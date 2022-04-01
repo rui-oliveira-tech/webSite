@@ -1,3 +1,11 @@
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
@@ -31,6 +39,8 @@ footer, header, hgroup, menu, nav, section {
 body {
 	line-height: 1;
 	/* overflow:hidden; */
+	font-family: "Open Sans", Helvetica, Arial, sans-serif;
+	font-weight: 400;
 }
 ol, ul {
 	list-style: none;
@@ -46,4 +56,29 @@ q:before, q:after {
 table {
 	border-collapse: collapse;
 	border-spacing: 0;
+}
+
+p {
+	display: block;
+	width: 100%;
+}
+
+.light {
+	font-weight: 300;
+}
+
+.bold {
+	font-weight: 700;
+}
+
+.extrabold {
+	font-weight: 800;
+}
+
+.big {
+	font-size: 1.5em;
+}
+
+.right {
+	text-align: right;
 }

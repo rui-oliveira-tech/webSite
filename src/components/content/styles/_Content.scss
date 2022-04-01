@@ -1,16 +1,3 @@
-*,
-*:before,
-*:after {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
-body {
-  background: #ffffff;
-  font-family: "Open Sans", Helvetica, Arial, sans-serif;
-}
-
 $vertPad: 1em;
 $sidePad: 1em;
 
@@ -208,7 +195,7 @@ $contentFadeinAT: 0.5s;
     opacity: 0;
     pointer-events: none;
     transition: all 0.1s;
-    background-color: #EEE;
+    background-color: rgba(238, 238, 238, .9);
 
     @include cardActive {
       z-index: 2;
@@ -428,26 +415,76 @@ $contentFadeinAT: 0.5s;
 
 // ------------------------------------------- About -----------------------------------------------------
 
-.about {  
-  display: flex;
-  flex-wrap: wrap;
+.section {  
+  position: relative;
   width: 100%;
-  p {
-    color: rgb(0, 0, 0);
-    font-size: 1em;
-    padding: 0.5em;
-  }
+  padding-bottom: calc(27.2px + 3em + 4px);
+
+
   &__title {
     width: 100%;
-    color: rgb(0, 0, 0);
+    color: #333;
     font-size: 3em;
-    text-align: center;
+    padding-bottom: .1em;
+    // text-align: center;
+  }
+  p {
+    display:block;
+    text-decoration: none;
+    color: #111;
+
+
+    &.title{
+      padding-block-start: 0.5em;
+      padding-bottom: 0.5em;
+      line-height: 1;
+      color: rgb(138, 126, 247);
+    }
+
+    &.text{
+      padding-bottom: .5em;
+      line-height: 1.5;
+    }
+    
+    &.textGlue{
+      padding-bottom: 1.5em;
+      line-height: 0;
+    }
+
+    
+  }
+  a{    
+    text-decoration: none;
+    color: rgb(138, 126, 247);
+
+    &.title{
+      display:block;
+      padding-block-start: 0.5em;
+      padding-bottom: 0.5em;
+      line-height: 1;
+    }
+  }
+
+  .affterTitle{
+    padding-bottom: 0.5em;
+    line-height: 1;
   }
 }
 
-.col {
-  
-}
-.col-2 {
-  width: 50%;
+.button {
+  padding: 1em;
+  font-size: 1.5em;
+  border: 2px solid black;
+  position: absolute;
+  right: 0%;
+  bottom: 0%;
+  cursor: pointer;
+  transition: 0.1s ease-in-out;
+  transform: scale(1);
+  &:hover {
+
+  }
+  &:active {
+    transform: scale(0.9);
+  }
 }
