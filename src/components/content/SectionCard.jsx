@@ -8,7 +8,7 @@ export default function Section() {
 
 
     const [isInactive, setIsInactive] = useState(true);
-    const [currentlyOpenCard, setCurrentlyOpenCard] = useState(3);
+    const [currentlyOpenCard, setCurrentlyOpenCard] = useState(0);
 
     useEffect(() => {
         setTimeout(function () {

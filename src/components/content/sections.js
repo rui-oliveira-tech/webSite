@@ -243,7 +243,7 @@ const sections = [
                         </tr>
                         {languages.map((degree) => (
                             <tr className="color">
-                                <td className="noBorder left"><span className={["flag-icon flag-icon-" + degree.flag]}></span>{degree.language}</td>
+                                <td className="noBorder left"><span className={"flag-icon flag-icon-" + degree.flag}></span>{degree.language}</td>
                                 <td>{degree.listening}</td>
                                 <td>{degree.reading}</td>
                                 <td>{degree.spokenInteraction}</td>
@@ -294,12 +294,8 @@ const sections = [
                 <h2 className="section__title bold">Projects</h2>
                 {projects.map((degree) => (
                     <>
-                        <a className="light big title" href={degree.website}>
-                            {degree.title}
-                        </a>
-                        <p className="affterTitle text">
-                            {degree.startDate} - {degree.endDate}
-                        </p>
+                        <a className="light big subTitle" href={degree.website}>{degree.title}</a>
+                        <p className="text">{degree.startDate} - {degree.endDate}</p>
                         <p className="light text textSpacement">{degree.description}</p>
                     </>
                 ))}
@@ -316,9 +312,7 @@ const sections = [
                 {other.map((degree) => (
                     <>
                         <p className="light big subTitle">{degree.title}</p>
-                        <p className="affterTitle text">
-                            {degree.startDate} - {degree.endDate}
-                        </p>
+                        <p className="text">{degree.startDate} - {degree.endDate}</p>
                         <p className="light text textSpacement">{degree.description}</p>
                     </>
                 ))}
