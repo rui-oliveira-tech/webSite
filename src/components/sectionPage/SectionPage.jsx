@@ -1,4 +1,4 @@
-import "./_Section.css";
+import "./_SectionPage.css";
 
 export default function Section({ children, ...restProps }) {
   restProps.className += " scroll_to";

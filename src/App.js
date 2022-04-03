@@ -1,6 +1,7 @@
 import React, { useEffect, useRef } from "react";
 import "./css/global.css";
-import Section from "./components/section/Section"
+import "./css/globalVar.scss";
+import SectionPage from "./components/sectionPage/SectionPage"
 import FirstPageContainer from "./containers/1_Page";
 // import SecondPageContainer from "./containers/2_Page";
 import ThirdPageContainer from "./containers/3_Page";
@@ -41,17 +42,17 @@ function App() {
 
   return (
     <>
-      <Section id='fristPage'>
+      <SectionPage id='fristPage'>
         <FirstPageContainer />
-      </Section>
+      </SectionPage>
 
      {/*  <Section id='secondPage'>
         <SecondPageContainer />
       </Section> */}
 
-      <Section id='thirdPage'>
+      <SectionPage id='thirdPage'>
         <ThirdPageContainer />
-      </Section>
+      </SectionPage>
 
     </>
   );

@@ -52,7 +52,6 @@ $contentFadeinAT: 0.5s;
     padding: 0;
   }
 
-
   &__inner {
     position: relative;
     height: 100%;
@@ -72,7 +71,7 @@ $contentFadeinAT: 0.5s;
   top: 0;
   width: $elW;
   height: 100%;
-  background: #ffffff;
+  background: var(--backgroundColor0);
   transition: transform $moveAT $expandAT, width $expandAT,
     opacity $moveAT $expandAT, z-index 0s $moveAT + $expandAT;
   will-change: transform, width, opacity;
@@ -116,7 +115,7 @@ $contentFadeinAT: 0.5s;
       background-position: center center;
       transition: transform $initAT;
       transform: translate3d(0, 0, 0) scale(1);
-      
+
       @include sectionsInactive {
         transform: translate3d(0, -100%, 0) scale(1.2);
       }
@@ -137,7 +136,7 @@ $contentFadeinAT: 0.5s;
       top: 0;
       width: 100%;
       height: 100%;
-      background: rgba(255, 255, 255, 0.3);
+      background: var(--backgroundColor1);
       opacity: 0;
       transition: opacity $opacityAT;
 
@@ -174,7 +173,7 @@ $contentFadeinAT: 0.5s;
   }
 
   &__heading {
-    color: #fff;
+    color: var(--backgroundColor0);
     text-transform: uppercase;
     font-size: 36px;
     // width: 3em;
@@ -195,7 +194,8 @@ $contentFadeinAT: 0.5s;
     opacity: 0;
     pointer-events: none;
     transition: all 0.1s;
-    background-color: rgba(238, 238, 238, .9);
+    background-color: var(--backgroundColor2);
+    overflow-y: auto;
 
     @include cardActive {
       z-index: 2;
@@ -239,7 +239,7 @@ $contentFadeinAT: 0.5s;
       width: 100%;
       height: 8px;
       margin-top: -4px;
-      background: #fff;
+      background: var(--backgroundColor0);
       opacity: 0;
       transition: opacity 0s;
 
@@ -362,7 +362,7 @@ $contentFadeinAT: 0.5s;
 
       .card__bg {
         transform: translate3d($elW * $i * -1, 0, 0);
-        
+
         &:before {
           transition-delay: 0.1s * $i;
           background-image: url("../../../images/#{$i}.jpg");
@@ -415,76 +415,101 @@ $contentFadeinAT: 0.5s;
 
 // ------------------------------------------- About -----------------------------------------------------
 
-.section {  
+.languagesTable {
+  margin-block-start: 0.8em;
+  width: 100%;
+  // border: 2px solid #2f3840;
+  line-height: 1.5em;
+  text-align: center;
+
+  tbody {
+    td {
+      border: 0;
+      border-top: 1px solid rgba(var(--languagesTableColor));
+      line-height: 1.5em;
+
+      &.noBorder {
+        border: 0;
+      }
+      &.left {
+        text-align: left;
+      }
+    }
+    tr {
+      &.color {
+        &:hover {
+          background-color: rgba(var(--languagesTableColor), 0.3);;
+        }
+      }
+    }
+  }
+
+  .flag-icon {
+    margin-right: 1em;
+  }
+}
+
+.section {
   position: relative;
   width: 100%;
   padding-bottom: calc(27.2px + 3em + 4px);
+  //padding-left: 2.2rem;
 
+  &__languages {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: left;
+    align-items: left;
+    text-align: left;
+    //padding: 0rem -2.2rem;
+    //border: 2px solid #4CAF50;
+  }
 
   &__title {
     width: 100%;
     color: #333;
     font-size: 3em;
-    padding-bottom: .1em;
+    padding-bottom: 0.1em;
     // text-align: center;
   }
   p {
-    display:block;
+    display: block;
     text-decoration: none;
-    color: #111;
+    color: var(--textColor);
+    //padding-left: 2.2rem;
 
-
-    &.title{
-      padding-block-start: 0.5em;
-      padding-bottom: 0.5em;
-      line-height: 1;
-      color: rgb(138, 126, 247);
+    &.noLineBreak {
+      display: inline;
     }
 
-    &.text{
-      padding-bottom: .5em;
-      line-height: 1.5;
-    }
-    
-    &.textGlue{
-      padding-bottom: 1.5em;
-      line-height: 0;
+    &.textSpacement {
+      padding-left: 1rem;
     }
 
-    
-  }
-  a{    
-    text-decoration: none;
-    color: rgb(138, 126, 247);
-
-    &.title{
-      display:block;
-      padding-block-start: 0.5em;
-      padding-bottom: 0.5em;
-      line-height: 1;
+    &.noPading {
+      padding-bottom: 0em;
+    }
+    &.small {
+      font-size: 0.5em;
     }
   }
-
-  .affterTitle{
+  a {
+    text-decoration: none;
+    color: var(--linkColor);
+  }
+  .subTitle {
+    padding-block-start: 0.5em;
     padding-bottom: 0.5em;
     line-height: 1;
+    color: var(--titleColor);
   }
-}
 
-.button {
-  padding: 1em;
-  font-size: 1.5em;
-  border: 2px solid black;
-  position: absolute;
-  right: 0%;
-  bottom: 0%;
-  cursor: pointer;
-  transition: 0.1s ease-in-out;
-  transform: scale(1);
-  &:hover {
-
+  .text {
+    line-height: 1.5;
   }
-  &:active {
-    transform: scale(0.9);
+
+  .textGlue {
+    line-height: 0.5em;
   }
 }
