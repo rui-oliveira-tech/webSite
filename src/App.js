@@ -2,9 +2,11 @@ import React, { useEffect, useRef } from "react";
 import "./css/global.css";
 import "./css/globalVar.scss";
 import SectionPage from "./components/sectionPage/SectionPage"
-import FirstPageContainer from "./containers/1_Page";
-// import SecondPageContainer from "./containers/2_Page";
-import ThirdPageContainer from "./containers/3_Page";
+import Home from "./components/home/Home"
+import Section from "./components/content/SectionCard"
+import Footer from "./components/footer/Footer"
+
+
 
 function App() {
   const scrollSpeed = 500;
@@ -43,15 +45,17 @@ function App() {
   return (
     <>
       <SectionPage id='fristPage'>
-        <FirstPageContainer />
+        <div className="flexHeight">
+          <Home />
+          <Footer />
+        </div>
       </SectionPage>
 
-     {/*  <Section id='secondPage'>
-        <SecondPageContainer />
-      </Section> */}
-
       <SectionPage id='thirdPage'>
-        <ThirdPageContainer />
+        <div className="flexHeight">
+          <Section />
+          <Footer />
+        </div>
       </SectionPage>
 
     </>
