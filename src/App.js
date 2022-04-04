@@ -44,14 +44,14 @@ function App() {
 
   return (
     <>
-      <SectionPage id='fristPage'>
+      <SectionPage>
         <div className="flexHeight">
           <Home />
           <Footer />
         </div>
       </SectionPage>
 
-      <SectionPage id='thirdPage'>
+      <SectionPage>
         <div className="flexHeight">
           <Section />
           <Footer />
