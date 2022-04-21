@@ -7,10 +7,11 @@
 
 footer {
   text-align: center;
-  display: block;
+  //display: block;
   height: auto;
   padding: 1em 1em;
-  background-color: var(--backgroundColor0);
+  display: flex;
+  justify-content: center;
 }
 
 .icon {
@@ -23,6 +24,7 @@ footer {
   color: #1f1f1f;
   background-color: var(--backgroundColor0);
   transition: all .2s ease-in-out;
+
   i {
     text-align: center;
     font-size: 1.5em;
@@ -30,11 +32,10 @@ footer {
   }
 
   &:hover {
-    color: var(--backgroundColor0);;
+    color: var(--backgroundColor0);
+    ;
     background-color: #1f1f1f;
     border-color: #1f1f1f;
     transform: scale(1.5)
   }
 }
-
-

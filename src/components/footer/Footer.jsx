@@ -3,7 +3,8 @@ import "./styles/footer.scss"
 
 export function Footer() {
     return (
-        <footer>
+        <footer >
+            <div>
             <a className="icon" href="mailto:rui.f.oliveira.95@gmail.com"><i className="fa-regualar fa-envelope" /></a>
 
             <a className="icon" href="https://wa.me/message/NX352LLKCXBFH1"><i className="fab fa-whatsapp" /></a>
@@ -15,6 +16,7 @@ export function Footer() {
             <a className="icon" href="https://www.instagram.com/r.u.i_o.l.i.v.e.i.r.a/"><i className="fab fa-instagram" /></a>
             
             <a className="icon" href="#"><i className="fab fa-facebook-f" /></a>
+            </div>
         </footer>
     )
 }
