@@ -45,7 +45,7 @@ function App() {
   return (
     <>
       <SectionPage>
-        <div className="flexHeight frontImage">
+        <div className="flexHeight">
           <Home />
           <Footer />
         </div>
@@ -57,7 +57,6 @@ function App() {
           <Footer />
         </div>
       </SectionPage>
-
     </>
   );
 }
