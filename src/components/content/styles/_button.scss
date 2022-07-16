@@ -2,21 +2,17 @@ $Color: #00b7ff;
 /* ~~~~~~~ INIT. BTN ~~~~~~~ */
 
 .hireMe_btn {
-  &__home {
-    position: relative;
-
-    &:hover:after {
-      background: var(--hireMeButtonColor__home);
-    }
-  }
-
   &__about {
     position: absolute;
     right: 0%;
     bottom: 0%;
-    
+
     &:hover:after {
       background: var(--hireMeButtonColor__about);
+    }
+
+    &:hover {
+      color: var(--linkColor);
     }
   }
 
@@ -40,7 +36,6 @@ $Color: #00b7ff;
   }
 
   &:hover {
-    color: var(--linkColor);
     transition-delay: 0.5s;
   }
 
@@ -55,12 +50,7 @@ $Color: #00b7ff;
   padding: 1.4rem 2.2rem;
   font-size: 1.4rem;
   text-transform: uppercase;
-  letter-spacing: 1.1rem;
-}
-
-.education {
-  padding: 1.4rem 2.2rem;
-  //font-size: 1.4rem;
+  margin: 0 8px;
 }
 
 /* From Top */
@@ -130,10 +120,6 @@ $Color: #00b7ff;
   border-right: 0;
 }
 
-.colorBlack:before {
-  border: 1px solid black;
-}
-
 .from-right:after {
   right: 0;
 }
@@ -150,7 +136,7 @@ $Color: #00b7ff;
   left: 50%;
   height: 100%;
   width: 0;
-  border: 1px solid var(--backgroundColor0);
+ // border: 1px solid #344759;
   border-left: 0;
   border-right: 0;
 }
@@ -160,7 +146,7 @@ $Color: #00b7ff;
   left: 0;
   height: 0;
   width: 100%;
-  background: var(--backgroundColor0);
+  //background: #344759;
 }
 
 .from-center:hover:before {

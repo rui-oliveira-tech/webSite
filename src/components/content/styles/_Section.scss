@@ -45,7 +45,6 @@ $contentFadeinAT: 0.5s;
 .sections {
   position: relative;
   overflow: hidden;
-  // height: 85vh;
   padding: $vertPad $sidePad 0;
 
   &.s--card-active {
@@ -176,10 +175,8 @@ $contentFadeinAT: 0.5s;
     color: var(--backgroundColor0);
     text-transform: uppercase;
     font-size: 36px;
-    // width: 3em;
     text-align: center;
     overflow: visible;
-    // display: block;
     text-shadow: 1px 1px 3px black;
   }
 
@@ -204,12 +201,6 @@ $contentFadeinAT: 0.5s;
       transition: all $contentFadeinAT $fullExpandAT;
     }
   }
-
-  /* &__text {
-    text-transform: uppercase;
-    font-size: 40px;
-    color: #fff;
-  } */
 
   &__close-btn {
     z-index: -1;
@@ -438,7 +429,7 @@ $contentFadeinAT: 0.5s;
     tr {
       &.color {
         &:hover {
-          background-color: rgba(var(--languagesTableColor), 0.3);;
+          background-color: rgba(var(--languagesTableColor), 0.3);
         }
       }
     }

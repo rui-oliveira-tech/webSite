@@ -20,8 +20,7 @@ export default function FrontPage() {
                         <p textEffect="Residencial Electrician"className="subTitle second">Residencial Electrician</p>
                         <p textEffect="Schematic Projecting"className="subTitle third">Schematic Projecting</p>
                     </div>
-                    <div className="placementHireMe">
-                        <div className="from-right hireMe_btn hireMe_btn__home">Hire me</div>
+                    <div className="placementExtra">
                     </div>
                     <div className="placementscrollArrow">
                         <div className="scrollArrow">
