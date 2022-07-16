@@ -9,7 +9,7 @@ export function Footer() {
 
                 <a className="icon" href="https://wa.me/message/NX352LLKCXBFH1"><i className="fab fa-whatsapp" /></a>
 
-                <div className="hireMe hireMe_btn  from-center  hireMe_btn__home">Hire Me</div>
+                <div className="hireMe hireMe_btn  from-center">Hire Me</div>
 
                 <a className="icon" href="https://github.com/rui1999"><i className="fab fa-github" /></a>
 
