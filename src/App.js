@@ -11,7 +11,7 @@ import Footer from "./components/footer/Footer"
 function App() {
   const scrollSpeed = 500;
 
-  let page = useRef(0);
+  let page = useRef(1);
   let allPages = useRef([]);
   let scrollTimeout = null;
   useEffect(() => {
@@ -45,18 +45,12 @@ function App() {
   return (
     <>
       <SectionPage>
-        <div className="flexHeight">
-          <Home />
-          <Footer />
-        </div>
+        <Home />
       </SectionPage>
-
       <SectionPage>
-        <div className="flexHeight">
-          <Section />
-          <Footer />
-        </div>
+        <Section />
       </SectionPage>
+      <Footer />
     </>
   );
 }
