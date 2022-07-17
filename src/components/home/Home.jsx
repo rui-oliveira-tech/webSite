@@ -2,7 +2,6 @@ import React from "react"
 import "./styles/_home.scss"
 import "./styles/_scrollArrow.scss"
 import "../content/styles/_button.scss"
-import Footer from "../footer/Footer"
 
 export default function FrontPage() {
     return (

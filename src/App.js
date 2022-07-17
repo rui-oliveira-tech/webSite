@@ -1,6 +1,7 @@
 import React, { useEffect, useRef } from "react";
 import "./css/global.css";
 import "./css/globalVar.scss";
+import Loading from "./components/Loading/Loading"
 import SectionPage from "./components/sectionPage/SectionPage"
 import Home from "./components/home/Home"
 import Section from "./components/content/SectionCard"
@@ -11,7 +12,7 @@ import Footer from "./components/footer/Footer"
 function App() {
   const scrollSpeed = 500;
 
-  let page = useRef(1);
+  let page = useRef(0);
   let allPages = useRef([]);
   let scrollTimeout = null;
   useEffect(() => {
@@ -44,13 +45,16 @@ function App() {
 
   return (
     <>
-      <SectionPage>
-        <Home />
-      </SectionPage>
-      <SectionPage>
-        <Section />
-      </SectionPage>
-      <Footer />
+      <>
+        <SectionPage>
+          <Home />
+        </SectionPage>
+        <SectionPage>
+          <Section />
+        </SectionPage>
+        <Footer />
+      </>
+      <Loading />
     </>
   );
 }
