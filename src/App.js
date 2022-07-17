@@ -45,16 +45,14 @@ function App() {
 
   return (
     <>
-      <>
-        <SectionPage>
-          <Home />
-        </SectionPage>
-        <SectionPage>
-          <Section />
-        </SectionPage>
-        <Footer />
-      </>
       <Loading />
+      <SectionPage>
+        <Home />
+      </SectionPage>
+      <SectionPage>
+        <Section />
+      </SectionPage>
+      <Footer />
     </>
   );
 }

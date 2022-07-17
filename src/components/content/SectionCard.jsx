@@ -29,10 +29,8 @@ export default function Section() {
         <div className={["sections", isInactive ? "s--inactive" : "", currentlyOpenCard > 0 ? "s--card-active" : ""].join(" ")}>
             <div className="sections__inner">
                 {
-                    sections.map(section => (
-                        <>
-                            <Card section={section} currentlyOpenCard={currentlyOpenCard} CardOpenOnClick={CardOpenOnClick} CardCloseOnClick={CardCloseOnClick} />
-                        </>
+                    sections.map((section, i) => (
+                        <Card key={i} section={section} currentlyOpenCard={currentlyOpenCard} CardOpenOnClick={CardOpenOnClick} CardCloseOnClick={CardCloseOnClick} />
                     ))
                 }
             </div>

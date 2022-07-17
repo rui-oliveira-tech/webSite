@@ -14,9 +14,9 @@ export default function FrontPage() {
                     <p className="title">Rui Oliveira</p>
                 </div>
                 <div className="placementSubtitle">
-                    <p textEffect="Industrial Electrician" className="subTitle first">Industrial Electrician</p>
-                    <p textEffect="Residencial Electrician" className="subTitle second">Residencial Electrician</p>
-                    <p textEffect="Schematic Projecting" className="subTitle third">Schematic Projecting</p>
+                    <p data-texteffect="Industrial Electrician" className="subTitle first">Industrial Electrician</p>
+                    <p data-texteffect="Residencial Electrician" className="subTitle second">Residencial Electrician</p>
+                    <p data-texteffect="Schematic Projecting" className="subTitle third">Schematic Projecting</p>
                 </div>
                 <div className="placementExtra">
                 </div>

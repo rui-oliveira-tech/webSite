@@ -136,7 +136,7 @@ a {
   font-weight: 00;
 
   &::before {
-    content: attr(textEffect);
+    content: attr(data-texteffect);
     position: absolute;
     top: 0;
     left: 0;
@@ -150,21 +150,21 @@ a {
   }
 
   &.first {
-    animation-delay: 1s;
+    animation-delay: calc(var(--loadingAnimation) + 1s);
     &::before {
-      animation-delay: 1.1s;
+      animation-delay: calc(var(--loadingAnimation) + 1.1s);
     }
   }
   &.second {
-    animation-delay: 4s;
+    animation-delay: calc(var(--loadingAnimation) + 4s);
     &::before {
-      animation-delay: 4.1s;
+      animation-delay: calc(var(--loadingAnimation) + 4.1s);
     }
   }
   &.third {
-    animation-delay: 7s;
+    animation-delay: calc(var(--loadingAnimation) + 7s);
     &::before {
-      animation-delay: 7.1s;
+      animation-delay: calc(var(--loadingAnimation) + 7.1s);
     }
   }
 }

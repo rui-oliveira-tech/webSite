@@ -1,3 +1,5 @@
+import React from "react";
+
 const education = [
     {
         title: "Driving course of electric forklifts, combustion and gas",
@@ -197,7 +199,7 @@ const sections = [
                 <p className="light text big right">
                     Looking forward to hearing from you.
                 </p>
-                <div class="from-right  hireMe_btn hireMe_btn__about">Hire me</div>
+                <div className="from-right  hireMe_btn hireMe_btn__about">Hire me</div>
             </div>
         ),
     },
@@ -210,12 +212,12 @@ const sections = [
                 <h2 className="section__title bold" /* onClick={slideChangeOnClick} */>
                     Education
                 </h2>
-                {education.map((degree) => (
-                    <>
+                {education.map((degree, i) => (
+                    <React.Fragment key={i}>
                         <p className="light big subTitle">{degree.title}</p>
                         <a className="textGlue" href={degree.website}>{degree.company} in {degree.location}</a>
                         <p className="text">{degree.startDate === "" ? degree.endDate : degree.startDate + " - " + degree.endDate}</p>
-                    </>
+                    </React.Fragment>
                 ))}
                 <h2 className="section__title bold">Languages</h2>
 
@@ -223,10 +225,10 @@ const sections = [
                     <thead>
                         <tr>
                             <th width="150px"> LANGUAGE</th>
-                            <th className="divid" colspan="2">
+                            <th className="divid" colSpan="2">
                                 UNDERSTANDING
                             </th>
-                            <th className="divid" colspan="2">
+                            <th className="divid" colSpan="2">
                                 SPEAKING
                             </th>
                             <th className="divid">WRITING</th>
@@ -241,8 +243,8 @@ const sections = [
                             <td>Production</td>
                             <td></td>
                         </tr>
-                        {languages.map((degree) => (
-                            <tr className="color">
+                        {languages.map((degree, i) => (
+                            <tr className="color" key={i}>
                                 <td className="noBorder left"><span className={"flag-icon flag-icon-" + degree.flag}></span>{degree.language}</td>
                                 <td>{degree.listening}</td>
                                 <td>{degree.reading}</td>
@@ -253,7 +255,7 @@ const sections = [
                         ))}
                         <tr>
                             <td className="noBorder left" ></td>
-                            <td className="noBorder left" colspan="5">
+                            <td className="noBorder left" colSpan="5">
                                 <p className="small text noPading">Levels: A1/2: Basic user - B1/2: Independent user - C1/2 Proficient user</p>
                                 <p className="small text noPading">Common European Framework of Reference for Languages</p>
                             </td>
@@ -271,8 +273,8 @@ const sections = [
         text: (
             <div className="section">
                 <h2 className="section__title bold">Experience</h2>
-                {experience.map((degree) => (
-                    <>
+                {experience.map((degree, i) => (
+                    <React.Fragment key={i}>
                         <p className="light big subTitle">{degree.title}</p>
                         <a className="textGlue" href={degree.website}>{degree.company} in {degree.location}</a>
                         <p className="text">{degree.startDate} - {degree.endDate} - {degree.offerType}{" "}</p>
@@ -280,7 +282,7 @@ const sections = [
                         <p className="light text textSpacement">
                             {degree.functionsPerformed}
                         </p>
-                    </>
+                    </React.Fragment>
                 ))}
             </div>
         ),
@@ -292,12 +294,12 @@ const sections = [
         text: (
             <div className="section">
                 <h2 className="section__title bold">Projects</h2>
-                {projects.map((degree) => (
-                    <>
+                {projects.map((degree, i) => (
+                    <React.Fragment key={i}>
                         <a className="light big subTitle" href={degree.website}>{degree.title}</a>
                         <p className="text">{degree.startDate} - {degree.endDate}</p>
                         <p className="light text textSpacement">{degree.description}</p>
-                    </>
+                    </React.Fragment>
                 ))}
             </div>
         ),
@@ -309,12 +311,12 @@ const sections = [
         text: (
             <div className="section">
                 <h2 className="section__title bold">Other things</h2>
-                {other.map((degree) => (
-                    <>
+                {other.map((degree, i) => (
+                    <React.Fragment key={i}>
                         <p className="light big subTitle">{degree.title}</p>
                         <p className="text">{degree.startDate} - {degree.endDate}</p>
                         <p className="light text textSpacement">{degree.description}</p>
-                    </>
+                    </React.Fragment>
                 ))}
             </div>
         ),
