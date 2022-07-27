@@ -3,7 +3,17 @@ import "./styles/_home.scss"
 import "./styles/_scrollArrow.scss"
 import "../content/styles/_button.scss"
 
-export default function FrontPage() {
+
+
+
+export default function Home({ allPages }) {
+    console.log(allPages);
+    function scrollDown() {
+        allPages.current[1].scrollIntoView({
+            behavior: "smooth",
+            block: "center",
+        });
+    }
     return (
         <>
             <div className="container" >
@@ -21,7 +31,7 @@ export default function FrontPage() {
                 <div className="placementExtra">
                 </div>
                 <div className="placementscrollArrow">
-                    <div className="scrollArrow">
+                    <div className="scrollArrow" onClick={scrollDown}>
                         <span></span><span></span><span></span>
                     </div>
                 </div>

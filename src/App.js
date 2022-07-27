@@ -47,7 +47,7 @@ function App() {
     <>
       <Loading />
       <SectionPage>
-        <Home />
+        <Home allPages={allPages} />
       </SectionPage>
       <SectionPage>
         <Section />
