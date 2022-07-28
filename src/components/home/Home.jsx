@@ -7,7 +7,6 @@ import "../content/styles/_button.scss"
 
 
 export default function Home({ allPages }) {
-    console.log(allPages);
     function scrollDown() {
         allPages.current[1].scrollIntoView({
             behavior: "smooth",
