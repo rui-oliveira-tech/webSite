@@ -13,7 +13,7 @@ export function Footer() {
 
                 <a className="icon" target="_blank" rel="noreferrer" href="https://github.com/rui-oliveira-tech"><i className="fab fa-github" /></a>
 
-                <a className="icon" target="_blank" rel="noreferrer" href="https://www.linkedin.com/in/rui-tech/"><i className="fab fa-linkedin-in" /></a>
+                <a className="icon" target="_blank" rel="noreferrer" href="https://www.linkedin.com/in/rui-oliveira--tech/"><i className="fab fa-linkedin-in" /></a>
 
                 {/*  <a className="icon" href="#"><i className="fab fa-facebook-f" /></a> */}
             </div>
