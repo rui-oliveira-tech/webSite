@@ -1,7 +1,7 @@
 # timer-lib
 ![License](https://img.shields.io/github/license/rui-oliveira-tech/website)
 
-Program to control swingGate for Arduino ProMini.
+My personal Website.
 
 ## License
 
