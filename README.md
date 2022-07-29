@@ -1,4 +1,4 @@
-# timer-lib
+# Website
 ![License](https://img.shields.io/github/license/rui-oliveira-tech/website)
 
 My personal Website.
