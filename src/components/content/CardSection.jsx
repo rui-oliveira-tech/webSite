@@ -4,9 +4,7 @@ import "./styles/_button.scss"
 import sections from "./sections.js"
 import Card from "./Card"
 
-export default function Section() {
-
-
+export default function CardSection() {
     const [isInactive, setIsInactive] = useState(true);
     const [currentlyOpenCard, setCurrentlyOpenCard] = useState(0);
 
@@ -16,11 +14,11 @@ export default function Section() {
         }, 200);
     }, [])
 
-    const CardOpenOnClick = (id) => (e) => {
+    const onClickOpenCard = (id) => (e) => {
         setCurrentlyOpenCard(id);
     }
 
-    const CardCloseOnClick = (e) => {
+    const onClickCloseCard = (e) => {
         e.stopPropagation();
         setCurrentlyOpenCard(-1);
     }
@@ -30,7 +28,7 @@ export default function Section() {
             <div className="sections__inner">
                 {
                     sections.map((section, i) => (
-                        <Card key={i} section={section} currentlyOpenCard={currentlyOpenCard} CardOpenOnClick={CardOpenOnClick} CardCloseOnClick={CardCloseOnClick} />
+                        <Card key={i} section={section} currentlyOpenCard={currentlyOpenCard} onClickOpenCard={onClickOpenCard} onClickCloseCard={onClickCloseCard} />
                     ))
                 }
             </div>
