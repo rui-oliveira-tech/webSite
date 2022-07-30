@@ -199,7 +199,6 @@ const sections = [
                 <p className="light text big right">
                     Looking forward to hearing from you.
                 </p>
-                <div className="from-right  hireMe_btn hireMe_btn__about">Hire me</div>
             </div>
         ),
     },

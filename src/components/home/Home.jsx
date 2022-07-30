@@ -1,6 +1,5 @@
 import React from "react";
 import "./Home.scss";
-import "./styles/_scrollArrow.scss";
 import MainImage from "../../images/main.jpg";
 
 

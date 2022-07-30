@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "./styles/_Section.scss"
-import sections from "./sections.js"
+import sections from "./sectionsConfig.js"
 import Card from "./Card"
 
 export default function CardSection() {
