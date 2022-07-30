@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from "react";
+import "./css/ruicons-embeddd.css";
 import "./css/globalVar.scss";
-import "./css/global.css";
 import "./css/global.css";
 import Loading from "./components/Loading/Loading";
 import Home from "./components/home/Home";
@@ -45,7 +45,7 @@ function App() {
 
   return (
     <>
-      <Loading />
+      {false && <Loading />}
       <div className="wideGrid">
           <Home allPages={allPages} />
           <CardSection />
