@@ -1,40 +1,37 @@
-import React from "react"
-import "./styles/_home.scss"
-import "./styles/_scrollArrow.scss"
-import "../content/styles/_button.scss"
-
+import React from "react";
+import "./Home.scss";
+import "./styles/_scrollArrow.scss";
+// import "../content/styles/_button.scss";
+import MainImage from "../../images/main.jpg";
 
 
 
 export default function Home({ allPages }) {
-    function scrollDown() {
-        allPages.current[1].scrollIntoView({
-            behavior: "smooth",
-            block: "center",
-        });
-    }
-    return (
-        <>
-            <div className="container" >
-                <div className="placementFrontImage">
-                    <div className="frontImage"></div>
-                </div>
-                <div className="placementTitle">
-                    <p className="title">Rui Oliveira</p>
-                </div>
-                <div className="placementSubtitle">
-                    <p data-texteffect="Industrial Electrician" className="subTitle first">Industrial Electrician</p>
-                    <p data-texteffect="Residencial Electrician" className="subTitle second">Residencial Electrician</p>
-                    <p data-texteffect="Schematic Projecting" className="subTitle third">Schematic Projecting</p>
-                </div>
-                <div className="placementExtra">
-                </div>
-                <div className="placementscrollArrow">
-                    <div className="scrollArrow" onClick={scrollDown}>
-                        <span></span><span></span><span></span>
-                    </div>
-                </div>
-            </div>
-        </>
-    )
+  function scrollDown(e) {
+    document.querySelector(".projects").scrollIntoView({
+      behavior: "smooth",
+      block: "center",
+    });
+  }
+  return (
+    <section className="scroll_to home">
+      <header>
+        <figure>
+          <img src={MainImage} className="frontImage" alt="Rui Oliveira" />
+        </figure>
+      </header>
+      <main>
+        <h1 className="title">Rui Oliveira</h1>
+        <h2 data-texteffect="Industrial Electrician" className="subTitle first">Industrial Electrician</h2>
+        <h3 data-texteffect="Residencial Electrician" className="subTitle second">Residencial Electrician</h3>
+        <h3 data-texteffect="Schematic Projecting" className="subTitle third">Schematic Projecting</h3>
+      </main>
+      
+      <footer className="scrollArrow" onClick={scrollDown}>
+        <span></span>
+        <span></span>
+        <span></span>
+      </footer>
+    </section>
+  )
 }

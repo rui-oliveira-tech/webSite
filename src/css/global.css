@@ -85,9 +85,9 @@ p {
 }
 
 #root, footer{
-	display: block;
-	min-width: 1280px;
-	max-width: 1920px;
-	width: 100%;
-	margin: 0 auto;
+	/* display: block; */
+	/* min-width: 1280px; */
+	/* max-width: 1920px; */
+	/* width: 100%; */
+	/* margin: 0 auto; */
 }

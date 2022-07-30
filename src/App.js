@@ -1,29 +1,29 @@
 import React, { useEffect, useRef } from "react";
-import "./css/global.css";
 import "./css/globalVar.scss";
-import Loading from "./components/Loading/Loading"
-import SectionPage from "./components/sectionPage/SectionPage"
-import Home from "./components/home/Home"
-import Section from "./components/content/SectionCard"
-import Footer from "./components/footer/Footer"
+import "./css/global.css";
+import "./css/global.css";
+import Loading from "./components/Loading/Loading";
+import Home from "./components/home/Home";
+import CardSection from "./components/content/CardSection";
+import Footer from "./components/footer/Footer";
 
 
 
 function App() {
   const scrollSpeed = 500;
 
-  let page = useRef(0);
+  // let page = useRef(0);
   let allPages = useRef([]);
-  let scrollTimeout = null;
+  // let scrollTimeout = null;
   useEffect(() => {
     allPages.current = document.querySelectorAll(".scroll_to");
-    const root = document.querySelector("#root");
-    root.onwheel = scrollPage;
+    // const root = document.querySelector("#root");
+    // root.onwheel = scrollPage;
     // swipeup swipedown
 
-    page.current = Math.ceil(window.pageYOffset / allPages.current[0].scrollHeight);
+    // page.current = Math.ceil(window.pageYOffset / allPages.current[0].scrollHeight);
   }, []);
-
+  /* 
   function scrollPage(event) {
     event.preventDefault();
     if (scrollTimeout === null) {
@@ -41,17 +41,15 @@ function App() {
         scrollTimeout = null;
       }, scrollSpeed)
     }
-  }
+  } */
 
   return (
     <>
       <Loading />
-      <SectionPage>
-        <Home allPages={allPages} />
-      </SectionPage>
-      <SectionPage>
-        <Section />
-      </SectionPage>
+      <div className="wideGrid">
+          <Home allPages={allPages} />
+          <CardSection />
+      </div>
       <Footer />
     </>
   );
