@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from "react";
-import "./css/ruicons-embeddd.css";
+import "./css/ruicons-embedded.css";
 import "./css/globalVar.scss";
 import "./css/global.css";
 import Loading from "./components/Loading/Loading";
