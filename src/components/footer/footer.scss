@@ -27,13 +27,6 @@
     width: 3em;
     height: 3em;
     margin: 0 0.6em;
-    &:hover {
-      color: var(--backgroundColor0);
-      background-color: #1f1f1f;
-      border-color: #1f1f1f;
-      transform: scale(1.2);
-    }
-
     i {
       text-align: center;
       font-size: 1.5em;
@@ -41,7 +34,15 @@
     }
   }
 
-  @media (hover: none) {
+  @media (hover) {
+    .icon {
+      &:hover {
+        color: var(--backgroundColor0);
+        background-color: #1f1f1f;
+        border-color: #1f1f1f;
+        transform: scale(1.2);
+      }
+    }
   }
 
   @media (min-width: 270px) and (max-width: 1023px) {

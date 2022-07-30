@@ -11,21 +11,6 @@
   text-transform: uppercase;
   text-decoration: none;
 
-  @media (min-width: 270px) and (max-width: 511px) {
-    padding: 1rem 1.5rem;
-  }
-  &:hover {
-    transition-delay: 0.2s;
-    color: white;
-
-    &:before {
-      transition-delay: 0s;
-    }
-    &:after {
-      transition-delay: 0.35s;
-    }
-  }
-
   &:active {
     transform: scale(0.9);
   }
@@ -56,16 +41,36 @@
       width: 100%;
       background: #344759;
     }
+  }
+  
+  @media (min-width: 270px) and (max-width: 511px) {
+    padding: 1rem 1.5rem;
+  }
 
+  @media (hover) {
     &:hover {
+      transition-delay: 0.2s;
+      color: white;
+  
       &:before {
-        left: 0;
-        width: 100%;
+        transition-delay: 0s;
       }
-
       &:after {
-        top: 0;
-        height: 100%;
+        transition-delay: 0.35s;
+      }
+    }
+  
+    &.from-center {
+      &:hover {
+        &:before {
+          left: 0;
+          width: 100%;
+        }
+  
+        &:after {
+          top: 0;
+          height: 100%;
+        }
       }
     }
   }

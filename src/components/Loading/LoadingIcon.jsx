@@ -1,7 +1,5 @@
 import React, { useEffect } from "react";
-import "./styles/_loadingIcon.scss"
-
-
+import "./LoadingIcon.scss"
 
 function shuffle(array) {
   var currentIndex = array.length, randomIndex;
