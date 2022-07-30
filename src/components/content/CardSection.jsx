@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import "./styles/_Section.scss"
-import "./styles/_button.scss"
 import sections from "./sections.js"
 import Card from "./Card"
 

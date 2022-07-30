@@ -1,7 +1,6 @@
 import React from "react";
 import "./Home.scss";
 import "./styles/_scrollArrow.scss";
-// import "../content/styles/_button.scss";
 import MainImage from "../../images/main.jpg";
 
 

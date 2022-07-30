@@ -1,6 +1,8 @@
 import React from "react"
 import "./footer.scss"
 
+import Button from "../Button/Button"
+
 export function Footer() {
   return (
     <footer className="mainFooter">
@@ -8,7 +10,7 @@ export function Footer() {
 
         <a className="icon" target="_blank" rel="noreferrer" href="https://wa.me/message/NX352LLKCXBFH1"><i className="fab fa-whatsapp" /></a>
 
-        <a className="hireMe hireMe_btn  from-center" target="_blank" rel="noreferrer" href="mailto:hire@rui-oliveira.com">Hire Me</a>
+        <Button className="from-center" href="mailto:hire@rui-oliveira.com">Hire Me</Button>
 
         <a className="icon" target="_blank" rel="noreferrer" href="https://github.com/rui-oliveira-tech"><i className="fab fa-github" /></a>
 
