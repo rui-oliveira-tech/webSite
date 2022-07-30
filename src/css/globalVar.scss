@@ -17,6 +17,9 @@ $Color: #00b7ff;
 
 
 .wideGrid {
+  
+  position: relative;
+  z-index: 1;
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 1fr 1fr;
