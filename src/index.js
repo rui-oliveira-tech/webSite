@@ -14,6 +14,11 @@ ReactDOM.render(
       <Routes>
         <Route path="/" element={<App />} />
         <Route path="contacts" element={<Navigate to="/vcard.vcf" />} />
+        <Route path="*" element={
+          <main>
+            <h1>Nothing here</h1>
+          </main>
+        } />
       </Routes>
     </BrowserRouter>
   </React.StrictMode>,
