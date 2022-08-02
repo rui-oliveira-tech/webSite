@@ -13,7 +13,8 @@ ReactDOM.render(
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<App />} />
-        <Route path="vcard" element={<Navigate to="/vcard.vcf" />} />
+        <Route path="vcard/work" element={<Navigate to="/workVcard.vcf" />} />
+        <Route path="vcard/VIP" element={<Navigate to="/vcard.vcf" />} />
         {/*   <Route path="*" element={
           <main>
             <h1>Nothing here</h1>
