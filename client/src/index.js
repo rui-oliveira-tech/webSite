@@ -1,5 +1,6 @@
 import React from "react";
 import App from "./App";
+import Vcard from "./components/vcard/Vcard";
 import ReactDOM from "react-dom";
 import {
   BrowserRouter,
@@ -13,7 +14,7 @@ ReactDOM.render(
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<App />} />
-        <Route path="vcard" element={<Navigate to="/vcard.vcf" />} />
+        <Route path="/vcard/work" element={<Vcard />} />
         {/*   <Route path="*" element={
           <main>
             <h1>Nothing here</h1>
