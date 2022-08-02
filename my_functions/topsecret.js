@@ -2,11 +2,11 @@ const fs = require('fs')
 
 exports.handler = async () => {
 
-    const contents = fs.readFileSync('./vcard.vcf', {encoding: 'base64'});
+    const contents = fs.readFileSync('/path/to/img.jpg', {encoding: 'base64'});
 
     return {
         statusCode: 200,
-        headers: {'text/vcard'},
+        headers: {'Content-type' : 'text/vcard'},
         body: contents,
         isBase64Encoded : true,
     }
