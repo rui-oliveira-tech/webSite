@@ -6,3 +6,4 @@ module.exports.handler = async (event, context) => {
     body: greeting
   };
 };
+
