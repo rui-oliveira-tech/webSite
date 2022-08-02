@@ -8,7 +8,7 @@ exports.handler = async () => {
     return {
         statusCode: 200,
         headers: {'Content-type' : 'text/vcard'},
-        body: greeting,
+        body: {greeting},
         isBase64Encoded : true,
     }
 }
