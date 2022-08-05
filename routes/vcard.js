@@ -1,37 +1,44 @@
-const vcard = require('express').Router();
+const vcardRouter = require('express').Router();
+const vCardsJS = require('vcards-js');
 
-
-
-vcard.get("/vip", (req, res) => {
-
-     res.json({ message: "vip vcard!" }); 
+vcardRouter.get('/:type', function (req, res, next) {
+  const { type } = req.params;
+  const fileName = `${type}_vcard.vcf`;
+  res.set('Content-Type', `text/vcard; name="${fileName}"`);
+  res.set('Content-Disposition', `inline; filename="${fileName}"`);
+  const myVcard = getVcard(type, fileName);
+  if (myVcard != null) {
+    res.download(myVcard);
+  } else {
+    res.status(500).json({ message: "Could not create requested vcard!" })
+  }
 });
 
+function getVcard(type, filename) {
+  if (!["work", "vip"].includes(type)) return null;
 
-vcard.get('/work', function (req, res, next) {
+  // Create a new vCard
+  const vcard = vCardsJS();
+  const outputFile = `${__dirname}/${filename}`;
 
-    var vCardsJS = require('vcards-js');
-    var fileName = '/vcard.vcf';
+  // Set common properties
 
-    //create a new vCard
-    vCard = vCardsJS();
+  switch (type) {
+    case "work":
+      // Set properties that will only be in "work" card
+      break;
 
-    //set properties
-    vCard.firstName = 'Eric';
-    vCard.middleName = 'J';
-    vCard.lastName = 'Nesser';
-    vCard.organization = 'ACME Corporation';
+    case "vip":
+      // Set properties that will only be in "vip" card
+      break;
 
-    //set content-type and disposition including desired filename
-    res.set('Content-Type', 'text/vcard; name="enesser.vcf"');
-    res.set('Content-Disposition', 'inline; filename="enesser.vcf"');
+    default:
+      break;
+  }
 
-    //send the response
-    vCard.saveToFile(__dirname + fileName);
-    
-    res.download(__dirname + fileName);
-    res.send(200);
-    res.end();
-});
+  // Save file
+  vcard.saveToFile(outputFile);
+  return outputFile;
+}
 
-module.exports = vcard;
+module.exports = vcardRouter;

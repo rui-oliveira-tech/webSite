@@ -1,20 +1,23 @@
-import React from "react";
+import React, { useState, useEffect, useRef } from "react";
+
+const server = process.env.REACT_APP_API;
 
 export default function Vcard({ type }) {
-    const [data, setData] = React.useState(null);
+  const vCardLink = useRef(null);
+  const [fileUrl, setFileUrl] = useState(null);
 
-    React.useEffect(() => {
-        fetch("/vcard/" + type)
-            .then((res) => res.json())
-            .then((data) => setData(data.message));
+  useEffect(() => {
+    fetch(`${server}/vcard/${type}`)
+      .then((data) => {
+        const url = URL.createObjectURL(new Blob([data]));
+        setFileUrl(url);
+        vCardLink.current?.click();
+        URL.revokeObjectURL(url);
+      });
+  }, []);
 
-    }, [type]);
-
-
-    return (
-        <>
-            <p>{!data ? "Loading " + type + " ..." : data}</p>
-            {/*   <Navigate to="/vcard.vcf" /> */}
-        </>
-    )
+  const filename = `${type}_vcard.vcf`;
+  return (
+    <a ref={vCardLink} href={fileUrl} download={filename}>Download Vcard</a>
+  )
 }

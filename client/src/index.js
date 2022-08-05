@@ -6,7 +6,6 @@ import {
   BrowserRouter,
   Routes,
   Route,
-  Navigate
 } from "react-router-dom";
 
 ReactDOM.render(
@@ -14,8 +13,8 @@ ReactDOM.render(
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<App />} />
-        <Route path="/vcard/work" element={<Vcard type={"work"} />} />
-        <Route path="/vcard/vip" element={<Vcard type={"vip"} />} />
+        <Route path="/vcard/work" element={<Vcard type="work" />} />
+        <Route path="/vcard/vip" element={<Vcard type="vip" />} />
         {/*   <Route path="*" element={
           <main>
             <h1>Nothing here</h1>
