@@ -26,17 +26,18 @@ function getVcard(type, filename) {
   vCard.lastName = 'Oliveira';
   vCard.gender = 'M';
   vCard.url = 'https://www.rui-oliveira.com/';
-  vCard.socialUrls['facebook'] = 'https://...';
-  vCard.socialUrls['linkedIn'] = 'https://...';
-  vCard.socialUrls['twitter'] = 'https://...';
-  vCard.socialUrls['flickr'] = 'https://...';
-  vCard.socialUrls['custom'] = 'https://...';
+  vCard.socialUrls['linkedIn'] = 'https://www.linkedin.com/in/rui-oliveira--tech/';
+  vCard.socialUrls['github'] = 'https://github.com/rui-oliveira-tech/';
+  vCard.socialUrls['instagram'] = 'https://www.instagram.com/rui_oliveira_tech/';
+
+
+
   vCard.logo.attachFromUrl('https://avatars2.githubusercontent.com/u/5659221?v=3&s=460', 'JPEG');
 
   switch (type) {
     case "work":
       // Set properties that will only be in "work" card
-      vCard.namePrefix = 'Mr.';
+      vCard.namePrefix = 'Sr.';
       vCard.title = 'Software Developer';
       vCard.role = 'Software Development';
       vCard.note = 'Notes on Eric';
