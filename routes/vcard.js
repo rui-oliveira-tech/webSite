@@ -1,26 +1,17 @@
 const vcard = require('express').Router();
 
-vcard.get("/", (req, res) => {
-    /* res.json({ message: "work vcard!" }); */
-    var fileName = '/vcard.vcf';
-    res.sendFile(__dirname + fileName, function (err) {
-        if (err) {
-            next(err);
-        } else {
-            console.log('Sent:', fileName);
-        }
-    });
-});
+
 
 vcard.get("/vip", (req, res) => {
 
-    res.json({ message: "vip vcard!" });
+     res.json({ message: "vip vcard!" }); 
 });
 
 
 vcard.get('/work', function (req, res, next) {
 
     var vCardsJS = require('vcards-js');
+    var fileName = '/vcard.vcf';
 
     //create a new vCard
     vCard = vCardsJS();
@@ -36,7 +27,11 @@ vcard.get('/work', function (req, res, next) {
     res.set('Content-Disposition', 'inline; filename="enesser.vcf"');
 
     //send the response
-    res.send(vCard.getFormattedString());
+    vCard.saveToFile(__dirname + fileName);
+    
+    res.download(__dirname + fileName);
+    res.send(200);
+    res.end();
 });
 
 module.exports = vcard;

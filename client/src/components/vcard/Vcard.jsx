@@ -1,26 +1,20 @@
 import React from "react";
-import ReactDOM from "react-dom";
-import {
-    BrowserRouter,
-    Routes,
-    Route,
-    Navigate
-} from "react-router-dom";
 
-export default function Vcard() {
+export default function Vcard({ type }) {
     const [data, setData] = React.useState(null);
 
     React.useEffect(() => {
-        fetch("/vcard/work")
+        fetch("/vcard/" + type)
             .then((res) => res.json())
             .then((data) => setData(data.message));
-    }, []);
+
+    }, [type]);
 
 
     return (
         <>
-            <p>{!data ? "Loading..." : data}</p>
-          {/*   <Navigate to="/vcard.vcf" /> */}
+            <p>{!data ? "Loading " + type + " ..." : data}</p>
+            {/*   <Navigate to="/vcard.vcf" /> */}
         </>
     )
 }

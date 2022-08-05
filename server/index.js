@@ -28,16 +28,12 @@ function logger(req, res, next) {
 
 
 server.get('/', (req, res) => {
-    res.status(200).json({ message: 'Server is running' });
+    res.status(300).json({ message: 'Server is running' });
 });
 
 
   
-  server.use(`/.netlify/build/api`, router);
   
-
-
-
 const vcard = require('../routes/vcard');
 
 server.use('/vcard', vcard);
