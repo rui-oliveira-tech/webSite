@@ -47,8 +47,8 @@ function App() {
     <>
       <Loading />
       <div className="wideGrid">
-          <Home allPages={allPages} />
-          <CardSection />
+        <Home allPages={allPages} />
+        <CardSection />
       </div>
       <Footer />
     </>
