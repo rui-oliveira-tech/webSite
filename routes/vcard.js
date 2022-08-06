@@ -32,38 +32,38 @@ function getVcard(type, filename) {
 
 
 
-  vCard.logo.attachFromUrl('https://avatars2.githubusercontent.com/u/5659221?v=3&s=460', 'JPEG');
+  vCard.logo.attachFromUrl('https://www.rui-oliveira.com/logo_vcard.png', 'PNG');
 
   switch (type) {
     case "work":
       // Set properties that will only be in "work" card
       vCard.namePrefix = 'Sr.';
-      vCard.title = 'Software Developer';
-      vCard.role = 'Software Development';
-      vCard.note = 'Notes on Eric';
+      vCard.title = 'Industrial electrician';
+      vCard.role = 'Industrial electrician';
+      vCard.note = 'An industrial electrician with 5+ years experience looking for job opportunities.';
       vCard.email = 'hire@rui-oliveira.com';
       vCard.source = 'https://www.rui-oliveira.com/vcard/work';
-      vCard.cellPhone = ['312-555-1414'];
+      vCard.cellPhone = ['+32474127175'];
 
-      vCard.photo.attachFromUrl('/path/to/file.jpeg');
+      vCard.photo.attachFromUrl('https://www.rui-oliveira.com/workFoto_vcard.jpg', 'JPG');
       break;
 
     case "vip":
       // Set properties that will only be in "vip" card
       vCard.namePrefix = 'Mr.';
-      vCard.title = 'Software Developer';
-      vCard.role = 'Software Development';
-      vCard.note = 'Notes on Eric';
+      vCard.title = 'industrial electrician';
+      vCard.role = 'Industrial electrician';
+      vCard.note = 'Your best friend';
       vCard.birthday = new Date(1995, 12, 19);
       vCard.anniversary = new Date(1995, 12, 19);
       vCard.email = 'rui.f.oliveira.95@gmail.com';
       vCard.source = 'https://www.rui-oliveira.com/vcard/vip';
       vCard.cellPhone = [
-        '312-555-1414',
+        '+32474127175',
         '+351934272501'
       ];
 
-      vCard.photo.attachFromUrl('/path/to/file.jpeg');
+      vCard.photo.attachFromUrl('https://www.rui-oliveira.com/workFoto_vcard.jpg', 'JPG');
       break;
 
     default:
