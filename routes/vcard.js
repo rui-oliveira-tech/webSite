@@ -50,7 +50,7 @@ function getVcard(type, filename) {
 
     case "vip":
       // Set properties that will only be in "vip" card
-      vCard.namePrefix = 'Mr.';
+      vCard.namePrefix = 'Besty.';
       vCard.title = 'industrial electrician';
       vCard.role = 'Industrial electrician';
       vCard.note = 'Your best friend';
