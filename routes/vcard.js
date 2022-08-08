@@ -75,7 +75,7 @@ function getVcard(type, fileName) {
   }
 
   // Save file
-  vcard.saveToFile(outputFile);
+  vCard.saveToFile(outputFile);
   return outputFile;
 }
 
