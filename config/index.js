@@ -17,9 +17,8 @@ module.exports = {
     birthday: process.env.BIRTHDAY,
     email: process.env.EMAIL,    
     cellphone: process.env.CELLPHONE,
-
-    source_vip: process.env.SOURCE_VIP,
-    SOURCE_work: process.env.SOURCE_WORK,
     photo: process.env.PHOTO,
+    type_0: process.env.TYPE_0,
+    type_1: process.env.TYPE_1,   
 };
 
