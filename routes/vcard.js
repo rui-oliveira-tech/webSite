@@ -2,7 +2,6 @@ const vcardRouter = require('express').Router();
 const vCardsJS = require('vcards-js');
 
 vcardRouter.get('/:type', function (req, res, next) {
-  console.log("aa");
   const { type } = req.params;
   const fileName = `${type}_vcard.vcf`;
   res.set('Content-Type', `text/vcard; name="${fileName}"`);
