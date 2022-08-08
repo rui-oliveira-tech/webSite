@@ -8,8 +8,10 @@ export default function Vcard({ type }) {
 
   useEffect(() => {
     fetch(`${server}/vcard/${type}`)
+      .then((response) => response.blob())
       .then((data) => {
-        const url = URL.createObjectURL(new Blob([data]));
+        const url = URL.createObjectURL(data);
+        console.log(url);
         setFileUrl(url);
         vCardLink.current?.click();
         URL.revokeObjectURL(url);
