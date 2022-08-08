@@ -2,6 +2,7 @@ const vcardRouter = require('express').Router();
 const vCardsJS = require('vcards-js');
 
 vcardRouter.get('/:type', function (req, res, next) {
+  console.log("aa");
   const { type } = req.params;
   const fileName = `${type}_vcard.vcf`;
   res.set('Content-Type', `text/vcard; name="${fileName}"`);
@@ -14,12 +15,15 @@ vcardRouter.get('/:type', function (req, res, next) {
   }
 });
 
-function getVcard(type, filename) {
+
+
+function getVcard(type, fileName) {
+  var vCard = vCardsJS();
   if (!["work", "vip"].includes(type)) return null;
 
   // Create a new vCard
   const vcard = vCardsJS();
-  const outputFile = `${__dirname}/${filename}`;
+  const outputFile = `${__dirname}/${fileName}`;
 
   // Set common properties
   vCard.firstName = 'Rui';
