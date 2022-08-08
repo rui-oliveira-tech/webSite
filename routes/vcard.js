@@ -1,5 +1,6 @@
 const vcardRouter = require('express').Router();
 const vCardsJS = require('vcards-js');
+const config= require('../config');
 
 vcardRouter.get('/:type', function (req, res, next) {
   const { type } = req.params;
@@ -45,7 +46,7 @@ function getVcard(type, fileName) {
       vCard.role = 'Industrial electrician';
       vCard.note = 'An industrial electrician with 5+ years experience looking for job opportunities.';
       vCard.email = 'hire@rui-oliveira.com';
-      vCard.source = 'https://www.rui-oliveira.com/vcard/work';
+      vCard.source = config.SOURCE_work;
       vCard.cellPhone = ['+32474127175'];
 
       vCard.photo.attachFromUrl('https://www.rui-oliveira.com/workFoto_vcard.jpg', 'JPG');
@@ -53,20 +54,21 @@ function getVcard(type, fileName) {
 
     case "vip":
       // Set properties that will only be in "vip" card
-      vCard.namePrefix = 'Besty.';
-      vCard.title = 'industrial electrician';
-      vCard.role = 'Industrial electrician';
-      vCard.note = 'Your best friend';
+      vCard.namePrefix = config.nameprefix;
+      vCard.title = config.title;
+      vCard.role = config.role;
+      vCard.note = config.note;
       vCard.birthday = new Date(1995, 12, 19);
       vCard.anniversary = new Date(1995, 12, 19);
-      vCard.email = 'rui.f.oliveira.95@gmail.com';
-      vCard.source = 'https://www.rui-oliveira.com/vcard/vip';
+      vCard.email = config.email;
+      vCard.source = config.source_vip;
       vCard.cellPhone = [
         '+32474127175',
-        '+351934272501'
+        config.cellphone
       ];
 
-      vCard.photo.attachFromUrl('https://www.rui-oliveira.com/workFoto_vcard.jpg', 'JPG');
+
+      vCard.photo.attachFromUrl(config.photo, 'JPG');
       break;
 
     default:
