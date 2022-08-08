@@ -6,14 +6,12 @@ vcardRouter.get('/:type', function (req, res, next) {
   const fileName = `${type}_vcard.vcf`;
   res.set('Content-Type', `text/vcard; name="${fileName}"`);
   res.set('Content-Disposition', `inline; filename="${fileName}"`);
-  //const myVcard = getVcard(type, fileName);
-  res.status(200).json({ message: "Could not create requested vcard!" });
-  console.log("asda");
- /*  if (myVcard != null) {
+  const myVcard = getVcard(type, fileName);
+  if (myVcard != null) {
     res.download(myVcard);
   } else {
     res.status(500).json({ message: "Could not create requested vcard!" });
-  } */
+  }
 });
 
 
