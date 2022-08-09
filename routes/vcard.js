@@ -24,6 +24,7 @@ function getVcard(type, fileName) {
   const outputFile = `${__dirname}/${fileName}`;
 
   // Set common properties
+  vCard.version = '4.0';
   vCard.firstName = 'Rui';
   vCard.lastName = 'Oliveira';
   vCard.gender = 'M';
@@ -40,7 +41,7 @@ function getVcard(type, fileName) {
       vCard.title = 'Industrial electrician';
       vCard.role = 'Industrial electrician';
       vCard.note = 'An industrial electrician with 5+ years experience looking for job opportunities.';
-      vCard.email = 'hire@rui-oliveira.com';
+      vCard.workEmail = 'hire@rui-oliveira.com';
       vCard.source = `https://www.rui-oliveira.com/vcard/${config.type_0}`;
       vCard.cellPhone = ['+32474127175'];
 
