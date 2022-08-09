@@ -16,12 +16,12 @@ vcardRouter.get('/:type', function (req, res, next) {
 });
 
 function getVcard(type, fileName) {
-  var vCard = vCardsJS();
   if (![config.type_0, config.type_1].includes(type)) return null;
 
   // Create a new vCard
-  const vcard = vCardsJS();
-  const outputFile = `${__dirname}/${fileName}`;
+  const vCard = vCardsJS();
+  const dirname = process.cwd();
+  const outputFile = `${dirname}/tempFiles/${fileName}`;
 
   // Set common properties
   vCard.version = '3.0';
@@ -34,8 +34,8 @@ function getVcard(type, fileName) {
   vCard.socialUrls['linkedIn'] = 'https://www.linkedin.com/in/rui-oliveira--tech/';
   vCard.socialUrls['github'] = 'https://github.com/rui-oliveira-tech/';
   vCard.socialUrls['instagram'] = 'https://www.instagram.com/rui_oliveira_tech/';
-  vCard.logo.attachFromUrl('https://www.rui-oliveira.com/logo_vcard', 'PNG');
- 
+  vCard.logo.embedFromFile(`${dirname}/client/public/logo_vcard.png`);  /* vCard.logo.attachFromUrl('https://www.rui-oliveira.com/logo_vcard', 'PNG'); */
+
   switch (type) {
     case config.type_0:
       // Set properties that will only be in "work" card
@@ -45,7 +45,7 @@ function getVcard(type, fileName) {
       vCard.note = 'An industrial electrician with 5+ years experience looking for job opportunities.';
       vCard.source = `https://www.rui-oliveira.com/vcard/${config.type_0}`;
 
-      vCard.photo.attachFromUrl('https://www.rui-oliveira.com/workFoto_vcard', 'PNG');
+      vCard.photo.embedFromFile(`${dirname}/client/public/workFoto_vcard.jpeg`); /*  vCard.photo.attachFromUrl('https://www.rui-oliveira.com/workFoto_vcard', 'PNG'); */
       break;
 
     case config.type_1:
@@ -61,7 +61,7 @@ function getVcard(type, fileName) {
       vCard.source = `https://www.rui-oliveira.com/vcard/${config.type_1}`;
       vCard.cellPhone = config.cellphone;
 
-      vCard.photo.attachFromUrl(config.photo, 'PNG');
+      vCard.photo.embedFromFile(`${dirname}/client/public/workFoto_vcard.jpeg`); /*    vCard.photo.attachFromUrl(config.photo, 'JPEG'); */
       break;
 
     default:
