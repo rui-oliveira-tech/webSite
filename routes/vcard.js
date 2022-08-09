@@ -21,7 +21,7 @@ function getVcard(type, fileName) {
   // Create a new vCard
   const vCard = vCardsJS();
   const dirname = process.cwd();
-  const outputFile = `${dirname}/tempFiles/${fileName}`;
+  const outputFile = `${dirname}/${fileName}`;
 
   // Set common properties
   vCard.version = '3.0';
