@@ -18,9 +18,9 @@ export default function Vcard({ type }) {
         setFileUrl(url);
         vCardLink.current?.click();
         URL.revokeObjectURL(url);
-   /*      setTimeout(() => {
+        setTimeout(() => {
           navigate('/');
-        }, 5000); */
+        }, 5000);
       });
   }, []);
 
