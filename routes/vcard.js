@@ -24,17 +24,18 @@ function getVcard(type, fileName) {
   const outputFile = `${__dirname}/${fileName}`;
 
   // Set common properties
-  vCard.version = '4.0';
+  vCard.version = '3.0';
   vCard.firstName = 'Rui';
   vCard.lastName = 'Oliveira';
   vCard.gender = 'M';
+  vCard.workPhone = '+32474127175';
   vCard.workEmail = 'hire@rui-oliveira.com';
   vCard.url = 'https://www.rui-oliveira.com/';
   vCard.socialUrls['linkedIn'] = 'https://www.linkedin.com/in/rui-oliveira--tech/';
   vCard.socialUrls['github'] = 'https://github.com/rui-oliveira-tech/';
   vCard.socialUrls['instagram'] = 'https://www.instagram.com/rui_oliveira_tech/';
-  vCard.logo.attachFromUrl('https://www.rui-oliveira.com/logo_vcard.png', 'PNG');
-
+  vCard.logo.attachFromUrl('https://www.rui-oliveira.com/logo_vcard', 'PNG');
+ 
   switch (type) {
     case config.type_0:
       // Set properties that will only be in "work" card
@@ -43,9 +44,8 @@ function getVcard(type, fileName) {
       vCard.role = 'Industrial electrician';
       vCard.note = 'An industrial electrician with 5+ years experience looking for job opportunities.';
       vCard.source = `https://www.rui-oliveira.com/vcard/${config.type_0}`;
-      vCard.cellPhone = ['+32474127175'];
-
-      vCard.photo.attachFromUrl('https://www.rui-oliveira.com/workFoto_vcard.jpg', 'JPG');
+      
+      vCard.photo.attachFromUrl('https://www.rui-oliveira.com/workFoto_vcard', 'JPG');
       break;
 
     case config.type_1:
@@ -59,10 +59,7 @@ function getVcard(type, fileName) {
       vCard.anniversary = new Date(Number(birthdayArray[0]), Number(birthdayArray[1]), Number(birthdayArray[2]));
       vCard.email = config.email;
       vCard.source = `https://www.rui-oliveira.com/vcard/${config.type_1}`;
-      vCard.cellPhone = [
-        '+32474127175',
-        config.cellphone
-      ];
+      vCard.cellPhone = config.cellphone;
 
       vCard.photo.attachFromUrl(config.photo, 'JPG');
       break;
