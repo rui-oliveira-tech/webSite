@@ -28,13 +28,14 @@ function getVcard(type, fileName) {
   vCard.firstName = 'Rui';
   vCard.lastName = 'Oliveira';
   vCard.gender = 'M';
-  vCard.url = 'https://www.rui-oliveira.com/';
-  vCard.url = 'https://www.linkedin.com/in/rui-oliveira--tech/';
-  vCard.url = 'https://github.com/rui-oliveira-tech/';
-  vCard.url = 'https://www.instagram.com/rui_oliveira_tech/';
-/*   vCard.socialUrls['linkedIn'] = 'https://www.linkedin.com/in/rui-oliveira--tech/';
-  vCard.socialUrls['github'] = 'https://github.com/rui-oliveira-tech/';
-  vCard.socialUrls['instagram'] = 'https://www.instagram.com/rui_oliveira_tech/'; */
+  vCard.workEmail = 'hire@rui-oliveira.com';
+  vCard.url = ['https://www.rui-oliveira.com/',
+    'https://www.linkedin.com/in/rui-oliveira--tech/',
+    'https://github.com/rui-oliveira-tech/',
+    'https://www.instagram.com/rui_oliveira_tech/'];
+  /*   vCard.socialUrls['linkedIn'] = 'https://www.linkedin.com/in/rui-oliveira--tech/';
+    vCard.socialUrls['github'] = 'https://github.com/rui-oliveira-tech/';
+    vCard.socialUrls['instagram'] = 'https://www.instagram.com/rui_oliveira_tech/'; */
   vCard.logo.attachFromUrl('https://www.rui-oliveira.com/logo_vcard.png', 'PNG');
 
   switch (type) {
@@ -44,7 +45,6 @@ function getVcard(type, fileName) {
       vCard.title = 'Industrial electrician';
       vCard.role = 'Industrial electrician';
       vCard.note = 'An industrial electrician with 5+ years experience looking for job opportunities.';
-      vCard.workEmail = 'hire@rui-oliveira.com';
       vCard.source = `https://www.rui-oliveira.com/vcard/${config.type_0}`;
       vCard.cellPhone = ['+32474127175'];
 
