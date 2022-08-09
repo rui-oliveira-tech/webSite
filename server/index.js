@@ -14,6 +14,7 @@ server.use(helmet());
 server.use(cors({ origin: config.origin }));
 server.use(express.json());
 server.use(logger);
+// server.use(express.static("images"))
 
 server.get('/', (req, res) => {
   res.status(200).json({ message: 'Server is running' });
