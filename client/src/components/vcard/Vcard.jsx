@@ -44,7 +44,7 @@ export default function Vcard() {
         console.log('Request failed', error);
         setTimeout(() => {
           navigate('/');
-        }, 5000);
+        }, 1000);
       });
   }, []);
 
