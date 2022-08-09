@@ -44,8 +44,8 @@ function getVcard(type, fileName) {
       vCard.role = 'Industrial electrician';
       vCard.note = 'An industrial electrician with 5+ years experience looking for job opportunities.';
       vCard.source = `https://www.rui-oliveira.com/vcard/${config.type_0}`;
-      
-      vCard.photo.attachFromUrl('https://www.rui-oliveira.com/workFoto_vcard', 'JPG');
+
+      vCard.photo.attachFromUrl('https://www.rui-oliveira.com/workFoto_vcard', 'PNG');
       break;
 
     case config.type_1:
@@ -61,7 +61,7 @@ function getVcard(type, fileName) {
       vCard.source = `https://www.rui-oliveira.com/vcard/${config.type_1}`;
       vCard.cellPhone = config.cellphone;
 
-      vCard.photo.attachFromUrl(config.photo, 'JPG');
+      vCard.photo.attachFromUrl(config.photo, 'PNG');
       break;
 
     default:
@@ -72,3 +72,5 @@ function getVcard(type, fileName) {
   return outputFile;
 }
 module.exports = vcardRouter;
+
+
