@@ -29,9 +29,12 @@ function getVcard(type, fileName) {
   vCard.lastName = 'Oliveira';
   vCard.gender = 'M';
   vCard.url = 'https://www.rui-oliveira.com/';
-  vCard.socialUrls['linkedIn'] = 'https://www.linkedin.com/in/rui-oliveira--tech/';
+  vCard.url = 'https://www.linkedin.com/in/rui-oliveira--tech/';
+  vCard.url = 'https://github.com/rui-oliveira-tech/';
+  vCard.url = 'https://www.instagram.com/rui_oliveira_tech/';
+/*   vCard.socialUrls['linkedIn'] = 'https://www.linkedin.com/in/rui-oliveira--tech/';
   vCard.socialUrls['github'] = 'https://github.com/rui-oliveira-tech/';
-  vCard.socialUrls['instagram'] = 'https://www.instagram.com/rui_oliveira_tech/';
+  vCard.socialUrls['instagram'] = 'https://www.instagram.com/rui_oliveira_tech/'; */
   vCard.logo.attachFromUrl('https://www.rui-oliveira.com/logo_vcard.png', 'PNG');
 
   switch (type) {
