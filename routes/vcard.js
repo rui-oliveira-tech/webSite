@@ -2,23 +2,30 @@ const path = require("path");
 const vcardRouter = require('express').Router();
 const vCardsJS = require('vcards-js');
 const config = require('../config');
+const fs = require("fs");
 
-vcardRouter.get('/:type', function (req, res, next) {
+const validateVcardType = (req, res, next) => {
+  const { type } = req.params;
+  if (![config.type_0, config.type_1].includes(type)) {
+    res.status(404).json({ message: "This type does not exist!" });
+  }
+  next();
+}
+
+vcardRouter.get('/:type', validateVcardType, async function (req, res, next) {
   const { type } = req.params;
   const fileName = `${type}_vcard.vcf`;
   res.set('Content-Type', `text/vcard; name="${fileName}"`);
   res.set('Content-Disposition', `inline; filename="${fileName}"`);
-  const myVcard = getVcard(type, fileName);
+  const myVcard = await getVcard(type, fileName);
   if (myVcard != null) {
     res.download(myVcard);
   } else {
-    res.status(400).json({ message: "Could not create requested vcard!" });
+    res.status(500).json({ message: "Could not create requested vcard!" });
   }
 });
 
-function getVcard(type, fileName) {
-  if (![config.type_0, config.type_1].includes(type)) return null;
-
+async function getVcard(type, fileName) {
   // Create a new vCard
   const vCard = vCardsJS();
   const publicBasePath = path.join(__dirname, "../client/public");
@@ -70,10 +77,21 @@ function getVcard(type, fileName) {
     default:
       break;
   }
+  // Make folder
+  await createDir(tmpPath);
   // Save file
   vCard.saveToFile(outputPath);
   return outputPath;
 }
+
+async function createDir(dir) {
+  try {
+    await fs.promises.access(dir, fs.constants.F_OK);
+  } catch (e) {
+    await fs.promises.mkdir(dir);
+  }
+}
+
 module.exports = vcardRouter;
 
 

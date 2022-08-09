@@ -10,7 +10,7 @@ import Footer from "./components/footer/Footer";
 
 
 function App() {
-  const scrollSpeed = 500;
+  // const scrollSpeed = 500;
 
   // let page = useRef(0);
   let allPages = useRef([]);

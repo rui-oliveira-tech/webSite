@@ -46,6 +46,7 @@ export default function Vcard() {
           navigate('/');
         }, 1000);
       });
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const filename = `${type}_vcard.vcf`;
