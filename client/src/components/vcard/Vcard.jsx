@@ -56,7 +56,7 @@ export default function Vcard() {
 
 
   return (
-    <a ref={vCardLink} href={fileUrl} download={filename}>{errors? "Server is sleeping! Come back after 7am.":"Download Vcard"}</a>
+    <a ref={vCardLink} href={fileUrl} download={filename}>{errors? "Server is sleeping! Come back after next month.":"Download Vcard"}</a>
   )
 }
 
