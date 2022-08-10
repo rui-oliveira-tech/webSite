@@ -50,8 +50,8 @@ async function getVcard(type, fileName) {
 
   switch (type) {
     case config.type_0:
-      vCard.namePrefix = 'Sr. ';
-      vCard.title = 'Industrial electrician';
+      vCard.namePrefix = '🧑‍🔧 Sr. ';
+      vCard.title = '⚡ Industrial electrician ⚡';
       vCard.note = 'An industrial electrician with 5+ years experience looking for job opportunities.';
 
       const publicPhotoPath = path.join(publicBasePath, "workFoto_vcard.jpg");
