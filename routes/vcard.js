@@ -6,7 +6,7 @@ const fs = require("fs");
 
 const validateVcardType = (req, res, next) => {
   const { type } = req.params;
-  if (![config.type_0, config.type_1].includes(type)) {
+  if (![config.type_0, config.type_1, config.type_2].includes(type)) {
     res.status(404).json({ message: "This type does not exist!" });
   }
   next();
@@ -43,7 +43,8 @@ async function getVcard(type, fileName) {
   vCard.socialUrls['linkedIn'] = 'https://www.linkedin.com/in/rui-oliveira--tech/';
   vCard.socialUrls['github'] = 'https://github.com/rui-oliveira-tech/';
   vCard.socialUrls['instagram'] = 'https://www.instagram.com/rui_oliveira_tech/';
-  
+  vCard.source = `https://www.rui-oliveira.com/vcard/${type}`;
+
   const publicLogoPath = path.join(publicBasePath, "logo_vcard.png");
   vCard.logo.embedFromFile(publicLogoPath);
 
@@ -51,28 +52,38 @@ async function getVcard(type, fileName) {
     case config.type_0:
       vCard.namePrefix = 'Sr. ';
       vCard.title = 'Industrial electrician';
-      vCard.role = 'Industrial electrician';
       vCard.note = 'An industrial electrician with 5+ years experience looking for job opportunities.';
-      vCard.source = `https://www.rui-oliveira.com/vcard/${config.type_0}`;
 
       const publicPhotoPath = path.join(publicBasePath, "workFoto_vcard.jpg");
       vCard.photo.embedFromFile(publicPhotoPath);
       break;
 
     case config.type_1:
-      vCard.namePrefix = config.nameprefix;
-      vCard.title = config.title;
-      vCard.role = config.role;
-      vCard.note = config.note;
+      vCard.namePrefix = config.nameprefix_1;
+      vCard.title = config.title_1;
+      vCard.note = config.note_1;
       vCard.birthday = new Date(config.birthday);
       vCard.anniversary = new Date(config.birthday);
       vCard.email = config.email;
-      vCard.source = `https://www.rui-oliveira.com/vcard/${config.type_1}`;
       vCard.cellPhone = config.cellphone;
 
       const privatePhotoPath = path.join(publicBasePath, "workFoto_vcard.jpg");
       vCard.photo.embedFromFile(privatePhotoPath);
       break;
+
+    case config.type_2:
+      vCard.namePrefix = config.nameprefix_2;
+      vCard.title = config.title_2;
+      vCard.note = config.note_2;
+      vCard.birthday = new Date(config.birthday);
+      vCard.anniversary = new Date(config.birthday);
+      vCard.email = config.email;
+      vCard.cellPhone = config.cellphone;
+
+      const privateSpecialPhotoPath = path.join(publicBasePath, "workFoto_vcard.jpg");
+      vCard.photo.embedFromFile(privateSpecialPhotoPath);
+      break;
+
 
     default:
       break;

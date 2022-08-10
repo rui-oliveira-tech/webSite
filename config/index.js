@@ -10,15 +10,21 @@ module.exports = {
         'http://localhost',
         'http://localhost:3000',
     ],
-    nameprefix: process.env.NAMEPREFIX,
-    title: process.env.TITLE,
-    role: process.env.ROLE,
-    note: process.env.NOTE,
+
+    type_0: process.env.TYPE_0,
+    type_1: process.env.TYPE_1,
+    type_2: process.env.TYPE_2,
+
     birthday: process.env.BIRTHDAY,
-    email: process.env.EMAIL,    
+    email: process.env.EMAIL,
     cellphone: process.env.CELLPHONE,
     photo: process.env.PHOTO,
-    type_0: process.env.TYPE_0,
-    type_1: process.env.TYPE_1,   
-};
 
+    nameprefix_1: process.env.NAMEPREFIX_1,
+    title_1: process.env.TITLE_1,
+    note_1: process.env.NOTE_1,
+
+    nameprefix_2: process.env.NAMEPREFIX_2,
+    title_2: process.env.TITLE_2,
+    note_2: process.env.NOTE_2
+};
