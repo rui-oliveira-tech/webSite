@@ -23,6 +23,7 @@ export default function Vcard() {
   const { type } = useParams();
   const vCardLink = useRef(null);
   const [fileUrl, setFileUrl] = useState(null);
+  const [errors, setErrors] = useState(null);
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -42,11 +43,12 @@ export default function Vcard() {
       })
       .catch(function (error) {                        // catch
         console.log('Request failed', error);
+        setErrors(error);
         setTimeout(() => {
           navigate('/');
         }, 1000);
       });
-  // eslint-disable-next-line react-hooks/exhaustive-deps
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const filename = `${type}_vcard.vcf`;
@@ -54,7 +56,7 @@ export default function Vcard() {
 
 
   return (
-    <a ref={vCardLink} href={fileUrl} download={filename}>Download Vcard</a>
+    <a ref={vCardLink} href={fileUrl} download={filename}>{errors? "Server is sleeping! Come back after 7am.":"Download Vcard"}</a>
   )
 }
 
