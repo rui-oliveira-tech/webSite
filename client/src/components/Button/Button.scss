@@ -3,10 +3,10 @@
   user-select: none;
   cursor: pointer;
   transition: all 333ms cubic-bezier(0.77, 0, 0.175, 1);
-  
-  font-size: 1.4rem;
+
+  font-size: 1.5rem;
   color: black;
-  padding: 1.4rem 2.2rem;
+  padding: 1.5rem 2.2rem;
   margin: 0 8px;
   text-transform: uppercase;
   text-decoration: none;
@@ -42,7 +42,7 @@
       background: #344759;
     }
   }
-  
+
   @media (min-width: 270px) and (max-width: 511px) {
     padding: 1rem 1.5rem;
   }
@@ -51,7 +51,7 @@
     &:hover {
       transition-delay: 0.2s;
       color: white;
-  
+
       &:before {
         transition-delay: 0s;
       }
@@ -59,14 +59,14 @@
         transition-delay: 0.35s;
       }
     }
-  
+
     &.from-center {
       &:hover {
         &:before {
           left: 0;
           width: 100%;
         }
-  
+
         &:after {
           top: 0;
           height: 100%;
