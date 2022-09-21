@@ -19,7 +19,8 @@ vcardRouter.get('/:type', validateVcardType, async function (req, res, next) {
   res.set('Content-Disposition', `inline; filename="${fileName}"`);
   const myVcard = await getVcard(type, fileName);
   if (myVcard != null) {
-    res.download(myVcard);
+    res.send(myVcard);
+    //res.download(myVcard);
   } else {
     res.status(500).json({ message: "Could not create requested vcard!" });
   }
@@ -89,19 +90,21 @@ async function getVcard(type, fileName) {
       break;
   }
   // Make folder
-  await createDir(tmpPath);
+  // await createDir(tmpPath);
   // Save file
-  vCard.saveToFile(outputPath);
-  return outputPath;
+  //vCard.saveToFile(outputPath);
+  //return outputPath;
+  return vCard.getFormattedString();
+
 }
 
-async function createDir(dir) {
+/* async function createDir(dir) {
   try {
     await fs.promises.access(dir, fs.constants.F_OK);
   } catch (e) {
     await fs.promises.mkdir(dir);
   }
-}
+} */
 
 module.exports = vcardRouter;
 
