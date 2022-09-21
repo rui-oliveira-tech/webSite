@@ -98,13 +98,13 @@ async function getVcard(type, fileName) {
 
 }
 
-async function createDir(dir) {
+/* async function createDir(dir) {
   try {
     await fs.promises.access(dir, fs.constants.F_OK);
   } catch (e) {
     await fs.promises.mkdir(dir);
   }
-}
+} */
 
 module.exports = vcardRouter;
 
