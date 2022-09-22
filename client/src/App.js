@@ -33,7 +33,7 @@ function App() {
       } else {
         page.current -= 1;
       }
-      page.current = Math.min(Math.max(0, page.current), 2);
+      page.current = Math.min(Math.max(0, page.current), 1);
       allPages.current[page.current].scrollIntoView({
         behavior: "smooth",
         block: "center",
@@ -43,6 +43,8 @@ function App() {
       }, scrollSpeed)
     }
   }
+
+  console.log(isMobile);
 
   return (
     <>
