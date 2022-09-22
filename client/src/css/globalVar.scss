@@ -30,6 +30,8 @@ $Color: #00b7ff;
   padding-bottom: 9em;
 
   &.projects {
+    height: auto;
+    min-height: 100vh;
     padding-bottom: 6.25em;
   }
 

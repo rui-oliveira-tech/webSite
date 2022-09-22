@@ -1,17 +1,17 @@
-import React, { useEffect, useState } from "react";
-import { BrowserView, MobileView } from 'react-device-detect';
-import CardSectionBrowserView from "./CardSectionBrowserView"
-import CardSectionMobileView from "./CardSectionMobileView"
+import React from "react";
+import "./_CardSection.scss"
+import sections from "./sectionsConfig.js"
 
 export default function CardSection() {
   return (
-    <>
-      <BrowserView>
-        <CardSectionBrowserView />
-      </BrowserView>
-      <MobileView>
-        <CardSectionMobileView />
-      </MobileView>
-    </>
+    <section className="scroll_to projects">
+      <div className="about">
+        {
+          sections.map((section, i) => (
+            section.text
+          ))
+        }
+      </div>
+    </section>
   )
 }
