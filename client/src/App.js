@@ -44,8 +44,6 @@ function App() {
     }
   }
 
-  console.log(isMobile);
-
   return (
     <>
       <Loading />
