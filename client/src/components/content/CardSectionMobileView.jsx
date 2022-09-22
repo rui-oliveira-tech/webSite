@@ -1,12 +1,22 @@
 import React, { useEffect, useState } from "react";
 import "./_SectionMobileView.scss"
 import sections from "./sectionsConfig.js"
-import Card from "./Card"
 
 export default function CardSectionMobileView() {
 
-
   return (
-    <h2>      sdfdsffds    </h2>
+    <section className="scroll_to projects">
+      {
+        sections.map((section) => (
+          <div className="about">
+            <div className="layout">
+              <div className="titlePoss">
+                {section.text}
+              </div>
+            </div>
+          </div>
+        ))
+      }
+    </section>
   )
 }
