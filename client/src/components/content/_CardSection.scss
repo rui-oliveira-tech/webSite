@@ -31,7 +31,6 @@
 .project {
   width: 100%;
   position: relative;
-  // padding: 3em;
 
   margin-bottom: 2em;
   background-repeat: no-repeat;
@@ -40,14 +39,12 @@
 
   &:hover {
     .overlay {
-    animation: hoverProjects 0.33s ease-in-out forwards;
+      animation: hoverProjects .33s ease-in-out forwards;
     }
   }
 
   .overlay {
-    opacity: 1;
-    transition: all 0.33s ease-in-out;
-    // background-blend-mode: color;
+    animation: unhoverProjects .33s ease-in-out backwards;
 
     background-repeat: no-repeat;
     background-position: center center;
@@ -231,18 +228,36 @@
   }
 }
 
-
 @keyframes hoverProjects {
   0% {
     opacity: 1;
+    z-index: 2;
   }
 
   99% {
     opacity: 0;
+    z-index: 2;
   }
 
   100% {
     opacity: 0;
-    display: none;
+    z-index: -1;
+  }
+}
+
+@keyframes unhoverProjects {
+  0% {
+    opacity: 0;
+    z-index: -1;
+  }
+
+  1% {
+    opacity: 0;
+    z-index: 2;
+  }
+
+  100% {
+    opacity: 1;
+    z-index: 2;
   }
 }
