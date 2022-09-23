@@ -130,6 +130,22 @@
     line-height: 1em;
   }
 
+  /*   .estraSmall {
+    font-size: 1em;
+  }
+  .small {
+    font-size: 1.5em;
+  }
+  .medium {
+    font-size: 1.75em;
+  }
+  .big {
+    font-size: 2.25em;
+  }
+  .extraBig {
+    font-size: 4.25em;
+  } */
+
   .estraSmall {
     font-size: 0.5em;
   }
@@ -161,6 +177,24 @@
     }
     .extraBig {
       font-size: 1.5em;
+    }
+  }
+
+  @media (min-width: 512px) and (max-width: 1370px) {
+    .estraSmall {
+      font-size: 0.5em;
+    }
+    .small {
+      font-size: 0.75em;
+    }
+    .medium {
+      font-size: 1em;
+    }
+    .big {
+      font-size: 1.25em;
+    }
+    .extraBig {
+      font-size: 2em;
     }
   }
 }
