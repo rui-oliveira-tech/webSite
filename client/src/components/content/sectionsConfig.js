@@ -181,31 +181,31 @@ const sections = [
                     <p>Who I am</p>
                 </div>
                 <div className="underlay">
-                    <h2 className="project__title bold">About</h2>
+                    <h2 className="project__title extraBig bold">About</h2>
                     <p className="light text big">I'm Rui. I'm a Industrial Electrician.</p>
-                    <p className="light text">
+                    <p className="light text medium">
                         I am currently working at the{" "}
                         <a href={experience[0].website}>{experience[0].company}</a> in{" "}
                         {experience[0].location}. However I have total and immediate
                         availability to start working.
                     </p>
-                    <p className="light text">
+                    <p className="light text medium">
                         I have excellent knowledge of Electricity, Pneumatics, Hydraulics,
                         Interpretation of schematics, Informatics in the user's perspective,
                         as well as in the use of internet.
                     </p>
-                    <p className="light text">
+                    <p className="light text medium">
                         My strengths are Electrification of electrical boards and structures,
                         Industrial maintenance and repair.
                     </p>
-                    <p className="light text">
+                    <p className="light text medium">
                         I also have experience in industrial automation and electromechanical.
                     </p>
-                    <p className="light text">
+                    <p className="light text medium">
                         I have good team work spirit, cooperative and with a taste for
                         knowledge and learning.
                     </p>
-                    <p className="light text">
+                    <p className="light text medium">
                         I have preference in working as an industrial electrician, but I do
                         not exclude the possibility of performing another position in
                         different areas.
@@ -227,21 +227,21 @@ const sections = [
                     <p>What I've learned</p>
                 </div>
                 <div className="underlay">
-                    <h2 className="project__title bold">
+                    <h2 className="project__title extraBig bold">
                         Education
                     </h2>
                     {education.map((degree, i) => (
                         <React.Fragment key={i}>
                             <p className="light big subTitle">{degree.title}</p>
-                            <a className="textGlue" href={degree.website}>{degree.company} in {degree.location}</a>
-                            <p className="text">{degree.startDate === "" ? degree.endDate : degree.startDate + " - " + degree.endDate}</p>
+                            <a className="textGlue medium" href={degree.website}>{degree.company} in {degree.location}</a>
+                            <p className="text small">{degree.startDate === "" ? degree.endDate : degree.startDate + " - " + degree.endDate}</p>
                         </React.Fragment>
                     ))}
                 </div>
             </div>
         ),
     },
-    {
+    /* {
         id: 3,
         title: "Languages",
         hoverTitle: "",
@@ -251,9 +251,9 @@ const sections = [
                     <p>texto aqui</p>
                 </div>
                 <div className="underlay">
-                    <h2 className="project__title bold">Languages</h2>
-                    <table className="languagesTable">
-                        <thead>
+                    <h2 className="project__title extraBig bold">Languages</h2>
+                    <table className="languagesTable small">
+                        <thead className="small">
                             <tr>
                                 <th width="150px"> LANGUAGE</th>
                                 <th className="divid" colSpan="2">
@@ -265,7 +265,7 @@ const sections = [
                                 <th className="divid">WRITING</th>
                             </tr>
                         </thead>
-                        <tbody>
+                        <tbody className="small">
                             <tr>
                                 <td></td>
                                 <td>Listening</td>
@@ -287,8 +287,8 @@ const sections = [
                             <tr>
                                 <td className="noBorder left" ></td>
                                 <td className="noBorder left" colSpan="5">
-                                    <p className="small text noPading">Levels: A1/2: Basic user - B1/2: Independent user - C1/2 Proficient user</p>
-                                    <p className="small text noPading">Common European Framework of Reference for Languages</p>
+                                    <p className="text estraSmall noPading">Levels: A1/2: Basic user - B1/2: Independent user - C1/2 Proficient user</p>
+                                    <p className="text estraSmall noPading">Common European Framework of Reference for Languages</p>
                                 </td>
                             </tr>
                         </tbody>
@@ -296,7 +296,7 @@ const sections = [
                 </div>
             </div>
         ),
-    },
+    }, */
     {
         id: 4,
         title: "Experience",
@@ -307,14 +307,14 @@ const sections = [
                     <p>What I've done</p>
                 </div>
                 <div className="underlay">
-                    <h2 className="project__title bold">Experience</h2>
+                    <h2 className="project__title extraBig bold">Experience</h2>
                     {experience.map((degree, i) => (
                         <React.Fragment key={i}>
                             <p className="light big subTitle">{degree.title}</p>
-                            <a className="textGlue" href={degree.website}>{degree.company} in {degree.location}</a>
-                            <p className="text">{degree.startDate} - {degree.endDate} - {degree.offerType}{" "}</p>
-                            <p className="light text textSpacement">{degree.skillsGained}</p>
-                            <p className="light text textSpacement">
+                            <a className="textGlue medium" href={degree.website}>{degree.company} in {degree.location}</a>
+                            <p className="text small">{degree.startDate} - {degree.endDate} - {degree.offerType}{" "}</p>
+                            <p className="light text medium textSpacement">{degree.skillsGained}</p>
+                            <p className="light text medium textSpacement">
                                 {degree.functionsPerformed}
                             </p>
                         </React.Fragment>
@@ -333,12 +333,12 @@ const sections = [
                     <p>What I've created</p>
                 </div>
                 <div className="underlay">
-                    <h2 className="project__title bold">Projects</h2>
+                    <h2 className="project__title extraBig bold">Projects</h2>
                     {projects.map((degree, i) => (
                         <React.Fragment key={i}>
                             <a className="light big subTitle" href={degree.website}>{degree.title}</a>
-                            <p className="text">{degree.startDate} - {degree.endDate}</p>
-                            <p className="light text textSpacement">{degree.description}</p>
+                            <p className="text small">{degree.startDate} - {degree.endDate}</p>
+                            <p className="light text medium textSpacement">{degree.description}</p>
                         </React.Fragment>
                     ))}
                 </div>
@@ -356,18 +356,18 @@ const sections = [
                 </div>
                 <div className="underlay">
 
-                    <h2 className="project__title bold">Other things</h2>
+                    <h2 className="project__title extraBig bold">Other things</h2>
                     {other.map((degree, i) => (
                         <React.Fragment key={i}>
                             <p className="light big subTitle">{degree.title}</p>
-                            <p className="text">{degree.startDate} - {degree.endDate}</p>
-                            <p className="light text textSpacement">{degree.description}</p>
+                            <p className="text small">{degree.startDate} - {degree.endDate}</p>
+                            <p className="light text medium textSpacement">{degree.description}</p>
                         </React.Fragment>
                     ))}
                 </div>
             </div>
         ),
-    },
+    }, 
 ];
 
 export default sections;

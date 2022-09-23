@@ -17,12 +17,12 @@ function App() {
   let scrollTimeout = null;
   useEffect(() => {
     allPages.current = document.querySelectorAll(".scroll_to");
-   /*  if (!isMobile && false) {
-      const root = document.querySelector("#root");
-      root.onwheel = scrollPage;
-      // swipeup swipedown
-      page.current = Math.ceil(window.pageYOffset / allPages.current[0].scrollHeight);
-    } */
+    /*  if (!isMobile && false) {
+       const root = document.querySelector("#root");
+       root.onwheel = scrollPage;
+       // swipeup swipedown
+       page.current = Math.ceil(window.pageYOffset / allPages.current[0].scrollHeight);
+     } */
   }, []);
 
   function scrollPage(event) {
