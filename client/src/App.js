@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from "react";
-import { isMobile } from 'react-device-detect';
+//import { isMobile } from 'react-device-detect';
 import "./css/ruicons-embedded.css";
 import "./css/globalVar.scss";
 import "./css/global.css";
@@ -17,12 +17,12 @@ function App() {
   let scrollTimeout = null;
   useEffect(() => {
     allPages.current = document.querySelectorAll(".scroll_to");
-    if (!isMobile && false) {
+   /*  if (!isMobile && false) {
       const root = document.querySelector("#root");
       root.onwheel = scrollPage;
       // swipeup swipedown
       page.current = Math.ceil(window.pageYOffset / allPages.current[0].scrollHeight);
-    }
+    } */
   }, []);
 
   function scrollPage(event) {
@@ -46,7 +46,7 @@ function App() {
 
   return (
     <>
-      {/* <Loading /> */}
+      <Loading />
       <div className="wideGrid">
         <Home allPages={allPages} />
         <CardSection />
