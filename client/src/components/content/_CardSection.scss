@@ -40,7 +40,7 @@
 
   &:hover {
     .overlay {
-      opacity: 0;
+    animation: hoverProjects 0.33s ease-in-out forwards;
     }
   }
 
@@ -228,5 +228,21 @@
 
   .flag-icon {
     margin-right: 1em;
+  }
+}
+
+
+@keyframes hoverProjects {
+  0% {
+    opacity: 1;
+  }
+
+  99% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 0;
+    display: none;
   }
 }
