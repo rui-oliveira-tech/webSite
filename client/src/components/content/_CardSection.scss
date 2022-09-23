@@ -131,22 +131,22 @@
   }
 
   .estraSmall {
-    font-size: 1em;
+    font-size: 0.5em;
   }
   .small {
-    font-size: 1.5em;
+    font-size: 1em;
   }
   .medium {
-    font-size: 1.75em;
+    font-size: 1.5em;
   }
   .big {
-    font-size: 2.25em;
+    font-size: 2em;
   }
   .extraBig {
-    font-size: 4.25em;
+    font-size: 3.75em;
   }
 
-  @media (min-width: 270px) and (max-width: 1023px) {
+  @media (min-width: 270px) and (max-width: 512px) {
     .estraSmall {
       font-size: 0.25em;
     }
@@ -154,32 +154,13 @@
       font-size: 0.4em;
     }
     .medium {
-      font-size: 0.60em;
+      font-size: 0.6em;
     }
     .big {
       font-size: 0.75em;
     }
     .extraBig {
       font-size: 1.5em;
-    }
-  }
-
-  //@media (min-width: 512px) and (max-width: 1023px) {
-  @media (min-width: 512px) and (max-width: 1023px) {
-    .estraSmall {
-      font-size: 0.5em;
-    }
-    .small {
-      font-size: 1em;
-    }
-    .medium {
-      font-size: 1.25em;
-    }
-    .big {
-      font-size: 1.75em;
-    }
-    .extraBig {
-      font-size: 3.75em;
     }
   }
 }

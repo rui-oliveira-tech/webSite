@@ -241,14 +241,14 @@ const sections = [
             </div>
         ),
     },
-    /* {
+    {
         id: 3,
         title: "Languages",
         hoverTitle: "",
         text: (
             <div className="project" style={{ gridArea: "languages", backgroundImage: `url(${EducationImg})` }}>
                 <div className="overlay" style={{ backgroundImage: `${gradient}, url(${EducationImg})` }}>
-                    <p>texto aqui</p>
+                    <p>What I speak</p>
                 </div>
                 <div className="underlay">
                     <h2 className="project__title extraBig bold">Languages</h2>
@@ -296,7 +296,7 @@ const sections = [
                 </div>
             </div>
         ),
-    }, */
+    },
     {
         id: 4,
         title: "Experience",
@@ -367,7 +367,7 @@ const sections = [
                 </div>
             </div>
         ),
-    }, 
+    },
 ];
 
 export default sections;
