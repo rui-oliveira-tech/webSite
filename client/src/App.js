@@ -17,7 +17,7 @@ function App() {
   let scrollTimeout = null;
   useEffect(() => {
     allPages.current = document.querySelectorAll(".scroll_to");
-    if (!isMobile) {
+    if (!isMobile && false) {
       const root = document.querySelector("#root");
       root.onwheel = scrollPage;
       // swipeup swipedown

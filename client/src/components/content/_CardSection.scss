@@ -8,11 +8,24 @@
   grid-template-rows: auto auto auto auto;
   grid-template-columns: 2em 1fr 2em 1fr 2em;
 
-  grid-template-areas: 
+  grid-template-areas:
     ". about about about ."
     ". education . experience ."
     ". languages . experience ."
-    ". others . projects ."
+    ". projects . others .";
+
+  @media (min-width: 270px) and (max-width: 1023px) {
+    grid-template-rows: auto auto auto auto auto auto auto;
+    grid-template-columns: 2em 1fr 2em;
+
+    grid-template-areas:
+      ". about ."
+      ". education ."
+      ". languages ."
+      ". experience ."
+      ". projects ."
+      ". others .";
+  }
 }
 
 .project {
@@ -33,7 +46,7 @@
 
   .overlay {
     opacity: 1;
-    transition: all .33s ease-in-out;
+    transition: all 0.33s ease-in-out;
     // background-blend-mode: color;
 
     background-repeat: no-repeat;
@@ -59,7 +72,6 @@
       overflow: visible;
       text-shadow: 1px 1px 3px #000;
     }
-
   }
   .underlay {
     position: relative;
@@ -68,7 +80,6 @@
     background-color: var(--backgroundColor2);
     height: 100%;
   }
-
 
   &__languages {
     position: relative;
@@ -125,7 +136,6 @@
     line-height: 1em;
   }
 }
-
 
 .languagesTable {
   margin-block-start: 0.8em;
