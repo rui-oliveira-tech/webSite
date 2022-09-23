@@ -1,4 +1,5 @@
 import React, { useEffect, useRef } from "react";
+import { isMobile } from 'react-device-detect';
 import "./css/ruicons-embedded.css";
 import "./css/globalVar.scss";
 import "./css/global.css";
@@ -10,20 +11,20 @@ import Footer from "./components/footer/Footer";
 
 
 function App() {
-  // const scrollSpeed = 500;
-
-  // let page = useRef(0);
+  const scrollSpeed = 500;
+  let page = useRef(0);
   let allPages = useRef([]);
-  // let scrollTimeout = null;
+  let scrollTimeout = null;
   useEffect(() => {
     allPages.current = document.querySelectorAll(".scroll_to");
-    // const root = document.querySelector("#root");
-    // root.onwheel = scrollPage;
-    // swipeup swipedown
-
-    // page.current = Math.ceil(window.pageYOffset / allPages.current[0].scrollHeight);
+    if (!isMobile && false) {
+      const root = document.querySelector("#root");
+      root.onwheel = scrollPage;
+      // swipeup swipedown
+      page.current = Math.ceil(window.pageYOffset / allPages.current[0].scrollHeight);
+    }
   }, []);
-  /* 
+
   function scrollPage(event) {
     event.preventDefault();
     if (scrollTimeout === null) {
@@ -32,7 +33,7 @@ function App() {
       } else {
         page.current -= 1;
       }
-      page.current = Math.min(Math.max(0, page.current), 2);
+      page.current = Math.min(Math.max(0, page.current), 1);
       allPages.current[page.current].scrollIntoView({
         behavior: "smooth",
         block: "center",
@@ -41,11 +42,11 @@ function App() {
         scrollTimeout = null;
       }, scrollSpeed)
     }
-  } */
+  }
 
   return (
     <>
-      <Loading />
+      {/* <Loading /> */}
       <div className="wideGrid">
         <Home allPages={allPages} />
         <CardSection />

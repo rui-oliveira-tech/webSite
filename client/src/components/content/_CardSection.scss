@@ -1,0 +1,171 @@
+.about {
+  position: relative;
+
+  margin-left: auto;
+  margin-right: auto;
+
+  display: grid;
+  grid-template-rows: auto auto auto auto;
+  grid-template-columns: 2em 1fr 2em 1fr 2em;
+
+  grid-template-areas:
+    ". about about about ."
+    ". education . experience ."
+    ". languages . experience ."
+    ". projects . others .";
+
+  @media (min-width: 270px) and (max-width: 1023px) {
+    grid-template-rows: auto auto auto auto auto auto auto;
+    grid-template-columns: 2em 1fr 2em;
+
+    grid-template-areas:
+      ". about ."
+      ". education ."
+      ". languages ."
+      ". experience ."
+      ". projects ."
+      ". others .";
+  }
+}
+
+.project {
+  width: 100%;
+  position: relative;
+  // padding: 3em;
+
+  margin-bottom: 2em;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+
+  &:hover {
+    .overlay {
+      opacity: 0;
+    }
+  }
+
+  .overlay {
+    opacity: 1;
+    transition: all 0.33s ease-in-out;
+    // background-blend-mode: color;
+
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    p {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+
+      color: var(--backgroundColor0);
+      text-transform: uppercase;
+      font-size: 36px;
+      text-align: center;
+      overflow: visible;
+      text-shadow: 1px 1px 3px #000;
+    }
+  }
+  .underlay {
+    position: relative;
+    z-index: 1;
+    padding: 3em;
+    background-color: var(--backgroundColor2);
+    height: 100%;
+  }
+
+  &__languages {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: left;
+    align-items: left;
+    text-align: left;
+  }
+
+  &__title {
+    width: 100%;
+    color: #333;
+    font-size: 3em;
+    padding-bottom: 0.1em;
+  }
+  p {
+    display: block;
+    text-decoration: none;
+    color: var(--textColor);
+
+    &.noLineBreak {
+      display: inline;
+    }
+
+    &.textSpacement {
+      padding-left: 1rem;
+    }
+
+    &.noPading {
+      padding-bottom: 0em;
+    }
+    &.small {
+      font-size: 0.5em;
+    }
+  }
+  a {
+    display: inline-block;
+    text-decoration: none;
+    color: var(--linkColor);
+  }
+  .subTitle {
+    padding-block-start: 0.5em;
+    padding-bottom: 0.5em;
+    line-height: 1;
+    color: var(--titleColor);
+  }
+
+  .text {
+    line-height: 1.5;
+  }
+
+  .textGlue {
+    line-height: 1em;
+  }
+}
+
+.languagesTable {
+  margin-block-start: 0.8em;
+  width: 100%;
+  line-height: 1.5em;
+  text-align: center;
+
+  tbody {
+    td {
+      border: 0;
+      border-top: 1px solid rgba(var(--languagesTableColor));
+      line-height: 1.5em;
+
+      &.noBorder {
+        border: 0;
+      }
+      &.left {
+        text-align: left;
+      }
+    }
+    tr {
+      &.color {
+        &:hover {
+          background-color: rgba(var(--languagesTableColor), 0.3);
+        }
+      }
+    }
+  }
+
+  .flag-icon {
+    margin-right: 1em;
+  }
+}

@@ -20,7 +20,6 @@ $Color: #00b7ff;
   z-index: 1;
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 1fr 1fr;
 }
 
 .scroll_to {
@@ -30,7 +29,9 @@ $Color: #00b7ff;
 
   padding-bottom: 9em;
 
-  &.projects{
+  &.projects {
+    height: auto;
+    min-height: 100vh;
     padding-bottom: 6.25em;
   }
 

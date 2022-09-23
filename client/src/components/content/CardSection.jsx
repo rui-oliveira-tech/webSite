@@ -1,37 +1,16 @@
-import React, { useEffect, useState } from "react";
-import "./styles/_Section.scss"
+import React from "react";
+import "./_CardSection.scss"
 import sections from "./sectionsConfig.js"
-import Card from "./Card"
 
 export default function CardSection() {
-  const [isInactive, setIsInactive] = useState(true);
-  const [currentlyOpenCard, setCurrentlyOpenCard] = useState(0);
-
-  useEffect(() => {
-    setTimeout(function () {
-      setIsInactive(false)
-    }, 200);
-  }, [])
-
-  const onClickOpenCard = (id) => (e) => {
-    setCurrentlyOpenCard(id);
-  }
-
-  const onClickCloseCard = (e) => {
-    e.stopPropagation();
-    setCurrentlyOpenCard(-1);
-  }
-
   return (
     <section className="scroll_to projects">
-      <div className={["sections", isInactive ? "s--inactive" : "", currentlyOpenCard > 0 ? "s--card-active" : ""].join(" ")}>
-        <div className="sections__inner">
-          {
-            sections.map((section, i) => (
-              <Card key={i} section={section} currentlyOpenCard={currentlyOpenCard} onClickOpenCard={onClickOpenCard} onClickCloseCard={onClickCloseCard} />
-            ))
-          }
-        </div>
+      <div className="about">
+        {
+          sections.map((section, i) => (
+            section.text
+          ))
+        }
       </div>
     </section>
   )
