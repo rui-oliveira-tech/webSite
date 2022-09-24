@@ -8,7 +8,7 @@ export default function Home({ allPages }) {
   function scrollDown(e) {
     document.querySelector(".projects").scrollIntoView({
       behavior: "smooth",
-      block: "center",
+      block: "start",
     });
   }
   return (
