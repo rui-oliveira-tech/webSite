@@ -2,6 +2,7 @@ import React from "react";
 import AboutImg from "../../images/AboutImg.jpg";
 import EducationImg from "../../images/EducationImg.jpg";
 import LanguagesImg from "../../images/LanguagesImg.jpg";
+import ProgramingLanguagesImg from "../../images/ProgramingLanguagesImg.jpg";
 import ExperienceImg from "../../images/ExperienceImg.jpg";
 import ProjectsImg from "../../images/ProjectsImg.jpg";
 import OthersImg from "../../images/OthersImg.jpg";
@@ -79,6 +80,64 @@ const languages = [
         writing: "A1",
     },
 ];
+
+const programingLanguages = [
+    [
+        {
+            language: "Arduino",
+            imgLink: "https://camo.githubusercontent.com/b3a1cdd20d0f308634ddd4598cdaa729c2d77047f51e66fa7206b9b4bac94c23/68747470733a2f2f63646e2e776f726c64766563746f726c6f676f2e636f6d2f6c6f676f732f61726475696e6f2d312e737667",
+            website: "https://github.com/rui-oliveira-tech/webSite/",
+            level: "C2",
+        },
+        {
+            language: "C++",
+            imgLink: "https://raw.githubusercontent.com/devicons/devicon/master/icons/cplusplus/cplusplus-original.svg",
+            website: "https://www.w3schools.com/cpp/",
+            level: "C1",
+        },
+        {
+            language: "Git",
+            imgLink: "https://camo.githubusercontent.com/fbfcb9e3dc648adc93bef37c718db16c52f617ad055a26de6dc3c21865c3321d/68747470733a2f2f7777772e766563746f726c6f676f2e7a6f6e652f6c6f676f732f6769742d73636d2f6769742d73636d2d69636f6e2e737667",
+            website: "https://git-scm.com/",
+            level: "A2",
+        },
+        {
+            language: "Linux",
+            imgLink: "https://raw.githubusercontent.com/devicons/devicon/master/icons/linux/linux-original.svg",
+            website: "https://www.linux.org/",
+            level: "C1",
+        },
+    ],
+    [
+        {
+            language: "Css",
+            imgLink: "https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original-wordmark.svg",
+            website: "https://www.w3schools.com/css/",
+            level: "C1",
+        },
+        {
+            language: "Html",
+            imgLink: "https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original-wordmark.svg",
+            website: "https://www.w3.org/html/",
+            level: "C1",
+        },
+        {
+            language: "Js",
+            imgLink: "https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg",
+            website: "https://developer.mozilla.org/en-US/docs/Web/JavaScript/",
+            level: "C1",
+        },
+        {
+            language: "NodeJs",
+            imgLink: "https://raw.githubusercontent.com/devicons/devicon/master/icons/nodejs/nodejs-original-wordmark.svg",
+            website: "https://nodejs.org/",
+            level: "C1",
+        },
+    ],
+];
+
+
+
 
 const experience = [
     {
@@ -181,7 +240,7 @@ const sections = [
                     <p className="light text big">I'm Rui. I'm a Industrial Electrician.</p>
                     <p className="light text medium">
                         I am currently working at the{" "}
-                        <a href={experience[0].website}>{experience[0].company}</a> in{" "}
+                        <a target="_blank" rel="noreferrer" href={experience[0].website}>{experience[0].company}</a> in{" "}
                         {experience[0].location}. However I have total and immediate
                         availability to start working.
                     </p>
@@ -229,7 +288,7 @@ const sections = [
                     {education.map((degree, i) => (
                         <React.Fragment key={i}>
                             <p className="light big subTitle">{degree.title}</p>
-                            <a className="textGlue medium" href={degree.website}>{degree.company} in {degree.location}</a>
+                            <a className="textGlue medium" target="_blank" rel="noreferrer" href={degree.website}>{degree.company} in {degree.location}</a>
                             <p className="text small">{degree.startDate === "" ? degree.endDate : degree.startDate + " - " + degree.endDate}</p>
                         </React.Fragment>
                     ))}
@@ -295,6 +354,37 @@ const sections = [
     },
     {
         id: 4,
+        title: "Programing Languages",
+        hoverTitle: "",
+        text: (
+            <div className="project" style={{ gridArea: "programingLanguages", backgroundImage: `url(${ProgramingLanguagesImg})` }}>
+                <div className="overlay" style={{ backgroundImage: `${gradient}, url(${ProgramingLanguagesImg})` }}>
+                    <p>What I program</p>
+                </div>
+                <div className="underlay">
+                    <h2 className="project__title extraBig bold">Programing Languages</h2>
+                    <p className="light big subTitle">Knowing :</p>
+                    {programingLanguages[0].map((degree, i) => (
+                        <React.Fragment key={i}>
+                            <a target="_blank" rel="noreferrer" href={degree.website}>
+                                <img src={degree.imgLink} alt={degree.title} width="40" height="40" style={{ "maxWidth": "100%" }} />
+                            </a>
+                        </React.Fragment>
+                    ))}
+                    <p className="light big subTitle">Lerning :</p>
+                    {programingLanguages[1].map((degree, i) => (
+                        <React.Fragment key={i}>
+                            <a target="_blank" rel="noreferrer" href={degree.website}>
+                                <img src={degree.imgLink} alt={degree.title} width="40" height="40" style={{ "maxWidth": "100%" }} />
+                            </a>
+                        </React.Fragment>
+                    ))}
+                </div>
+            </div>
+        ),
+    },
+    {
+        id: 5,
         title: "Experience",
         hoverTitle: "What I've done",
         text: (
@@ -307,7 +397,7 @@ const sections = [
                     {experience.map((degree, i) => (
                         <React.Fragment key={i}>
                             <p className="light big subTitle">{degree.title}</p>
-                            <a className="textGlue medium" href={degree.website}>{degree.company} in {degree.location}</a>
+                            <a className="textGlue medium" target="_blank" rel="noreferrer" href={degree.website}>{degree.company} in {degree.location}</a>
                             <p className="text small">{degree.startDate} - {degree.endDate} - {degree.offerType}{" "}</p>
                             <p className="light text medium textSpacement">{degree.skillsGained}</p>
                             <p className="light text medium textSpacement">
@@ -320,7 +410,7 @@ const sections = [
         ),
     },
     {
-        id: 5,
+        id: 6,
         title: "Projects",
         hoverTitle: "What I've created",
         text: (
@@ -332,7 +422,7 @@ const sections = [
                     <h2 className="project__title extraBig bold">Projects</h2>
                     {projects.map((degree, i) => (
                         <React.Fragment key={i}>
-                            <a className="light big subTitle" href={degree.website}>{degree.title}</a>
+                            <a className="light big subTitle" target="_blank" rel="noreferrer" href={degree.website}>{degree.title}</a>
                             <p className="text small">{degree.startDate} - {degree.endDate}</p>
                             <p className="light text medium textSpacement">{degree.description}</p>
                         </React.Fragment>
@@ -342,7 +432,7 @@ const sections = [
         ),
     },
     {
-        id: 6,
+        id: 7,
         title: "Other things",
         hoverTitle: "Other stuff I'm doing",
         text: (
