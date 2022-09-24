@@ -1,9 +1,10 @@
 import React from "react";
-import AboutImg from "../../images/0.jpg";
-import EducationImg from "../../images/1.jpg";
-import ExperienceImg from "../../images/2.jpg";
-import ProjectsImg from "../../images/3.jpg";
-import OthersImg from "../../images/4.jpg";
+import AboutImg from "../../images/AboutImg.jpg";
+import EducationImg from "../../images/EducationImg.jpg";
+import LanguagesImg from "../../images/LanguagesImg.jpg";
+import ExperienceImg from "../../images/ExperienceImg.jpg";
+import ProjectsImg from "../../images/ProjectsImg.jpg";
+import OthersImg from "../../images/OthersImg.jpg";
 
 const education = [
     {
@@ -241,8 +242,8 @@ const sections = [
         title: "Languages",
         hoverTitle: "",
         text: (
-            <div className="project" style={{ gridArea: "languages", backgroundImage: `url(${EducationImg})` }}>
-                <div className="overlay" style={{ backgroundImage: `${gradient}, url(${EducationImg})` }}>
+            <div className="project" style={{ gridArea: "languages", backgroundImage: `url(${LanguagesImg})` }}>
+                <div className="overlay" style={{ backgroundImage: `${gradient}, url(${LanguagesImg})` }}>
                     <p>What I speak</p>
                 </div>
                 <div className="underlay">
