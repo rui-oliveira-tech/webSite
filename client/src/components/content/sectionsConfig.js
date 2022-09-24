@@ -88,8 +88,7 @@ const experience = [
         offerType: "Full-time",
         startDate: "May 2019",
         endDate: "Present",
-        functionsPerformed:
-            "Find machine problems and fix, install cable ducts, pass cables, connect electrical boards, replace plugs, lamps, switches, mechanics basic.",
+        functionsPerformed: "Find machine problems and fix, install cable ducts, pass cables, connect electrical boards, replace plugs, lamps, switches, mechanics basic.",
         skillsGained: "Repairing skills, communication skills.",
     },
     {
@@ -100,8 +99,7 @@ const experience = [
         offerType: "Full-time",
         startDate: "Jul 2018",
         endDate: "May 2019",
-        functionsPerformed:
-            'Repair and maintenance of cold containers, "PtI", copper welding and replacement of motors and sensors.',
+        functionsPerformed: 'Repair and maintenance of cold containers, "PtI", copper welding and replacement of motors and sensors.',
         skillsGained: "Repairing skills, communication skills.",
     },
     {
@@ -112,10 +110,8 @@ const experience = [
         offerType: "Full-time",
         startDate: "Feb 2015",
         endDate: "Jul 2018",
-        functionsPerformed:
-            "Repair of industrial machines (electrical and electromechanical), elaboration and electrification of electrical boards, electrical assembly of machines and structures of transport of cork and beginner of programming and automation of PLC (OMRON).",
-        skillsGained:
-            "Repairing skills, construction skills, development skills, analytical skills.",
+        functionsPerformed: "Repair of industrial machines (electrical and electromechanical), elaboration and electrification of electrical boards, electrical assembly of machines and structures of transport of cork and beginner of programming and automation of PLC (OMRON).",
+        skillsGained: "Repairing skills, construction skills, development skills, analytical skills.",
     },
     {
         title: "Electronic, automation and maintenance (1500 hours Internship)",
@@ -126,25 +122,24 @@ const experience = [
         startDate: "2012",
         endDate: "2015",
         functionsPerformed: "Repair and maintenance of home appliances.",
-        skillsGained:
-            "Communication skills, engines skills, repairing skills, selling skills.",
+        skillsGained: "Communication skills, engines skills, repairing skills, selling skills.",
     },
 ];
 
 const projects = [
     {
-        title: "home assiatant",
-        website: "https://github.com/rui1999/homeAssistant",
+        title: "Home Assistant",
+        website: "https://github.com/rui-oliveira-tech/homeAssistant/",
         startDate: "7 Feb 2021",
         endDate: "Present",
-        description: "My house.",
+        description: 'My house is controlled by a Raspberry PI 4 with the "Home Assistant" program. In it I elaborate automations to control internally (without internet connection) or externally (via VPN "Tailscale" and IP masked by "Duck DNS") the house, such as lights, sensors, robots...',
     },
     {
         title: "Website",
-        website: "https://github.com/rui1999/webSite",
+        website: "https://github.com/rui-oliveira-tech/webSite/",
         startDate: "11 Feb 2022",
         endDate: "Present",
-        description: "This website.",
+        description: "This website was created with the aim of promoting information about my professional career, in a way that is accessible to companies and interested people.",
     },
 ];
 
