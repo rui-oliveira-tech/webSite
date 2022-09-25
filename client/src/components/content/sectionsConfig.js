@@ -82,58 +82,51 @@ const languages = [
 ];
 
 const programingLanguages = [
-    [
-        {
-            language: "Arduino",
-            imgLink: "https://camo.githubusercontent.com/b3a1cdd20d0f308634ddd4598cdaa729c2d77047f51e66fa7206b9b4bac94c23/68747470733a2f2f63646e2e776f726c64766563746f726c6f676f2e636f6d2f6c6f676f732f61726475696e6f2d312e737667",
-            website: "https://github.com/rui-oliveira-tech/webSite/",
-            level: "C2",
-        },
-        {
-            language: "C++",
-            imgLink: "https://raw.githubusercontent.com/devicons/devicon/master/icons/cplusplus/cplusplus-original.svg",
-            website: "https://www.w3schools.com/cpp/",
-            level: "C1",
-        },
-        {
-            language: "Git",
-            imgLink: "https://camo.githubusercontent.com/fbfcb9e3dc648adc93bef37c718db16c52f617ad055a26de6dc3c21865c3321d/68747470733a2f2f7777772e766563746f726c6f676f2e7a6f6e652f6c6f676f732f6769742d73636d2f6769742d73636d2d69636f6e2e737667",
-            website: "https://git-scm.com/",
-            level: "A2",
-        },
-        {
-            language: "Linux",
-            imgLink: "https://raw.githubusercontent.com/devicons/devicon/master/icons/linux/linux-original.svg",
-            website: "https://www.linux.org/",
-            level: "C1",
-        },
-    ],
-    [
-        {
-            language: "Css",
-            imgLink: "https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original-wordmark.svg",
-            website: "https://www.w3schools.com/css/",
-            level: "C1",
-        },
-        {
-            language: "Html",
-            imgLink: "https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original-wordmark.svg",
-            website: "https://www.w3.org/html/",
-            level: "C1",
-        },
-        {
-            language: "Js",
-            imgLink: "https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg",
-            website: "https://developer.mozilla.org/en-US/docs/Web/JavaScript/",
-            level: "C1",
-        },
-        {
-            language: "NodeJs",
-            imgLink: "https://raw.githubusercontent.com/devicons/devicon/master/icons/nodejs/nodejs-original-wordmark.svg",
-            website: "https://nodejs.org/",
-            level: "C1",
-        },
-    ],
+    /*     {
+            language: "Ladder",
+            imgLink: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Ladder_diagram.png/800px-Ladder_diagram.png",
+            website: "https://ladderlogicworld.com/",
+        }, */
+    {
+        language: "Arduino",
+        imgLink: "https://camo.githubusercontent.com/b3a1cdd20d0f308634ddd4598cdaa729c2d77047f51e66fa7206b9b4bac94c23/68747470733a2f2f63646e2e776f726c64766563746f726c6f676f2e636f6d2f6c6f676f732f61726475696e6f2d312e737667",
+        website: "https://github.com/rui-oliveira-tech/webSite/",
+    },
+    {
+        language: "C++",
+        imgLink: "https://raw.githubusercontent.com/devicons/devicon/master/icons/cplusplus/cplusplus-original.svg",
+        website: "https://www.w3schools.com/cpp/",
+    },
+    {
+        language: "Git",
+        imgLink: "https://camo.githubusercontent.com/fbfcb9e3dc648adc93bef37c718db16c52f617ad055a26de6dc3c21865c3321d/68747470733a2f2f7777772e766563746f726c6f676f2e7a6f6e652f6c6f676f732f6769742d73636d2f6769742d73636d2d69636f6e2e737667",
+        website: "https://git-scm.com/",
+    },
+    {
+        language: "Linux",
+        imgLink: "https://raw.githubusercontent.com/devicons/devicon/master/icons/linux/linux-original.svg",
+        website: "https://www.linux.org/",
+    },
+    {
+        language: "Css",
+        imgLink: "https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original-wordmark.svg",
+        website: "https://www.w3schools.com/css/",
+    },
+    {
+        language: "Html",
+        imgLink: "https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original-wordmark.svg",
+        website: "https://www.w3.org/html/",
+    },
+    {
+        language: "Js",
+        imgLink: "https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg",
+        website: "https://developer.mozilla.org/en-US/docs/Web/JavaScript/",
+    },
+    {
+        language: "NodeJs",
+        imgLink: "https://raw.githubusercontent.com/devicons/devicon/master/icons/nodejs/nodejs-original-wordmark.svg",
+        website: "https://nodejs.org/",
+    },
 ];
 
 
@@ -363,19 +356,11 @@ const sections = [
                 </div>
                 <div className="underlay">
                     <h2 className="project__title extraBig bold">Programing Languages</h2>
-                    <p className="light big subTitle">Knowing :</p>
-                    {programingLanguages[0].map((degree, i) => (
+                    <p className="light big subTitle"> </p>
+                    {programingLanguages.map((degree, i) => (
                         <React.Fragment key={i}>
-                            <a target="_blank" rel="noreferrer" href={degree.website}>
-                                <img src={degree.imgLink} alt={degree.title} width="40" height="40" style={{ "maxWidth": "100%" }} />
-                            </a>
-                        </React.Fragment>
-                    ))}
-                    <p className="light big subTitle">Lerning :</p>
-                    {programingLanguages[1].map((degree, i) => (
-                        <React.Fragment key={i}>
-                            <a target="_blank" rel="noreferrer" href={degree.website}>
-                                <img src={degree.imgLink} alt={degree.title} width="40" height="40" style={{ "maxWidth": "100%" }} />
+                            <a className="iconProgLang" target="_blank" rel="noreferrer" href={degree.website}>
+                                <img src={degree.imgLink} alt={degree.title} />
                             </a>
                         </React.Fragment>
                     ))}
