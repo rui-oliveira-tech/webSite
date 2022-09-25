@@ -438,7 +438,7 @@ const sections = [
                             <p className="light text medium textSpacement">{degree.description}</p>
                         </React.Fragment>
                     ))}
-                    <img src={TraveledMap} className="frontImage" alt="Countries i visited" />
+                   {/*  <img src={TraveledMap} className="frontImage" alt="Countries i visited" /> */}
                 </div>
             </div>
         ),
