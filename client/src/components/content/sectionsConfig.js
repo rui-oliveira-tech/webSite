@@ -1,14 +1,29 @@
 import React from "react";
-import AboutImg from "../../images/AboutImg.jpg";
-import EducationImg from "../../images/EducationImg.jpg";
-import LanguagesImg from "../../images/LanguagesImg.jpg";
-import ProgramingLanguagesImg from "../../images/ProgramingLanguagesImg.jpg";
-import ExperienceImg from "../../images/ExperienceImg.jpg";
-import ProjectsImg from "../../images/ProjectsImg.jpg";
-import OthersImg from "../../images/OthersImg.jpg";
+import About_Img from "../../images/About_Img.jpg";
+import Education_Img from "../../images/Education_Img.jpg";
+import Languages_Img from "../../images/Languages_Img.jpg";
+import ProgramingLanguages_Img from "../../images/ProgramingLanguages_Img.jpg";
+import Experience_Img from "../../images/Experience_Img.jpg";
+import Projects_Img from "../../images/Projects_Img.jpg";
+import Others_Img from "../../images/Others_Img.jpg";
 
-import TraveledMap from "../../images/TraveledMap.jpg";
+/* import TraveledMap from "../../images/Traveled_Img.jpg"; */
 
+
+
+
+
+import Lader_Svg from "../../images/Programing_Languages/Lader_Svg.svg";
+import FrequencyInverters_Img from "../../images/Programing_Languages/FrequencyInverters_Img.jpg";
+
+import Arduino_Svg from "../../images/Programing_Languages/Arduino_Svg.svg";
+import Cplusplus_Svg from "../../images/Programing_Languages/Cplusplus_Svg.svg";
+import Git_Svg from "../../images/Programing_Languages/Git_Svg.svg";
+import Linux_Svg from "../../images/Programing_Languages/Linux_Svg.svg";
+import Css_Svg from "../../images/Programing_Languages/Css_Svg.svg";
+import Html_Svg from "../../images/Programing_Languages/Html_Svg.svg";
+import Js_Svg from "../../images/Programing_Languages/Js_Svg.svg";
+import NodeJs_Svg from "../../images/Programing_Languages/NodeJs_Svg.svg";
 
 const education = [
     {
@@ -85,51 +100,78 @@ const languages = [
 ];
 
 const programingLanguages = [
-    /*     {
-            language: "Ladder",
-            imgLink: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Ladder_diagram.png/800px-Ladder_diagram.png",
+    [
+        {
+            id: 1,
+            title: "Industrial",
+        },
+        {
+            id: 2,
+            title: "",
+
+        },
+        {
+            id: 3,
+            title: "",
+
+        },
+    ],
+    [
+        {
+            title: "Ladder",
+            imgLink: Lader_Svg,
             website: "https://ladderlogicworld.com/",
+        },
+     /*    {
+            title: "FrequencyInverters",
+            imgLink: FrequencyInverters_Img,
+            website: "",
         }, */
-    {
-        language: "Arduino",
-        imgLink: "https://camo.githubusercontent.com/b3a1cdd20d0f308634ddd4598cdaa729c2d77047f51e66fa7206b9b4bac94c23/68747470733a2f2f63646e2e776f726c64766563746f726c6f676f2e636f6d2f6c6f676f732f61726475696e6f2d312e737667",
-        website: "https://github.com/rui-oliveira-tech/webSite/",
-    },
-    {
-        language: "C++",
-        imgLink: "https://raw.githubusercontent.com/devicons/devicon/master/icons/cplusplus/cplusplus-original.svg",
-        website: "https://www.w3schools.com/cpp/",
-    },
-    {
-        language: "Git",
-        imgLink: "https://camo.githubusercontent.com/fbfcb9e3dc648adc93bef37c718db16c52f617ad055a26de6dc3c21865c3321d/68747470733a2f2f7777772e766563746f726c6f676f2e7a6f6e652f6c6f676f732f6769742d73636d2f6769742d73636d2d69636f6e2e737667",
-        website: "https://git-scm.com/",
-    },
-    {
-        language: "Linux",
-        imgLink: "https://raw.githubusercontent.com/devicons/devicon/master/icons/linux/linux-original.svg",
-        website: "https://www.linux.org/",
-    },
-    {
-        language: "Css",
-        imgLink: "https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original-wordmark.svg",
-        website: "https://www.w3schools.com/css/",
-    },
-    {
-        language: "Html",
-        imgLink: "https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original-wordmark.svg",
-        website: "https://www.w3.org/html/",
-    },
-    {
-        language: "Js",
-        imgLink: "https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg",
-        website: "https://developer.mozilla.org/en-US/docs/Web/JavaScript/",
-    },
-    {
-        language: "NodeJs",
-        imgLink: "https://raw.githubusercontent.com/devicons/devicon/master/icons/nodejs/nodejs-original-wordmark.svg",
-        website: "https://nodejs.org/",
-    },
+        {
+            title: "Arduino",
+            imgLink: Arduino_Svg,
+            website: "https://github.com/rui-oliveira-tech/webSite/",
+        },
+    ],
+    [
+        {
+            title: "C++",
+            imgLink: Cplusplus_Svg,
+            website: "https://www.w3schools.com/cpp/",
+        },
+        {
+            title: "Css",
+            imgLink: Css_Svg,
+            website: "https://www.w3schools.com/css/",
+        },
+        {
+            title: "Html",
+            imgLink: Html_Svg,
+            website: "https://www.w3.org/html/",
+        },
+        {
+            title: "Js",
+            imgLink: Js_Svg,
+            website: "https://developer.mozilla.org/en-US/docs/Web/JavaScript/",
+        },
+        {
+            title: "NodeJs",
+            imgLink: NodeJs_Svg,
+            website: "https://nodejs.org/",
+        },
+    ],
+    [
+        {
+            title: "Git",
+            imgLink: Git_Svg,
+            website: "https://git-scm.com/",
+        },
+        {
+            title: "Linux",
+            imgLink: Linux_Svg,
+            website: "https://www.linux.org/",
+        },
+    ],
 ];
 
 
@@ -227,8 +269,8 @@ const sections = [
         title: "About",
         hoverTitle: "Who I am",
         text: (
-            <div className="project" style={{ gridArea: "about", backgroundImage: `url(${AboutImg})` }}>
-                <div className="overlay" style={{ backgroundImage: `${gradient}, url(${AboutImg})` }}>
+            <div className="project" style={{ gridArea: "about", backgroundImage: `url(${About_Img})` }}>
+                <div className="overlay" style={{ backgroundImage: `${gradient}, url(${About_Img})` }}>
                     <p>Who I am</p>
                 </div>
                 <div className="underlay">
@@ -273,8 +315,8 @@ const sections = [
         title: "Education",
         hoverTitle: "What I've learned",
         text: (
-            <div className="project" style={{ gridArea: "education", backgroundImage: `url(${EducationImg})` }}>
-                <div className="overlay" style={{ backgroundImage: `${gradient}, url(${EducationImg})` }}>
+            <div className="project" style={{ gridArea: "education", backgroundImage: `url(${Education_Img})` }}>
+                <div className="overlay" style={{ backgroundImage: `${gradient}, url(${Education_Img})` }}>
                     <p>What I've learned</p>
                 </div>
                 <div className="underlay">
@@ -297,8 +339,8 @@ const sections = [
         title: "Languages",
         hoverTitle: "",
         text: (
-            <div className="project" style={{ gridArea: "languages", backgroundImage: `url(${LanguagesImg})` }}>
-                <div className="overlay" style={{ backgroundImage: `${gradient}, url(${LanguagesImg})` }}>
+            <div className="project" style={{ gridArea: "languages", backgroundImage: `url(${Languages_Img})` }}>
+                <div className="overlay" style={{ backgroundImage: `${gradient}, url(${Languages_Img})` }}>
                     <p>What I speak</p>
                 </div>
                 <div className="underlay">
@@ -353,18 +395,24 @@ const sections = [
         title: "Programing Languages",
         hoverTitle: "",
         text: (
-            <div className="project" style={{ gridArea: "programingLanguages", backgroundImage: `url(${ProgramingLanguagesImg})` }}>
-                <div className="overlay" style={{ backgroundImage: `${gradient}, url(${ProgramingLanguagesImg})` }}>
+            <div className="project" style={{ gridArea: "programingLanguages", backgroundImage: `url(${ProgramingLanguages_Img})` }}>
+                <div className="overlay" style={{ backgroundImage: `${gradient}, url(${ProgramingLanguages_Img})` }}>
                     <p>What I program</p>
                 </div>
                 <div className="underlay">
                     <h2 className="project__title extraBig bold">Programing Languages</h2>
-                    <p className="light big subTitle"> </p>
-                    {programingLanguages.map((degree, i) => (
+                    {programingLanguages[0].map((degree, i) => (
                         <React.Fragment key={i}>
-                            <a className="iconProgLang" target="_blank" rel="noreferrer" href={degree.website}>
-                                <img src={degree.imgLink} alt={degree.title} />
-                            </a>
+                            {/* <p/> */}
+                           {/*  <p className="light big subTitle">{degree.title}</p> */}
+                            {programingLanguages[degree.id].map((degree, i) => (
+                                <React.Fragment key={i}>
+                                    <a className="iconProgLang" target="_blank" rel="noreferrer" href={degree.website}>
+                                        <figure><img src={degree.imgLink} alt={degree.title} /></figure>
+                                    </a>
+                                </React.Fragment>
+                            ))}
+
                         </React.Fragment>
                     ))}
                 </div>
@@ -376,8 +424,8 @@ const sections = [
         title: "Experience",
         hoverTitle: "What I've done",
         text: (
-            <div className="project" style={{ gridArea: "experience", backgroundImage: `url(${ExperienceImg})` }}>
-                <div className="overlay" style={{ backgroundImage: `${gradient}, url(${ExperienceImg})` }}>
+            <div className="project" style={{ gridArea: "experience", backgroundImage: `url(${Experience_Img})` }}>
+                <div className="overlay" style={{ backgroundImage: `${gradient}, url(${Experience_Img})` }}>
                     <p>What I've done</p>
                 </div>
                 <div className="underlay">
@@ -402,8 +450,8 @@ const sections = [
         title: "Projects",
         hoverTitle: "What I've created",
         text: (
-            <div className="project" style={{ gridArea: "projects", backgroundImage: `url(${ProjectsImg})` }}>
-                <div className="overlay" style={{ backgroundImage: `${gradient}, url(${ProjectsImg})` }}>
+            <div className="project" style={{ gridArea: "projects", backgroundImage: `url(${Projects_Img})` }}>
+                <div className="overlay" style={{ backgroundImage: `${gradient}, url(${Projects_Img})` }}>
                     <p>What I've created</p>
                 </div>
                 <div className="underlay">
@@ -424,8 +472,8 @@ const sections = [
         title: "Other things",
         hoverTitle: "Other stuff I'm doing",
         text: (
-            <div className="project" style={{ gridArea: "others", backgroundImage: `url(${OthersImg})` }}>
-                <div className="overlay" style={{ backgroundImage: `${gradient}, url(${OthersImg})` }}>
+            <div className="project" style={{ gridArea: "others", backgroundImage: `url(${Others_Img})` }}>
+                <div className="overlay" style={{ backgroundImage: `${gradient}, url(${Others_Img})` }}>
                     <p>Other stuff I'm doing</p>
                 </div>
                 <div className="underlay">
@@ -438,7 +486,7 @@ const sections = [
                             <p className="light text medium textSpacement">{degree.description}</p>
                         </React.Fragment>
                     ))}
-                   {/*  <img src={TraveledMap} className="frontImage" alt="Countries i visited" /> */}
+                    {/*  <img src={TraveledMap} className="frontImage" alt="Countries i visited" /> */}
                 </div>
             </div>
         ),
