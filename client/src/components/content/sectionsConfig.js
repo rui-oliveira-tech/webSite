@@ -14,7 +14,7 @@ import Others_Img from "../../images/Others_Img.jpg";
 
 
 import Lader_Svg from "../../images/Programing_Languages/Lader_Svg.svg";
-import FrequencyInverters_Img from "../../images/Programing_Languages/FrequencyInverters_Img.jpg";
+/* import FrequencyInverters_Img from "../../images/Programing_Languages/FrequencyInverters_Img.jpg"; */
 
 import Arduino_Svg from "../../images/Programing_Languages/Arduino_Svg.svg";
 import Cplusplus_Svg from "../../images/Programing_Languages/Cplusplus_Svg.svg";
@@ -122,11 +122,11 @@ const programingLanguages = [
             imgLink: Lader_Svg,
             website: "https://ladderlogicworld.com/",
         },
-     /*    {
-            title: "FrequencyInverters",
-            imgLink: FrequencyInverters_Img,
-            website: "",
-        }, */
+        /*    {
+               title: "FrequencyInverters",
+               imgLink: FrequencyInverters_Img,
+               website: "",
+           }, */
         {
             title: "Arduino",
             imgLink: Arduino_Svg,
@@ -404,7 +404,7 @@ const sections = [
                     {programingLanguages[0].map((degree, i) => (
                         <React.Fragment key={i}>
                             {/* <p/> */}
-                           {/*  <p className="light big subTitle">{degree.title}</p> */}
+                            {/*  <p className="light big subTitle">{degree.title}</p> */}
                             {programingLanguages[degree.id].map((degree, i) => (
                                 <React.Fragment key={i}>
                                     <a className="iconProgLang" target="_blank" rel="noreferrer" href={degree.website}>
