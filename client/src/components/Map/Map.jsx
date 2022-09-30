@@ -37,7 +37,7 @@ export default function MapSection(props) {
           >
             <div className="popup">
               {marker.title}
-              <img src={marker.image} alt="" />
+              <img src={marker.image} alt={marker.title} />
             </div>
           </div>
         ))}
