@@ -8,6 +8,8 @@ import Home from "./components/home/Home";
 import CardSection from "./components/content/CardSection";
 import Footer from "./components/footer/Footer";
 
+import MapSection from "./components/Map/Map";
+import { googleMapsMarkers } from "./components/content/sectionsConfig.js";
 
 
 function App() {
@@ -44,9 +46,26 @@ function App() {
     }
   }
 
+
+  const [zoom, setZoom] = React.useState(2); // initial zoom
+  const [center, setCenter] = React.useState({
+    lat: 0,
+    lng: 0,
+  });
+
+  const onIdle = (m) => {
+    console.log("onIdle");
+    setZoom(m.getZoom());
+    setCenter(m.getCenter().toJSON());
+  };
+  const onClick = (e) => { };
+
   return (
     <>
-      <Loading />
+      {/*  <Loading /> */}
+      {/*    <MapSection center={center} zoom={zoom} onClick={onClick} onIdle={onIdle} markers={[]} /> */}
+      <MapSection markers={googleMapsMarkers} />
+
       <div className="wideGrid">
         <Home allPages={allPages} />
         <CardSection />
