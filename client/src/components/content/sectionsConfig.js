@@ -249,11 +249,16 @@ export const other = [
 
 export const googleMapsMarkers = [
     {
-   /*      title: "Portugal,lisboa", */
-        lat: 10,
-        lng: 10,
+        title: "Portugal, Lisboa",
+        marker: NodeJs_Svg,
+        image: Js_Svg,
+        lat: 40.848362,
+        lng: -8.6129936,
     },
     {
+        title: "centro",
+        marker: Css_Svg,
+        image: Html_Svg,
         lat: 12,
         lng: 12,
     },

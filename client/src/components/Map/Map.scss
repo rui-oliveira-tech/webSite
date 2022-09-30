@@ -1,18 +1,22 @@
-.places-container {
+.marker {
+  width: 100px;
+  height: 100px;
   position: absolute;
-  top: 10px;
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 10;
-  width: 300px;
-}
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  &:hover {
+    z-index: 2;
+    .popup {
+      display: block;
+    }
+  }
 
-.map-container {
-  width: 100%;
-  height: 100vh;
-}
-
-.combobox-input {
-  width: 100%;
-  padding: 0.5rem;
+  .popup {
+    background: white;
+    position: absolute;
+    display: none;
+    transform: translate(-50%, -50%);
+    width: 100px;
+    height: 100px;
+  }
 }
