@@ -5,23 +5,25 @@
   margin-right: auto;
 
   display: grid;
-  grid-template-rows: auto auto auto auto;
+  grid-template-rows: auto auto auto auto auto;
   grid-template-columns: 2em 1fr 2em 1fr 2em;
 
   grid-template-areas:
     ". about about about ."
     ". education . experience ."
     ". languages . experience ."
+    ". programingLanguages . experience ."
     ". projects . others .";
 
   @media (min-width: 270px) and (max-width: 1023px) {
-    grid-template-rows: auto auto auto auto auto auto auto;
-    grid-template-columns: 2em 1fr 2em;
+    grid-template-rows: auto auto auto auto auto auto auto auto;
+    grid-template-columns: 0.5em 1fr 0.5em;
 
     grid-template-areas:
       ". about ."
       ". education ."
       ". languages ."
+      ". programingLanguages ."
       ". experience ."
       ". projects ."
       ". others .";
@@ -31,7 +33,6 @@
 .project {
   width: 100%;
   position: relative;
-  // padding: 3em;
 
   margin-bottom: 2em;
   background-repeat: no-repeat;
@@ -40,14 +41,12 @@
 
   &:hover {
     .overlay {
-      opacity: 0;
+      animation: hoverProjects 0.33s ease-in-out forwards;
     }
   }
 
   .overlay {
-    opacity: 1;
-    transition: all 0.33s ease-in-out;
-    // background-blend-mode: color;
+    animation: unhoverProjects 0.33s ease-in-out backwards;
 
     background-repeat: no-repeat;
     background-position: center center;
@@ -89,11 +88,9 @@
     align-items: left;
     text-align: left;
   }
-
   &__title {
     width: 100%;
     color: #333;
-    font-size: 3em;
     padding-bottom: 0.1em;
   }
   p {
@@ -112,9 +109,6 @@
     &.noPading {
       padding-bottom: 0em;
     }
-    &.small {
-      font-size: 0.5em;
-    }
   }
   a {
     display: inline-block;
@@ -127,45 +121,161 @@
     line-height: 1;
     color: var(--titleColor);
   }
-
   .text {
     line-height: 1.5;
   }
-
   .textGlue {
     line-height: 1em;
   }
-}
+  .estraSmall {
+    font-size: 0.5em;
+  }
+  .small {
+    font-size: 1em;
+  }
+  .medium {
+    font-size: 1.5em;
+  }
+  .big {
+    font-size: 2em;
+  }
+  .extraBig {
+    font-size: 3.75em;
+  }
 
-.languagesTable {
-  margin-block-start: 0.8em;
-  width: 100%;
-  line-height: 1.5em;
-  text-align: center;
-
-  tbody {
-    td {
-      border: 0;
-      border-top: 1px solid rgba(var(--languagesTableColor));
-      line-height: 1.5em;
-
-      &.noBorder {
+  .languagesTable {
+    margin-block-start: 0.8em;
+    width: 100%;
+    line-height: 1.5em;
+    text-align: center;
+    tbody {
+      td {
         border: 0;
+        border-top: 1px solid rgba(var(--languagesTableColor));
+        line-height: 1.5em;
+
+        &.noBorder {
+          border: 0;
+        }
+        &.left {
+          text-align: left;
+        }
       }
-      &.left {
-        text-align: left;
+      tr {
+        &.color {
+          &:hover {
+            background-color: rgba(var(--languagesTableColor), 0.3);
+          }
+        }
       }
     }
-    tr {
-      &.color {
-        &:hover {
-          background-color: rgba(var(--languagesTableColor), 0.3);
-        }
+
+    .flag-icon {
+      margin-right: 1em;
+    }
+  }
+
+  .iconProgLang {
+   
+    display: inline-block;
+    color: #1f1f1f;
+    width: 4em;
+    height: 4em;
+    margin: 0.6em 0.6em;
+    img {
+      max-Width: 100%;
+      text-align: center;
+      font-size: 1.5em;
+      line-height: calc(2em - 2px);
+    }
+    &:hover {
+      transform: scale(1.2);
+    }
+  }
+
+  @media (min-width: 270px) and (max-width: 512px) {
+    .estraSmall {
+      font-size: 0.25em;
+    }
+    .small {
+      font-size: 0.4em;
+    }
+    .medium {
+      font-size: 0.6em;
+    }
+    .big {
+      font-size: 0.75em;
+    }
+    .extraBig {
+      font-size: 1.5em;
+    }
+    .iconProgLang {
+      width: 2em;
+      height: 2em;
+      margin: 0.3em 0.3em;
+      img {
+        line-height: 1.67em;
       }
     }
   }
 
-  .flag-icon {
-    margin-right: 1em;
+  @media (min-width: 512px) and (max-width: 1370px) {
+    .estraSmall {
+      font-size: 0.5em;
+    }
+    .small {
+      font-size: 0.75em;
+    }
+    .medium {
+      font-size: 1em;
+    }
+    .big {
+      font-size: 1.25em;
+    }
+    .extraBig {
+      font-size: 2em;
+    }
+    .iconProgLang {
+      width: 2.5em;
+      height: 2.5em;
+      margin: 0.45em 0.45em;
+      img {
+        line-height: calc(2em - 2px);
+      }
+    }
+  }
+}
+
+@keyframes hoverProjects {
+  0% {
+    opacity: 1;
+    z-index: 2;
+  }
+
+  99% {
+    opacity: 0;
+    z-index: 2;
+  }
+
+  100% {
+    opacity: 0;
+    z-index: -1;
+  }
+}
+
+@keyframes unhoverProjects {
+  0% {
+    opacity: 0;
+    z-index: -1;
+  }
+
+  1% {
+    opacity: 0;
+    z-index: 2;
+  }
+
+  100% {
+    opacity: 1;
+    z-index: 2;
   }
 }

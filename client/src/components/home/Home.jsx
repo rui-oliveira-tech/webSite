@@ -1,6 +1,6 @@
 import React from "react";
 import "./Home.scss";
-import MainImage from "../../images/main.jpg";
+import main_Img from "../../images/main_Img.jpg";
 
 
 
@@ -8,14 +8,14 @@ export default function Home({ allPages }) {
   function scrollDown(e) {
     document.querySelector(".projects").scrollIntoView({
       behavior: "smooth",
-      block: "center",
+      block: "start",
     });
   }
   return (
     <section className="scroll_to home">
       <header>
         <figure>
-          <img src={MainImage} className="frontImage" alt="Rui Oliveira" />
+          <img src={main_Img} className="frontImage" alt="Rui Oliveira" />
         </figure>
       </header>
       <main>
