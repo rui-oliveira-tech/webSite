@@ -10,8 +10,10 @@
     "google-map-react": "^2.2.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
+    "react-papaparse": "^4.1.0",
     "react-router-dom": "^6.3.0",
-    "react-scripts": "^4.0.1"
+    "react-scripts": "^4.0.1",
+    "use-supercluster": "^0.4.0"
   },
   "scripts": {
     "start": "react-scripts start",

@@ -13,6 +13,12 @@ import Html_Svg from "../../images/Programing_Languages/Html_Svg.svg";
 import Js_Svg from "../../images/Programing_Languages/Js_Svg.svg";
 import NodeJs_Svg from "../../images/Programing_Languages/NodeJs_Svg.svg";
 
+import Marker from "../../images/maps/Marker.svg";
+
+let id = 0;
+const getNextId = () => {
+    return ++id;
+};
 
 export const education = [
     {
@@ -247,19 +253,141 @@ export const other = [
     },
 ];
 
+
+
 export const googleMapsMarkers = [
     {
-        title: "Portugal, Lisboa",
-        marker: NodeJs_Svg,
-        image: Js_Svg,
-        lat: 40.848362,
-        lng: -8.6129936,
+        id: getNextId,
+        country: "Portugal",
+        city: "Póvoa de Varzim",
+        marker: Marker,
+        lat: 41.382679,
+        lng: -8.762750,
+        zoom: 13,
     },
     {
-        title: "centro",
-        marker: Css_Svg,
-        image: Html_Svg,
-        lat: 12,
-        lng: 12,
+        id: getNextId,
+        country: "Portugal",
+        city: "Lisbon",
+        marker: Marker,
+        lat: 38.722252,
+        lng: -9.139337,
+        zoom: 7,
     },
+   /*  {
+        id: getNextId,
+        country: "Portugal",
+        city: "Porto",
+        marker: Marker,
+        lat: 41.158022,
+        lng: -8.6293649,
+        zoom: 13,
+    },
+    {
+        id: getNextId,
+        country: "Portugal",
+        city: "Vila Nova de Gaia",
+        marker: Marker,
+        lat: 41.1228842,
+        lng: -8.6163951,
+        zoom: 13,
+    },
+    {
+        id: getNextId,
+        country: "Portugal",
+        city: "Viseu",
+        marker: Marker,
+        lat: 40.6587356,
+        lng: -7.9151915,
+        zoom: 7,
+    },
+    {
+        id: getNextId,
+        country: "Portugal",
+        city: "Lisabon",
+        marker: Marker,
+        lat: 38.722252,
+        lng: -9.139337,
+        zoom: 7,
+    },
+    {
+        id: getNextId,
+        country: "Portugal",
+        city: "Lisabon",
+        marker: Marker,
+        lat: 38.722252,
+        lng: -9.139337,
+        zoom: 7,
+    },
+    {
+        id: getNextId,
+        country: "Portugal",
+        city: "Lisabon",
+        marker: Marker,
+        lat: 38.722252,
+        lng: -9.139337,
+        zoom: 7,
+    },
+
+
+
+
+
+
+    {
+        id: getNextId,
+        country: "Portugal",
+        city: "Lisabon",
+        marker: Marker,
+        lat: 38.722252,
+        lng: -9.139337,
+        zoom: 7,
+    },
+    {
+        id: getNextId,
+        country: "place",
+        city: "Espanha",
+        marker: Marker,
+        lat: 40.4215761,
+        lng: -3.7011246,
+        zoom: 6,
+    },
+    {
+        id: getNextId,
+        country: "place",
+        city: "bananas, Lisboa",
+        marker: Marker,
+        lat: 41.848362,
+        lng: -9.6129936,
+        zoom: 10,
+    },
+    {
+        id: getNextId,
+        country: "place",
+        city: "centro",
+        marker: Marker,
+        lat: 42.848362,
+        lng: -10.6129936,
+        zoom: 10,
+    },
+    {
+        id: getNextId,
+        country: "place",
+        city: "centro",
+        marker: Marker,
+        lat: 60.848362,
+        lng: -30.6129936,
+        zoom: 10,
+    },
+    {
+        id: getNextId,
+        country: "place",
+        city: "centro",
+        marker: Marker,
+        lat: 60.848362,
+        lng: -35.6129936,
+        zoom: 10,
+    },
+ */
 ];
+
