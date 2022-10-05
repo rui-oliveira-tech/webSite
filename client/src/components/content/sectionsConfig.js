@@ -226,6 +226,7 @@ export const projects = [
         startDate: "7 Feb 2021",
         endDate: "Present",
         description: 'My house is controlled by a Raspberry PI 4 with the "Home Assistant" program. In it I elaborate automations to control internally (without internet connection) or externally (via VPN "Tailscale" and IP masked by "Duck DNS") the house, such as lights, sensors, robots...',
+        // description: ["texto", "texto"].join(<br/>),
     },
     {
         title: "Website",

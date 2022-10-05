@@ -178,7 +178,7 @@ export default function MapSection({ markers }) {
         return (
           <div
             className="marker"
-            /*   key={`marker-${cluster.properties.markersId}`} */
+            key={cluster.properties.markersId}
             lat={lat}
             lng={lng}
             style={{ backgroundImage: `url(${cluster.geometry.marker})` }}
