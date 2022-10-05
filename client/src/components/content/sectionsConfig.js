@@ -257,25 +257,25 @@ export const other = [
 
 export const googleMapsMarkers = [
     {
-        id: getNextId,
+        id: getNextId(),
         country: "Portugal",
         city: "Póvoa de Varzim",
         marker: Marker,
-        lat: 41.382679,
-        lng: -8.762750,
+        // lat: 41.382679,
+        // lng: -8.762750,
         zoom: 13,
     },
     {
-        id: getNextId,
+        id: getNextId(),
         country: "Portugal",
         city: "Lisbon",
         marker: Marker,
-        lat: 38.722252,
-        lng: -9.139337,
+        // lat: 38.722252,
+        // lng: -9.139337,
         zoom: 7,
     },
    /*  {
-        id: getNextId,
+        id: getNextId(),
         country: "Portugal",
         city: "Porto",
         marker: Marker,
@@ -284,7 +284,7 @@ export const googleMapsMarkers = [
         zoom: 13,
     },
     {
-        id: getNextId,
+        id: getNextId(),
         country: "Portugal",
         city: "Vila Nova de Gaia",
         marker: Marker,
@@ -293,7 +293,7 @@ export const googleMapsMarkers = [
         zoom: 13,
     },
     {
-        id: getNextId,
+        id: getNextId(),
         country: "Portugal",
         city: "Viseu",
         marker: Marker,
@@ -302,7 +302,7 @@ export const googleMapsMarkers = [
         zoom: 7,
     },
     {
-        id: getNextId,
+        id: getNextId(),
         country: "Portugal",
         city: "Lisabon",
         marker: Marker,
@@ -311,7 +311,7 @@ export const googleMapsMarkers = [
         zoom: 7,
     },
     {
-        id: getNextId,
+        id: getNextId(),
         country: "Portugal",
         city: "Lisabon",
         marker: Marker,
@@ -320,7 +320,7 @@ export const googleMapsMarkers = [
         zoom: 7,
     },
     {
-        id: getNextId,
+        id: getNextId(),
         country: "Portugal",
         city: "Lisabon",
         marker: Marker,
@@ -335,7 +335,7 @@ export const googleMapsMarkers = [
 
 
     {
-        id: getNextId,
+        id: getNextId(),
         country: "Portugal",
         city: "Lisabon",
         marker: Marker,
@@ -344,7 +344,7 @@ export const googleMapsMarkers = [
         zoom: 7,
     },
     {
-        id: getNextId,
+        id: getNextId(),
         country: "place",
         city: "Espanha",
         marker: Marker,
@@ -353,7 +353,7 @@ export const googleMapsMarkers = [
         zoom: 6,
     },
     {
-        id: getNextId,
+        id: getNextId(),
         country: "place",
         city: "bananas, Lisboa",
         marker: Marker,
@@ -362,7 +362,7 @@ export const googleMapsMarkers = [
         zoom: 10,
     },
     {
-        id: getNextId,
+        id: getNextId(),
         country: "place",
         city: "centro",
         marker: Marker,
@@ -371,7 +371,7 @@ export const googleMapsMarkers = [
         zoom: 10,
     },
     {
-        id: getNextId,
+        id: getNextId(),
         country: "place",
         city: "centro",
         marker: Marker,
@@ -380,7 +380,7 @@ export const googleMapsMarkers = [
         zoom: 10,
     },
     {
-        id: getNextId,
+        id: getNextId(),
         country: "place",
         city: "centro",
         marker: Marker,
