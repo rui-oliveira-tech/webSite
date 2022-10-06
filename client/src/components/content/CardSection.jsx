@@ -11,7 +11,7 @@ import ProgramingLanguages_Img from "../../images/ProgramingLanguages_Img.jpg";
 import Experience_Img from "../../images/Experience_Img.jpg";
 import Projects_Img from "../../images/Projects_Img.jpg";
 import Others_Img from "../../images/Others_Img.jpg";
-/* import TraveledMap from "../../images/Traveled_Img.jpg"; */
+import TraveledMap_Img from "../../images/TraveledMap_Img.jpg";
 
 // color: #193a59;
 // background-color: #bdd9f3;
@@ -202,7 +202,16 @@ export default function CardSection() {
                 <p className="light text medium textSpacement">{degree.description}</p>
               </React.Fragment>
             ))}
-            <MapSection markers={googleMapsMarkers} />
+          </div>
+        </div>
+        <div className="project" style={{ gridArea: "map", backgroundImage: `url(${TraveledMap_Img})` }}>
+          <div className="overlay" style={{ backgroundImage: `${gradient}, url(${TraveledMap_Img})` }}>
+            <p>Where I've  been</p>
+          </div>
+          <div className="underlay">
+            <div className="traveledMap">
+              <MapSection markers={googleMapsMarkers} />
+            </div>
           </div>
         </div>
       </div>

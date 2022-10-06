@@ -8,8 +8,8 @@ import { readString } from 'react-papaparse';
 
 const defaultZoom = 2;
 const defaultCenter = {
-  lat: 0,
-  lng: 0,
+  lat: 49.1485207,
+  lng: 2.9511712,
 }
 
 const getPapaConfig = (markers, setPoints) => ({
@@ -124,7 +124,7 @@ export default function MapSection({ markers }) {
       bootstrapURLKeys={{ key: process.env.REACT_APP_GOOGLE_KEY }}
       defaultCenter={defaultCenter}
       defaultZoom={defaultZoom}
-      style={{ width: "100%", height: "100vh" }}
+      style={{ width: "100%", height: "100%" }}
       yesIWantToUseGoogleMapApiInternals
       onGoogleApiLoaded={({ map }) => {
         mapRef.current = map;
