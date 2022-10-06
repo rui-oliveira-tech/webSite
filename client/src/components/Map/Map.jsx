@@ -121,7 +121,7 @@ export default function MapSection({ markers }) {
 
   return (
     <GoogleMapReact
-      bootstrapURLKeys={{ key: process.env.REACT_APP_GOOGLE_KEY }}
+      bootstrapURLKeys={{ key: process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY }}
       defaultCenter={defaultCenter}
       defaultZoom={defaultZoom}
       style={{ width: "100%", height: "100%" }}
