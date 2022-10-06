@@ -77,6 +77,8 @@ const getPapaConfig = (markers, setPoints) => ({
   },
 });
 
+
+
 const Marker = ({ children }) => children;
 
 export default function MapSection({ markers }) {
@@ -118,6 +120,9 @@ export default function MapSection({ markers }) {
     mapRef.current.setZoom(zoom);
     mapRef.current.panTo({ lat: lat, lng: lng });
   };
+
+  const server = process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY;
+  console.log(process.env);
 
   return (
     <GoogleMapReact
