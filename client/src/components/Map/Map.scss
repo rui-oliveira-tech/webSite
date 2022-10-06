@@ -17,8 +17,8 @@
 
 
 .marker {
-  width: 20px;
-  height: 20px;
+  width: 25px;
+  height: 25px;
   position: absolute;
   transform: translate(-50%, -50%);
   z-index: 1;
@@ -36,8 +36,8 @@
     position: absolute;
     display: none;
 
-    width: 20px;
-    height: 20px;
+    width: 25px;
+    height: 25px;
     img {
       position: relative;
       filter: invert(48%) sepia(79%) saturate(2476%) hue-rotate(86deg)
@@ -46,10 +46,10 @@
 
     .title {
       width: 200px;
-      transform: translate(100%, -140%);
+      transform: translate(100%, -150%);
       animation: showLettersMapsMarker 1s linear forwards;
       color: #ffffff;
-      font-size: 1em;
+      font-size: 1.5em;
       line-height: 1em;
       font-weight: 600;
       letter-spacing: normal;
@@ -62,7 +62,7 @@
   0% {
     width: 70%;
     opacity: 0;
-    background: rgba(0, 0, 0, 0);
+    //background: rgba(0, 0, 0, 0);
   }
   50% {
     opacity: 0.1;
@@ -70,6 +70,6 @@
   100% {
     width: 100%;
     opacity: 1;
-    background: rgba(0, 0, 0, 0.359);
+   // background: rgba(0, 0, 0, 0.359);
   }
 }
