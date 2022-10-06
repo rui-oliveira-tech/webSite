@@ -121,12 +121,12 @@ export default function MapSection({ markers }) {
     mapRef.current.panTo({ lat: lat, lng: lng });
   };
 
-  const server = process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY;
+  const server = process.env.REACT_APP_GOOGLE_MAPS_API_KEY;
   console.log(process.env);
 
   return (
     <GoogleMapReact
-      bootstrapURLKeys={{ key: process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY }}
+      bootstrapURLKeys={{ key: process.env.REACT_APP_GOOGLE_MAPS_API_KEY }}
       defaultCenter={defaultCenter}
       defaultZoom={defaultZoom}
       style={{ width: "100%", height: "100%" }}
