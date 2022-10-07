@@ -9,7 +9,7 @@ import {
 } from "react-router-dom";
 import ReactGA from 'react-ga4';
 
-const TRACKING_ID = "G-2XS270VH06"; // OUR_TRACKING_ID
+const TRACKING_ID = process.env.REACT_APP_GOOGLE_ANALYTICS_ID ; // OUR_TRACKING_ID
 ReactGA.initialize(TRACKING_ID);
 // To Report Page View 
 ReactGA.send({ hitType: "pageview", page: "/my-path" });
