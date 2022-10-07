@@ -225,7 +225,7 @@ export const projects = [
         website: "https://github.com/rui-oliveira-tech/homeAssistant/",
         startDate: "7 Feb 2021",
         endDate: "Present",
-        description: 'My house is controlled by a Raspberry PI 4 with the "Home Assistant" program. In it I elaborate automations to control internally (without internet connection) or externally (via VPN "Tailscale" and IP masked by "Duck DNS") the house, such as lights, sensors, robots...',
+        description: 'My house is controlled by a Raspberry PI 4 and automated with "Home Assistant". I can control lights, sensors, robots, both internally (without internet connection) and externally (via VPN "Tailscale" and IP masked by "Duck DNS").',
         // description: ["texto", "texto"].join(<br/>),
     },
     {
