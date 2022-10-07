@@ -7,7 +7,22 @@ import {
   Routes,
   Route,
 } from "react-router-dom";
+import ReactGA from 'react-ga';
+import TagManager from 'react-gtm-module'
 
+
+ 
+const tagManagerArgs = {
+    gtmId: 'GTM-MDWT5P6'
+}
+ 
+TagManager.initialize(tagManagerArgs)
+
+
+
+ReactGA.initialize('G-6NZY9LSDTM');
+// To Report Page View 
+ReactGA.pageview(window.location.pathname + window.location.search);
 
 ReactDOM.render(
   <React.StrictMode>

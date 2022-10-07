@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from "react";
-import ReactGA from 'react-ga';
+
 //import { isMobile } from 'react-device-detect';
 import "./css/ruicons-embedded.css";
 import "./css/globalVar.scss";
@@ -43,14 +43,7 @@ function App() {
     }
   }
 
-  useEffect(() => {
-    ReactGA.initialize('G-6NZY9LSDTM');
-    // To Report Page View 
-    ReactGA.pageview(window.location.pathname + window.location.search);
-  }, [])
-
-
-  return (
+   return (
     <>
       <Loading />
       <div className="wideGrid">
