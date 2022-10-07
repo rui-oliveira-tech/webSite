@@ -8,7 +8,7 @@ export function Footer() {
     <footer className="mainFooter">
         <a className="icon" target="_blank" rel="noreferrer" href="https://www.instagram.com/rui_oliveira_tech/"><i className="icon-instagram" /></a>
 
-        <a className="icon" target="_blank" rel="noreferrer" href="https://wa.me/message/NX352LLKCXBFH1"><i className="icon-whatsapp" /></a>
+        <a className="icon" target="_blank" rel="noreferrer" href="https://api.whatsapp.com/send/?phone=32474127175&text&type=phone_number&app_absent=0"><i className="icon-whatsapp" /></a>
 
         <Button className="from-center" href="mailto:hire@rui-oliveira.com">Hire Me</Button>
 
