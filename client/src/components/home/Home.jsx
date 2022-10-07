@@ -21,11 +21,11 @@ export default function Home({ allPages }) {
   return (
     <section className="scroll_to home">
       <header>
-        <button class="learn-more" onClick={saveFile}>
-          <span class="circle" aria-hidden="true">
-            <span class="icon arrow"></span>
+        <button className="learn-more" onClick={saveFile}>
+          <span className="circle" aria-hidden="true">
+            <span className="icon arrow"></span>
           </span>
-          <span class="button-text"> Get My CV</span>
+          <span className="button-text"> Get My CV</span>
         </button>
         <figure>
           <img src={main_Img} className="frontImage" alt="Rui Oliveira" />
