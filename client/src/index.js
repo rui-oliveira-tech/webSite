@@ -7,29 +7,19 @@ import {
   Routes,
   Route,
 } from "react-router-dom";
-import ReactGA from 'react-ga';
-import TagManager from 'react-gtm-module'
+import ReactGA from 'react-ga4';
 
-
- 
-const tagManagerArgs = {
-    gtmId: 'GTM-MDWT5P6'
-}
- 
-TagManager.initialize(tagManagerArgs)
-
-
-
-ReactGA.initialize('G-6NZY9LSDTM');
+const TRACKING_ID = "G-2XS270VH06"; // OUR_TRACKING_ID
+ReactGA.initialize(TRACKING_ID);
 // To Report Page View 
-ReactGA.pageview(window.location.pathname + window.location.search);
+ReactGA.send({ hitType: "pageview", page: "/my-path" });
 
 ReactDOM.render(
   <React.StrictMode>
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<App />} />
-        <Route exact path="/vcard/:type" element={<Vcard/>} />
+        <Route exact path="/vcard/:type" element={<Vcard />} />
         {/*   <Route path="*" element={
           <main>
             <h1>Nothing here</h1>
