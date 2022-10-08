@@ -21,6 +21,8 @@ function getType({ type }) {
       return "Mail";
     case "vdab":
       return "VDAB";
+    case "twitter":
+      return "Twitter";
     default:
       return "Other";
   }
