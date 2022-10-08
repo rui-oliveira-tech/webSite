@@ -1,4 +1,5 @@
 import React from "react";
+import Redirects from "./components/Redirects/Redirects";
 import App from "./App";
 import Vcard from "./components/vcard/Vcard";
 import ReactDOM from "react-dom";
@@ -9,15 +10,16 @@ import {
 } from "react-router-dom";
 import ReactGA from 'react-ga4';
 
-const TRACKING_ID = process.env.REACT_APP_GOOGLE_ANALYTICS_ID ; // OUR_TRACKING_ID
+const TRACKING_ID = process.env.REACT_APP_GOOGLE_ANALYTICS_ID; // OUR_TRACKING_ID
 ReactGA.initialize(TRACKING_ID);
 // To Report Page View 
-ReactGA.send({ hitType: "pageview", page: "/my-path" });
+ReactGA.send({ hitType: "pageview", page: `${window.location.pathname}` });
 
 ReactDOM.render(
   <React.StrictMode>
     <BrowserRouter>
       <Routes>
+        <Route path="/:type" element={<Redirects />} />
         <Route path="/" element={<App />} />
         <Route exact path="/vcard/:type" element={<Vcard />} />
         {/*   <Route path="*" element={

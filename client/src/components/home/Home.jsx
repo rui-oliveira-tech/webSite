@@ -1,5 +1,6 @@
 import React from "react";
 import FileSaver from 'file-saver';
+import ReactGA from 'react-ga4';
 import "./Home.scss";
 import "./CvButton.scss";
 import main_Img from "../../images/main_Img.jpg";
@@ -14,6 +15,12 @@ export default function Home({ allPages }) {
     });
   }
   const saveFile = () => {
+
+    ReactGA.event({
+      action: "download",
+      category: "cv", 
+    });
+
     FileSaver.saveAs(
       process.env.PUBLIC_URL + "/resource/CV - EN - Rui Oliveira.pdf",
       "CV - EN - Rui Oliveira.pdf");

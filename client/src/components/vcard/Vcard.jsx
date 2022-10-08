@@ -3,6 +3,7 @@ import {
   useNavigate,
   useParams,
 } from "react-router-dom";
+import ReactGA from 'react-ga4';
 
 const server = process.env.REACT_APP_API;
 
@@ -53,10 +54,15 @@ export default function Vcard() {
 
   const filename = `${type}_vcard.vcf`;
 
-
+  useEffect(() => {
+    ReactGA.event({
+      action: "download",
+      category: `${type}_vcard`,
+    });
+  }, []);
 
   return (
-    <a ref={vCardLink} href={fileUrl} download={filename}>{errors? "Server is sleeping! Come back after next month.":"Download Vcard"}</a>
+    <a ref={vCardLink} href={fileUrl} download={filename}>{errors ? "Server is sleeping! Come back after next month." : "Download Vcard"}</a>
   )
 }
 
