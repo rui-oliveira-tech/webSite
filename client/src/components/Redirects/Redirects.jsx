@@ -13,9 +13,9 @@ function getType({ type }) {
       return "Facebook";
     case "insta":
       return "Instagram";
-    case "l":
+    case "linkedin":
       return "Linkedin";
-    case "g":
+    case "google":
       return "Google";
     case "m":
       return "Mail";
