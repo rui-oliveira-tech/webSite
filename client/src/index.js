@@ -10,9 +10,7 @@ import {
 } from "react-router-dom";
 import ReactGA from 'react-ga4';
 
-const TRACKING_ID = process.env.REACT_APP_GOOGLE_ANALYTICS_ID; // OUR_TRACKING_ID
-ReactGA.initialize(TRACKING_ID);
-// To Report Page View 
+ReactGA.initialize(process.env.REACT_APP_GOOGLE_ANALYTICS_ID);
 ReactGA.send({ hitType: "pageview", page: `${window.location.pathname}` });
 
 ReactDOM.render(
