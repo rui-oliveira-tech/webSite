@@ -10,7 +10,7 @@
     "react-ga4": "^1.4.1",
     "react-papaparse": "^4.1.0",
     "react-router-dom": "^6.4.2",
-    "react-scripts": "^4.0.1",
+    "react-scripts": "^5.0.1",
     "use-supercluster": "^0.4.0"
   },
   "scripts": {
