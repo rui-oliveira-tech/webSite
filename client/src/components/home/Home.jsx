@@ -13,7 +13,6 @@ export default function Home({ allPages }) {
   const { t } = useTranslation();
   const currentLanguageCode = cookies.get('i18next') || 'en'
 
-  console.log(currentLanguageCode)
   function scrollDown(e) {
     document.querySelector(".projects").scrollIntoView({
       behavior: "smooth",

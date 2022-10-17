@@ -37,7 +37,6 @@ export default function MapSection(props) {
     }
     return false;
   };
-  console.log(zoom);
   return (
 
 
@@ -75,29 +74,3 @@ export default function MapSection(props) {
     </GoogleMapReact>
   );
 }
-
-
- {/*  {props.markers.length && props.markers.map((marker, i) => (
-          <>
-                {console.log(marker.length)}  
-            {marker.length && marker.map((marker, i) => (
-              <>  {console.log(marker.title, marker.lat, marker.lng)} 
-                <div
-                  onClick={onClickMarker(marker)}
-                  className="marker"
-                  lat={Number(marker.lat)}
-                  lng={Number(marker.lng)}
-                  key={i}
-                  style={isToMarker(marker) ? { backgroundImage: `url(${marker.marker})`, } : { display: "none" }}
-                >
-                  <div className="popup">
-                    <img src={marker.marker} alt={marker.marker} />
-                    <p className="title">{marker.title}</p>
-
-                  </div>
-                </div>
-              </>
-            ))}
-          </>
-        ))} 
-        */}
