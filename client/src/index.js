@@ -1,33 +1,37 @@
-import React from "react";
-import Redirects from "./components/Redirects/Redirects";
-import App from "./App";
-import Vcard from "./components/vcard/Vcard";
+import React, { Suspense } from "react";
 import ReactDOM from "react-dom";
-import {
-  BrowserRouter,
-  Routes,
-  Route,
-} from "react-router-dom";
-import ReactGA from 'react-ga4';
+import { BrowserRouter, Routes, Route, } from "react-router-dom";
+import './components/Languages/i18nextConf.js'
+import './components/GoogleAnalytics/reactGAConf.js'
 
-ReactGA.initialize(process.env.REACT_APP_GOOGLE_ANALYTICS_ID);
-ReactGA.send({ hitType: "pageview", page: `${window.location.pathname}` });
+import {Redirect_App, Redirect_Vcard} from "./components/GoogleAnalytics/Redirects";
+
+
+
+
+const loadingMarkup = (
+
+    <h3>Loading..</h3>
+
+)
 
 ReactDOM.render(
-  <React.StrictMode>
-    <BrowserRouter>
-      <Routes>
-        <Route path="/:type" element={<Redirects />} />
-        <Route path="/" element={<App />} />
-        <Route exact path="/vcard/:type" element={<Vcard />} />
-        {/*   <Route path="*" element={
+  <Suspense fallback={loadingMarkup}>
+    <React.StrictMode>
+      <BrowserRouter>
+        <Routes>
+        <Route path="/" element={<Redirect_App />} /> 
+          <Route path="/:type" element={<Redirect_App />} /> 
+          <Route exact path="/vcard/:type" element={<Redirect_Vcard />} />
+          {/*   <Route path="*" element={
           <main>
             <h1>Nothing here</h1>
           </main>
         } /> */}
-      </Routes>
-    </BrowserRouter>
-  </React.StrictMode>,
+        </Routes>
+      </BrowserRouter>
+    </React.StrictMode>,
+  </Suspense>,
   document.getElementById('root')
 );
 
