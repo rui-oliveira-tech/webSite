@@ -34,9 +34,9 @@ export default function CardSection() {
           </div>
           <div className="underlay">
             <h2 className="extraBig bold">{t('about.underlayTitle')}</h2>
-            <p className="light text">
+            <div className="light text">
               {t('about.description', { returnObjects: true, company: t('experience.description.0.company'), location: t('experience.description.0.location') }).map((item, i) =>
-                <>
+                <React.Fragment key={i}>
                   {i === 0 ?
                     (<p className="big" key={i}>{item}</p>)
                     : i === 1 ?
@@ -52,9 +52,9 @@ export default function CardSection() {
                         :
                         (<p className="big right" key={i}>{item}</p>)
                   }
-                </>
+                </React.Fragment>
               )}
-            </p>
+            </div>
           </div>
         </div>
         <div className="project" style={{ gridArea: "education", backgroundImage: `url(${Education_Img})` }}>
