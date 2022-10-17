@@ -33,7 +33,7 @@ export default function CardSection() {
             <p>{t('about.overlayTitle')}</p>
           </div>
           <div className="underlay">
-            <h2 className="project__title extraBig bold">{t('about.underlayTitle')}</h2>
+            <h2 className="extraBig bold">{t('about.underlayTitle')}</h2>
             <p className="light text">
               {t('about.description', { returnObjects: true, company: t('experience.description.0.company'), location: t('experience.description.0.location') }).map((item, i) =>
                 <>
@@ -62,7 +62,7 @@ export default function CardSection() {
             <p>{t('education.overlayTitle')}</p>
           </div>
           <div className="underlay">
-            <h2 className="project__title extraBig bold">{t('education.underlayTitle')}</h2>
+            <h2 className="extraBig bold">{t('education.underlayTitle')}</h2>
             {t('education.description', { returnObjects: true }).map((degree, i) => (
               <React.Fragment key={i}>
                 <p className="light big subTitle">{degree.title}</p>
@@ -77,7 +77,7 @@ export default function CardSection() {
             <p>{t('languages.overlayTitle')}</p>
           </div>
           <div className="underlay">
-            <h2 className="project__title extraBig bold">{t('languages.underlayTitle')}</h2>
+            <h2 className="extraBig bold">{t('languages.underlayTitle')}</h2>
             <table className="languagesTable small">
               <thead className="small">
                 <tr>
@@ -122,7 +122,7 @@ export default function CardSection() {
             <p>{t('programingLanguages.overlayTitle')}</p>
           </div>
           <div className="underlay">
-            <h2 className="project__title extraBig bold">{t('programingLanguages.underlayTitle')}</h2>
+            <h2 className="extraBig bold">{t('programingLanguages.underlayTitle')}</h2>
             {programingLanguages[0].map((degree, i) => (
               <React.Fragment key={i}>
                 {/* <p/> */}
@@ -144,7 +144,7 @@ export default function CardSection() {
             <p>{t('experience.overlayTitle')}</p>
           </div>
           <div className="underlay">
-            <h2 className="project__title extraBig bold">{t('experience.underlayTitle')}</h2>
+            <h2 className="extraBig bold">{t('experience.underlayTitle')}</h2>
             {t('experience.description', { returnObjects: true }).map((degree, i) => (
               <React.Fragment key={i}>
                 <p className="light big subTitle">{degree.title}</p>
@@ -163,7 +163,7 @@ export default function CardSection() {
             <p>{t('projects.overlayTitle')}</p>
           </div>
           <div className="underlay">
-            <h2 className="project__title extraBig bold">{t('projects.underlayTitle')}</h2>
+            <h2 className="extraBig bold">{t('projects.underlayTitle')}</h2>
             {t('projects.description', { returnObjects: true }).map((degree, i) => (
               <React.Fragment key={i}>
                 <a className="light big subTitle" target="_blank" rel="noreferrer" href={degree.website}>{degree.title}</a>
@@ -179,7 +179,7 @@ export default function CardSection() {
           </div>
           <div className="underlay">
 
-            <h2 className="project__title extraBig bold">{t('other.underlayTitle')}</h2>
+            <h2 className="extraBig bold">{t('other.underlayTitle')}</h2>
             {t('other.description', { returnObjects: true }).map((degree, i) => (
               <React.Fragment key={i}>
                 <p className="light big subTitle">{degree.title}</p>

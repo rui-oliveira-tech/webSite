@@ -82,15 +82,7 @@
     height: 100%;
   }
 
-  &__languages {
-    position: relative;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: left;
-    align-items: left;
-    text-align: left;
-  }
-  &__title {
+  h2 {
     width: 100%;
     color: #333;
     padding-bottom: 0.1em;
@@ -98,7 +90,8 @@
   p {
     display: block;
     text-decoration: none;
-    margin-bottom: 0.5em;
+    margin-bottom: 0em;
+
     color: var(--textColor);
 
     &.noLineBreak {
@@ -120,8 +113,8 @@
     color: var(--linkColor);
   }
   .subTitle {
-    padding-block-start: 0.5em;
-    padding-bottom: 0.5em;
+    padding-block-start: 1em;
+    padding-bottom: 0.3em;
     line-height: 1;
     color: var(--titleColor);
   }
@@ -138,13 +131,13 @@
     font-size: 1em;
   }
   .medium {
-    font-size: 1.5em;
+    font-size: 1.2em;
   }
   .big {
-    font-size: 2em;
+    font-size: 1.5em;
   }
   .extraBig {
-    font-size: 3.75em;
+    font-size: 2.75em;
   }
 
   .languagesTable {
