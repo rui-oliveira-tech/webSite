@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { useTranslation } from 'react-i18next'
 
 import "./_CardSection.scss"
@@ -25,6 +25,11 @@ const gradient = "radial-gradient(circle, rgb(25, 58, 89, 0.5) 0%, rgb(0, 0, 0, 
 
 export default function CardSection() {
   const { t } = useTranslation();
+  const [loadingMap, setLoadingMap] = useState(true);
+  useEffect(() => {
+    new Promise(resolve => setTimeout(() => resolve(setLoadingMap(false)), 2000))
+  })
+
   return (
     <section className="scroll_to projects">
       <div className="about">
@@ -189,7 +194,7 @@ export default function CardSection() {
             ))}
           </div>
         </div>
-        <div className="project" style={{ gridArea: "map", backgroundImage: `url(${TraveledMap_Img})` }}>
+        {!loadingMap && <div className="project" style={{ gridArea: "map", backgroundImage: `url(${TraveledMap_Img})` }}>
           <div className="overlay" style={{ backgroundImage: `${gradient}, url(${TraveledMap_Img})` }}>
             <p>{t('googleMapsMarkers.overlayTitle')}</p>
           </div>
@@ -198,7 +203,7 @@ export default function CardSection() {
               <MapSection markers={googleMapsMarkers} />
             </div>
           </div>
-        </div>
+        </div>}
       </div>
     </section>
   )

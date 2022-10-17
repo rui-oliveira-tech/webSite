@@ -3,7 +3,6 @@ import React, { useEffect, useRef } from "react";
 import "./css/ruicons-embedded.css";
 import "./css/globalVar.scss";
 import "./css/global.css";
-import Loading from "./components/Loading/Loading";
 import Language from "./components/Languages/Language";
 import Home from "./components/home/Home";
 import CardSection from "./components/content/CardSection";
@@ -45,7 +44,6 @@ function App() {
 
   return (
     <>
-     <Loading /> 
       <div className="wideGrid">
         <Language />
         <Home allPages={allPages} />

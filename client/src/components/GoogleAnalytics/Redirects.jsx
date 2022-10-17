@@ -30,7 +30,7 @@ function getType({ type }) {
   }
 }
 
-export function Redirect_App() {
+export function RedirectApp() {
   const type = getType(useParams());
 
   useEffect(() => {
@@ -45,7 +45,7 @@ export function Redirect_App() {
   )
 }
 
-export function Redirect_Vcard() {
+export function RedirectVcard() {
   const type = getType(useParams());
 
   return (
@@ -53,4 +53,4 @@ export function Redirect_Vcard() {
   )
 }
 
-export default Redirect_App;
+export default RedirectApp;
