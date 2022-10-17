@@ -66,8 +66,7 @@ export default function Language() {
           <ul className="dropdown-menu" aria-labelledby="dropdownMenuButton1">
             {languages.map(({ code, name, country_code }) => (
               <li key={country_code}>
-                <a
-                  href="#"
+                <button
                   className={classNames('dropdown-item', {
                     disabled: currentLanguageCode === code,
                   })}
@@ -82,7 +81,7 @@ export default function Language() {
                     }}
                   ></span>
                   {name}
-                </a>
+                </button>
               </li>
             ))}
           </ul>
