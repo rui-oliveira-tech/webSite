@@ -1,0 +1,19 @@
+.language {
+  position: relative;
+  margin-left: auto;
+  margin-right: 0px;
+  top: 10px;
+  left: -150px;
+  z-index: 1000;
+
+  .globeIcon {
+    width: 24;
+    height: 24;
+  }
+  @media (min-width: 270px) and (max-width: 1023px) {
+    .globeIcon {
+      filter: invert(82%) sepia(100%) saturate(0%) hue-rotate(341deg)
+        brightness(101%) contrast(104%);
+    }
+  }
+}

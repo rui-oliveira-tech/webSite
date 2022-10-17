@@ -1,10 +1,10 @@
 import React, { useEffect, useRef } from "react";
 
-//import { isMobile } from 'react-device-detect';
 import "./css/ruicons-embedded.css";
 import "./css/globalVar.scss";
 import "./css/global.css";
 import Loading from "./components/Loading/Loading";
+import Language from "./components/Languages/Language";
 import Home from "./components/home/Home";
 import CardSection from "./components/content/CardSection";
 import Footer from "./components/footer/Footer";
@@ -43,10 +43,11 @@ function App() {
     }
   }
 
-   return (
+  return (
     <>
-      <Loading />
+     <Loading /> 
       <div className="wideGrid">
+        <Language />
         <Home allPages={allPages} />
         <CardSection />
       </div>

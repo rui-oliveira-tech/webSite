@@ -1,8 +1,9 @@
 import React from "react";
+import { useTranslation } from 'react-i18next'
+
 import "./_CardSection.scss"
 import MapSection from "../Map/Map";
-/* import sections from "./sectionsConfig.js" */
-import { education, languages, programingLanguages, experience, projects, other, googleMapsMarkers } from "./sectionsConfig.js"
+import { programingLanguages, googleMapsMarkers } from "./sectionsConfig.js"
 
 import About_Img from "../../images/About_Img.jpg";
 import Education_Img from "../../images/Education_Img.jpg";
@@ -21,60 +22,46 @@ import TraveledMap_Img from "../../images/TraveledMap_Img.jpg";
 const gradient = "radial-gradient(circle, rgb(25, 58, 89, 0.5) 0%, rgb(0, 0, 0, 0.5) 100%)"
 
 export default function CardSection() {
-
-
-
+  const { t } = useTranslation();
   return (
     <section className="scroll_to projects">
       <div className="about">
         <div className="project" style={{ gridArea: "about", backgroundImage: `url(${About_Img})` }}>
           <div className="overlay" style={{ backgroundImage: `${gradient}, url(${About_Img})` }}>
-            <p>Who I am</p>
+            <p>{t('about.overlayTitle')}</p>
           </div>
           <div className="underlay">
-            <h2 className="project__title extraBig bold">About</h2>
-            <p className="light text big">I'm Rui. I'm a Industrial Electrician.</p>
-            <p className="light text medium">
-              I am currently working at the{" "}
-              <a target="_blank" rel="noreferrer" href={experience[0].website}>{experience[0].company}</a> in{" "}
-              {experience[0].location}. However I have total and immediate
-              availability to start working.
-            </p>
-            <p className="light text medium">
-              I have excellent knowledge of Electricity, Pneumatics, Hydraulics,
-              Interpretation of schematics, Informatics in the user's perspective,
-              as well as in the use of internet.
-            </p>
-            <p className="light text medium">
-              My strengths are Electrification of electrical boards and structures,
-              Industrial maintenance and repair.
-            </p>
-            <p className="light text medium">
-              I also have experience in industrial automation and electromechanical.
-            </p>
-            <p className="light text medium">
-              I have good team work spirit, cooperative and with a taste for
-              knowledge and learning.
-            </p>
-            <p className="light text medium">
-              I have preference in working as an industrial electrician, but I do
-              not exclude the possibility of performing another position in
-              different areas.
-            </p>
-            <p className="light text big right">
-              Looking forward to hearing from you.
+            <h2 className="project__title extraBig bold">{t('about.underlayTitle')}</h2>
+            <p className="light text">
+              {t('about.description', { returnObjects: true, company: t('experience.description.0.company'), location: t('experience.description.0.location') }).map((item, i) =>
+                <>
+                  {i === 0 ?
+                    (<p className="big" key={i}>{item}</p>)
+                    : i === 1 ?
+                      (<p className="medium" key={i}>
+                        {item[0]}
+                        <a target="_blank" rel="noreferrer" href={t('experience.description.0.website')}> {item[1]}</a>
+                        {item[2]}
+                        {item[3]}
+                        {item[4]}
+                      </p>)
+                      : i === 2 ?
+                        (<p className="medium" key={i}>{item}</p>)
+                        :
+                        (<p className="big right" key={i}>{item}</p>)
+                  }
+                </>
+              )}
             </p>
           </div>
         </div>
         <div className="project" style={{ gridArea: "education", backgroundImage: `url(${Education_Img})` }}>
           <div className="overlay" style={{ backgroundImage: `${gradient}, url(${Education_Img})` }}>
-            <p>What I've learned</p>
+            <p>{t('education.overlayTitle')}</p>
           </div>
           <div className="underlay">
-            <h2 className="project__title extraBig bold">
-              Education
-            </h2>
-            {education.map((degree, i) => (
+            <h2 className="project__title extraBig bold">{t('education.underlayTitle')}</h2>
+            {t('education.description', { returnObjects: true }).map((degree, i) => (
               <React.Fragment key={i}>
                 <p className="light big subTitle">{degree.title}</p>
                 <a className="textGlue medium" target="_blank" rel="noreferrer" href={degree.website}>{degree.company} in {degree.location}</a>
@@ -85,33 +72,29 @@ export default function CardSection() {
         </div>
         <div className="project" style={{ gridArea: "languages", backgroundImage: `url(${Languages_Img})` }}>
           <div className="overlay" style={{ backgroundImage: `${gradient}, url(${Languages_Img})` }}>
-            <p>What I speak</p>
+            <p>{t('languages.overlayTitle')}</p>
           </div>
           <div className="underlay">
-            <h2 className="project__title extraBig bold">Languages</h2>
+            <h2 className="project__title extraBig bold">{t('languages.underlayTitle')}</h2>
             <table className="languagesTable small">
               <thead className="small">
                 <tr>
-                  <th width="150px"> LANGUAGE</th>
-                  <th className="divid" colSpan="2">
-                    UNDERSTANDING
-                  </th>
-                  <th className="divid" colSpan="2">
-                    SPEAKING
-                  </th>
-                  <th className="divid">WRITING</th>
+                  <th width="150px">{t('languages.language')}</th>
+                  <th className="divid" colSpan="2">{t('languages.understanding')}</th>
+                  <th className="divid" colSpan="2">{t('languages.speaking')}</th>
+                  <th className="divid">{t('languages.writing')}</th>
                 </tr>
               </thead>
               <tbody className="small">
                 <tr>
                   <td></td>
-                  <td>Listening</td>
-                  <td>Reading</td>
-                  <td>Interaction</td>
-                  <td>Production</td>
+                  <td>{t('languages.listening')}</td>
+                  <td>{t('languages.reading')}</td>
+                  <td>{t('languages.interaction')}</td>
+                  <td>{t('languages.production')}</td>
                   <td></td>
                 </tr>
-                {languages.map((degree, i) => (
+                {t('languages.description', { returnObjects: true }).map((degree, i) => (
                   <tr className="color" key={i}>
                     <td className="noBorder left"><span className={"flag-icon flag-icon-" + degree.flag}></span>{degree.language}</td>
                     <td>{degree.listening}</td>
@@ -124,8 +107,8 @@ export default function CardSection() {
                 <tr>
                   <td className="noBorder left" ></td>
                   <td className="noBorder left" colSpan="5">
-                    <p className="text estraSmall noPading">Levels: A1/2: Basic user - B1/2: Independent user - C1/2 Proficient user</p>
-                    <p className="text estraSmall noPading">Common European Framework of Reference for Languages</p>
+                    <p className="text estraSmall noPading">{t('languages.levels')}</p>
+                    <p className="text estraSmall noPading">{t('languages.framework')}</p>
                   </td>
                 </tr>
               </tbody>
@@ -134,10 +117,10 @@ export default function CardSection() {
         </div>
         <div className="project" style={{ gridArea: "programingLanguages", backgroundImage: `url(${ProgramingLanguages_Img})` }}>
           <div className="overlay" style={{ backgroundImage: `${gradient}, url(${ProgramingLanguages_Img})` }}>
-            <p>What I program</p>
+            <p>{t('programingLanguages.overlayTitle')}</p>
           </div>
           <div className="underlay">
-            <h2 className="project__title extraBig bold">Programing Languages</h2>
+            <h2 className="project__title extraBig bold">{t('programingLanguages.underlayTitle')}</h2>
             {programingLanguages[0].map((degree, i) => (
               <React.Fragment key={i}>
                 {/* <p/> */}
@@ -156,11 +139,11 @@ export default function CardSection() {
         </div>
         <div className="project" style={{ gridArea: "experience", backgroundImage: `url(${Experience_Img})` }}>
           <div className="overlay" style={{ backgroundImage: `${gradient}, url(${Experience_Img})` }}>
-            <p>What I've done</p>
+            <p>{t('experience.overlayTitle')}</p>
           </div>
           <div className="underlay">
-            <h2 className="project__title extraBig bold">Experience</h2>
-            {experience.map((degree, i) => (
+            <h2 className="project__title extraBig bold">{t('experience.underlayTitle')}</h2>
+            {t('experience.description', { returnObjects: true }).map((degree, i) => (
               <React.Fragment key={i}>
                 <p className="light big subTitle">{degree.title}</p>
                 <a className="textGlue medium" target="_blank" rel="noreferrer" href={degree.website}>{degree.company} in {degree.location}</a>
@@ -175,11 +158,11 @@ export default function CardSection() {
         </div>
         <div className="project" style={{ gridArea: "projects", backgroundImage: `url(${Projects_Img})` }}>
           <div className="overlay" style={{ backgroundImage: `${gradient}, url(${Projects_Img})` }}>
-            <p>What I've created</p>
+            <p>{t('projects.overlayTitle')}</p>
           </div>
           <div className="underlay">
-            <h2 className="project__title extraBig bold">Projects</h2>
-            {projects.map((degree, i) => (
+            <h2 className="project__title extraBig bold">{t('projects.underlayTitle')}</h2>
+            {t('projects.description', { returnObjects: true }).map((degree, i) => (
               <React.Fragment key={i}>
                 <a className="light big subTitle" target="_blank" rel="noreferrer" href={degree.website}>{degree.title}</a>
                 <p className="text small">{degree.startDate} - {degree.endDate}</p>
@@ -190,12 +173,12 @@ export default function CardSection() {
         </div>
         <div className="project" style={{ gridArea: "others", backgroundImage: `url(${Others_Img})` }}>
           <div className="overlay" style={{ backgroundImage: `${gradient}, url(${Others_Img})` }}>
-            <p>Other stuff I'm doing</p>
+            <p>{t('other.overlayTitle')}</p>
           </div>
           <div className="underlay">
 
-            <h2 className="project__title extraBig bold">Other things</h2>
-            {other.map((degree, i) => (
+            <h2 className="project__title extraBig bold">{t('other.underlayTitle')}</h2>
+            {t('other.description', { returnObjects: true }).map((degree, i) => (
               <React.Fragment key={i}>
                 <p className="light big subTitle">{degree.title}</p>
                 <p className="text small">{degree.startDate} - {degree.endDate}</p>
@@ -206,7 +189,7 @@ export default function CardSection() {
         </div>
         <div className="project" style={{ gridArea: "map", backgroundImage: `url(${TraveledMap_Img})` }}>
           <div className="overlay" style={{ backgroundImage: `${gradient}, url(${TraveledMap_Img})` }}>
-            <p>Where I've  been</p>
+            <p>{t('googleMapsMarkers.overlayTitle')}</p>
           </div>
           <div className="underlay">
             <div className="traveledMap">

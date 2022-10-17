@@ -98,6 +98,7 @@
   p {
     display: block;
     text-decoration: none;
+    margin-bottom: 0.5em;
     color: var(--textColor);
 
     &.noLineBreak {
@@ -110,6 +111,7 @@
 
     &.noPading {
       padding-bottom: 0em;
+      margin-bottom: 0em;
     }
   }
   a {
