@@ -3,7 +3,9 @@ import { useTranslation } from 'react-i18next'
 
 import "./_CardSection.scss"
 import MapSection from "../Map/Map";
-import { programingLanguages, googleMapsMarkers } from "./sectionsConfig.js"
+import { programingLanguages } from "./programingLanguages.js"
+import { googleMapsMarkers } from "./googleMapsMarkers.js"
+
 
 import About_Img from "../../images/About_Img.jpg";
 import Education_Img from "../../images/Education_Img.jpg";
