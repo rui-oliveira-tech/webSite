@@ -1,3 +1,231 @@
 {
-
+  "app_title": "Rui Oliveira - Eletricista  Industrial | Residencial",
+  "footer": {
+    "mailButton": "Contrate-me"
+  },
+  "home": {
+    "title": "Rui Oliveira",
+    "subTitle": {
+      "first": "Eletricista Industrial",
+      "second": "Eletricista Residencial",
+      "third": "Projetista eletrico"
+    },
+    "cvButton": "Adquira o Cv"
+  },
+  "about": {
+    "overlayTitle": "Quem eu sou",
+    "underlayTitle": "Sobre",
+    "description": [
+      [
+        "Eu sou o Rui. Sou Eletricista Industrial."
+      ],
+      [
+        "Atualmente estou trabalhando na\n",
+        "{{company}}",
+        "\nin\n",
+        "{{location}}.\n",
+        "No entanto tenho total e imediata disponibilidade para começar a trabalhar."
+      ],
+      [
+        "Possuo excelentes conhecimentos de Eletricidade, Pneumática, Hidráulica, Interpretação de esquemas, Informática na perspectiva do usuário, bem como no uso da internet.",
+        "Os meus pontos fortes são Electrificação de quadros e estruturas eléctricas, Manutenção e reparação industrial.",
+        "Também tenho experiência em automação industrial e eletromecânica.",
+        "Tenho bom espírito de trabalho em equipa, cooperativo e com gosto pelo conhecimento e pela aprendizagem.",
+        "Tenho preferência em trabalhar como eletricista industrial, mas não excluo a possibilidade de exercer outro cargo em diferentes áreas."
+      ],
+      [
+        "Aguardo contato."
+      ]
+    ]
+  },
+  "education": {
+    "overlayTitle": "O que eu aprendi",
+    "underlayTitle": "Educaçao",
+    "description": [
+      {
+        "title": "Curso de condução de empilhadores elétricos, combustão e gás",
+        "company": "Cincork",
+        "location": "Santa Maria de Lamas, Portugal",
+        "website": "https://www.cincork.com/",
+        "startDate": "",
+        "endDate": "4 May 2018"
+      },
+      {
+        "title": "Curso de Eletrónica Automação e Comando + 1500 horas Estágio",
+        "company": "CFPIC",
+        "location": "São João da Madeira, Portugal",
+        "website": "http://www.cfpic.pt/",
+        "startDate": "2012",
+        "endDate": "22 April 2015"
+      },
+      {
+        "title": "Carta de condução AM / B / B1 ",
+        "company": "Boavista escola de condução",
+        "location": "Santa Maria da Feira, Portugal",
+        "website": "http://www.ecboavista.com/",
+        "startDate": "",
+        "endDate": "4 Dec 2015"
+      },
+      {
+        "title": "Curso de Ciências e Tecnologias",
+        "company": "Liceu de Santa Maria da Feira",
+        "location": "Santa Maria da Feira, Portugal",
+        "website": "https://ae-smfeira.pt/",
+        "startDate": "2010",
+        "endDate": "2012"
+      }
+    ]
+  },
+  "languages": {
+    "overlayTitle": "O que eu falo",
+    "underlayTitle": "Linguagens",
+    "language": "LINGUAGEM",
+    "understanding": "COMPREENDER",
+    "speaking": "FALAR",
+    "writing": "ESCREVER",
+    "listening": "Ouvir",
+    "reading": "Ler",
+    "interaction": "Interaçao",
+    "production": "Produçao",
+    "levels": "Níveis: A1/2: Utilizador basico - B1/2: Utilizador independente - C1/2 Utilizador proficional",
+    "framework": "Quadro Europeu Comum de Referência para Línguas",
+    "description": [
+      {
+        "language": "Portugues",
+        "flag": "pt",
+        "listening": "C2",
+        "reading": "C2",
+        "spokenInteraction": "C2",
+        "spokenProduction": "C2",
+        "writing": "C2"
+      },
+      {
+        "language": "Ingles",
+        "flag": "us",
+        "listening": "C1",
+        "reading": "C1",
+        "spokenInteraction": "C1",
+        "spokenProduction": "C1",
+        "writing": "B1"
+      },
+      {
+        "language": "Espanhol",
+        "flag": "es",
+        "listening": "C1",
+        "reading": "C1",
+        "spokenInteraction": "C1",
+        "spokenProduction": "C1",
+        "writing": "B1"
+      },
+      {
+        "language": "Holandes",
+        "flag": "be",
+        "listening": "A2",
+        "reading": "A2",
+        "spokenInteraction": "A1",
+        "spokenProduction": "A1",
+        "writing": "A1"
+      }
+    ]
+  },
+  "programingLanguages": {
+    "overlayTitle": "O que programo",
+    "underlayTitle": "Linguagens de programação",
+    "description": []
+  },
+  "experience": {
+    "overlayTitle": "What I program",
+    "underlayTitle": "Programing Languages",
+    "description": [
+      {
+        "title": "Eletrecista Industrial",
+        "company": "SOCEA nv",
+        "location": "Oelegem, Belgium",
+        "website": "https://www.socea.be/",
+        "offerType": "Tempo inteiro",
+        "startDate": "May 2019",
+        "endDate": "Present",
+        "functionsPerformed": "Encontar problemas na máquina e consertar, instalar suporte de cabos, passar cabos, conectar quadros elétricos, trocar tomadas, lâmpadas, interruptores, mecânica básica.",
+        "skillsGained": "Habilidades de reparo e comunicação."
+      },
+      {
+        "title": "Técnico de frio",
+        "company": "MEDREPAIR",
+        "location": "Beveren, Belgium",
+        "website": "https://www.msc.com/",
+        "offerType": "Tempo inteiro",
+        "startDate": "Jul 2018",
+        "endDate": "May 2019",
+        "functionsPerformed": "Reparação e manutenção de contentores frios,\"PtI\", soldadura de cobre e substituição de motores e sensores.",
+        "skillsGained": "Habilidades adquiridas de reparo e comunicação."
+      },
+      {
+        "title": "Industrial Electrician",
+        "company": "SERSAN",
+        "location": "Lourosa, Portugal",
+        "website": "https://www.sersan.pt/",
+        "offerType": "Tempo inteiro",
+        "startDate": "Feb 2015",
+        "endDate": "Jul 2018",
+        "functionsPerformed": "Reparação de máquinas industriais (eléctricas e electromecânicas), elaboração e electrificação de quadros eléctricos, montagem eléctrica de máquinas e estruturas de transporte de cortiça e iniciante de programação e automatização de PLC (OMRON).",
+        "skillsGained": "Habilidades adquiridas de reparo, construção, desenvolvimento e analíticas."
+      },
+      {
+        "title": "Eletrónica Automação e Comando (1500 hours Internship)",
+        "company": "Electro Oliveira",
+        "location": "Milheirós de Poiares, Portugal",
+        "website": "https://www.sersan.pt/",
+        "offerType": "Tempo inteiro",
+        "startDate": "2012",
+        "endDate": "2015",
+        "functionsPerformed": "Reparação e manutenção de electrodomésticos.",
+        "skillsGained": "Habilidades adquiridas de comunicação, motores, reparo e venda."
+      }
+    ]
+  },
+  "projects": {
+    "overlayTitle": "O que desemvolvi",
+    "underlayTitle": "Projectos",
+    "description": [
+      {
+        "title": "Home Assistant",
+        "website": "https://github.com/rui-oliveira-tech/homeAssistant/",
+        "startDate": "7 Feb 2021",
+        "endDate": "Present",
+        "description": "Minha casa é controlada por um Raspberry PI 4 e automatizada com \"Home Assistant\". Posso controlar luzes, sensores, robôs, tanto internamente (sem conexão com a internet) quanto externamente (via VPN \"Tailscale\" e IP mascarado por \"Duck DNS\")."
+      },
+      {
+        "title": "Website",
+        "website": "https://github.com/rui-oliveira-tech/webSite/",
+        "startDate": "11 Feb 2022",
+        "endDate": "Present",
+        "description": "Este website foi criado com o objetivo de divulgar informação sobre o meu percurso profissional, de forma acessível a empresas e pessoas interessadas."
+      }
+    ]
+  },
+  "other": {
+    "overlayTitle": "Outras coisas que fiz",
+    "underlayTitle": "Outras coisas",
+    "description": [
+      {
+        "id": 2,
+        "title": "Off We Go – IB&C WEEKS",
+        "startDate": "17 May 2014",
+        "endDate": "25 May 2014",
+        "description": "Experiência de intercâmbio acadêmico"
+      },
+      {
+        "id": 1,
+        "title": "Viagem pela Europa",
+        "startDate": "7 Feb 2021",
+        "endDate": "Present",
+        "description": "Países que visitei."
+      }
+    ]
+  },
+  "googleMapsMarkers": {
+    "overlayTitle": "Onde eu estive",
+    "underlayTitle": "Marcadores do Google Maps",
+    "description": []
+  }
 }

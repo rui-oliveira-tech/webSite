@@ -1,5 +1,8 @@
 {
   "app_title": "Rui Oliveira - Electrician  Industrial | Residencial",
+  "footer": {
+    "mailButton": "Hire Me"
+  },
   "home": {
     "title": "Rui Oliveira",
     "subTitle": {
@@ -64,7 +67,7 @@
         "endDate": "4 Dec 2015"
       },
       {
-        "title": "High School, Course of Sciences and TechnologiesEnsino Secundário",
+        "title": "High School, Course of Sciences and Technologies",
         "company": "High School of Santa Maria da Feira",
         "location": "Santa Maria da Feira, Portugal",
         "website": "https://ae-smfeira.pt/",
@@ -143,7 +146,7 @@
         "startDate": "May 2019",
         "endDate": "Present",
         "functionsPerformed": "Find machine problems and fix, install cable ducts, pass cables, connect electrical boards, replace plugs, lamps, switches, mechanics basic.",
-        "skillsGained": "Repairing skills, communication skills."
+        "skillsGained": "Repairing and communication skills."
       },
       {
         "title": "Cold technician",
@@ -154,7 +157,7 @@
         "startDate": "Jul 2018",
         "endDate": "May 2019",
         "functionsPerformed": "Repair and maintenance of cold containers,\"PtI\", copper welding and replacement of motors and sensors.",
-        "skillsGained": "Repairing skills, communication skills."
+        "skillsGained": "Repairing and communication skills."
       },
       {
         "title": "Industrial Electrician",
@@ -165,7 +168,7 @@
         "startDate": "Feb 2015",
         "endDate": "Jul 2018",
         "functionsPerformed": "Repair of industrial machines (electrical and electromechanical), elaboration and electrification of electrical boards, electrical assembly of machines and structures of transport of cork and beginner of programming and automation of PLC (OMRON).",
-        "skillsGained": "Repairing skills, construction skills, development skills, analytical skills."
+        "skillsGained": "Repairing, construction, development and analytical skills."
       },
       {
         "title": "Electronic, automation and maintenance (1500 hours Internship)",
@@ -176,7 +179,7 @@
         "startDate": "2012",
         "endDate": "2015",
         "functionsPerformed": "Repair and maintenance of home appliances.",
-        "skillsGained": "Communication skills, engines skills, repairing skills, selling skills."
+        "skillsGained": "Communication, engines, repairing and selling skills."
       }
     ]
   },
