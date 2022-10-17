@@ -33,12 +33,12 @@ export default function Home({ allPages }) {
   return (
     <section className="scroll_to home">
       <header>
-        <button className="learn-more buttonCV" onClick={saveFile}>
+        {currentLanguageCode === "en" && <button className="learn-more buttonCV" onClick={saveFile}>
           <span className="circle" aria-hidden="true">
             <span className="icon arrow"></span>
           </span>
           <span className="button-text">{t('home.cvButton')}</span>
-        </button>
+        </button>}
         <figure>
           <img src={main_Img} className="frontImage" alt="Rui Oliveira" />
         </figure>

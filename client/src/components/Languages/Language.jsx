@@ -17,11 +17,11 @@ const languages = [
     name: 'English',
     country_code: 'gb',
   },
-  {
+/*   {
     code: 'nl',
     name: 'Netherlands',
     country_code: 'nl',
-  },
+  }, */
   {
     code: 'fr',
     name: 'Français',
