@@ -134,8 +134,8 @@
     "description": []
   },
   "experience": {
-    "overlayTitle": "What I program",
-    "underlayTitle": "Programing Languages",
+    "overlayTitle": "What I've done",
+    "underlayTitle": "Experience",
     "description": [
       {
         "title": "Industrial Electrician",
@@ -204,7 +204,7 @@
     ]
   },
   "other": {
-    "overlayTitle": "Other stuff I'm doing",
+    "overlayTitle": "Other stuff I've done",
     "underlayTitle": "Other things",
     "description": [
       {

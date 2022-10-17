@@ -14,7 +14,7 @@
   },
   "about": {
     "overlayTitle": "Quem eu sou",
-    "underlayTitle": "Sobre",
+    "underlayTitle": "Acerca de mim",
     "description": [
       [
         "Eu sou o Rui. Sou Eletricista Industrial."
@@ -40,7 +40,7 @@
   },
   "education": {
     "overlayTitle": "O que eu aprendi",
-    "underlayTitle": "Educaçao",
+    "underlayTitle": "Educação",
     "description": [
       {
         "title": "Curso de condução de empilhadores elétricos, combustão e gás",
@@ -77,7 +77,7 @@
     ]
   },
   "languages": {
-    "overlayTitle": "O que eu falo",
+    "overlayTitle": "O que falo",
     "underlayTitle": "Linguagens",
     "language": "LINGUAGEM",
     "understanding": "COMPREENDER",
@@ -85,8 +85,8 @@
     "writing": "ESCREVER",
     "listening": "Ouvir",
     "reading": "Ler",
-    "interaction": "Interaçao",
-    "production": "Produçao",
+    "interaction": "Interação",
+    "production": "Produção",
     "levels": "Níveis: A1/2: Utilizador basico - B1/2: Utilizador independente - C1/2 Utilizador proficional",
     "framework": "Quadro Europeu Comum de Referência para Línguas",
     "description": [
@@ -134,8 +134,8 @@
     "description": []
   },
   "experience": {
-    "overlayTitle": "What I program",
-    "underlayTitle": "Programing Languages",
+    "overlayTitle": "O que eu fiz",
+    "underlayTitle": "Experiência",
     "description": [
       {
         "title": "Eletrecista Industrial",
@@ -205,7 +205,7 @@
   },
   "other": {
     "overlayTitle": "Outras coisas que fiz",
-    "underlayTitle": "Outras coisas",
+    "underlayTitle": "Outros",
     "description": [
       {
         "id": 2,
