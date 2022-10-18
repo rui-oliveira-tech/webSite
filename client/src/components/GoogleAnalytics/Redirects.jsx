@@ -54,9 +54,16 @@ function getType({ type }) {
   }
 }
 
+function isEmpty(obj) {
+  return Object.keys(obj).length === 0;
+}
+
 export function RedirectApp() {
   const redirect = useParams();
-  const from = getType(redirect.from);
+  console.log(isEmpty(redirect))
+  if (!isEmpty(redirect)) {
+    const from = getType(redirect.from);
+  }
 
   /*   useEffect(() => {
       ReactGA.event({
@@ -64,7 +71,7 @@ export function RedirectApp() {
         category: from,
       });
     }, []); */
-
+  console.log("saddasdas");
   return (
     <App />
   )
