@@ -87,7 +87,7 @@
     "reading": "Ler",
     "interaction": "Interação",
     "production": "Produção",
-    "levels": "Níveis: A1/2: basico - B1/2: Independente - C1/2 Proficional",
+    "levels": "Níveis: A1/2: básico - B1/2: Independente - C1/2 Profissional",
     "framework": "Quadro Europeu Comum de Referência para Línguas",
     "description": [
       {
@@ -138,14 +138,14 @@
     "underlayTitle": "Experiência",
     "description": [
       {
-        "title": "Eletrecista Industrial",
+        "title": "Eletricista Industrial",
         "company": "SOCEA nv",
         "location": "Oelegem, Belgium",
         "website": "https://www.socea.be/",
         "offerType": "Tempo inteiro",
         "startDate": "May 2019",
         "endDate": "Presente",
-        "functionsPerformed": "Encontar problemas na máquina e consertar, instalar suporte de cabos, passar cabos, conectar quadros elétricos, trocar tomadas, lâmpadas, interruptores, mecânica básica.",
+        "functionsPerformed": "Encontrar problemas na máquina e consertar, instalar suporte de cabos, passar cabos, conectar quadros elétricos, trocar tomadas, lâmpadas, interruptores, mecânica básica.",
         "skillsGained": "Habilidades de reparo e comunicação."
       },
       {
@@ -160,14 +160,14 @@
         "skillsGained": "Habilidades adquiridas de reparo e comunicação."
       },
       {
-        "title": "Industrial Electrician",
+        "title": "Eletricista Industrial",
         "company": "SERSAN",
         "location": "Lourosa, Portugal",
         "website": "https://www.sersan.pt/",
         "offerType": "Tempo inteiro",
         "startDate": "Feb 2015",
         "endDate": "Jul 2018",
-        "functionsPerformed": "Reparação de máquinas industriais (eléctricas e electromecânicas), elaboração e electrificação de quadros eléctricos, montagem eléctrica de máquinas e estruturas de transporte de cortiça e iniciante de programação e automatização de PLC (OMRON).",
+        "functionsPerformed": "Reparação de máquinas industriais (eléctricas e electromecânicas), elaboração e electrificação de elétricos, montagem elétrica de máquinas e estruturas de transporte de cortiça e iniciante de programação e automatização de PLC (OMRON).",
         "skillsGained": "Habilidades adquiridas de reparo, construção, desenvolvimento e analíticas."
       },
       {
@@ -178,13 +178,13 @@
         "offerType": "Tempo inteiro",
         "startDate": "2012",
         "endDate": "2015",
-        "functionsPerformed": "Reparação e manutenção de electrodomésticos.",
+        "functionsPerformed": "Reparação e manutenção de eletrodomésticos.",
         "skillsGained": "Habilidades adquiridas de comunicação, motores, reparo e venda."
       }
     ]
   },
   "projects": {
-    "overlayTitle": "O que desemvolvi",
+    "overlayTitle": "O que desenvolvi",
     "underlayTitle": "Projectos",
     "description": [
       {
