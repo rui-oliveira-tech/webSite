@@ -43,7 +43,7 @@ function getType({ type }) {
       return "Github";
     case "google":
       return "Google";
-    case "m":
+    case "mail":
       return "Mail";
     case "vdab":
       return "VDAB";
