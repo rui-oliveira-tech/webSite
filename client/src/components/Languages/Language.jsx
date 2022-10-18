@@ -7,7 +7,7 @@ import i18next from 'i18next'
 import { useTranslation } from 'react-i18next'
 import cookies from 'js-cookie'
 import classNames from 'classnames'
-import GlobeIcon from "./language.svg";
+import GlobeIcon from "../../images/Languages/language.svg";
 import 'bootstrap/dist/js/bootstrap.js'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import './Language.scss'
@@ -17,11 +17,11 @@ const languages = [
     name: 'English',
     country_code: 'gb',
   },
-/*   {
+  {
     code: 'nl',
     name: 'Netherlands',
     country_code: 'nl',
-  }, */
+  },
   {
     code: 'fr',
     name: 'Français',

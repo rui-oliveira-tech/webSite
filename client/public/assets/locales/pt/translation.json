@@ -8,7 +8,7 @@
     "subTitle": {
       "first": "Eletricista Industrial",
       "second": "Eletricista Residencial",
-      "third": "Projetista eletrico"
+      "third": "Projetista Elétrico"
     },
     "cvButton": "Download Cv"
   },
@@ -144,7 +144,7 @@
         "website": "https://www.socea.be/",
         "offerType": "Tempo inteiro",
         "startDate": "May 2019",
-        "endDate": "Present",
+        "endDate": "Presente",
         "functionsPerformed": "Encontar problemas na máquina e consertar, instalar suporte de cabos, passar cabos, conectar quadros elétricos, trocar tomadas, lâmpadas, interruptores, mecânica básica.",
         "skillsGained": "Habilidades de reparo e comunicação."
       },
@@ -156,7 +156,7 @@
         "offerType": "Tempo inteiro",
         "startDate": "Jul 2018",
         "endDate": "May 2019",
-        "functionsPerformed": "Reparação e manutenção de contentores frios,\"PtI\", soldadura de cobre e substituição de motores e sensores.",
+        "functionsPerformed": "Reparação e manutenção de contentores frios,\"PTI\", soldadura de cobre e substituição de motores e sensores.",
         "skillsGained": "Habilidades adquiridas de reparo e comunicação."
       },
       {
@@ -191,14 +191,14 @@
         "title": "Home Assistant",
         "website": "https://github.com/rui-oliveira-tech/homeAssistant/",
         "startDate": "7 Feb 2021",
-        "endDate": "Present",
+        "endDate": "Presente",
         "description": "Minha casa é controlada por um Raspberry PI 4 e automatizada com \"Home Assistant\". Posso controlar luzes, sensores, robôs, tanto internamente (sem conexão com a internet) quanto externamente (via VPN \"Tailscale\" e IP mascarado por \"Duck DNS\")."
       },
       {
         "title": "Website",
         "website": "https://github.com/rui-oliveira-tech/webSite/",
         "startDate": "11 Feb 2022",
-        "endDate": "Present",
+        "endDate": "Presente",
         "description": "Este website foi criado com o objetivo de divulgar informação sobre o meu percurso profissional, de forma acessível a empresas e pessoas interessadas."
       }
     ]
@@ -218,7 +218,7 @@
         "id": 1,
         "title": "Viagem pela Europa",
         "startDate": "7 Feb 2021",
-        "endDate": "Present",
+        "endDate": "Presente",
         "description": "Países que visitei."
       }
     ]
