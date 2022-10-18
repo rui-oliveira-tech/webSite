@@ -1,13 +1,20 @@
 import Arduino_Svg from "../../images/Programing_Languages/Arduino_Svg.svg";
-import Cplusplus_Svg from "../../images/Programing_Languages/Cplusplus_Svg.svg";
-import Git_Svg from "../../images/Programing_Languages/Git_Svg.svg";
-import Linux_Svg from "../../images/Programing_Languages/Linux_Svg.svg";
+import Cpp_Svg from "../../images/Programing_Languages/Cpp_Svg.svg";
+
 import Css_Svg from "../../images/Programing_Languages/Css_Svg.svg";
 import Html_Svg from "../../images/Programing_Languages/Html_Svg.svg";
 import Js_Svg from "../../images/Programing_Languages/Js_Svg.svg";
 import NodeJs_Svg from "../../images/Programing_Languages/NodeJs_Svg.svg";
 
+
+
 import Lader_Svg from "../../images/Programing_Languages/Lader_Svg.svg";
+
+import Git_Svg from "../../images/Programing_Languages/Git_Svg.svg";
+import Vsc_Svg from "../../images/Programing_Languages/Vsc_Svg.svg";
+import Linux_Svg from "../../images/Programing_Languages/Linux_Svg.svg";
+import Windows_Svg from "../../images/Programing_Languages/Windows_Svg.svg";
+
 
 export const programingLanguages = [
     [
@@ -46,7 +53,7 @@ export const programingLanguages = [
     [
         {
             title: "C++",
-            imgLink: Cplusplus_Svg,
+            imgLink: Cpp_Svg,
             website: "https://www.w3schools.com/cpp/",
         },
         {
@@ -77,9 +84,19 @@ export const programingLanguages = [
             website: "https://git-scm.com/",
         },
         {
+            title: "Visual Studio Code",
+            imgLink: Vsc_Svg,
+            website: "https://code.visualstudio.com/",
+        },
+        {
             title: "Linux",
             imgLink: Linux_Svg,
             website: "https://www.linux.org/",
+        },
+        {
+            title: "Windows",
+            imgLink: Windows_Svg,
+            website: "https://www.microsoft.com/en-gb/windows/",
         },
     ],
 ];
