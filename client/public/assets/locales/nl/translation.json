@@ -13,7 +13,7 @@
       "cvButton": "Downloaden Cv"
     },
     "about": {
-      "overlayTitle": "Wie ik ben",
+      "overlayTitle": "Wie ben ik",
       "underlayTitle": "Over",
       "description": [
         [
@@ -39,7 +39,7 @@
       ]
     },
     "education": {
-      "overlayTitle": "Wat ik heb geleerd",
+      "overlayTitle": "Wat ik geleerd heb",
       "underlayTitle": "Opleiding",
       "description": [
         {
