@@ -18,7 +18,7 @@ export function Footer() {
     <footer className="mainFooter">
       <a className="icon" target="_blank" rel="noreferrer" onClick={onClick("instagram")} href="https://www.instagram.com/RuiOliveira_Electrician/"><i className="icon-instagram" /></a>
 
-      <a className="icon" target="_blank" rel="noreferrer" onClick={onClick("instagram")} href="https://api.whatsapp.com/send/?phone=32474127175&text&type=phone_number&app_absent=0"><i className="icon-whatsapp" /></a>
+      <a className="icon" target="_blank" rel="noreferrer" onClick={onClick("whatsapp")} href="https://api.whatsapp.com/send/?phone=32474127175&text&type=phone_number&app_absent=0"><i className="icon-whatsapp" /></a>
 
       <Button className="from-center" onClick={onClick("mail")} href="mailto:hire@rui-oliveira.com">{t('footer.mailButton')}</Button>
 

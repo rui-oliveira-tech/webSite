@@ -4,7 +4,7 @@ import { BrowserRouter, Routes, Route, } from "react-router-dom";
 import './components/Languages/i18nextConf.js'
 import './components/GoogleAnalytics/reactGAConf.js'
 
-import { RedirectApp, RedirectVcard } from "./components/GoogleAnalytics/Redirects";
+import { RedirectApp, RedirectVcard, RedirectToLink } from "./components/GoogleAnalytics/Redirects";
 import Loading from "./components/Loading/Loading";
 
 ReactDOM.render(
@@ -14,8 +14,9 @@ ReactDOM.render(
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<RedirectApp />} />
-          <Route path="/:type" element={<RedirectApp />} />
+          <Route path="/:from" element={<RedirectApp />} />
           <Route exact path="/vcard/:type" element={<RedirectVcard />} />
+          <Route exact path="/redirect/:from/:to" element={<RedirectToLink />} />
         </Routes>
       </BrowserRouter>
     </React.StrictMode>,
