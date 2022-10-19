@@ -60,7 +60,6 @@ function isEmpty(obj) {
 
 export function RedirectApp() {
   const redirect = useParams();
-  console.log(isEmpty(redirect))
   if (!isEmpty(redirect)) {
     const from = getType(redirect.from);
   }
@@ -71,7 +70,6 @@ export function RedirectApp() {
         category: from,
       });
     }, []); */
-  console.log("saddasdas");
   return (
     <App />
   )
