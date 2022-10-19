@@ -47,7 +47,7 @@
     }
   }
 
-  @media (min-width: 270px) and (max-width: 1023px) {
+  @media (min-width: 270px) and (max-width: 600px) {
     height: auto;
     padding-bottom: 1em;
     .button {
@@ -66,7 +66,7 @@
     }
   }
 
-  @media (min-width: 512px) and (max-width: 1023px) {
+  @media (min-width: 601px) and (max-width: 1023px) {
     padding-bottom: 1em;
     padding-top: 1em;
     .button {

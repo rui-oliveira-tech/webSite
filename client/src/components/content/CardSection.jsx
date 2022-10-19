@@ -83,16 +83,16 @@ export default function CardSection() {
           </div>
           <div className="underlay">
             <h2 className="extraBig bold">{t('languages.underlayTitle')}</h2>
-            <table className="languagesTable small">
-              <thead className="small">
+            <table className="languagesTable">
+              <thead className="">
                 <tr>
-                  <th width="150px">{t('languages.language')}</th>
-                  <th className="divid" colSpan="2">{t('languages.understanding')}</th>
-                  <th className="divid" colSpan="2">{t('languages.speaking')}</th>
-                  <th className="divid">{t('languages.writing')}</th>
+                  <th className="languageColumn">{t('languages.language')}</th>
+                  <th colSpan="2">{t('languages.understanding')}</th>
+                  <th colSpan="2">{t('languages.speaking')}</th>
+                  <th >{t('languages.writing')}</th>
                 </tr>
               </thead>
-              <tbody className="small">
+              <tbody className="">
                 <tr>
                   <td></td>
                   <td>{t('languages.listening')}</td>
@@ -114,8 +114,8 @@ export default function CardSection() {
                 <tr>
                   <td className="noBorder left" ></td>
                   <td className="noBorder left" colSpan="5">
-                    <p className="text estraSmall noPading">{t('languages.levels')}</p>
-                    <p className="text estraSmall noPading">{t('languages.framework')}</p>
+                    <p className="text small noPading">{t('languages.levels')}</p>
+                    <p className="text small noPading">{t('languages.framework')}</p>
                   </td>
                 </tr>
               </tbody>
