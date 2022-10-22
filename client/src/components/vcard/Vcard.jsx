@@ -79,20 +79,18 @@ export default function Vcard() {
 
 
   return (
-    <>
-      <div className="center">
-        <div className="ring"></div>
-        <div className="text">You gonna be redirected</div>
-        <div className="timer">{timer}</div>
-        {!errors ?
-          <a className="vcardDownloadText" onClick={resetTimer} ref={vCardLink} href={fileUrl} download={filename}>Download Vcard</a>
-          :
-          <>
-            <p className="textError">Error</p>
-            <p className="vcardDownloadText">Please ty latter</p>
-          </>
-        }
-      </div>
-    </>
+    <div className="centerVcard">
+      <div className="ringVcard"></div>
+      <div className="titleTextVcard">You gonna be redirected</div>
+      <div className="timerTextVcard">{timer}</div>
+      {!errors ?
+        <a className="vcardDownloadTextVcard" onClick={resetTimer} ref={vCardLink} href={fileUrl} download={filename}>Download Vcard</a>
+        :
+        <>
+          <p className="textErrorVcard">Error</p>
+          <p className="vcardDownloadTextVcard">Please ty latter</p>
+        </>
+      }
+    </div>
   )
 }

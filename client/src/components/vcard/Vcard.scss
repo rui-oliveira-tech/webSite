@@ -1,4 +1,4 @@
-.center {
+.centerVcard {
   background: black;
   display: flex;
   flex-direction: column;
@@ -8,7 +8,7 @@
   align-items: center;
   min-height: 100vh;
 }
-.ring {
+.ringVcard {
   position: absolute;
   width: 399px;
   height: 400px;
@@ -29,7 +29,7 @@
     box-shadow: 1px 5px 2px #0456c8;
   }
 }
-.ring:before {
+.ringVcard:before {
   position: absolute;
   content: "";
   left: 0;
@@ -40,7 +40,7 @@
   box-shadow: 0 0 5px rgba(255, 255, 255, 0.3);
 }
 
-.text {
+.titleTextVcard {
   position: absolute;
   transform: translate(0, -60px);
   color: #737373;
@@ -48,7 +48,7 @@
   animation: text 5s ease-in-out forwards;
 }
 
-.textError {
+.textErrorVcard {
   position: absolute;
   color: #737373;
   transform: translate(0, 90px);
@@ -56,7 +56,7 @@
   animation: text 5s ease-in-out forwards;
 }
 
-.timer {
+.timerTextVcard {
   position: absolute;
   transform: translate(0, 10px);
   color: #737373;
@@ -64,7 +64,7 @@
   animation: timer 1s ease-in-out infinite ;
 }
 
-.vcardDownloadText {
+.vcardDownloadTextVcard {
   position: absolute;
   transform: translate(0, 130px);
   color: #737373;
