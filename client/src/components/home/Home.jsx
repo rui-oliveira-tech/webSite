@@ -33,7 +33,7 @@ export default function Home({ allPages }) {
   return (
     <section className="scroll_to home">
       <header>
-        {currentLanguageCode === "en" && <button className="learn-more buttonCV" onClick={saveFile}>
+        {(currentLanguageCode === "en" || currentLanguageCode === "nl") && <button className="learn-more buttonCV" onClick={saveFile}>
           <span className="circle" aria-hidden="true">
             <span className="icon arrow"></span>
           </span>
