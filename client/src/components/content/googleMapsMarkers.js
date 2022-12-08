@@ -551,6 +551,29 @@ export const googleMapsMarkers = [
         marker: Marker,
         zoom: 9,
     },
+    //-----------------------// Denmark //-----------------------//
+    {
+        id: getNextId(),
+        country: "Denmark",
+        city: "Copenhagen",
+        marker: Marker,
+        zoom: 9,
+    },
+    //-----------------------// Sweden //-----------------------//
+    {
+        id: getNextId(),
+        country: "Sweden",
+        city: "Malmö",
+        marker: Marker,
+        zoom: 9,
+    },
+    {
+        id: getNextId(),
+        country: "Sweden",
+        city: "Stockholm",
+        marker: Marker,
+        zoom: 9,
+    },
     //-----------------------// Belgium //-----------------------//
     {
         id: getNextId(),
