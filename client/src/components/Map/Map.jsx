@@ -4,6 +4,8 @@ import useSupercluster from "use-supercluster";
 import "./Map.scss"
 
 import worldCitiesCSV from "./worldcities.csv";
+import worldExtraCitiesCSV from "./worldexteacities.csv";
+
 import { readString } from 'react-papaparse';
 
 const defaultZoom = 2;
@@ -12,71 +14,78 @@ const defaultCenter = {
   lng: 2.9511712,
 }
 
-const getPapaConfig = (markers, setPoints) => ({
-  complete: (results, file) => {
-    const type = {};
-    let index = 0;
-    results.data[0].map((results, i) => {
-      index = i;
-      switch (results) {
-        case "city":
-          return Object.assign(type, { city: i });
-        case "city_ascii":
-          return Object.assign(type, { city_ascii: i });
-        case "lat":
-          return Object.assign(type, { lat: i });
-        case "lng":
-          return Object.assign(type, { lng: i });
-        case "country":
-          return Object.assign(type, { country: i });
-        case "iso2":
-          return Object.assign(type, { iso2: i });
-        case "iso3":
-          return Object.assign(type, { iso3: i });
-        case "admin_name":
-          return Object.assign(type, { admin_name: i });
-        case "population":
-          return Object.assign(type, { population: i });
-        case "id":
-          return Object.assign(type, { id: i });
-        default:
-          break;
-      }
-    });
-
-    for (let i = 0; i <= index; i++) {
-      delete results.data[0][i];
+const processResults = (results) => {
+  const type = {};
+  let index = 0;
+  results.data[0].map((results, i) => {
+    index = i;
+    switch (results) {
+      case "city":
+        return Object.assign(type, { city: i });
+      case "city_ascii":
+        return Object.assign(type, { city_ascii: i });
+      case "lat":
+        return Object.assign(type, { lat: i });
+      case "lng":
+        return Object.assign(type, { lng: i });
+      case "country":
+        return Object.assign(type, { country: i });
+      case "iso2":
+        return Object.assign(type, { iso2: i });
+      case "iso3":
+        return Object.assign(type, { iso3: i });
+      case "admin_name":
+        return Object.assign(type, { admin_name: i });
+      case "population":
+        return Object.assign(type, { population: i });
+      case "id":
+        return Object.assign(type, { id: i });
+      default:
+        break;
     }
-    Object.assign(results.data[0], type);
+  });
 
-    setPoints(
-      markers.reduce((total, marker, i) => {
-        const country = results.data.filter((worldCity) => worldCity[type.country] === marker.country);
-        const cities = country.filter((worldCity) => worldCity[type.city] === marker.city);
-        const cityMarkers = cities.map(city => ({
-          type: "Feature",
-          properties: { cluster: false, markersId: city[type.id], city: city[type.city], country: city[type.country], },
-          geometry: {
-            type: "Point",
-            zoom: marker.zoom,
-            marker: marker.marker,
-            coordinates: [
-              parseFloat(city[type.lng]),
-              parseFloat(city[type.lat])
-            ]
-          }
-        }));
-        total = [...total, ...cityMarkers];
-        return total;
-      }, [])
-    )
+  for (let i = 0; i <= index; i++) {
+    delete results.data[0][i];
+  }
+  Object.assign(results.data[0], type);
+
+  return [results, type];
+}
+
+const processNewMarkers = (markers, results, type) => {
+  return markers.reduce((total, marker, i) => {
+    const country = results.data.filter((worldCity) => worldCity[type.country] === marker.country);
+    const cities = country.filter((worldCity) => worldCity[type.city] === marker.city);
+    const cityMarkers = cities.map(city => ({
+      type: "Feature",
+      properties: { cluster: false, markersId: city[type.id], city: city[type.city], country: city[type.country], },
+      geometry: {
+        type: "Point",
+        zoom: marker.zoom,
+        marker: marker.marker,
+        coordinates: [
+          parseFloat(city[type.lng]),
+          parseFloat(city[type.lat])
+        ]
+      }
+    }));
+    total = [...total, ...cityMarkers];
+    return total;
+  }, [])
+}
+
+const getPapaConfig = (onComplete) => ({
+  complete: (results, file) => {
+    if (typeof onComplete === "function") {
+      onComplete(results);
+    }
   },
   download: true,
   error: (error, file) => {
     console.log('Error while parsing:', error, file);
   },
 });
-
 
 
 const Marker = ({ children }) => children;
@@ -87,6 +96,9 @@ export default function MapSection({ markers }) {
   const [zoom, setZoom] = React.useState(defaultZoom);
   const [center, setCenter] = React.useState(defaultCenter);
   const [bounds, setBounds] = useState(null);
+
+  const [csv1, setCSV1] = useState(null);
+  const [csv2, setCSV2] = useState(null);
 
   const [points, setPoints] = useState(
     markers.map(marker => ({
@@ -105,8 +117,25 @@ export default function MapSection({ markers }) {
   );
 
   React.useEffect(() => {
-    readString(worldCitiesCSV, getPapaConfig(markers, setPoints));
+    readString(worldCitiesCSV, getPapaConfig((r1) => {
+      setCSV1(r1);
+      readString(worldExtraCitiesCSV, getPapaConfig((r2) => {
+        setCSV2(r2);
+      }));
+    }));
   }, [])
+
+  React.useEffect(() => {
+    if (csv2 !== null) {
+      const [processedCSV1, type1] = processResults(csv1);
+      const [processedCSV2, type2] = processResults(csv2);
+      setPoints([
+        ...processNewMarkers(markers, processedCSV1, type1),
+        ...processNewMarkers(markers, processedCSV2, type2)
+      ]);
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [csv2]);
 
   const { clusters, supercluster } = useSupercluster({
     points,
