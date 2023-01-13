@@ -4,6 +4,8 @@ import useSupercluster from "use-supercluster";
 import "./Map.scss"
 
 import worldCitiesCSV from "./worldcities.csv";
+import worldExtraCitiesCSV from "./exteacities.csv";
+
 import { readString } from 'react-papaparse';
 
 const defaultZoom = 2;
@@ -12,7 +14,7 @@ const defaultCenter = {
   lng: 2.9511712,
 }
 
-const getPapaConfig = (markers, setPoints) => ({
+const getPapaConfig = (markers, points, setPoints) => ({
   complete: (results, file) => {
     const type = {};
     let index = 0;
@@ -70,6 +72,7 @@ const getPapaConfig = (markers, setPoints) => ({
         return total;
       }, [])
     )
+    console.log("points");
   },
   download: true,
   error: (error, file) => {
@@ -105,7 +108,11 @@ export default function MapSection({ markers }) {
   );
 
   React.useEffect(() => {
-    readString(worldCitiesCSV, getPapaConfig(markers, setPoints));
+ //   readString(worldCitiesCSV, getPapaConfig(markers, points, setPoints)).then(() => {console.log(points)});
+   /*  .then(() => {
+      readString(worldExtraCitiesCSV, getPapaConfig(markers, points, setPoints))
+    }).then(() => console.log(points)); */
+     // readString(worldExtraCitiesCSV, getPapaConfig(markers, points, setPoints));
   }, [])
 
   const { clusters, supercluster } = useSupercluster({
