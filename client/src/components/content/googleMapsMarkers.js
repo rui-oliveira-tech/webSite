@@ -7,6 +7,13 @@ const getNextId = () => {
 
 export const googleMapsMarkers = [
     //-----------------------// Portugal //-----------------------//
+       {//extra
+        id: getNextId(),
+        country: "Portugal",
+        city: "Peneda-Gerês National Park",
+        marker: Marker,
+        zoom: 9,
+    },
     {
         id: getNextId(),
         country: "Portugal",
@@ -49,7 +56,7 @@ export const googleMapsMarkers = [
         marker: Marker,
         zoom: 9,
     },
-    {// Not Working
+    {//extra
         id: getNextId(),
         country: "Portugal",
         city: "Santa Maria da Feira",
@@ -88,6 +95,13 @@ export const googleMapsMarkers = [
         id: getNextId(),
         country: "Portugal",
         city: "Viseu",
+        marker: Marker,
+        zoom: 9,
+    },
+      {//extra
+        id: getNextId(),
+        country: "Portugal",
+        city: "Serra da Estrela Natural Park",
         marker: Marker,
         zoom: 9,
     },
@@ -354,6 +368,13 @@ export const googleMapsMarkers = [
         marker: Marker,
         zoom: 9,
     },
+    {//extra
+        id: getNextId(),
+        country: "Italy",
+        city: "Vesuvius National Park",
+        marker: Marker,
+        zoom: 9,
+    },
     {
         id: getNextId(),
         country: "Italy",
@@ -389,17 +410,24 @@ export const googleMapsMarkers = [
         marker: Marker,
         zoom: 9,
     },
-    {// Not Working
+    {//extra
         id: getNextId(),
         country: "Italy",
         city: "Scilla",
         marker: Marker,
         zoom: 9,
     },
-    {// Not Working
+    {//extra
         id: getNextId(),
         country: "Italy",
         city: "Gambarie",
+        marker: Marker,
+        zoom: 9,
+    },
+    {//extra
+        id: getNextId(),
+        country: "Italy",
+        city: "Aspromonte National Park",
         marker: Marker,
         zoom: 9,
     },
@@ -424,10 +452,10 @@ export const googleMapsMarkers = [
         marker: Marker,
         zoom: 9,
     },
-    {// Not Working
+    {//extra
         id: getNextId(),
         country: "Italy",
-        city: "Etna",
+        city: "Mount Etna",
         marker: Marker,
         zoom: 9,
     },
@@ -643,6 +671,128 @@ export const googleMapsMarkers = [
         id: getNextId(),
         country: "Luxembourg",
         city: "Luxembourg",
+        marker: Marker,
+        zoom: 9,
+    },
+    //-----------------------// Egypt //-----------------------//
+    {
+        id: getNextId(),
+        country: "Egypt",
+        city: "Cairo",
+        marker: Marker,
+        zoom: 9,
+    },
+    {
+        id: getNextId(),
+        country: "Egypt",
+        city: "Giza",
+        marker: Marker,
+        zoom: 9,
+    },
+    {
+        id: getNextId(),
+        country: "Egypt",
+        city: "Luxor",
+        marker: Marker,
+        zoom: 9,
+    },
+    {
+        id: getNextId(),
+        country: "Egypt",
+        city: "Aswān",
+        marker: Marker,
+        zoom: 9,
+    },
+    {
+        id: getNextId(),
+        country: "Egypt",
+        city: "Idfū",
+        marker: Marker,
+        zoom: 9,
+    },
+    {//extra
+        id: getNextId(),
+        country: "Egypt",
+        city: "Abu Simbel",
+        marker: Marker,
+        zoom: 9,
+    },
+    {//extra
+        id: getNextId(),
+        country: "Egypt",
+        city: "Sharm el-Sheikh",
+        marker: Marker,
+        zoom: 9,
+    },
+    {//extra
+        id: getNextId(),
+        country: "Egypt",
+        city: "Dahab",
+        marker: Marker,
+        zoom: 9,
+    },
+    {//extra
+        id: getNextId(),
+        country: "Egypt",
+        city: "Nuweiba",
+        marker: Marker,
+        zoom: 9,
+    },
+    {//extra
+        id: getNextId(),
+        country: "Egypt",
+        city: "Taba Heights",
+        marker: Marker,
+        zoom: 9,
+    },
+    { //extra
+        id: getNextId(),
+        country: "Egypt",
+        city: "Taba",
+        marker: Marker,
+        zoom: 9,
+    },
+    //-----------------------// Israel //-----------------------//
+    {
+        id: getNextId(),
+        country: "Israel",
+        city: "Eilat",
+        marker: Marker,
+        zoom: 9,
+    },
+    //-----------------------// Jordan //-----------------------//
+    {
+        id: getNextId(),
+        country: "Jordan",
+        city: "Al ‘Aqabah",
+        marker: Marker,
+        zoom: 9,
+    },
+    {//extra
+        id: getNextId(),
+        country: "Jordan",
+        city: "Tala Bay Aqaba",
+        marker: Marker,
+        zoom: 9,
+    },
+    {//extra
+        id: getNextId(),
+        country: "Jordan",
+        city: "Wadi Rum",
+        marker: Marker,
+        zoom: 9,
+    },
+    {//extra
+        id: getNextId(),
+        country: "Jordan",
+        city: "Wadi Musa",
+        marker: Marker,
+        zoom: 9,
+    },
+    {//extra
+        id: getNextId(),
+        country: "Jordan",
+        city: "Wadi AlMujib",
         marker: Marker,
         zoom: 9,
     },
