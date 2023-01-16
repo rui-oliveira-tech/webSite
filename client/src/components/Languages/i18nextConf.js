@@ -14,7 +14,7 @@ i18next
     debug: false,
     // Options for language detector
     detection: {
-      order: ['path', 'cookie', 'htmlTag'],
+      order: ['path', 'htmlTag', 'cookie'],
       caches: ['cookie'],
     },
     // react: { useSuspense: false },

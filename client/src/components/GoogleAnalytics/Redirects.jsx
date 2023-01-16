@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import { useParams } from "react-router-dom";
 import ReactGA from 'react-ga4';
 
-import App from "../../App";
+import { App, Homepage, Portefolio } from "../../App";
 import Vcard from "../vcard/Vcard";
 
 
@@ -60,10 +60,10 @@ function isEmpty(obj) {
 
 export function RedirectApp() {
   const redirect = useParams();
-  if (!isEmpty(redirect)) {
+/*   if (!isEmpty(redirect)) {
     const from = getType(redirect.from);
-  }
-
+  } */
+  console.log(redirect);
   /*   useEffect(() => {
       ReactGA.event({
         action: "from:" + from,
@@ -71,7 +71,9 @@ export function RedirectApp() {
       });
     }, []); */
   return (
-    <App />
+    <>
+      < App redirect={redirect} />
+    </>
   )
 }
 

@@ -1,7 +1,4 @@
 import React, { useEffect } from 'react'
-import {
-  useNavigate,
-} from "react-router-dom";
 import ReactGA from 'react-ga4';
 import i18next from 'i18next'
 import { useTranslation } from 'react-i18next'
@@ -11,7 +8,8 @@ import GlobeIcon from "../../images/Languages/language.svg";
 import 'bootstrap/dist/js/bootstrap.js'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import './Language.scss'
-const languages = [
+
+export const languageList = [
   {
     code: 'en',
     name: 'English',
@@ -35,19 +33,17 @@ const languages = [
 ]
 
 
-export default function Language() {
-  const navigate = useNavigate();
-  const currentLanguageCode = cookies.get('i18next') || 'en'
-  const currentLanguage = languages.find((l) => l.code === currentLanguageCode)
-  const { t } = useTranslation()
 
+export function Language() {
+  const currentLanguageCode = cookies.get('i18next') || 'en'
+  const currentLanguage = languageList.find((l) => l.code === currentLanguageCode)
+  const { t } = useTranslation()
   useEffect(() => {
     ReactGA.event({
       action: currentLanguageCode + "__action",
     });
     document.body.dir = currentLanguage.dir || 'ltr'
     document.title = t('app_title')
-    navigate('/' + `${currentLanguageCode}`);
   }, [currentLanguage, t])
 
   return (
@@ -64,7 +60,7 @@ export default function Language() {
             <img className='globeIcon' src={GlobeIcon} alt="globeIcon" />
           </button>
           <ul className="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-            {languages.map(({ code, name, country_code }) => (
+            {languageList.map(({ code, name, country_code }) => (
               <li key={country_code}>
                 <button
                   className={classNames('dropdown-item', {

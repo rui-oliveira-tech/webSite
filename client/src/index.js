@@ -9,12 +9,15 @@ import Loading from "./components/Loading/Loading";
 
 ReactDOM.render(
   <Suspense fallback={<></>}>
-    <Loading />
+    {/*   <Loading /> */}
     <React.StrictMode>
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<RedirectApp />} />
-          <Route path="/:from" element={<RedirectApp />} />
+          {/*   <Route path="/:from*" element={<RedirectApp />} /> */}
+          <Route path="/:lang" element={<RedirectApp />} />
+          <Route path="/:lang/:page" element={<RedirectApp />} />
+
           <Route exact path="/vcard/:type" element={<RedirectVcard />} />
           <Route exact path="/redirect/:from/:to" element={<RedirectToLink />} />
         </Routes>
