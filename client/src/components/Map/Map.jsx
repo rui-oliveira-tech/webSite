@@ -4,7 +4,7 @@ import useSupercluster from "use-supercluster";
 import "./Map.scss"
 
 import worldCitiesCSV from "./worldcities.csv";
-import worldExtraCitiesCSV from "./exteacities.csv";
+import worldExtraCitiesCSV from "./worldexteacities.csv";
 
 import { readString } from 'react-papaparse';
 
@@ -130,11 +130,11 @@ export default function MapSection({ markers }) {
       const [processedCSV1, type1] = processResults(csv1);
       const [processedCSV2, type2] = processResults(csv2);
       setPoints([
-        ...processNewMarkers(markers, processedCSV1, type1), 
+        ...processNewMarkers(markers, processedCSV1, type1),
         ...processNewMarkers(markers, processedCSV2, type2)
       ]);
     }
-  // eslint-disable-next-line react-hooks/exhaustive-deps
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [csv2]);
 
   const { clusters, supercluster } = useSupercluster({
