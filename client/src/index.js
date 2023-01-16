@@ -1,10 +1,10 @@
 import React, { Suspense } from "react";
 import ReactDOM from "react-dom";
-import { BrowserRouter, Routes, Route, } from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import './components/Languages/i18nextConf.js'
 import './components/GoogleAnalytics/reactGAConf.js'
 
-import { RedirectApp, RedirectVcard, RedirectToLink } from "./components/GoogleAnalytics/Redirects";
+import { RedirectApp, RedirectVcard, RedirectToLink } from "./App";
 import Loading from "./components/Loading/Loading";
 
 ReactDOM.render(
@@ -14,7 +14,6 @@ ReactDOM.render(
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<RedirectApp />} />
-          {/*   <Route path="/:from*" element={<RedirectApp />} /> */}
           <Route path="/:lang" element={<RedirectApp />} />
           <Route path="/:lang/:page" element={<RedirectApp />} />
 
@@ -22,7 +21,7 @@ ReactDOM.render(
           <Route exact path="/redirect/:from/:to" element={<RedirectToLink />} />
         </Routes>
       </BrowserRouter>
-    </React.StrictMode>,
+    </React.StrictMode>
   </Suspense>,
   document.getElementById('root')
 );
