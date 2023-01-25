@@ -2,14 +2,15 @@ import React, { Suspense } from "react";
 import ReactDOM from "react-dom";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import './components/Languages/i18nextConf.js'
-import './components/GoogleAnalytics/reactGAConf.js'
+import GoogleAnalyticsInitialize from './util/GoogleAnalytics/GoogleAnalyticsInitialize'
 
 import { RedirectApp, RedirectVcard, RedirectToLink } from "./App";
 import Loading from "./components/Loading/Loading";
 
 ReactDOM.render(
   <Suspense fallback={<></>}>
-    {/*   <Loading /> */}
+    <GoogleAnalyticsInitialize />
+    <Loading />
     <React.StrictMode>
       <BrowserRouter>
         <Routes>

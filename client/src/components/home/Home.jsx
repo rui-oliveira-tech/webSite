@@ -20,12 +20,6 @@ export default function Home({ allPages }) {
     });
   }
   const saveFile = () => {
-
-    ReactGA.event({
-      action: "download",
-      category: "cv - " + currentLanguageCode.toUpperCase(),
-    });
-
     FileSaver.saveAs(
       process.env.PUBLIC_URL + "/resource/CV - " + currentLanguageCode.toUpperCase() + " - Rui Oliveira.pdf",
       "CV - " + currentLanguageCode.toUpperCase() + " - Rui Oliveira.pdf");
@@ -37,7 +31,7 @@ export default function Home({ allPages }) {
           <span className="circle" aria-hidden="true">
             <span className="icon arrow"></span>
           </span>
-          <span className="button-text">{t('home.cvButton')}</span>
+          <span id="buttonCV" className="buttonCV-text">{t('home.cvButton')}</span>
         </button>}
         <figure>
           <img src={main_Img} className="frontImage" alt="Rui Oliveira" />
