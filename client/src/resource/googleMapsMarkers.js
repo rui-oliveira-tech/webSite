@@ -1,4 +1,4 @@
-import Marker from "../../images/maps/Marker.svg";
+import Marker from "../images/maps/Marker.svg";
 
 let id = 0;
 const getNextId = () => {

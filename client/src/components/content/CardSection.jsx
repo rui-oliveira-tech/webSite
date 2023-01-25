@@ -3,8 +3,8 @@ import { useTranslation } from 'react-i18next'
 
 import "./_CardSection.scss"
 import MapSection from "../Map/Map";
-import { programingLanguages } from "./programingLanguages.js"
-import { googleMapsMarkers } from "./googleMapsMarkers.js"
+import { programingLanguages } from "../../resource/programingLanguages.js"
+import { googleMapsMarkers } from "../../resource/googleMapsMarkers.js"
 
 
 import About_Img from "../../images/About_Img.jpg";
