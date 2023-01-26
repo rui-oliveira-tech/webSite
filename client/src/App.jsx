@@ -4,7 +4,7 @@ import cookies from 'js-cookie';
 import { useTranslation } from 'react-i18next';
 
 import { pageList } from "./resource/pages"
-import GetLink, { GetType } from "./resource/link";
+import getLink, { getType } from "./resource/link";
 import { languages } from "./components/Languages/Language";
 
 
@@ -56,7 +56,7 @@ export function RedirectApp() {
 export function RedirectToLink() {
   const redirect = useParams();
   const from = getType(redirect.from);
-  const to = getLink(redirect.to);
+  const to = GetLink(redirect.to);
 
   React.useEffect(() => {
     /*   ReactGA.event({
