@@ -3,38 +3,10 @@ import { useNavigate, useParams } from "react-router-dom";
 import cookies from 'js-cookie';
 import { useTranslation } from 'react-i18next';
 
-import Vcard from "./components/vcard/Vcard";
-import Homepage from './Homepage';
-import Portfolio from "./Portfolio";
-
-
+import pageList from "./resource/pages"
 import GetLink, { GetType } from "./resource/link";
 import { languages } from "./components/Languages/Language";
 
-function isEmpty(obj) {
-  return Object.keys(obj).length === 0;
-}
-/*   if (!isEmpty(redirect)) {
-    const from = getType(redirect.from);
-  } */
-/*   useEffect(() => {
-    ReactGA.event({
-      action: "from:" + from,
-      category: from,
-    });
-  }, []); */
-
-
-const pageList = [
-  {
-    url: '',
-    Component: Homepage
-  },
-  {
-    url: 'portefolio',
-    Component: Portfolio
-  },
-]
 
 const pages = pageList.reduce((urls, page) => {
   urls.push(page.url);
