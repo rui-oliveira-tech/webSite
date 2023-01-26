@@ -1,4 +1,4 @@
-export default function GetLink(type) {
+export default function getLink(type) {
   switch (type) {
     case "facebook":
       return "https://www.facebook.com/RuiOliveira.Electrician/";
@@ -23,7 +23,7 @@ export default function GetLink(type) {
   }
 }
 
-export function GetType({ type }) {
+export function getType({ type }) {
   switch (type) {
     case "face":
       return "Facebook";

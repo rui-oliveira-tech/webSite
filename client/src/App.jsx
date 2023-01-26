@@ -56,7 +56,7 @@ export function RedirectApp() {
 export function RedirectToLink() {
   const redirect = useParams();
   const from = getType(redirect.from);
-  const to = GetLink(redirect.to);
+  const to = getLink(redirect.to);
 
   React.useEffect(() => {
     /*   ReactGA.event({
