@@ -63,7 +63,7 @@ export function RedirectToLink() {
        action: "redirect:from:" + from + "_to:" + to,
        category: from,
      }); */
-    window.location.replace(to);
+   // window.location.replace(to);
   }, [])
 
   return (
