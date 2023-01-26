@@ -58,13 +58,9 @@ export function RedirectToLink() {
   const from = getType(redirect.from);
   const to = getLink(redirect.to);
 
-  React.useEffect(() => {
-    /*   ReactGA.event({
-       action: "redirect:from:" + from + "_to:" + to,
-       category: from,
-     }); */
-   // window.location.replace(to);
-  }, [])
+
+  window.location.replace(to);
+
 
   return (
     <></>
