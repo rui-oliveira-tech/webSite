@@ -3,7 +3,7 @@ import { useNavigate, useParams } from "react-router-dom";
 import cookies from 'js-cookie';
 import { useTranslation } from 'react-i18next';
 
-import pageList from "./resource/pages"
+import { pageList } from "./resource/pages"
 import GetLink, { GetType } from "./resource/link";
 import { languages } from "./components/Languages/Language";
 
@@ -52,13 +52,6 @@ export function RedirectApp() {
   }
   return "404";
 }
-
-export function RedirectVcard() {
-  return (
-    <Vcard />
-  )
-}
-
 
 export function RedirectToLink() {
   const redirect = useParams();
