@@ -1,5 +1,4 @@
 import React, { useEffect } from 'react'
-import ReactGA from 'react-ga4';
 import i18next from 'i18next'
 import { useTranslation } from 'react-i18next'
 import cookies from 'js-cookie'
@@ -39,9 +38,6 @@ export default function Language() {
   const currentLanguage = languageList.find((l) => l.code === currentLanguageCode)
   const { t } = useTranslation()
   useEffect(() => {
-    ReactGA.event({
-      action: currentLanguageCode + "__action",
-    });
     document.body.dir = currentLanguage.dir || 'ltr'
     document.title = t('app_title')
   }, [currentLanguage, t])

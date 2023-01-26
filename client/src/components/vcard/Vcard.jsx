@@ -3,7 +3,6 @@ import {
   useNavigate,
   useParams,
 } from "react-router-dom";
-import ReactGA from 'react-ga4';
 import "./Vcard.scss"
 
 const server = process.env.REACT_APP_API;
@@ -68,15 +67,6 @@ export default function Vcard() {
       clearTimeout(timerTimeOut.current);
     }
   }, [timer, fileUrl, errors]);
-
-
-  useEffect(() => {
-    ReactGA.event({
-      action: "download",
-      category: `${type}_vcard`,
-    });
-  }, []);
-
 
   return (
     <div className="centerVcard">
