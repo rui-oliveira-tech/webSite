@@ -7,7 +7,7 @@
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  animation: showLetters 15s ease-in-out forwards;
+  animation: showLettersVcard 15s ease-in-out forwards;
 
   .ringVcard {
     position: absolute;
@@ -105,7 +105,7 @@
   }
 }
 
-@keyframes showLetters {
+@keyframes showLettersVcard {
   0% {
     color: black;
   }
