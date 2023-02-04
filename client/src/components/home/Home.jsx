@@ -2,7 +2,6 @@ import React from "react";
 import { useTranslation } from 'react-i18next'
 import cookies from 'js-cookie'
 import FileSaver from 'file-saver';
-import ReactGA from 'react-ga4';
 import "./Home.scss";
 import "./CvButton.scss";
 import main_Img from "../../images/main_Img.jpg";
@@ -25,14 +24,14 @@ export default function Home({ allPages }) {
       "CV - " + currentLanguageCode.toUpperCase() + " - Rui Oliveira.pdf");
   };
   return (
-    <section className="scroll_to home">
+    <section className="have_footer have_NavigationBar home">
       <header>
-        {(currentLanguageCode === "en" || currentLanguageCode === "nl") && <button className="learn-more buttonCV" onClick={saveFile}>
+        {/*  {(currentLanguageCode === "en" || currentLanguageCode === "nl") && <button className="learn-more buttonCV" onClick={saveFile}>
           <span className="circle" aria-hidden="true">
             <span className="icon arrow"></span>
           </span>
           <span id="buttonCV" className="buttonCV-text">{t('home.cvButton')}</span>
-        </button>}
+        </button>} */}
         <figure>
           <img src={main_Img} className="frontImage" alt="Rui Oliveira" />
         </figure>

@@ -1,17 +1,25 @@
 import Homepage from '../Homepage';
+import Cv from "../Cv";
 import Portfolio from "../Portfolio";
 
 export const pageList = [
+  /*   {
+      url: '',
+      Component: Portfolio
+    }, */
   {
-    url: '',
-    Component: Portfolio
-  },
-  /* {
+    navigationBar: false,
     url: '',
     Component: Homepage
   },
   {
-    url: 'portefolio',
+    navigationBar: true,
+    url: 'cv',
+    Component: Cv
+  },
+  {
+    navigationBar: true,
+    url: 'portfolio',
     Component: Portfolio
-  }, */
+  },
 ]

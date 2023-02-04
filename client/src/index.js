@@ -11,7 +11,7 @@ import Loading from "./components/Loading/Loading";
 ReactDOM.render(
   <Suspense fallback={<></>}>
     <GoogleAnalyticsInitialize />
-    <Loading />
+{/*     <Loading /> */}
     <React.StrictMode>
       <BrowserRouter>
         <Routes>

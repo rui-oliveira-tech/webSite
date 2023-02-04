@@ -1,5 +1,9 @@
 {
   "app_title": "Rui Oliveira - Electrician  Industrial | Residential",
+  "navigationBar": {
+    "cv": "curriculum Vitae",
+    "portfolio": "portfolio"
+  },
   "footer": {
     "mailButton": "Hire Me"
   },

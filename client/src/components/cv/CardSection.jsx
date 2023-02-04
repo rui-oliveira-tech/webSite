@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { useTranslation } from 'react-i18next'
 
 import "./_CardSection.scss"
@@ -26,12 +26,16 @@ const gradient = "radial-gradient(circle, rgb(25, 58, 89, 0.5) 0%, rgb(0, 0, 0, 
 export default function CardSection() {
   const { t } = useTranslation();
   const [loadingMap, setLoadingMap] = useState(true);
+  let waitForGoogleMaps = useRef(setTimeout(() => { }, 0));
   useEffect(() => {
-    new Promise(resolve => setTimeout(() => resolve(setLoadingMap(false)), 2000))
+    new Promise(resolve => {
+      waitForGoogleMaps.current = setTimeout(() => resolve(setLoadingMap(false)), 2000)
+    })
+    return () => clearTimeout(waitForGoogleMaps.current);
   })
 
   return (
-    <section className="scroll_to projects">
+    <section className="have_footer have_NavigationBar projects">
       <div className="about">
         <div className="project" style={{ gridArea: "about", backgroundImage: `url(${About_Img})` }}>
           <div className="overlay" style={{ backgroundImage: `${gradient}, url(${About_Img})` }}>

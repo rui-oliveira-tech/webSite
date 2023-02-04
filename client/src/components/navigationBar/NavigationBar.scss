@@ -1,0 +1,57 @@
+.mainNavigationBar {
+  position: fixed;
+  z-index: 3;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 1em;
+
+  width: 100%;
+  height: 4em;
+  background-color: rgb(255, 255, 255);
+  //transform: translate(-50%, 0%);
+
+  .iconNavigationBar {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    padding: 0em 2em;
+    svg {
+      display: block;
+      height: 100%;
+    }
+    img {
+      height: 100%;
+    }
+  }
+  .contentNavigationBar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 4;
+    height: 100%;
+
+    a {
+      font-size: 1rem;
+      color: black;
+      text-transform: uppercase;
+      text-decoration: none;
+
+      margin: auto;
+      border: none;
+      margin: 0 1em;
+
+      &:hover {
+        color: rgba(0, 0, 0, 0.5);
+      }
+    }
+  }
+
+  .languageNavigationBar {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    padding-right: 2em;
+  }
+}
