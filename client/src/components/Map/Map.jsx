@@ -116,6 +116,18 @@ export default function MapSection({ markers }) {
     }))
   );
 
+  //erro no consola
+  /*   react_devtools_backend.js:4012 Warning: Can't perform a React state update on an unmounted component. This is a no-op, but it indicates a memory leak in your application. To fix, cancel all subscriptions and asynchronous tasks in a useEffect cleanup function.
+    at MapSection (http://localhost:3000/static/js/bundle.js:6025:5)
+    at div
+    at div
+    at div
+    at div
+    at section
+    at CardSection (http://localhost:3000/static/js/bundle.js:6247:69)
+    at div
+    at Cv
+   */
   React.useEffect(() => {
     readString(worldCitiesCSV, getPapaConfig((r1) => {
       setCSV1(r1);

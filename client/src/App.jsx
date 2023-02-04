@@ -31,6 +31,9 @@ export function RedirectApp() {
     if (pages.includes(redirect.lang)) {
       navigate(`/${currentLanguageCode}/${redirect.lang}`, { replace: true });
     }
+    return () => {
+
+    }
   }, []);
 
   useLayoutEffect(() => {
@@ -40,6 +43,9 @@ export function RedirectApp() {
       } else {
         navigate(`/${currentLanguageCode}`, { replace: true });
       }
+    }
+    return () => {
+
     }
   }, [t])
 
