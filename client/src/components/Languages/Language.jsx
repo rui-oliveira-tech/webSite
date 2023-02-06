@@ -47,38 +47,36 @@ export default function Language() {
   }
 
   return (
-    <div className="language">
-      <div className="dropdown">
-        <button
-          className="btn btn-link dropdown-toggle"
-          type="button"
-          id="dropdownMenuButton1"
-          data-bs-toggle="dropdown"
-          aria-expanded="false"
-        >
-          <img className='globeIcon' src={GlobeIcon} alt="globeIcon" />
-        </button>
-        <ul className="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-          {languageList.map(({ code, name, country_code }) => (
-            <li key={country_code}>
-              <button
-                className={classNames('dropdown-item', {
-                  disabled: currentLanguageCode === code,
-                })}
-                onClick={onClickChangeLanguage(code)}
-              >
-                <span
-                  className={`flag-icon flag-icon-${country_code} mx-2`}
-                  style={{
-                    opacity: currentLanguageCode === code ? 0.5 : 1,
-                  }}
-                ></span>
-                {name}
-              </button>
-            </li>
-          ))}
-        </ul>
-      </div>
+    <div className="language dropdown">
+      <button
+        className="btn btn-link dropdown-toggle"
+        type="button"
+        id="dropdownMenuButton1"
+        data-bs-toggle="dropdown"
+        aria-expanded="false"
+      >
+        <img src={GlobeIcon} alt="globeIcon" />
+      </button>
+      <ul className="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+        {languageList.map(({ code, name, country_code }) => (
+          <li key={country_code}>
+            <button
+              className={classNames('dropdown-item', {
+                disabled: currentLanguageCode === code,
+              })}
+              onClick={onClickChangeLanguage(code)}
+            >
+              <span
+                className={`flag-icon flag-icon-${country_code} mx-2`}
+                style={{
+                  opacity: currentLanguageCode === code ? 0.5 : 1,
+                }}
+              ></span>
+              {name}
+            </button>
+          </li>
+        ))}
+      </ul>
     </div>
   )
 }

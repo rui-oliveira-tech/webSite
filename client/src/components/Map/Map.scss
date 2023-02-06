@@ -49,7 +49,7 @@
       transform: translate(100%, -150%);
       animation: showLettersMapsMarker 1s linear forwards;
       color: #ffffff;
-      font-size: 1.5em;
+      font-size: calc(var(--textSize) * 1.5em);
       line-height: 1em;
       font-weight: 600;
       letter-spacing: normal;

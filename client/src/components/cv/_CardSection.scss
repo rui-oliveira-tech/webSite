@@ -124,22 +124,22 @@
     line-height: 1.5;
   }
   .textGlue {
-    line-height: 1rem;
+    line-height: calc(var(--textSize) * 1rem);
   }
   .estraSmall {
-    font-size: 0.5rem;
+    font-size: calc(var(--textSize) * 0.5rem);
   }
   .small {
-    font-size: 1rem;
+    font-size: calc(var(--textSize) * 1rem);
   }
   .medium {
-    font-size: 1.2rem;
+    font-size: calc(var(--textSize) * 1.2rem);
   }
   .big {
-    font-size: 1.5rem;
+    font-size: calc(var(--textSize) * 1.5rem);
   }
   .extraBig {
-    font-size: 2.75rem;
+    font-size: calc(var(--textSize) * 2.75rem);
   }
 
   .languagesTable {
@@ -147,7 +147,7 @@
     width: 100%;
     line-height: 1.5em;
     text-align: center;
-    font-size: 1rem;
+    font-size: calc(var(--textSize) * 1rem);
 
     .languageColumn {
       width: 150px;
@@ -191,7 +191,7 @@
     img {
       max-width: 100%;
       text-align: center;
-      font-size: 1.5em;
+      font-size: calc(var(--textSize) * 1.5em);
       line-height: calc(2em - 2px);
     }
     &:hover {
@@ -206,22 +206,22 @@
 
   @media (min-width: 270px) and (max-width: 600px) {
     .estraSmall {
-      font-size: 0.25rem;
+      font-size: calc(var(--textSize) * 0.25rem);
     }
     .small {
-      font-size: 0.42rem;
+      font-size: calc(var(--textSize) * 0.42rem);
     }
     .medium {
-      font-size: 0.6rem;
+      font-size: calc(var(--textSize) * 0.6rem);
     }
     .big {
-      font-size: 0.75rem;
+      font-size: calc(var(--textSize) * 0.75rem);
     }
     .extraBig {
-      font-size: 1.5rem;
+      font-size: calc(var(--textSize) * 1.5rem);
     }
     .languagesTable {
-      font-size: 0.6rem;
+      font-size: calc(var(--textSize) * 0.6rem);
       .languageColumn {
         width: 100px;
       }
@@ -242,22 +242,22 @@
 
   @media (min-width: 601px) and (max-width: 1023px) {
     .estraSmall {
-      font-size: 0.5rem;
+      font-size: calc(var(--textSize) * 0.5rem);
     }
     .small {
-      font-size: 0.75rem;
+      font-size: calc(var(--textSize) * 0.75rem);
     }
     .medium {
-      font-size: 1rem;
+      font-size: calc(var(--textSize) * 1rem);
     }
     .big {
-      font-size: 1.25rem;
+      font-size: calc(var(--textSize) * 1.25rem);
     }
     .extraBig {
-      font-size: 2rem;
+      font-size: calc(var(--textSize) * 2rem);
     }
     .languagesTable {
-      font-size: 1rem;
+      font-size: calc(var(--textSize) * 1rem);
       .languageColumn {
         width: 150px;
       }

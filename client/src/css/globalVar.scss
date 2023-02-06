@@ -12,6 +12,8 @@
   --backgroundColor1: rgba(255, 255, 255, 0.3);
   --backgroundColor2: rgba(238, 238, 238, 0.9);
   --deepBlue: #344757;
+
+  --textSize: 0.8;
 }
 $Color: #00b7ff;
 
@@ -26,7 +28,15 @@ $Color: #00b7ff;
   width: 100%;
   height: 100vh;
   position: relative;
-  padding-top: 7em;
+  padding-top: 7.8em;
+
+  @media (min-width: 270px) and (max-width: 600px) {
+    padding-top: 5.8em;
+  }
+
+  @media (min-width: 601px) and (max-width: 1023px) {
+    padding-top: 6.8em;
+  }
 }
 
 .have_footer {
@@ -35,7 +45,7 @@ $Color: #00b7ff;
   position: relative;
   padding-bottom: 9em;
 
-/*   &.projects {
+  /*   &.projects {
     height: auto;
     min-height: 100vh;
     padding-bottom: 6.25em;
@@ -45,9 +55,7 @@ $Color: #00b7ff;
     padding-bottom: 9em;
   }
 
-  @media (min-width: 512px) and (max-width: 1023px) {
+  @media (min-width: 601px) and (max-width: 1023px) {
     padding-bottom: 6.5em;
   }
 }
-
-

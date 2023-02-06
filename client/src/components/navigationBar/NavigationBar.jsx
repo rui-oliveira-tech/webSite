@@ -8,15 +8,33 @@ import { pageList } from "../../resource/pages"
 
 import logo from "../../images/logo/logo.svg";
 
+function CurrentPage(currentLanguageCode) {
+  let currentPage = document.location.pathname.split("/");
 
+  if (currentPage.length === 0 || currentPage.length === 1 || currentPage.length === 2) {
+    currentPage = '';
+  }
+  else if (currentPage.length === 3) {
+    currentPage = currentPage[currentPage.length - 1];
+  }
+  return currentPage;
+}
 
 export function NavigationBar(props) {
   const { t } = useTranslation();
   const currentLanguageCode = props.i18n.language;
-  let currentPage = document.location.pathname.split("/");
-  currentPage = currentPage[currentPage.length - 1];
-  console.log(currentPage);
+  const currentPage = CurrentPage(currentLanguageCode);
 
+  console.log(currentPage);
+  console.log(currentPage.length);
+
+  function cssLink(page) {
+    let className = 'notThisPage';
+    if (currentPage === page.url) {
+      className = 'thisPage';
+    }
+    return className;
+  }
 
   return (
     <nav className="mainNavigationBar">
@@ -26,9 +44,7 @@ export function NavigationBar(props) {
       <div className="contentNavigationBar">
         {pageList.reduce((urls, page, i) => {
           if (page.navigationBar) {
-            urls.push(<Link key={i} style={{
-              opacity: currentPage === page.url ? 0.5 : 1,
-            }} to={`/${currentLanguageCode}/${page.url}`} >{t(`navigationBar.${page.url}`)}</Link>);
+            urls.push(<Link key={i} className={cssLink(page)} to={`/${currentLanguageCode}${page.url === '' ? '' : '/'}${page.url}`} >{t(`navigationBar.${page.name}`)}</Link>);
           }
           return urls;
         }, [])}

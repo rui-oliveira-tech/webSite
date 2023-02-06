@@ -8,17 +8,20 @@ export const pageList = [
       Component: Portfolio
     }, */
   {
-    navigationBar: false,
+    navigationBar: true,
+    name: 'homepage',
     url: '',
     Component: Homepage
   },
   {
     navigationBar: true,
+    name: 'cv',
     url: 'cv',
     Component: Cv
   },
   {
     navigationBar: true,
+    name: 'portfolio',
     url: 'portfolio',
     Component: Portfolio
   },

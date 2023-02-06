@@ -1,7 +1,8 @@
 {
   "app_title": "Rui Oliveira - Eletricista  Industrial | Residencial",
   "navigationBar": {
-    "cv": "curriculum Vitae",
+    "homepage": "Inicio",
+    "cv": "Curriculum Vitae",
     "portfolio": "Portefólio"
   },
   "footer": {
