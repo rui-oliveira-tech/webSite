@@ -25,9 +25,6 @@ export function NavigationBar(props) {
   const currentLanguageCode = props.i18n.language;
   const currentPage = CurrentPage(currentLanguageCode);
 
-  console.log(currentPage);
-  console.log(currentPage.length);
-
   function cssLink(page) {
     let className = 'notThisPage';
     if (currentPage === page.url) {
