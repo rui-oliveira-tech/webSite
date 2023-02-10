@@ -27,7 +27,7 @@ export default function CardSection() {
   const { t } = useTranslation();
   const [loadingMap, setLoadingMap] = useState(true);
   let waitForGoogleMaps = useRef(setTimeout(() => { }, 0));
-  
+
   const animatedOverlay = useRef("");
   let waitForOverlay = useRef(setTimeout(() => { }, 0));
   useEffect(() => {

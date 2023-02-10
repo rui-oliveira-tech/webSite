@@ -43,11 +43,11 @@ export default function Home({ allPages }) {
         <h3 data-texteffect={t('home.subTitle.third')} className="subTitle third">{t('home.subTitle.third')}</h3>
       </main>
 
-      <footer className="scrollArrow" onClick={scrollDown}>
+      {/*  <footer className="scrollArrow" onClick={scrollDown}>
         <span></span>
         <span></span>
         <span></span>
-      </footer>
+      </footer> */}
     </section>
   )
 }

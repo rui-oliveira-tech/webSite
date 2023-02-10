@@ -3,10 +3,6 @@ import Cv from "../Cv";
 import Portfolio from "../Portfolio";
 
 export const pageList = [
-  /*   {
-      url: '',
-      Component: Portfolio
-    }, */
   {
     navigationBar: true,
     name: 'homepage',
@@ -19,10 +15,10 @@ export const pageList = [
     url: 'cv',
     Component: Cv
   },
-  {
+/*   {
     navigationBar: true,
     name: 'portfolio',
     url: 'portfolio',
     Component: Portfolio
-  },
+  }, */
 ]
