@@ -1,6 +1,5 @@
 import React from "react";
 import { useTranslation, withTranslation } from 'react-i18next';
-import FileSaver from 'file-saver';
 import "./Home.scss";
 import main_Img from "../../images/main_Img.jpg";
 
@@ -16,11 +15,7 @@ export function Home(props) {
       block: "start",
     });
   }
-  const saveFile = () => {
-    FileSaver.saveAs(
-      process.env.PUBLIC_URL + "/resource/CV - " + currentLanguageCode.toUpperCase() + " - Rui Oliveira.pdf",
-      "CV - " + currentLanguageCode.toUpperCase() + " - Rui Oliveira.pdf");
-  };
+
   return (
     <section className="have_footer have_NavigationBar home">
       <header>

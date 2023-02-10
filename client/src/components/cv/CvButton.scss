@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css?family=Mukta:700");
 
-$bg: #f3f8fa;
-$white: #fff;
+$bg: #ffffff;
+$white: #ffffff;
 $black: #193a59;
 
 @mixin transition(
@@ -21,10 +21,9 @@ $black: #193a59;
 }
 
 .buttonCV {
-  position: absolute;
+  position: relative;
   display: inline-block;
-  z-index: 1;
-  transform: translate(3.5em, 1.5em);
+  z-index: 5;
   outline: none;
   border: 0;
   vertical-align: middle;
@@ -36,9 +35,9 @@ $black: #193a59;
   animation: showCvButton 2s linear forwards;
   opacity: 0;
 
-   animation-delay: calc(var(--loadingAnimation) + 1s);
+  //animation-delay: calc(var(--loadingAnimation) + 1s);
   &::before {
-     animation-delay: calc(var(--loadingAnimation) + 1.1s);
+   // animation-delay: calc(var(--loadingAnimation) + 1.1s);
   }
 
   &.learn-more {
@@ -96,7 +95,7 @@ $black: #193a59;
       font-size: calc(var(--textSize) * 0.8em);
       text-align: center;
       text-transform: uppercase;
-      opacity: 0.3;
+      opacity: 0;
     }
   }
   &:hover {
