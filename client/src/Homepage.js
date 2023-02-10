@@ -8,7 +8,7 @@ import NavigationBar from "./components/navigationBar/NavigationBar";
 import Home from "./components/home/Home";
 import Footer from "./components/footer/Footer";
 
-export default function Portfolio() {
+export default function Homepage() {
   const scrollSpeed = 500;
   let page = useRef(0);
   let allPages = useRef([]);

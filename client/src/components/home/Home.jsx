@@ -1,16 +1,14 @@
 import React from "react";
-import { useTranslation } from 'react-i18next'
-import cookies from 'js-cookie'
+import { useTranslation, withTranslation } from 'react-i18next';
 import FileSaver from 'file-saver';
 import "./Home.scss";
-import "./CvButton.scss";
 import main_Img from "../../images/main_Img.jpg";
 
 
 
-export default function Home({ allPages }) {
+export function Home(props) {
   const { t } = useTranslation();
-  const currentLanguageCode = cookies.get('i18next') || 'en'
+  const currentLanguageCode = props.i18n.language;
 
   function scrollDown(e) {
     document.querySelector(".projects").scrollIntoView({
@@ -26,12 +24,6 @@ export default function Home({ allPages }) {
   return (
     <section className="have_footer have_NavigationBar home">
       <header>
-        {/*  {(currentLanguageCode === "en" || currentLanguageCode === "nl") && <button className="learn-more buttonCV" onClick={saveFile}>
-          <span className="circle" aria-hidden="true">
-            <span className="icon arrow"></span>
-          </span>
-          <span id="buttonCV" className="buttonCV-text">{t('home.cvButton')}</span>
-        </button>} */}
         <figure>
           <img src={main_Img} className="frontImage" alt="Rui Oliveira" />
         </figure>
@@ -51,3 +43,5 @@ export default function Home({ allPages }) {
     </section>
   )
 }
+
+export default withTranslation()(Home);
