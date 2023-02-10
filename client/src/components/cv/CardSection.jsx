@@ -2,9 +2,11 @@ import React, { useEffect, useRef, useState } from "react";
 import { useTranslation, withTranslation } from 'react-i18next';
 
 import "./_CardSection.scss"
+import "./CvButton.scss"
 import MapSection from "../Map/Map";
 import { programingLanguages } from "../../resource/programingLanguages.js"
 import { googleMapsMarkers } from "../../resource/googleMapsMarkers.js"
+import FileSaver from 'file-saver';
 
 
 import About_Img from "../../images/About_Img.jpg";
@@ -45,8 +47,22 @@ export default withTranslation()(function CardSection(props) {
     return () => clearTimeout(waitForGoogleMaps.current);
   })
 
+  const saveFile = () => {
+    FileSaver.saveAs(
+      process.env.PUBLIC_URL + "/resource/CV - " + currentLanguageCode.toUpperCase() + " - Rui Oliveira.pdf",
+      "CV - " + currentLanguageCode.toUpperCase() + " - Rui Oliveira.pdf");
+  };
+
   return (
     <section className="have_footer have_NavigationBar projects">
+      <div className="download">
+        {(currentLanguageCode === "en" || currentLanguageCode === "nl") && <button className="learn-more buttonCV" onClick={saveFile}>
+          <span className="circle" aria-hidden="true">
+            <span className="icon arrow"></span>
+          </span>
+          <span id="buttonCV" className="buttonCV-text">{t('home.cvButton')}</span>
+        </button>}
+      </div>
       <div className="about">
         <div className="project" style={{ gridArea: "about", backgroundImage: `url(${About_Img})` }}>
           <div className={"overlay " + animatedOverlay.current} style={{ backgroundImage: `${gradient}, url(${About_Img})` }}>
