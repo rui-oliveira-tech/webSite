@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
-import { useTranslation } from 'react-i18next'
+import { useTranslation, withTranslation } from 'react-i18next';
 
 import "./_CardSection.scss"
 import MapSection from "../Map/Map";
@@ -23,7 +23,8 @@ import TraveledMap_Img from "../../images/TraveledMap_Img.jpg";
 
 const gradient = "radial-gradient(circle, rgb(25, 58, 89, 0.5) 0%, rgb(0, 0, 0, 0.5) 100%)"
 
-export default function CardSection() {
+export default withTranslation()(function CardSection(props) {
+  const currentLanguageCode = props.i18n.language;
   const { t } = useTranslation();
   const [loadingMap, setLoadingMap] = useState(true);
   let waitForGoogleMaps = useRef(setTimeout(() => { }, 0));
@@ -221,4 +222,4 @@ export default function CardSection() {
       </div>
     </section>
   )
-}
+})
