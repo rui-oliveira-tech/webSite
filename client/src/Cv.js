@@ -11,14 +11,11 @@ import Footer from "./components/footer/Footer";
 export default function Cv() {
 
   return (
-    <>
-      <div className="wideGrid">
-        <NavigationBar />
-      {/*   <Home allPages={allPages} /> */}
-        <CardSection />
-      </div>
+    <div className="wideGrid">
+      <NavigationBar />
+      <CardSection />
       <Footer />
-    </>
+    </div>
   );
 }
 

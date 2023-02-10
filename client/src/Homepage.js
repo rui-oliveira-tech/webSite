@@ -13,6 +13,7 @@ export default function Homepage() {
   let page = useRef(0);
   let allPages = useRef([]);
   let scrollTimeout = null;
+
   useEffect(() => {
     allPages.current = document.querySelectorAll(".have_footer");
     /*  if (!isMobile && false) {
@@ -23,32 +24,30 @@ export default function Homepage() {
      } */
   }, []);
 
-  function scrollPage(event) {
-    event.preventDefault();
-    if (scrollTimeout === null) {
-      if (event.deltaY > 0) {
-        page.current += 1;
-      } else {
-        page.current -= 1;
-      }
-      page.current = Math.min(Math.max(0, page.current), 1);
-      allPages.current[page.current].scrollIntoView({
-        behavior: "smooth",
-        block: "center",
-      });
-      scrollTimeout = setTimeout(() => {
-        scrollTimeout = null;
-      }, scrollSpeed)
-    }
-  }
+  /*  function scrollPage(event) {
+     event.preventDefault();
+     if (scrollTimeout === null) {
+       if (event.deltaY > 0) {
+         page.current += 1;
+       } else {
+         page.current -= 1;
+       }
+       page.current = Math.min(Math.max(0, page.current), 1);
+       allPages.current[page.current].scrollIntoView({
+         behavior: "smooth",
+         block: "center",
+       });
+       scrollTimeout = setTimeout(() => {
+         scrollTimeout = null;
+       }, scrollSpeed)
+     } 
+  }*/
 
   return (
-    <>
+    <div className="wideGrid">
       <NavigationBar />
-      <div className="wideGrid">
-        <Home allPages={allPages} />
-      </div>
+      <Home />
       <Footer />
-    </>
+    </div>
   );
 }
