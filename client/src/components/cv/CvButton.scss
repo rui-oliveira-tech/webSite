@@ -35,9 +35,17 @@ $black: #193a59;
   animation: showCvButton 2s linear forwards;
   opacity: 0;
 
-  //animation-delay: calc(var(--loadingAnimation) + 1s);
-  &::before {
-   // animation-delay: calc(var(--loadingAnimation) + 1.1s);
+  &.notLoading {
+    animation-delay: 1s;
+    &::before {
+      animation-delay: 1.1s;
+    }
+  }
+  &.loading {
+    animation-delay: calc(var(--loadingAnimation) + 1s);
+    &::before {
+      animation-delay: calc(var(--loadingAnimation) + 1.1s);
+    }
   }
 
   &.learn-more {

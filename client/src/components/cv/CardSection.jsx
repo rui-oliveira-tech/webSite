@@ -29,10 +29,20 @@ export default withTranslation()(function CardSection(props) {
   const currentLanguageCode = props.i18n.language;
   const { t } = useTranslation();
   const [loadingMap, setLoadingMap] = useState(true);
-  let waitForGoogleMaps = useRef(setTimeout(() => { }, 0));
-
   const animatedOverlay = useRef("");
+  const animation = useRef("notLoading");
+
+  let waitForGoogleMaps = useRef(setTimeout(() => { }, 0));
   let waitForOverlay = useRef(setTimeout(() => { }, 0));
+  let waitForLoading = useRef(setTimeout(() => { }, 0));
+
+  useEffect(() => {
+    new Promise(resolve => {
+      waitForGoogleMaps.current = setTimeout(() => resolve(setLoadingMap(false)), 2000)
+    })
+    return () => clearTimeout(waitForGoogleMaps.current);
+  })
+
   useEffect(() => {
     waitForOverlay.current = setTimeout(() => {
       animatedOverlay.current = "animated";
@@ -41,11 +51,13 @@ export default withTranslation()(function CardSection(props) {
   }, [])
 
   useEffect(() => {
-    new Promise(resolve => {
-      waitForGoogleMaps.current = setTimeout(() => resolve(setLoadingMap(false)), 2000)
-    })
-    return () => clearTimeout(waitForGoogleMaps.current);
-  })
+    waitForLoading.current = setTimeout(() => {
+      if (props.isLoading) {
+        animation.current = "loading";
+      }
+    }, 1)
+    return () => clearTimeout(waitForLoading.current);
+  }, [])
 
   const saveFile = () => {
     FileSaver.saveAs(
@@ -56,7 +68,7 @@ export default withTranslation()(function CardSection(props) {
   return (
     <section className="have_footer have_NavigationBar projects">
       <div className="download">
-        {(currentLanguageCode === "en" || currentLanguageCode === "nl") && <button className="learn-more buttonCV" onClick={saveFile}>
+        {(currentLanguageCode === "en" || currentLanguageCode === "nl") && <button className={"learn-more buttonCV " + animation.current} onClick={saveFile}>
           <span className="circle" aria-hidden="true">
             <span className="icon arrow"></span>
           </span>

@@ -8,12 +8,12 @@ import NavigationBar from "./components/navigationBar/NavigationBar";
 import CardSection from "./components/cv/CardSection";
 import Footer from "./components/footer/Footer";
 
-export default function Cv() {
+export default function Cv(props) {
 
   return (
     <div className="wideGrid">
       <NavigationBar />
-      <CardSection />
+      <CardSection {...props} />
       <Footer />
     </div>
   );
