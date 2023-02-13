@@ -18,16 +18,19 @@ function shuffle(array) {
   return array;
 }
 
-export default function LoadingIcon() {
+export default function LoadingIcon(props) {
   useEffect(() => {
+    props.setIsLoading(true);
     const paths = document.querySelectorAll("path");
     shuffle(Array.from(paths)).forEach((p) => {
       setTimeout(() => {
         p.classList.add(p.dataset.classname);
       }, 500 + Math.random() * 1000)
     })
+    setTimeout(() => {
+      props.setIsLoading(false);
+    }, 4000)
   }, [])
-
 
   return (
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 31.61 35.93">

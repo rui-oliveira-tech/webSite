@@ -53,7 +53,7 @@ function RedirectApp(props) {
   }
   if (pages.includes(redirect.page)) {
     const PageComponent = pageList.find((page) => page.url === redirect.page).Component;
-    return <PageComponent redirect={redirect} />
+    return <PageComponent {...props} />
   }
   return "404";
 }

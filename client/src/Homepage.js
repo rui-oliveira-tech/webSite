@@ -8,7 +8,7 @@ import NavigationBar from "./components/navigationBar/NavigationBar";
 import Home from "./components/home/Home";
 import Footer from "./components/footer/Footer";
 
-export default function Homepage() {
+export default function Homepage(props) {
   const scrollSpeed = 500;
   let page = useRef(0);
   let allPages = useRef([]);
@@ -46,7 +46,7 @@ export default function Homepage() {
   return (
     <div className="wideGrid">
       <NavigationBar />
-      <Home />
+      <Home {...props} />
       <Footer />
     </div>
   );
