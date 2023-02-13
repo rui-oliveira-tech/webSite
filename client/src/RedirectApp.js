@@ -1,6 +1,5 @@
 import React, { useEffect, useLayoutEffect } from "react";
 import { useNavigate, useParams } from "react-router-dom";
-import cookies from 'js-cookie';
 import { useTranslation, withTranslation } from 'react-i18next';
 
 import { pageList } from "./resource/pages"
@@ -13,12 +12,11 @@ const pages = pageList.reduce((urls, page) => {
   return urls;
 }, [])
 
-export function RedirectApp(props) {
+function RedirectApp(props) {
   const { t } = useTranslation();
   const navigate = useNavigate();
   const redirect = useParams();
-  //const currentLanguageCode = props.i18n.language;
-   const currentLanguageCode = cookies.get('i18next') || 'en';
+  const currentLanguageCode = props.i18n.language;
 
   useEffect(() => {
     if (

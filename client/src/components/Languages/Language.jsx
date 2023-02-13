@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react'
 import i18next from 'i18next'
-import { useTranslation } from 'react-i18next'
+import { useTranslation, withTranslation } from 'react-i18next';
 import cookies from 'js-cookie'
 import classNames from 'classnames'
 import GlobeIcon from "../../images/Languages/language.svg";
@@ -33,8 +33,8 @@ export const languageList = [
 
 export const languages = ['en', 'nl', 'fr', 'pt'];
 
-export default function Language() {
-  const currentLanguageCode = cookies.get('i18next') || 'en'
+function Language(props) {
+  const currentLanguageCode = props.i18n.language;
   const currentLanguage = languageList.find((l) => l.code === currentLanguageCode)
   const { t } = useTranslation()
   useEffect(() => {
@@ -80,3 +80,5 @@ export default function Language() {
     </div>
   )
 }
+
+export default withTranslation()(Language);
