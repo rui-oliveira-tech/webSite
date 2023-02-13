@@ -1,8 +1,8 @@
 .download {
   position: fixed;
-  width: 100%;
+  width: auto;
   transform: translate(calc(0% + 0.5em), 0.5em);
-  z-index: 5;
+  z-index: 3;
 }
 
 .about {
