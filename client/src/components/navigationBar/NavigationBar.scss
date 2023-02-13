@@ -18,6 +18,17 @@
     img {
       height: 100%;
     }
+
+    .thisPage {
+      cursor: default;
+    }
+
+    .notThisPage {
+      cursor: pointer;
+      &:hover {
+        opacity: 0.5;
+      }
+    }
   }
   .contentNavigationBar {
     display: flex;

@@ -25,23 +25,24 @@ export function NavigationBar(props) {
   const currentLanguageCode = props.i18n.language;
   const currentPage = CurrentPage(currentLanguageCode);
 
-  function cssLink(page) {
+  function CssLink(page) {
     let className = 'notThisPage';
     if (currentPage === page.url) {
       className = 'thisPage';
     }
     return className;
   }
+  console.log(CssLink(pageList[0]));
 
   return (
     <nav className="mainNavigationBar">
       <Link className="iconNavigationBar" to={`/${currentLanguageCode}`}>
-        <img src={logo} alt="Logo" />
+        <img src={logo} className={CssLink(pageList[0])} alt="Logo" />
       </Link>
       <div className="contentNavigationBar">
         {pageList.reduce((urls, page, i) => {
           if (page.navigationBar) {
-            urls.push(<Link key={i} className={cssLink(page)} to={`/${currentLanguageCode}${page.url === '' ? '' : '/'}${page.url}`} >{t(`navigationBar.${page.name}`)}</Link>);
+            urls.push(<Link key={i} className={CssLink(page)} to={`/${currentLanguageCode}${page.url === '' ? '' : '/'}${page.url}`} >{t(`navigationBar.${page.name}`)}</Link>);
           }
           return urls;
         }, [])}
