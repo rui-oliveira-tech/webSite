@@ -66,7 +66,7 @@ export default withTranslation()(function CardSection(props) {
   };
 
   return (
-    <section className="have_footer have_NavigationBar projects">
+    <section className="have_footer have_NavigationBar cv">
       <div className="download">
         {(currentLanguageCode === "en" || currentLanguageCode === "nl") && <button className={"learn-more buttonCV " + animation.current} onClick={saveFile}>
           <span className="circle" aria-hidden="true">
@@ -75,8 +75,8 @@ export default withTranslation()(function CardSection(props) {
           <span id="buttonCV" className="buttonCV-text">{t('home.cvButton')}</span>
         </button>}
       </div>
-      <div className="about">
-        <div className="project" style={{ gridArea: "about", backgroundImage: `url(${About_Img})` }}>
+      <div className="cvContainer">
+        <div className="module" style={{ gridArea: "about", backgroundImage: `url(${About_Img})` }}>
           <div className={"overlay " + animatedOverlay.current} style={{ backgroundImage: `${gradient}, url(${About_Img})` }}>
             <p>{t('about.overlayTitle')}</p>
           </div>
@@ -105,7 +105,7 @@ export default withTranslation()(function CardSection(props) {
             </div>
           </div>
         </div>
-        <div className="project" style={{ gridArea: "education", backgroundImage: `url(${Education_Img})` }}>
+        <div className="module" style={{ gridArea: "education", backgroundImage: `url(${Education_Img})` }}>
           <div className={"overlay " + animatedOverlay.current} style={{ backgroundImage: `${gradient}, url(${Education_Img})` }}>
             <p>{t('education.overlayTitle')}</p>
           </div>
@@ -120,7 +120,7 @@ export default withTranslation()(function CardSection(props) {
             ))}
           </div>
         </div>
-        <div className="project" style={{ gridArea: "languages", backgroundImage: `url(${Languages_Img})` }}>
+        <div className="module" style={{ gridArea: "languages", backgroundImage: `url(${Languages_Img})` }}>
           <div className={"overlay " + animatedOverlay.current} style={{ backgroundImage: `${gradient}, url(${Languages_Img})` }}>
             <p>{t('languages.overlayTitle')}</p>
           </div>
@@ -165,7 +165,7 @@ export default withTranslation()(function CardSection(props) {
             </table>
           </div>
         </div>
-        <div className="project" style={{ gridArea: "programingLanguages", backgroundImage: `url(${ProgramingLanguages_Img})` }}>
+        <div className="module" style={{ gridArea: "programingLanguages", backgroundImage: `url(${ProgramingLanguages_Img})` }}>
           <div className={"overlay " + animatedOverlay.current} style={{ backgroundImage: `${gradient}, url(${ProgramingLanguages_Img})` }}>
             <p>{t('programingLanguages.overlayTitle')}</p>
           </div>
@@ -187,7 +187,7 @@ export default withTranslation()(function CardSection(props) {
             ))}
           </div>
         </div>
-        <div className="project" style={{ gridArea: "experience", backgroundImage: `url(${Experience_Img})` }}>
+        <div className="module" style={{ gridArea: "experience", backgroundImage: `url(${Experience_Img})` }}>
           <div className={"overlay " + animatedOverlay.current} style={{ backgroundImage: `${gradient}, url(${Experience_Img})` }}>
             <p>{t('experience.overlayTitle')}</p>
           </div>
@@ -206,7 +206,7 @@ export default withTranslation()(function CardSection(props) {
             ))}
           </div>
         </div>
-        <div className="project" style={{ gridArea: "projects", backgroundImage: `url(${Projects_Img})` }}>
+        <div className="module" style={{ gridArea: "projects", backgroundImage: `url(${Projects_Img})` }}>
           <div className={"overlay " + animatedOverlay.current} style={{ backgroundImage: `${gradient}, url(${Projects_Img})` }}>
             <p>{t('projects.overlayTitle')}</p>
           </div>
@@ -221,7 +221,7 @@ export default withTranslation()(function CardSection(props) {
             ))}
           </div>
         </div>
-        <div className="project" style={{ gridArea: "others", backgroundImage: `url(${Others_Img})` }}>
+        <div className="module" style={{ gridArea: "others", backgroundImage: `url(${Others_Img})` }}>
           <div className={"overlay " + animatedOverlay.current} style={{ backgroundImage: `${gradient}, url(${Others_Img})` }}>
             <p>{t('other.overlayTitle')}</p>
           </div>
@@ -237,7 +237,7 @@ export default withTranslation()(function CardSection(props) {
             ))}
           </div>
         </div>
-        {!loadingMap && <div className="project" style={{ gridArea: "map", backgroundImage: `url(${TraveledMap_Img})` }}>
+        {!loadingMap && <div className="module" style={{ gridArea: "map", backgroundImage: `url(${TraveledMap_Img})` }}>
           <div className={"overlay " + animatedOverlay.current} style={{ backgroundImage: `${gradient}, url(${TraveledMap_Img})` }}>
             <p>{t('googleMapsMarkers.overlayTitle')}</p>
           </div>
