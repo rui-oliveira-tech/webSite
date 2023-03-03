@@ -15,10 +15,10 @@ export const pageList = [
     url: 'cv',
     Component: Cv
   },
-/*   {
+  {
     navigationBar: true,
     name: 'portfolio',
     url: 'portfolio',
     Component: Portfolio
-  }, */
+  },
 ]
