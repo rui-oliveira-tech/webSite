@@ -49,33 +49,25 @@
     "description": [
       {
         "title": "Diplôme en conduite de chariots élévateurs électriques, à combustion et à gaz",
-        "company": "Cincork",
-        "location": "Santa Maria de Lamas, Portugal",
-        "website": "https://www.cincork.com/",
+        "companyTitle": "",
         "startDate": "",
         "endDate": "4 Mai 2018"
       },
       {
         "title": "Diplôme en Électronique d'automatisation et de contrôle +1500 heures de stage",
-        "company": "CFPIC",
-        "location": "São João da Madeira, Portugal",
-        "website": "http://www.cfpic.pt/",
+        "companyTitle": "",
         "startDate": "2012",
         "endDate": "22 Avril 2015"
       },
       {
         "title": "Permis de conduire AM / B / B1 ",
-        "company": "Boavista, école de conduite",
-        "location": "Santa Maria da Feira, Portugal",
-        "website": "http://www.ecboavista.com/",
+        "companyTitle": "École de conduite",
         "startDate": "",
         "endDate": "4 Déc. 2015"
       },
       {
         "title": " Equivalent du Bac en science et technologies",
-        "company": "Lycée de Santa Maria da Feira",
-        "location": "Santa Maria da Feira, Portugal",
-        "website": "https://ae-smfeira.pt/",
+        "companyTitle": "Lycée de",
         "startDate": "2010",
         "endDate": "2012"
       }
@@ -96,44 +88,20 @@
     "framework": "Cadre européen commun de référence pour les langues",
     "description": [
       {
-        "language": "Portuguais",
-        "flag": "pt",
-        "listening": "C2",
-        "reading": "C2",
-        "spokenInteraction": "C2",
-        "spokenProduction": "C2",
-        "writing": "C2"
+        "language": "Portuguais"
       },
       {
-        "language": "Anglais",
-        "flag": "gb",
-        "listening": "C1",
-        "reading": "C1",
-        "spokenInteraction": "C1",
-        "spokenProduction": "C1",
-        "writing": "B1"
+        "language": "Anglais"
       },
       {
-        "language": "Espagnol",
-        "flag": "es",
-        "listening": "C1",
-        "reading": "C1",
-        "spokenInteraction": "C1",
-        "spokenProduction": "C1",
-        "writing": "B1"
+        "language": "Espagnol"
       },
       {
-        "language": "Holandais",
-        "flag": "be",
-        "listening": "A2",
-        "reading": "A2",
-        "spokenInteraction": "A1",
-        "spokenProduction": "A1",
-        "writing": "A1"
+        "language": "Holandais"
       }
     ]
   },
-  "programingLanguages": {
+  "programmingLanguages": {
     "overlayTitle": "Ce que je programme",
     "underlayTitle": "Codes de programmation",
     "description": []
@@ -144,9 +112,6 @@
     "description": [
       {
         "title": "Electricien Industriel",
-        "company": "SOCEA nv",
-        "location": "Oelegem, Belgique",
-        "website": "https://www.socea.be/",
         "offerType": "Temps plein",
         "startDate": "Mai 2019",
         "endDate": "Présent",
@@ -155,9 +120,6 @@
       },
       {
         "title": "Technicien de froid",
-        "company": "MEDREPAIR",
-        "location": "Beveren, Belgique",
-        "website": "https://www.msc.com/",
         "offerType": "Temps plein",
         "startDate": "Juillet 2018",
         "endDate": "Mai 2019",
@@ -166,9 +128,6 @@
       },
       {
         "title": "Industrial Electrician",
-        "company": "SERSAN",
-        "location": "Lourosa, Portugal",
-        "website": "https://www.sersan.pt/",
         "offerType": "Temps plein",
         "startDate": "Février 2015",
         "endDate": "Juillet 2018",
@@ -177,9 +136,6 @@
       },
       {
         "title": "Electronique automatisation et commande (1500 heures de stage)",
-        "company": "Electro Oliveira",
-        "location": "Milheirós de Poiares, Portugal",
-        "website": "https://www.sersan.pt/",
         "offerType": "Temps plein",
         "startDate": "2012",
         "endDate": "2015",
@@ -194,14 +150,12 @@
     "description": [
       {
         "title": "Home Assistant",
-        "website": "https://github.com/rui-oliveira-tech/homeAssistant/",
         "startDate": "7 Février 2021",
         "endDate": "Present",
         "description": "Ma maison est controlée par un Raspberry PI 4 et automatisée avec \"Home Assistant\". Je peux contrôler les lumières, les capteurs, les robots à la fois en interne (sans connexion Internet) et en externe (via VPN \"Tailscale\" et IP masqué par \"Duck DNS\")."
       },
       {
         "title": "Site web",
-        "website": "https://github.com/rui-oliveira-tech/webSite/",
         "startDate": "11 Février 2022",
         "endDate": "Présent",
         "description": "Ce site web a été crée avec l'objectif de diffuser mon parcours professionnel de manière accessible pour les entreprises et les particuliers intéressés."

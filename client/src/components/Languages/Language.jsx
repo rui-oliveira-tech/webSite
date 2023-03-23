@@ -3,7 +3,7 @@ import i18next from 'i18next'
 import { useTranslation, withTranslation } from 'react-i18next';
 import cookies from 'js-cookie'
 import classNames from 'classnames'
-import GlobeIcon from "../../images/Languages/language.svg";
+import ImportAllImg from '../../images/importAll'
 import 'bootstrap/dist/js/bootstrap.js'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import './Language.scss'
@@ -34,6 +34,7 @@ export const languageList = [
 export const languages = ['en', 'nl', 'fr', 'pt'];
 
 function Language(props) {
+  const images = ImportAllImg(require.context("../../images/languages/", false, /\.(png|jpe?g|svg)$/));
   const currentLanguageCode = props.i18n.language;
   const currentLanguage = languageList.find((l) => l.code === currentLanguageCode)
   const { t } = useTranslation()
@@ -55,7 +56,7 @@ function Language(props) {
         data-bs-toggle="dropdown"
         aria-expanded="false"
       >
-        <img src={GlobeIcon} alt="globeIcon" />
+        <img src={images["language"]} alt="globeIcon" />
       </button>
       <ul className="dropdown-menu" aria-labelledby="dropdownMenuButton1">
         {languageList.map(({ code, name, country_code }) => (

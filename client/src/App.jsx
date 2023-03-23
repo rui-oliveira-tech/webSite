@@ -13,7 +13,7 @@ export function App() {
   return (
     <Suspense fallback={<></>}>
       <GoogleAnalyticsInitialize />
-      <Loading setIsLoading={setIsLoading} />
+   {/*     <Loading setIsLoading={setIsLoading} />  */}
       <React.StrictMode>
         <BrowserRouter>
           <Routes>

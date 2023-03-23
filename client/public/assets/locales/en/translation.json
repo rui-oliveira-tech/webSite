@@ -49,33 +49,25 @@
     "description": [
       {
         "title": "Driving course of electric forklifts, combustion and gas",
-        "company": "Cincork",
-        "location": "Santa Maria de Lamas, Portugal",
-        "website": "https://www.cincork.com/",
+        "companyTitle": "",
         "startDate": "",
         "endDate": "4 May 2018"
       },
       {
         "title": "Electronic, automation and maintenance +1500 hours InternshipElectronic",
-        "company": "CFPIC",
-        "location": "São João da Madeira, Portugal",
-        "website": "http://www.cfpic.pt/",
+        "companyTitle": "",
         "startDate": "2012",
         "endDate": "22 April 2015"
       },
       {
-        "title": "Driving licence AM / B / B1 ",
-        "company": "Boavista driving school",
-        "location": "Santa Maria da Feira, Portugal",
-        "website": "http://www.ecboavista.com/",
+        "title": "Driving license AM / B / B1 ",
+        "companyTitle": "Driving school",
         "startDate": "",
         "endDate": "4 Dec 2015"
       },
       {
         "title": "High School, Course of Sciences and Technologies",
-        "company": "High School of Santa Maria da Feira",
-        "location": "Santa Maria da Feira, Portugal",
-        "website": "https://ae-smfeira.pt/",
+        "companyTitle": "High School of",
         "startDate": "2010",
         "endDate": "2012"
       }
@@ -96,46 +88,22 @@
     "framework": "Common European Framework of Reference for Languages",
     "description": [
       {
-        "language": "Portuguese",
-        "flag": "pt",
-        "listening": "C2",
-        "reading": "C2",
-        "spokenInteraction": "C2",
-        "spokenProduction": "C2",
-        "writing": "C2"
+        "language": "Portuguese"
       },
       {
-        "language": "English",
-        "flag": "gb",
-        "listening": "C1",
-        "reading": "C1",
-        "spokenInteraction": "C1",
-        "spokenProduction": "C1",
-        "writing": "B1"
+        "language": "English"
       },
       {
-        "language": "Spanish",
-        "flag": "es",
-        "listening": "C1",
-        "reading": "C1",
-        "spokenInteraction": "C1",
-        "spokenProduction": "C1",
-        "writing": "B1"
+        "language": "Spanish"
       },
       {
-        "language": "Dutch",
-        "flag": "be",
-        "listening": "A2",
-        "reading": "A2",
-        "spokenInteraction": "A1",
-        "spokenProduction": "A1",
-        "writing": "A1"
+        "language": "Dutch"
       }
     ]
   },
-  "programingLanguages": {
+  "programmingLanguages": {
     "overlayTitle": "What I program",
-    "underlayTitle": "Programing Languages",
+    "underlayTitle": "Programming Languages",
     "description": []
   },
   "experience": {
@@ -144,9 +112,6 @@
     "description": [
       {
         "title": "Industrial Electrician",
-        "company": "SOCEA nv",
-        "location": "Oelegem, Belgium",
-        "website": "https://www.socea.be/",
         "offerType": "Full-time",
         "startDate": "May 2019",
         "endDate": "Present",
@@ -155,9 +120,6 @@
       },
       {
         "title": "Cold technician",
-        "company": "MEDREPAIR",
-        "location": "Beveren, Belgium",
-        "website": "https://www.msc.com/",
         "offerType": "Full-time",
         "startDate": "Jul 2018",
         "endDate": "May 2019",
@@ -166,9 +128,6 @@
       },
       {
         "title": "Industrial Electrician",
-        "company": "SERSAN",
-        "location": "Lourosa, Portugal",
-        "website": "https://www.sersan.pt/",
         "offerType": "Full-time",
         "startDate": "Feb 2015",
         "endDate": "Jul 2018",
@@ -177,9 +136,6 @@
       },
       {
         "title": "Electronic, automation and maintenance (1500 hours Internship)",
-        "company": "Electro Oliveira",
-        "location": "Milheirós de Poiares, Portugal",
-        "website": "https://www.sersan.pt/",
         "offerType": "Full-time",
         "startDate": "2012",
         "endDate": "2015",
@@ -194,28 +150,24 @@
     "description": [
       {
         "title": "Home Assistant",
-        "website": "https://github.com/rui-oliveira-tech/homeAssistant/",
         "startDate": "7 Feb 2021",
         "endDate": "Present",
         "description": "My house is controlled by a Raspberry PI 4 and automated with \"Home Assistant\". I can control lights, sensors, robots, both internally (without internet connection) and externally (via VPN \"Tailscale\" and IP masked by \"Duck DNS\")."
       },
       {
         "title": "Website",
-        "website": "https://github.com/rui-oliveira-tech/webSite/",
         "startDate": "11 Feb 2022",
         "endDate": "Present",
         "description": "This website was created with the aim of promoting information about my professional career, in a way that is accessible to companies and interested people."
       },
       {
         "title": "Home Assistant",
-        "website": "https://github.com/rui-oliveira-tech/homeAssistant/",
         "startDate": "7 Feb 2021",
         "endDate": "Present",
         "description": "My house is controlled by a Raspberry PI 4 and automated with \"Home Assistant\". I can control lights, sensors, robots, both internally (without internet connection) and externally (via VPN \"Tailscale\" and IP masked by \"Duck DNS\")."
       },
       {
         "title": "Home Assistant",
-        "website": "https://github.com/rui-oliveira-tech/homeAssistant/",
         "startDate": "7 Feb 2021",
         "endDate": "Present",
         "description": "My house is controlled by a Raspberry PI 4 and automated with \"Home Assistant\". I can control lights, sensors, robots, both internally (without internet connection) and externally (via VPN \"Tailscale\" and IP masked by \"Duck DNS\")."

@@ -3,13 +3,12 @@ import { useTranslation, withTranslation } from 'react-i18next';
 import { MouseParallaxContainer, MouseParallaxChild } from 'react-parallax-mouse';
 import Tilt from 'react-parallax-tilt';
 import "./Projects.scss";
-
-
-
+import ImportAllImg from '../../images/importAll'
 
 export default withTranslation()(function Portfolio(props) {
   const { t } = useTranslation();
   const animation = useRef("notLoading");
+  const images = ImportAllImg(require.context("../../images/projects/", false, /\.(png|jpe?g|svg)$/));
   let waitForLoading = useRef(setTimeout(() => { }, 0));
   useEffect(() => {
     waitForLoading.current = setTimeout(() => {
@@ -41,7 +40,7 @@ export default withTranslation()(function Portfolio(props) {
                   <MouseParallaxChild className="card-bg"
                     factorX={0.6}
                     factorY={0.1}
-                    style={{ backgroundImage: `url(https://images.unsplash.com/photo-1479660656269-197ebb83b540?dpr=2&auto=compress,format&fit=crop&w=1199&h=798&q=80&cs=tinysrgb&crop=)` }}
+                    style={{ backgroundImage: `url("${images[projects.img]}")` }}
                   />
                   <div className="card-info">
                     <h1 slot="header">{projects.title}</h1>
@@ -56,9 +55,3 @@ export default withTranslation()(function Portfolio(props) {
     </div >
   )
 })
-
-
-
-
-
-

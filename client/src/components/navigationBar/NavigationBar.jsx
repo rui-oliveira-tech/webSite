@@ -32,7 +32,6 @@ export function NavigationBar(props) {
     }
     return className;
   }
-  console.log(CssLink(pageList[0]));
 
   return (
     <nav className="mainNavigationBar">
