@@ -1,13 +1,12 @@
 import React, { useEffect } from 'react'
 import i18next from 'i18next'
 import { useTranslation, withTranslation } from 'react-i18next';
-import cookies from 'js-cookie'
+// import cookies from 'js-cookie'
 import classNames from 'classnames'
-import ImportAllImg from '../../images/importAll'
+import withPublicImages from '../../hooks/withPublicImages'
 import 'bootstrap/dist/js/bootstrap.js'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import './Language.scss'
-import '../../public/images/languages/language.svg'
 
 export const languageList = [
   {
@@ -35,7 +34,7 @@ export const languageList = [
 export const languages = ['en', 'nl', 'fr', 'pt'];
 
 function Language(props) {
-  const images = ImportAllImg(require("../../public/images/languages/", false, /\.(png|jpe?g|svg)$/));
+  const { images } = props;
   const currentLanguageCode = props.i18n.language;
   const currentLanguage = languageList.find((l) => l.code === currentLanguageCode)
   const { t } = useTranslation()
@@ -57,7 +56,7 @@ function Language(props) {
         data-bs-toggle="dropdown"
         aria-expanded="false"
       >
-        <img src={images["language"]} alt="globeIcon" />
+        <img src={images.language} alt="globeIcon" />
       </button>
       <ul className="dropdown-menu" aria-labelledby="dropdownMenuButton1">
         {languageList.map(({ code, name, country_code }) => (
@@ -83,4 +82,4 @@ function Language(props) {
   )
 }
 
-export default withTranslation()(Language);
+export default withPublicImages(require.context("../../../public/images/languages/"))(withTranslation()(Language));

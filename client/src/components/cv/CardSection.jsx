@@ -3,11 +3,13 @@ import { useTranslation, withTranslation } from 'react-i18next';
 
 import "./_CardSection.scss"
 import "./CvButton.scss"
-import ImportAllImg from '../../images/importAll'
+import usePublicImages from '../../hooks/usePublicImages'
 import Translation from '../../resource/translation'
 import MapSection from "../Map/Map";
 import { googleMapsMarkers } from "../../resource/googleMapsMarkers.js"
 import FileSaver from 'file-saver';
+
+import getImagesFromFolder from '../../util/getImagesFromFolder';
 
 // color: #193a59;
 // background-color: #bdd9f3;
@@ -18,8 +20,8 @@ const gradient = "radial-gradient(circle, rgb(25, 58, 89, 0.5) 0%, rgb(0, 0, 0, 
 
 export default withTranslation()(function CardSection(props) {
   const currentLanguageCode = props.i18n.language;
-  const images =""; //= ImportAllImg(require.context("../../images/cv/", false, /\.(png|jpe?g|svg)$/));
-  const programmingLanguages =""; //= ImportAllImg(require.context("../../images/programming_languages/", false, /\.(png|jpe?g|svg)$/));
+  const images = getImagesFromFolder(props.images, "cv")
+  const programmingLanguages = getImagesFromFolder(props.images, "programming_languages");
   const t = Translation();
   const [loadingMap, setLoadingMap] = useState(true);
   const animatedOverlay = useRef("");
@@ -91,7 +93,7 @@ export default withTranslation()(function CardSection(props) {
                         (<p className="medium" key={i}>{item}</p>)
                         :
                         (<p className="big right" key={i}>{item}</p>)
-                  } 
+                  }
                 </React.Fragment>
               )}
             </div>
@@ -229,7 +231,7 @@ export default withTranslation()(function CardSection(props) {
             ))}
           </div>
         </div>
-        {!loadingMap && <div className="module" style={{ gridArea: "map", backgroundImage: `url(${images[t.googleMapsMarkers.img]})` }}>
+        {!true && <div className="module" style={{ gridArea: "map", backgroundImage: `url(${images[t.googleMapsMarkers.img]})` }}>
           <div className={"overlay " + animatedOverlay.current} style={{ backgroundImage: `${gradient}, url(${images[t.googleMapsMarkers.img]})` }}>
             <p>{t.googleMapsMarkers.overlayTitle}</p>
           </div>

@@ -3,12 +3,17 @@ import { useTranslation, withTranslation } from 'react-i18next';
 import { MouseParallaxContainer, MouseParallaxChild } from 'react-parallax-mouse';
 import Tilt from 'react-parallax-tilt';
 import "./Projects.scss";
-//import ImportAllImg from '../../images/importAll'
+import usePublicImages from '../../hooks/usePublicImages'
+
+import getImagesFromFolder from '../../util/getImagesFromFolder';
 
 export default withTranslation()(function Portfolio(props) {
   const { t } = useTranslation();
   const animation = useRef("notLoading");
-  const images  ="";//= ImportAllImg(require.context("../../images/projects/", false, /\.(png|jpe?g|svg)$/));
+  
+  const images = getImagesFromFolder(props.images, "projects");
+  // const images = usePublicImages(require.context("../../../public/images/projects/", false, /\.(png|jpe?g|svg)$/));
+
   let waitForLoading = useRef(setTimeout(() => { }, 0));
   useEffect(() => {
     waitForLoading.current = setTimeout(() => {

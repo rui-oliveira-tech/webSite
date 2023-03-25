@@ -5,6 +5,7 @@ import { useTranslation, withTranslation } from 'react-i18next';
 import { pageList } from "./resource/pages"
 import getLink, { getType } from "./resource/link";
 import { languages } from "./components/Languages/Language";
+import usePublicImages from './hooks/usePublicImages'
 
 
 const pages = pageList.reduce((urls, page) => {
@@ -16,6 +17,7 @@ function RedirectApp(props) {
   const { t } = useTranslation();
   const navigate = useNavigate();
   const redirect = useParams();
+  const images = usePublicImages(require.context("../public/images/"));
   const currentLanguageCode = props.i18n.language;
 
   useEffect(() => {
@@ -53,7 +55,7 @@ function RedirectApp(props) {
   }
   if (pages.includes(redirect.page)) {
     const PageComponent = pageList.find((page) => page.url === redirect.page).Component;
-    return <PageComponent {...props} />
+    return <PageComponent {...props} images={images} />
   }
   return "404";
 }
