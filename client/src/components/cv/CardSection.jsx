@@ -1,9 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
-import { useTranslation, withTranslation } from 'react-i18next';
 
 import "./_CardSection.scss"
 import "./CvButton.scss"
-import usePublicImages from '../../hooks/usePublicImages'
 import Translation from '../../resource/translation'
 import MapSection from "../Map/Map";
 import { googleMapsMarkers } from "../../resource/googleMapsMarkers.js"
@@ -18,7 +16,7 @@ import getImagesFromFolder from '../../util/getImagesFromFolder';
 
 const gradient = "radial-gradient(circle, rgb(25, 58, 89, 0.5) 0%, rgb(0, 0, 0, 0.5) 100%)"
 
-export default withTranslation()(function CardSection(props) {
+export default function CardSection(props) {
   const currentLanguageCode = props.i18n.language;
   const images = getImagesFromFolder(props.images, "cv")
   const programmingLanguages = getImagesFromFolder(props.images, "programming_languages");
@@ -231,7 +229,7 @@ export default withTranslation()(function CardSection(props) {
             ))}
           </div>
         </div>
-        {!true && <div className="module" style={{ gridArea: "map", backgroundImage: `url(${images[t.googleMapsMarkers.img]})` }}>
+        {!loadingMap && <div className="module" style={{ gridArea: "map", backgroundImage: `url(${images[t.googleMapsMarkers.img]})` }}>
           <div className={"overlay " + animatedOverlay.current} style={{ backgroundImage: `${gradient}, url(${images[t.googleMapsMarkers.img]})` }}>
             <p>{t.googleMapsMarkers.overlayTitle}</p>
           </div>
@@ -244,4 +242,4 @@ export default withTranslation()(function CardSection(props) {
       </div>
     </section>
   )
-})
+}
