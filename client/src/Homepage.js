@@ -45,7 +45,7 @@ export default function Homepage(props) {
 
   return (
     <div className="wideGrid">
-      <NavigationBar />
+      <NavigationBar {...props} />
       <Home {...props} />
       <Footer />
     </div>

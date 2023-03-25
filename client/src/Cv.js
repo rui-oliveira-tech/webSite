@@ -12,7 +12,7 @@ export default function Cv(props) {
 
   return (
     <div className="wideGrid">
-      <NavigationBar />
+      <NavigationBar {...props} />
       <CardSection {...props} />
       <Footer />
     </div>

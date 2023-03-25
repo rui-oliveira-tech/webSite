@@ -1,11 +1,13 @@
 import React, { useRef, useEffect } from "react";
 import { useTranslation } from 'react-i18next';
 import "./Home.scss";
-//import main_Img from {process.env.PUBLIC_URL + "../../images/main_Img.jpg"};
+import getImagesFromFolder from './../../util/getImagesFromFolder';
 
 
 
 export function Home(props) {
+  const images = getImagesFromFolder(props.images, "home");
+  console.log(props.images, images)
   const { t } = useTranslation();
   const animation = useRef("notLoading");
   let waitForLoading = useRef(setTimeout(() => { }, 0));
@@ -29,7 +31,7 @@ export function Home(props) {
     <section className="have_footer have_NavigationBar home">
       <header>
         <figure>
-          <img src={process.env.PUBLIC_URL + "/images/main_Img.jpg"} className="frontImage" alt="Rui Oliveira" />
+          <img src={images.main} className="frontImage" alt="Rui Oliveira" />
         </figure>
       </header>
       <main>

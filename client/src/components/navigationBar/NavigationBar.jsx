@@ -1,12 +1,12 @@
 import React from "react";
-import { useTranslation, withTranslation } from 'react-i18next';
+import { useTranslation } from 'react-i18next';
 import { Link } from "react-router-dom";
 
 import "./NavigationBar.scss";
 import Language from "../Languages/Language";
 import { pageList } from "../../resource/pages"
 
-//import logo from "../../images/logo/logo.svg";
+import getImagesFromFolder from './../../util/getImagesFromFolder';
 
 function CurrentPage(currentLanguageCode) {
   let currentPage = document.location.pathname.split("/");
@@ -21,6 +21,7 @@ function CurrentPage(currentLanguageCode) {
 }
 
 export function NavigationBar(props) {
+  const images = getImagesFromFolder(props.images, "logo");
   const { t } = useTranslation();
   const currentLanguageCode = props.i18n.language;
   const currentPage = CurrentPage(currentLanguageCode);
@@ -36,7 +37,7 @@ export function NavigationBar(props) {
   return (
     <nav className="mainNavigationBar">
       <Link className="iconNavigationBar" to={`/${currentLanguageCode}`}>
-        <img src={process.env.PUBLIC_URL + "/images/logo/logo.svg"} className={CssLink(pageList[0])} alt="Logo" />
+        <img src={images.logo} className={CssLink(pageList[0])} alt="Logo" />
       </Link>
       <div className="contentNavigationBar">
         {pageList.reduce((urls, page, i) => {
@@ -53,5 +54,5 @@ export function NavigationBar(props) {
   )
 }
 
-export default withTranslation()(NavigationBar);
+export default NavigationBar;
 

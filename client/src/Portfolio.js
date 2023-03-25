@@ -12,7 +12,7 @@ export default function Portfolio(props) {
 
   return (
     <div className="wideGrid">
-      <NavigationBar />
+      <NavigationBar {...props} />
       <Projects {...props} />
       <Footer />
     </div>
