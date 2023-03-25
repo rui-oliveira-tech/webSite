@@ -1,5 +1,7 @@
-import Marker from "../images/maps/Marker.svg";
+//import Marker from "../images/maps/Marker.svg";
 
+
+const Marker = process.env.PUBLIC_URL + "/images/maps/Marker.svg";
 let id = 0;
 const getNextId = () => {
     return ++id;
@@ -7,7 +9,7 @@ const getNextId = () => {
 
 export const googleMapsMarkers = [
     //-----------------------// Portugal //-----------------------//
-       {//extra
+    {//extra
         id: getNextId(),
         country: "Portugal",
         city: "Peneda-Gerês National Park",
@@ -98,7 +100,7 @@ export const googleMapsMarkers = [
         marker: Marker,
         zoom: 9,
     },
-      {//extra
+    {//extra
         id: getNextId(),
         country: "Portugal",
         city: "Serra da Estrela Natural Park",

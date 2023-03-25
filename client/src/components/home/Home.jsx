@@ -1,7 +1,7 @@
 import React, { useRef, useEffect } from "react";
 import { useTranslation } from 'react-i18next';
 import "./Home.scss";
-import main_Img from "../../images/main_Img.jpg";
+//import main_Img from {process.env.PUBLIC_URL + "../../images/main_Img.jpg"};
 
 
 
@@ -29,7 +29,7 @@ export function Home(props) {
     <section className="have_footer have_NavigationBar home">
       <header>
         <figure>
-          <img src={main_Img} className="frontImage" alt="Rui Oliveira" />
+          <img src={process.env.PUBLIC_URL + "/images/main_Img.jpg"} className="frontImage" alt="Rui Oliveira" />
         </figure>
       </header>
       <main>

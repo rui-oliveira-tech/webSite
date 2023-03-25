@@ -6,7 +6,7 @@ import "./NavigationBar.scss";
 import Language from "../Languages/Language";
 import { pageList } from "../../resource/pages"
 
-import logo from "../../images/logo/logo.svg";
+//import logo from "../../images/logo/logo.svg";
 
 function CurrentPage(currentLanguageCode) {
   let currentPage = document.location.pathname.split("/");
@@ -36,7 +36,7 @@ export function NavigationBar(props) {
   return (
     <nav className="mainNavigationBar">
       <Link className="iconNavigationBar" to={`/${currentLanguageCode}`}>
-        <img src={logo} className={CssLink(pageList[0])} alt="Logo" />
+        <img src={process.env.PUBLIC_URL + "/images/logo/logo.svg"} className={CssLink(pageList[0])} alt="Logo" />
       </Link>
       <div className="contentNavigationBar">
         {pageList.reduce((urls, page, i) => {

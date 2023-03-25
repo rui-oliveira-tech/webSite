@@ -18,8 +18,8 @@ const gradient = "radial-gradient(circle, rgb(25, 58, 89, 0.5) 0%, rgb(0, 0, 0, 
 
 export default withTranslation()(function CardSection(props) {
   const currentLanguageCode = props.i18n.language;
-  const images = ImportAllImg(require.context("../../images/cv/", false, /\.(png|jpe?g|svg)$/));
-  const programmingLanguages = ImportAllImg(require.context("../../images/programming_languages/", false, /\.(png|jpe?g|svg)$/));
+  const images =""; //= ImportAllImg(require.context("../../images/cv/", false, /\.(png|jpe?g|svg)$/));
+  const programmingLanguages =""; //= ImportAllImg(require.context("../../images/programming_languages/", false, /\.(png|jpe?g|svg)$/));
   const t = Translation();
   const [loadingMap, setLoadingMap] = useState(true);
   const animatedOverlay = useRef("");

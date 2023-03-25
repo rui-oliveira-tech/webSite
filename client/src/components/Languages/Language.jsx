@@ -7,6 +7,7 @@ import ImportAllImg from '../../images/importAll'
 import 'bootstrap/dist/js/bootstrap.js'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import './Language.scss'
+import '../../public/images/languages/language.svg'
 
 export const languageList = [
   {
@@ -34,7 +35,7 @@ export const languageList = [
 export const languages = ['en', 'nl', 'fr', 'pt'];
 
 function Language(props) {
-  const images = ImportAllImg(require.context("../../images/languages/", false, /\.(png|jpe?g|svg)$/));
+  const images = ImportAllImg(require("../../public/images/languages/", false, /\.(png|jpe?g|svg)$/));
   const currentLanguageCode = props.i18n.language;
   const currentLanguage = languageList.find((l) => l.code === currentLanguageCode)
   const { t } = useTranslation()
