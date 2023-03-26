@@ -7,7 +7,6 @@ import getImagesFromFolder from './../../util/getImagesFromFolder';
 
 export function Home(props) {
   const images = getImagesFromFolder(props.images, "home");
-  console.log(props.images, images)
   const { t } = useTranslation();
   const animation = useRef("notLoading");
   let waitForLoading = useRef(setTimeout(() => { }, 0));

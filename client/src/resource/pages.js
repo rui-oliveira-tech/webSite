@@ -1,5 +1,5 @@
 import Homepage from '../Homepage';
-import Cv from "../Cv";
+import Curriculum from "../Curriculum";
 import Portfolio from "../Portfolio";
 
 export const pageList = [
@@ -13,7 +13,7 @@ export const pageList = [
     navigationBar: true,
     name: 'cv',
     url: 'cv',
-    Component: Cv
+    Component: Curriculum
   },
 /*   {
     navigationBar: true,
