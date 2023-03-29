@@ -18,7 +18,13 @@ i18next
       caches: ['cookie'],
     },
     // react: { useSuspense: false },
+
+    defaultNS: "en/translation.json",
     backend: {
       loadPath: '../../../assets/locales/{{lng}}/translation.json',
     },
+
+    interpolation: {
+      escapeValue: false
+    }
   })

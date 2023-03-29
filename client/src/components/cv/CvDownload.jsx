@@ -1,16 +1,14 @@
 import React, { useEffect, useRef } from "react";
-
+import { useTranslation } from 'react-i18next';
 import FileSaver from 'file-saver';
 
-import "./Cv.scss"
-import "./CvButton.scss"
-import Translation from '../../resource/translation'
+import "./Cv.scss";
+import "./CvButton.scss";
 
 export default function CvDownload(props) {
   const currentLanguageCode = props.i18n.language;
-  const t = Translation();
+  const { t } = useTranslation();
   const animation = useRef("notLoading");
-
   let waitForLoading = useRef(setTimeout(() => { }, 0));
 
   useEffect(() => {
@@ -21,7 +19,6 @@ export default function CvDownload(props) {
     }, 1)
     return () => clearTimeout(waitForLoading.current);
   }, [])
-
 
   const saveFile = () => {
     FileSaver.saveAs(
@@ -35,7 +32,7 @@ export default function CvDownload(props) {
         <span className="circle" aria-hidden="true">
           <span className="icon arrow"></span>
         </span>
-        <span id="buttonCV" className="buttonCV-text">{t.home.cvButton}</span>
+        <span id="buttonCV" className="buttonCV-text">{t('home.cvButton')}</span>
       </button>}
     </div>
   )

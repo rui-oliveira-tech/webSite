@@ -9,7 +9,6 @@
     "mailButton": "Contrate-me"
   },
   "home": {
-    "title": "Rui Oliveira",
     "subTitle": {
       "first": "Eletricista Industrial",
       "second": "Eletricista Residencial",
@@ -48,28 +47,18 @@
     "underlayTitle": "Educação",
     "description": [
       {
-        "title": "Curso de condução de empilhadores elétricos, combustão e gás",
-        "companyTitle": "",
-        "startDate": "",
-        "endDate": "4 May 2018"
+        "title": "Curso de condução de empilhadores elétricos, combustão e gás"
       },
       {
-        "title": "Curso de Eletrónica Automação e Comando +1500 horas Estágio",
-        "companyTitle": "",
-        "startDate": "2012",
-        "endDate": "22 April 2015"
+        "title": "Curso de Eletrónica Automação e Comando +1500 horas Estágio"
       },
       {
         "title": "Carta de condução AM / B / B1 ",
-        "companyTitle": "Escola de condução",
-        "startDate": "",
-        "endDate": "4 Dec 2015"
+        "companyTitle": "Escola de condução"
       },
       {
         "title": "Curso de Ciências e Tecnologias",
-        "companyTitle": "Liceu de",
-        "startDate": "2010",
-        "endDate": "2012"
+        "companyTitle": "Liceu de"
       }
     ]
   },
@@ -112,33 +101,21 @@
     "description": [
       {
         "title": "Eletricista Industrial",
-        "offerType": "Tempo inteiro",
-        "startDate": "May 2019",
-        "endDate": "Presente",
         "functionsPerformed": "Encontrar problemas na máquina e consertar, instalar suporte de cabos, passar cabos, conectar quadros elétricos, trocar tomadas, lâmpadas, interruptores, mecânica básica.",
         "skillsGained": "Habilidades de reparo e comunicação."
       },
       {
         "title": "Técnico de frio",
-        "offerType": "Tempo inteiro",
-        "startDate": "Jul 2018",
-        "endDate": "May 2019",
         "functionsPerformed": "Reparação e manutenção de contentores frios,\"PTI\", soldadura de cobre e substituição de motores e sensores.",
         "skillsGained": "Habilidades adquiridas de reparo e comunicação."
       },
       {
         "title": "Eletricista Industrial",
-        "offerType": "Tempo inteiro",
-        "startDate": "Feb 2015",
-        "endDate": "Jul 2018",
         "functionsPerformed": "Reparação de máquinas industriais (eléctricas e electromecânicas), elaboração e electrificação de elétricos, montagem elétrica de máquinas e estruturas de transporte de cortiça e iniciante de programação e automatização de PLC (OMRON).",
         "skillsGained": "Habilidades adquiridas de reparo, construção, desenvolvimento e analíticas."
       },
       {
         "title": "Eletrónica Automação e Comando (1500 hours Internship)",
-        "offerType": "Tempo inteiro",
-        "startDate": "2012",
-        "endDate": "2015",
         "functionsPerformed": "Reparação e manutenção de eletrodomésticos.",
         "skillsGained": "Habilidades adquiridas de comunicação, motores, reparo e venda."
       }
@@ -150,14 +127,10 @@
     "description": [
       {
         "title": "Home Assistant",
-        "startDate": "7 Feb 2021",
-        "endDate": "Presente",
         "description": "Minha casa é controlada por um Raspberry PI 4 e automatizada com \"Home Assistant\". Posso controlar luzes, sensores, robôs, tanto internamente (sem conexão com a internet) quanto externamente (via VPN \"Tailscale\" e IP mascarado por \"Duck DNS\")."
       },
       {
         "title": "Website",
-        "startDate": "11 Feb 2022",
-        "endDate": "Presente",
         "description": "Este website foi criado com o objetivo de divulgar informação sobre o meu percurso profissional, de forma acessível a empresas e pessoas interessadas."
       }
     ]
@@ -169,15 +142,11 @@
       {
         "id": 2,
         "title": "Off We Go – IB&C WEEKS",
-        "startDate": "17 May 2014",
-        "endDate": "25 May 2014",
         "description": "Experiência de intercâmbio acadêmico"
       },
       {
         "id": 1,
         "title": "Viagem pela Europa",
-        "startDate": "7 Feb 2021",
-        "endDate": "Presente",
         "description": "Países que visitei."
       }
     ]
@@ -186,5 +155,25 @@
     "overlayTitle": "Onde eu estive",
     "underlayTitle": "Marcadores do Google Maps",
     "description": []
+  },
+  "expressions": {
+    "offerType": {
+      "Full-time": "Tempo inteiro"
+    },
+    "month": {
+      "Present": "Presente",
+      "Jan": "Jan",
+      "Feb": "Fev",
+      "Mar": "Março",
+      "Apr": "Abril",
+      "May": "Maio",
+      "June": "Junho",
+      "July": "Julho",
+      "Aug": "Agosto",
+      "Sept": "Set",
+      "Oct": "Out",
+      "Nov": "Nov",
+      "Dec": "Dez"
+    }
   }
 }

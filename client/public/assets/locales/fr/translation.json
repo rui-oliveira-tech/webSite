@@ -9,7 +9,6 @@
     "mailButton": "Contactez-moi"
   },
   "home": {
-    "title": "Rui Oliveira",
     "subTitle": {
       "first": "Electricien Industriel",
       "second": "Electricien Résidentiel",
@@ -48,28 +47,18 @@
     "underlayTitle": "Education",
     "description": [
       {
-        "title": "Diplôme en conduite de chariots élévateurs électriques, à combustion et à gaz",
-        "companyTitle": "",
-        "startDate": "",
-        "endDate": "4 Mai 2018"
+        "title": "Diplôme en conduite de chariots élévateurs électriques, à combustion et à gaz"
       },
       {
-        "title": "Diplôme en Électronique d'automatisation et de contrôle +1500 heures de stage",
-        "companyTitle": "",
-        "startDate": "2012",
-        "endDate": "22 Avril 2015"
+        "title": "Diplôme en Électronique d'automatisation et de contrôle +1500 heures de stage"
       },
       {
         "title": "Permis de conduire AM / B / B1 ",
-        "companyTitle": "École de conduite",
-        "startDate": "",
-        "endDate": "4 Déc. 2015"
+        "companyTitle": "École de conduite"
       },
       {
         "title": " Equivalent du Bac en science et technologies",
-        "companyTitle": "Lycée de",
-        "startDate": "2010",
-        "endDate": "2012"
+        "companyTitle": "Lycée de"
       }
     ]
   },
@@ -112,33 +101,22 @@
     "description": [
       {
         "title": "Electricien Industriel",
-        "offerType": "Temps plein",
-        "startDate": "Mai 2019",
-        "endDate": "Présent",
         "functionsPerformed": "Identifier les problèmes dans la machine, dépanner la machine et la réparer, installer le support de câble, faire passer les câbles, connecter les panneaux électriques, changer les prises, les ampoules, les interrupteurs, la mécanique de base.",
         "skillsGained": "Compétences acquises de réparation et communication."
       },
       {
         "title": "Technicien de froid",
-        "offerType": "Temps plein",
-        "startDate": "Juillet 2018",
-        "endDate": "Mai 2019",
         "functionsPerformed": "Réparation et maintenance de containers froids,\"PTI\", soudure cuivre et remplacement moteurs et capteurs.",
         "skillsGained": "Compétences acquises de réparation et communication."
       },
       {
         "title": "Industrial Electrician",
-        "offerType": "Temps plein",
-        "startDate": "Février 2015",
-        "endDate": "Juillet 2018",
         "functionsPerformed": "Réparation de machines industrielles (électriques et électromécaniques), élaboration et électrification de cadres électriques, montages électriques de machines et structures de transport de structures de transport de liège et débutant en programmation et automatisation d'automates (OMRON).",
         "skillsGained": "Compétences acquises de réparation, construction, développement et analyse."
       },
       {
         "title": "Electronique automatisation et commande (1500 heures de stage)",
         "offerType": "Temps plein",
-        "startDate": "2012",
-        "endDate": "2015",
         "functionsPerformed": "Réparation et maintenance d'électroménagers.",
         "skillsGained": "Compétences acquises de communication, moteurs, réparation et vente."
       }
@@ -150,14 +128,10 @@
     "description": [
       {
         "title": "Home Assistant",
-        "startDate": "7 Février 2021",
-        "endDate": "Present",
         "description": "Ma maison est controlée par un Raspberry PI 4 et automatisée avec \"Home Assistant\". Je peux contrôler les lumières, les capteurs, les robots à la fois en interne (sans connexion Internet) et en externe (via VPN \"Tailscale\" et IP masqué par \"Duck DNS\")."
       },
       {
         "title": "Site web",
-        "startDate": "11 Février 2022",
-        "endDate": "Présent",
         "description": "Ce site web a été crée avec l'objectif de diffuser mon parcours professionnel de manière accessible pour les entreprises et les particuliers intéressés."
       }
     ]
@@ -169,15 +143,11 @@
       {
         "id": 2,
         "title": "Off We Go – IB&C WEEKS",
-        "startDate": "17 Mai 2014",
-        "endDate": "25 Mai 2014",
         "description": "Expérience d'échange académique."
       },
       {
         "id": 1,
         "title": "Voyage en Europe",
-        "startDate": "7 Février 2021",
-        "endDate": "Présent",
         "description": "Les pays que j'ai visités."
       }
     ]
@@ -186,5 +156,25 @@
     "overlayTitle": "Où j'ai été",
     "underlayTitle": "Points sur Google Maps",
     "description": []
+  },
+  "expressions": {
+    "offerType": {
+      "Full-time": "Temps plein"
+    },
+    "month": {
+      "Present": "Présent",
+      "Jan": "Janv",
+      "Feb": "Févr",
+      "Mar": "Mars",
+      "Apr": "Avril",
+      "May": "Mai",
+      "June": "Juin",
+      "July": "Juil",
+      "Aug": "Août",
+      "Sept": "Sept",
+      "Oct": "Oct",
+      "Nov": "Nov",
+      "Dec": "Déc"
+    }
   }
 }

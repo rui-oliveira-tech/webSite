@@ -9,7 +9,6 @@
     "mailButton": "Contact mij"
   },
   "home": {
-    "title": "Rui Oliveira",
     "subTitle": {
       "first": "Industrieel Elektricien",
       "second": "Residencial Electrician",
@@ -48,28 +47,18 @@
     "underlayTitle": "Opleiding",
     "description": [
       {
-        "title": "Rijopleiding elektrische heftrucks, verbranding en gas",
-        "companyTitle": "",
-        "startDate": "",
-        "endDate": "4 May 2018"
+        "title": "Rijopleiding elektrische heftrucks, verbranding en gas"
       },
       {
-        "title": "Elektronisch, automatisering en onderhoud +1500 uur Stage Elektronisch",
-        "companyTitle": "",
-        "startDate": "2012",
-        "endDate": "22 April 2015"
+        "title": "Elektronisch, automatisering en onderhoud +1500 uur Stage Elektronisch"
       },
       {
         "title": "Rijbewijs AM / B / B1 ",
-        "companyTitle": "Driving school",
-        "startDate": "",
-        "endDate": "4 Dec 2015"
+        "companyTitle": "Driving school"
       },
       {
         "title": "Middelbare school, cursus wetenschappen en technologieën",
-        "companyTitle": "Middelbare school van",
-        "startDate": "2010",
-        "endDate": "2012"
+        "companyTitle": "Middelbare school van"
       }
     ]
   },
@@ -112,33 +101,21 @@
     "description": [
       {
         "title": "Industrieel Elektricien",
-        "offerType": "Full-time",
-        "startDate": "May 2019",
-        "endDate": "Nu",
         "functionsPerformed": "Opsporen en oplossen van problemen met machines, kabelgoten installeren, kabels doorvoeren, elektrische borden aansluiten, stekkers vervangen, lampen, schakelaars, mechanica basis.",
         "skillsGained": "Reparatie en communicatieve vaardigheden."
       },
       {
         "title": "Koude technicus",
-        "offerType": "Full-time",
-        "startDate": "Jul 2018",
-        "endDate": "May 2019",
         "functionsPerformed": "Reparatie en onderhoud van koelcontainers,\"PTI\", koper lassen en vervanging van motoren en sensoren.",
         "skillsGained": "Reparatie en communicatieve vaardigheden."
       },
       {
         "title": "Industrial Electrician",
-        "offerType": "Full-time",
-        "startDate": "Feb 2015",
-        "endDate": "Jul 2018",
         "functionsPerformed": "Reparatie van industriële machines (elektrisch en elektromechanische), uitwerking en elektrificatie van elektrische borden, elektrische assemblage van machines en constructies van transport van kurk en beginner van programmering en automatisering van PLC (OMRON).",
         "skillsGained": "Repareren, bouwen, ontwikkelen en analytisch vermogen."
       },
       {
         "title": "Elektronica, automatisering en onderhoud (1500 uur stage)",
-        "offerType": "Full-time",
-        "startDate": "2012",
-        "endDate": "2015",
         "functionsPerformed": "Reparatie en onderhoud van huishoudelijke apparaten.",
         "skillsGained": "Communicatie, motoren, reparatie- en verkoopvaardigheden."
       }
@@ -151,15 +128,11 @@
       {
         "title": "Home Assistant",
         "website": "https://github.com/rui-oliveira-tech/homeAssistant/",
-        "startDate": "7 Feb 2021",
-        "endDate": "Nu",
         "description": "Mijn huis wordt bestuurd door een Raspberry PI 4 en geautomatiseerd met \"Home Assistant\". Ik kan lichten, sensoren, robots aansturen, zowel intern (zonder internetverbinding) als extern (via VPN \"Tailscale\" en IP gemaskeerd door \"Duck DNS\")."
       },
       {
         "title": "Website",
         "website": "https://github.com/rui-oliveira-tech/webSite/",
-        "startDate": "11 Feb 2022",
-        "endDate": "Nu",
         "description": "Deze website is gemaakt met als doel informatie over mijn professionele carrière te promoten op een manier die toegankelijk is voor bedrijven en geïnteresseerden."
       }
     ]
@@ -171,15 +144,11 @@
       {
         "id": 2,
         "title": "Off We Go – IB&C WEEKS",
-        "startDate": "17 May 2014",
-        "endDate": "25 May 2014",
         "description": "Ervaring met Scholar Exchange."
       },
       {
         "id": 1,
         "title": "Europa tour",
-        "startDate": "7 Feb 2021",
-        "endDate": "Nu",
         "description": "Landen die ik heb bezocht."
       }
     ]
@@ -188,5 +157,25 @@
     "overlayTitle": "Waar ik ben geweest",
     "underlayTitle": "Google Maps-markeringen",
     "description": []
+  },
+  "expressions": {
+    "offerType": {
+      "Full-time": "Full-time"
+    },
+    "month": {
+      "Present": "Nu",
+      "Jan": "Jan",
+      "Feb": "Feb",
+      "Mar": "Maart",
+      "Apr": "Apr",
+      "May": "Mei",
+      "June": "Juni",
+      "July": "Juli",
+      "Aug": "Aug",
+      "Sept": "Sept",
+      "Oct": "Oct",
+      "Nov": "Nov",
+      "Dec": "Dec"
+    }
   }
 }

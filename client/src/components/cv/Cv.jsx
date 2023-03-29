@@ -1,7 +1,4 @@
 import React, { useEffect, useRef } from "react";
-
-import "./Cv.scss";
-
 import getImagesFromFolder from '../../util/getImagesFromFolder';
 
 import CvDownload from './CvDownload';
@@ -14,6 +11,7 @@ import Projects from './Projects';
 import Others from './Others';
 import Map from './Map';
 
+import "./Cv.scss";
 
 // color: #193a59;
 // background-color: #bdd9f3;

@@ -18,6 +18,7 @@
     "cvButton": "Download Cv"
   },
   "about": {
+    "img": "about",
     "overlayTitle": "Who I am",
     "underlayTitle": "About",
     "description": [
@@ -44,36 +45,66 @@
     ]
   },
   "education": {
+    "img": "education",
     "overlayTitle": "What I've learned",
     "underlayTitle": "Education",
     "description": [
       {
         "title": "Driving course of electric forklifts, combustion and gas",
         "companyTitle": "",
-        "startDate": "",
-        "endDate": "4 May 2018"
+        "company": "Cincork",
+        "location": "Santa Maria de Lamas, Portugal",
+        "website": "https://www.cincork.com/",
+        "startDateDay": "",
+        "startDateMonth": "",
+        "startDateYear": "",
+        "endDateDay": "4",
+        "endDateMonth": "May",
+        "endDateYear": "2018"
       },
       {
         "title": "Electronic, automation and maintenance +1500 hours InternshipElectronic",
         "companyTitle": "",
-        "startDate": "2012",
-        "endDate": "22 April 2015"
+        "company": "CFPIC",
+        "location": "São João da Madeira, Portugal",
+        "website": "http://www.cfpic.pt/",
+        "startDateDay": "",
+        "startDateMonth": "",
+        "startDateYear": "2012",
+        "endDateDay": "22",
+        "endDateMonth": "Apr",
+        "endDateYear": "2015"
       },
       {
         "title": "Driving license AM / B / B1 ",
         "companyTitle": "Driving school",
-        "startDate": "",
-        "endDate": "4 Dec 2015"
+        "company": "Boavista",
+        "location": "Santa Maria da Feira, Portugal",
+        "website": "http://www.ecboavista.com/",
+        "startDateDay": "",
+        "startDateMonth": "",
+        "startDateYear": "",
+        "endDateDay": "4",
+        "endDateMonth": "Dec",
+        "endDateYear": "2015"
       },
       {
         "title": "High School, Course of Sciences and Technologies",
         "companyTitle": "High School of",
-        "startDate": "2010",
-        "endDate": "2012"
+        "company": "Santa Maria da Feira",
+        "location": "Santa Maria da Feira, Portugal",
+        "website": "https://ae-smfeira.pt/",
+        "startDateDay": "",
+        "startDateMonth": "",
+        "startDateYear": "2010",
+        "endDateDay": "",
+        "endDateMonth": "",
+        "endDateYear": "2012"
       }
     ]
   },
   "languages": {
+    "img": "languages",
     "overlayTitle": "What I speak",
     "underlayTitle": "Languages",
     "language": "LANGUAGE",
@@ -88,115 +119,272 @@
     "framework": "Common European Framework of Reference for Languages",
     "description": [
       {
-        "language": "Portuguese"
+        "language": "Portuguese",
+        "flag": "pt",
+        "listening": "C2",
+        "reading": "C2",
+        "spokenInteraction": "C2",
+        "spokenProduction": "C2",
+        "writing": "C2"
       },
       {
-        "language": "English"
+        "language": "English",
+        "flag": "gb",
+        "listening": "C1",
+        "reading": "C1",
+        "spokenInteraction": "C1",
+        "spokenProduction": "C1",
+        "writing": "B1"
       },
       {
-        "language": "Spanish"
+        "language": "Spanish",
+        "flag": "es",
+        "listening": "C1",
+        "reading": "C1",
+        "spokenInteraction": "C1",
+        "spokenProduction": "C1",
+        "writing": "B1"
       },
       {
-        "language": "Dutch"
+        "language": "Dutch",
+        "flag": "be",
+        "listening": "A2",
+        "reading": "A2",
+        "spokenInteraction": "A1",
+        "spokenProduction": "A1",
+        "writing": "A1"
       }
     ]
   },
   "programmingLanguages": {
+    "img": "programmingLanguages",
     "overlayTitle": "What I program",
     "underlayTitle": "Programming Languages",
-    "description": []
+    "description": [
+      [
+        {
+          "id": 1,
+          "title": "Industrial"
+        },
+        {
+          "id": 2,
+          "title": "Programming Languages"
+        },
+        {
+          "id": 3,
+          "title": "software"
+        }
+      ],
+      [
+        {
+          "title": "Ladder",
+          "imgLink": "lader",
+          "website": "https://ladderlogicworld.com/"
+        },
+        {
+          "title": "Arduino",
+          "imgLink": "arduino",
+          "website": "https://github.com/rui-oliveira-tech/webSite/"
+        }
+      ],
+      [
+        {
+          "title": "C++",
+          "imgLink": "cpp",
+          "website": "https://www.w3schools.com/cpp/"
+        },
+        {
+          "title": "Css",
+          "imgLink": "css",
+          "website": "https://www.w3schools.com/css/"
+        },
+        {
+          "title": "Html",
+          "imgLink": "html",
+          "website": "https://www.w3.org/html/"
+        },
+        {
+          "title": "Js",
+          "imgLink": "js",
+          "website": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/"
+        },
+        {
+          "title": "NodeJs",
+          "imgLink": "nodeJs",
+          "website": "https://nodejs.org/"
+        }
+      ],
+      [
+        {
+          "title": "Git",
+          "imgLink": "git",
+          "website": "https://git-scm.com/"
+        },
+        {
+          "title": "Visual Studio Code",
+          "imgLink": "vsc",
+          "website": "https://code.visualstudio.com/"
+        },
+        {
+          "title": "Linux",
+          "imgLink": "linux",
+          "website": "https://www.linux.org/"
+        },
+        {
+          "title": "Windows",
+          "imgLink": "windows",
+          "website": "https://www.microsoft.com/en-gb/windows/"
+        }
+      ]
+    ]
   },
   "experience": {
+    "img": "experience",
     "overlayTitle": "What I've done",
     "underlayTitle": "Experience",
     "description": [
       {
         "title": "Industrial Electrician",
-        "offerType": "Full-time",
-        "startDate": "May 2019",
-        "endDate": "Present",
         "functionsPerformed": "Find machine problems and fix, install cable ducts, pass cables, connect electrical boards, replace plugs, lamps, switches, mechanics basic.",
-        "skillsGained": "Repairing and communication skills."
+        "skillsGained": "Repairing and communication skills.",
+        "company": "SOCEA nv",
+        "location": "Oelegem, Belgium",
+        "website": "https://www.socea.be/",
+        "offerType": "Full-time",
+        "startDateDay": "",
+        "startDateMonth": "May",
+        "startDateYear": "2019",
+        "endDateDay": "",
+        "endDateMonth": "Mar",
+        "endDateYear": "2023"
       },
       {
         "title": "Cold technician",
-        "offerType": "Full-time",
-        "startDate": "Jul 2018",
-        "endDate": "May 2019",
         "functionsPerformed": "Repair and maintenance of cold containers,\"PTI\", copper welding and replacement of motors and sensors.",
-        "skillsGained": "Repairing and communication skills."
+        "skillsGained": "Repairing and communication skills.",
+        "company": "MEDREPAIR",
+        "location": "Beveren, Belgium",
+        "website": "https://www.msc.com/",
+        "offerType": "Full-time",
+        "startDateDay": "",
+        "startDateMonth": "July",
+        "startDateYear": "2018",
+        "endDateDay": "",
+        "endDateMonth": "May",
+        "endDateYear": "2019"
       },
       {
         "title": "Industrial Electrician",
-        "offerType": "Full-time",
-        "startDate": "Feb 2015",
-        "endDate": "Jul 2018",
         "functionsPerformed": "Repair of industrial machines (electrical and electromechanical), elaboration and electrification of electrical boards, electrical assembly of machines and structures of transport of cork and beginner of programming and automation of PLC (OMRON).",
-        "skillsGained": "Repairing, construction, development and analytical skills."
+        "skillsGained": "Repairing, construction, development and analytical skills.",
+        "company": "SERSAN",
+        "location": "Lourosa, Portugal",
+        "website": "https://www.sersan.pt/",
+        "offerType": "Full-time",
+        "startDateDay": "",
+        "startDateMonth": "Feb",
+        "startDateYear": "2015",
+        "endDateDay": "",
+        "endDateMonth": "July",
+        "endDateYear": "2018"
       },
       {
         "title": "Electronic, automation and maintenance (1500 hours Internship)",
-        "offerType": "Full-time",
-        "startDate": "2012",
-        "endDate": "2015",
         "functionsPerformed": "Repair and maintenance of home appliances.",
-        "skillsGained": "Communication, engines, repairing and selling skills."
+        "skillsGained": "Communication, engines, repairing and selling skills.",
+        "company": "Electro Oliveira",
+        "location": "Milheirós de Poiares, Portugal",
+        "website": "https://www.sersan.pt/",
+        "offerType": "Full-time",
+        "startDateDay": "",
+        "startDateMonth": "",
+        "startDateYear": "2012",
+        "endDateDay": "",
+        "endDateMonth": "",
+        "endDateYear": "2015"
       }
     ]
   },
   "projects": {
+    "img": "projects",
     "overlayTitle": "What I've created",
     "underlayTitle": "Projects",
     "description": [
       {
         "title": "Home Assistant",
-        "startDate": "7 Feb 2021",
-        "endDate": "Present",
-        "description": "My house is controlled by a Raspberry PI 4 and automated with \"Home Assistant\". I can control lights, sensors, robots, both internally (without internet connection) and externally (via VPN \"Tailscale\" and IP masked by \"Duck DNS\")."
+        "description": "My house is controlled by a Raspberry PI 4 and automated with \"Home Assistant\". I can control lights, sensors, robots, both internally (without internet connection) and externally (via VPN \"Tailscale\" and IP masked by \"Duck DNS\").",
+        "website": "https://github.com/rui-oliveira-tech/homeAssistant/",
+        "startDateDay": "7",
+        "startDateMonth": "Feb",
+        "startDateYear": "2021",
+        "endDateDay": "",
+        "endDateMonth": "",
+        "endDateYear": "Present"
       },
       {
         "title": "Website",
-        "startDate": "11 Feb 2022",
-        "endDate": "Present",
-        "description": "This website was created with the aim of promoting information about my professional career, in a way that is accessible to companies and interested people."
-      },
-      {
-        "title": "Home Assistant",
-        "startDate": "7 Feb 2021",
-        "endDate": "Present",
-        "description": "My house is controlled by a Raspberry PI 4 and automated with \"Home Assistant\". I can control lights, sensors, robots, both internally (without internet connection) and externally (via VPN \"Tailscale\" and IP masked by \"Duck DNS\")."
-      },
-      {
-        "title": "Home Assistant",
-        "startDate": "7 Feb 2021",
-        "endDate": "Present",
-        "description": "My house is controlled by a Raspberry PI 4 and automated with \"Home Assistant\". I can control lights, sensors, robots, both internally (without internet connection) and externally (via VPN \"Tailscale\" and IP masked by \"Duck DNS\")."
+        "description": "This website was created with the aim of promoting information about my professional career, in a way that is accessible to companies and interested people.",
+        "website": "https://github.com/rui-oliveira-tech/webSite/",
+        "startDateDay": "11",
+        "startDateMonth": "Feb",
+        "startDateYear": "2022",
+        "endDateDay": "",
+        "endDateMonth": "",
+        "endDateYear": "Present"
       }
     ]
   },
   "other": {
+    "img": "other",
     "overlayTitle": "Other stuff I've done",
     "underlayTitle": "Other things",
     "description": [
       {
-        "id": 2,
         "title": "Off We Go – IB&C WEEKS",
-        "startDate": "17 May 2014",
-        "endDate": "25 May 2014",
-        "description": "Scholar Exchange experience."
+        "description": "Scholar Exchange experience.",
+        "startDateDay": "17",
+        "startDateMonth": "May",
+        "startDateYear": "2014",
+        "endDateDay": "25",
+        "endDateMonth": "May",
+        "endDateYear": "2014"
       },
       {
-        "id": 1,
         "title": "Europe tour",
-        "startDate": "7 Feb 2021",
-        "endDate": "Present",
-        "description": "Countries I visited."
+        "description": "Countries I visited.",
+        "startDateDay": "7",
+        "startDateMonth": "Feb",
+        "startDateYear": "2021",
+        "endDateDay": "",
+        "endDateMonth": "",
+        "endDateYear": "Present"
       }
     ]
   },
   "googleMapsMarkers": {
+    "img": "googleMapsMarkers",
     "overlayTitle": "Where I've  been",
     "underlayTitle": "Google Maps Markers",
     "description": []
+  },
+  "expressions": {
+    "offerType": {
+      "Full-time": "Full-time"
+    },
+    "month": {
+      "Present": "Present",
+      "Jan": "Jan",
+      "Feb": "Feb",
+      "Mar": "Mar",
+      "Apr": "Apr",
+      "May": "May",
+      "June": "June",
+      "July": "July",
+      "Aug": "Aug",
+      "Sept": "Sept",
+      "Oct": "Oct",
+      "Nov": "Nov",
+      "Dec": "Dec"
+    }
   }
 }
