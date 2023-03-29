@@ -101,6 +101,11 @@
     "description": [
       {
         "title": "Electricien Industriel",
+        "functionsPerformed": "",
+        "skillsGained": ""
+      },
+      {
+        "title": "Electricien Industriel",
         "functionsPerformed": "Identifier les problèmes dans la machine, dépanner la machine et la réparer, installer le support de câble, faire passer les câbles, connecter les panneaux électriques, changer les prises, les ampoules, les interrupteurs, la mécanique de base.",
         "skillsGained": "Compétences acquises de réparation et communication."
       },

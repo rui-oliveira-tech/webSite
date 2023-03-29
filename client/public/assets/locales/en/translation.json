@@ -245,6 +245,21 @@
     "description": [
       {
         "title": "Industrial Electrician",
+        "functionsPerformed": "",
+        "skillsGained": "",
+        "company": "AGP eGlass",
+        "location": "Evergem, Belgium",
+        "website": "https://agpglass.com/",
+        "offerType": "Full-time",
+        "startDateDay": "",
+        "startDateMonth": "Mar",
+        "startDateYear": "2023",
+        "endDateDay": "",
+        "endDateMonth": "",
+        "endDateYear": "Present"
+      },
+      {
+        "title": "Industrial Electrician",
         "functionsPerformed": "Find machine problems and fix, install cable ducts, pass cables, connect electrical boards, replace plugs, lamps, switches, mechanics basic.",
         "skillsGained": "Repairing and communication skills.",
         "company": "SOCEA nv",

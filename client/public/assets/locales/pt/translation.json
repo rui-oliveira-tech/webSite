@@ -101,6 +101,11 @@
     "description": [
       {
         "title": "Eletricista Industrial",
+        "functionsPerformed": "",
+        "skillsGained": ""
+      },
+      {
+        "title": "Eletricista Industrial",
         "functionsPerformed": "Encontrar problemas na máquina e consertar, instalar suporte de cabos, passar cabos, conectar quadros elétricos, trocar tomadas, lâmpadas, interruptores, mecânica básica.",
         "skillsGained": "Habilidades de reparo e comunicação."
       },
