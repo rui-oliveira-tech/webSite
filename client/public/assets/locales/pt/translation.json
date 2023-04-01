@@ -65,16 +65,18 @@
   "languages": {
     "overlayTitle": "O que falo",
     "underlayTitle": "Linguagens",
-    "language": "LINGUAGEM",
-    "understanding": "COMPREENDER",
-    "speaking": "FALAR",
-    "writing": "ESCREVER",
-    "listening": "Ouvir",
-    "reading": "Ler",
-    "interaction": "Interação",
-    "production": "Produção",
-    "levels": "Níveis: A1/2: básico - B1/2: Independente - C1/2 Profissional",
-    "framework": "Quadro Europeu Comum de Referência para Línguas",
+    "key": {
+      "language": "LINGUAGEM",
+      "understanding": "COMPREENDER",
+      "speaking": "FALAR",
+      "writing": "ESCREVER",
+      "listening": "Ouvir",
+      "reading": "Ler",
+      "interaction": "Interação",
+      "production": "Produção",
+      "levels": "Níveis: A1/2: básico - B1/2: Independente - C1/2 Profissional",
+      "framework": "Quadro Europeu Comum de Referência para Línguas"
+    },
     "description": [
       {
         "language": "Portugues"

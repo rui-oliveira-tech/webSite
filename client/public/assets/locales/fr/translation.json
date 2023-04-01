@@ -65,16 +65,18 @@
   "languages": {
     "overlayTitle": "Les langues que je parle",
     "underlayTitle": "Langues",
-    "language": "LANGUES",
-    "understanding": "COMPRENDRE",
-    "speaking": "PARLER",
-    "writing": "ECRIRE",
-    "listening": "Écouter",
-    "reading": "Lire",
-    "interaction": "Interaction",
-    "production": "Production",
-    "levels": "Niveau : A1/2: Débutant - B1/2: Intermédiaire - C1/2: Confirmé",
-    "framework": "Cadre européen commun de référence pour les langues",
+    "key": {
+      "language": "LANGUES",
+      "understanding": "COMPRENDRE",
+      "speaking": "PARLER",
+      "writing": "ECRIRE",
+      "listening": "Écouter",
+      "reading": "Lire",
+      "interaction": "Interaction",
+      "production": "Production",
+      "levels": "Niveau : A1/2: Débutant - B1/2: Intermédiaire - C1/2: Confirmé",
+      "framework": "Cadre européen commun de référence pour les langues"
+    },
     "description": [
       {
         "language": "Portuguais"

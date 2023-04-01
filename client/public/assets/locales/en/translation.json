@@ -107,16 +107,18 @@
     "img": "languages",
     "overlayTitle": "What I speak",
     "underlayTitle": "Languages",
-    "language": "LANGUAGE",
-    "understanding": "UNDERSTANDING",
-    "speaking": "SPEAKING",
-    "writing": "WRITING",
-    "listening": "Listening",
-    "reading": "Reading",
-    "interaction": "Interaction",
-    "production": "Production",
-    "levels": "Levels: A1/2: Basic - B1/2: Independent - C1/2 Proficient",
-    "framework": "Common European Framework of Reference for Languages",
+    "key": {
+      "language": "LANGUAGE",
+      "understanding": "UNDERSTANDING",
+      "speaking": "SPEAKING",
+      "writing": "WRITING",
+      "listening": "Listening",
+      "reading": "Reading",
+      "interaction": "Interaction",
+      "production": "Production",
+      "levels": "Levels: A1/2: Basic - B1/2: Independent - C1/2 Proficient",
+      "framework": "Common European Framework of Reference for Languages"
+    },
     "description": [
       {
         "language": "Portuguese",

@@ -65,16 +65,18 @@
   "languages": {
     "overlayTitle": "Wat ik spreek",
     "underlayTitle": "Talen",
-    "language": "TAAL",
-    "understanding": "BEGRIP",
-    "speaking": "SPREKEN",
-    "writing": "SCHRIJVEN",
-    "listening": "Luisteren",
-    "reading": "Lezing",
-    "interaction": "Interactie",
-    "production": "Productie",
-    "levels": "Niveaus: A1/2: Basis - B1/2: Onafhankelijk - C1/2 bekwaam",
-    "framework": "Gemeenschappelijk Europees Referentiekader voor Talen",
+    "key": {
+      "language": "TAAL",
+      "understanding": "BEGRIP",
+      "speaking": "SPREKEN",
+      "writing": "SCHRIJVEN",
+      "listening": "Luisteren",
+      "reading": "Lezing",
+      "interaction": "Interactie",
+      "production": "Productie",
+      "levels": "Niveaus: A1/2: Basis - B1/2: Onafhankelijk - C1/2 bekwaam",
+      "framework": "Gemeenschappelijk Europees Referentiekader voor Talen"
+    },
     "description": [
       {
         "language": "Portugees"
