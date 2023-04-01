@@ -42,7 +42,7 @@ export default function Cv(props) {
         <Experience {...props} gradient={gradient} cardImages={cardImages} animatedOverlay={animatedOverlay} />
         <Projects {...props} gradient={gradient} cardImages={cardImages} animatedOverlay={animatedOverlay} />
         <Others {...props} gradient={gradient} cardImages={cardImages} animatedOverlay={animatedOverlay} />
-        <Map {...props} gradient={gradient} cardImages={cardImages} animatedOverlay={animatedOverlay} />
+       {/*  <Map {...props} gradient={gradient} cardImages={cardImages} animatedOverlay={animatedOverlay} /> */}
       </div>
     </section>
   )

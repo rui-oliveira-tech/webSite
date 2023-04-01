@@ -21,7 +21,9 @@ server.get('/', (req, res) => {
 });
   
 const vcard = require('../routes/vcard');
+const pdfCv = require('../routes/pdfCv');
 
 server.use('/vcard', vcard);
+server.use('/cv-pdf', pdfCv);
 
 module.exports = server;

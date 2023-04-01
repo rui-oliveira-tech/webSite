@@ -26,5 +26,8 @@ module.exports = {
 
     nameprefix_2: process.env.NAMEPREFIX_2,
     title_2: process.env.TITLE_2,
-    note_2: process.env.NOTE_2
+    note_2: process.env.NOTE_2v,
+
+
+    pdfCv: ['en', 'nl', 'fr', 'pt']
 };

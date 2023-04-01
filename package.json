@@ -25,6 +25,7 @@
     "dotenv": "^16.0.1",
     "express": "^4.18.1",
     "helmet": "^5.1.1",
+    "html-pdf": "^3.0.1",
     "react-device-detect": "^2.2.2",
     "react-parallax-mouse": "^2.0.1",
     "react-parallax-tilt": "^1.7.109",
