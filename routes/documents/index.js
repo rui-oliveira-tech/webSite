@@ -4,7 +4,7 @@ const path = require("path");
 module.exports = ({ experience }) => {
   const template = path.resolve(__dirname, "./cvTemplate.html")
   const experienceHtml = experience?.map((exp, i) => `
-    <div class="job${i === experience.length - 1 ? ' last': ''}">
+    <div class="job${i === experience.length - 1 ? ' last' : ''}">
       <h2>${exp.company}</h2>
       <h3>${exp.title}</h3>
       <h4>2005-2007</h4>
@@ -13,7 +13,7 @@ module.exports = ({ experience }) => {
         and top-line convergence. </p>
     </div>`);
   console.log(experienceHtml)
-   return fs.readFileSync(template).toString()
+  return fs.readFileSync(template).toString()
     .replace("{{experience}}", experienceHtml?.join("\n"));
 };
 // babel
