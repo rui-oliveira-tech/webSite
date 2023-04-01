@@ -1,7 +1,7 @@
-import React, { useEffect, useRef, Component } from "react";
+import React, { useEffect, useRef } from "react";
 import { useTranslation } from 'react-i18next';
 import axios from 'axios';
-import FileSaver, { saveAs } from 'file-saver';
+import { saveAs } from 'file-saver';
 
 import "./Cv.scss";
 import "./CvButton.scss";
@@ -37,7 +37,6 @@ export default function CvDownload(props) {
 
 
     axios.post(`${server}/cv-pdf/create/${currentLanguageCode}`, state)
-      .then(() => axios.get(`${server}/cv-pdf/fetch/${currentLanguageCode.toUpperCase()}`, { responseType: 'blob' }))
       .then((res) => {
         const pdfBlob = new Blob([res.data], { type: 'application/pdf' });
 
@@ -53,6 +52,6 @@ export default function CvDownload(props) {
         </span>
         <span id="buttonCV" className="buttonCV-text">{t('home.cvButton')}</span>
       </button>}
-    </div >
+    </div>
   )
 }
