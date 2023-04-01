@@ -13,11 +13,12 @@ const validatePdfCvType = (req, res, next) => {
   }
   next();
 }
+// 403 Forbidden https://developer.mozilla.org/en-US/docs/Web/HTTP/Status
 
 pdfCvRouter.post('/create/:type', validatePdfCvType, (req, res, next) => {
   const { type } = req.params;
   const template = path.join(__dirname, "../tmp", `RuiOliveira_CV-${type.toUpperCase()}.pdf`);
-  if (fs.existsSync(template)) {
+  if (fs.existsSync(template) && process.env.NODE_ENV !== "development") {
     downloadFile(res, template)
     return
   }
@@ -37,6 +38,7 @@ function downloadFile(res, filePath) {
   res.setHeader("Content-Length", size);
   res.setHeader("Content-Disposition", `attachment; filename="${fileName}";`);
   res.setHeader("Content-Type", "application/pdf");
+  res.setHeader("X-Suggested-Filename", fileName);
   res.send(file);
 }
 
