@@ -31,8 +31,14 @@ export default function CvDownload(props) {
     }
 
     let cvData = {
+      languageKey: t('language.key', { returnObjects: true }),
+      language: t('language.description', { returnObjects: true }),
+      programmingLanguages: t('programmingLanguages.description', { returnObjects: true }),
       education: t('education.description', { returnObjects: true }),
-      experience: t('experience.description', { returnObjects: true })
+      experience: t('experience.description', { returnObjects: true }),
+      projects: t('projects.description', { returnObjects: true }),
+      other: t('other.description', { returnObjects: true }),
+      expressions: t('expressions', { returnObjects: true })
     }
 
     axios.post(`${server}/cv-pdf/create/${currentLanguageCode}`, cvData, { responseType: "blob" })

@@ -724,6 +724,14 @@
     background: #222;
   }
 
+  .link {
+    font-size: 122%;
+    color: #333;
+    line-height: 18px;
+    text-decoration: none;
+  }
+
+
   .job {
     position: relative;
     margin-bottom: 1em;
@@ -888,24 +896,36 @@
             </div><!--// .yui-gf-->
 
             <div class="yui-gf">
-
               <div class="yui-u first">
                 <h2>Experience</h2>
               </div><!--// .yui-u -->
-
               <div class="yui-u">
                 {{experience}}
               </div><!--// .yui-u -->
             </div><!--// .yui-gf -->
 
-
-            <div class="yui-gf last">
+            <div class="yui-gf">
               <div class="yui-u first">
                 <h2>Education</h2>
               </div>
               <div class="yui-u">
-                <h2>Indiana University - Bloomington, Indiana</h2>
-                <h3>Dual Major, Economics and English &mdash; <strong>4.0 GPA</strong> </h3>
+                {{education}}
+              </div>
+            </div><!--// .yui-gf -->
+            <div class="yui-gf">
+              <div class="yui-u first">
+                <h2>Projects</h2>
+              </div>
+              <div class="yui-u">
+                {{projects}}
+              </div>
+            </div><!--// .yui-gf -->
+            <div class="yui-gf last">
+              <div class="yui-u first">
+                <h2>Other</h2>
+              </div>
+              <div class="yui-u">
+                {{other}}
               </div>
             </div><!--// .yui-gf -->
 
