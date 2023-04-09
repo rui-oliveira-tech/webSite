@@ -14,7 +14,7 @@ export default function About(props) {
       <div className="underlay">
         <h2 className="extraBig bold">{t('about.underlayTitle')}</h2>
         <div className="light text">
-          {t('about.description', { returnObjects: true, company: t('experience.description.0.company'), location: t('experience.description.0.location') }).map((item, i) =>
+          {t('about.description.website', { returnObjects: true, company: t('experience.description.0.company'), location: t('experience.description.0.location') }).map((item, i) =>
             <React.Fragment key={i}>
               {i === 0 ?
                 (<p className="big" key={i}>{item}</p>)

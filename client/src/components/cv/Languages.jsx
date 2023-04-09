@@ -16,19 +16,19 @@ export default function Languages(props) {
         <table className="languagesTable">
           <thead className="">
             <tr>
-              <th className="languageColumn">{t('languages.language')}</th>
-              <th colSpan="2">{t('languages.understanding')}</th>
-              <th colSpan="2">{t('languages.speaking')}</th>
-              <th >{t('languages.writing')}</th>
+              <th className="languageColumn">{t('languages.key.language')}</th>
+              <th colSpan="2">{t('languages.key.understanding')}</th>
+              <th colSpan="2">{t('languages.key.speaking')}</th>
+              <th >{t('languages.key.writing')}</th>
             </tr>
           </thead>
           <tbody className="">
             <tr>
               <td></td>
-              <td>{t('languages.listening')}</td>
-              <td>{t('languages.reading')}</td>
-              <td>{t('languages.interaction')}</td>
-              <td>{t('languages.production')}</td>
+              <td>{t('languages.key.listening')}</td>
+              <td>{t('languages.key.reading')}</td>
+              <td>{t('languages.key.interaction')}</td>
+              <td>{t('languages.key.production')}</td>
               <td></td>
             </tr>
             {t('languages.description', { returnObjects: true }).map((degree, i) => (
@@ -44,8 +44,8 @@ export default function Languages(props) {
             <tr>
               <td className="noBorder left" ></td>
               <td className="noBorder left" colSpan="5">
-                <p className="text small noPading">{t('languages.levels')}</p>
-                <p className="text small noPading">{t('languages.framework')}</p>
+                <p className="text small noPading">{t('languages.key.levels')}</p>
+                <p className="text small noPading">{t('languages.key.framework')}</p>
               </td>
             </tr>
           </tbody>

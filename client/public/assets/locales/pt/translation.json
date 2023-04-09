@@ -1,5 +1,9 @@
 {
   "app_title": "Rui Oliveira - Eletricista  Industrial | Residencial",
+  "characteristics": {
+    "sex": "Masculino",
+    "nationality": "Português"
+  },
   "navigationBar": {
     "homepage": "Inicio",
     "cv": "Curriculum Vitae",
@@ -19,29 +23,58 @@
   "about": {
     "overlayTitle": "Quem eu sou",
     "underlayTitle": "Acerca de mim",
-    "description": [
-      [
-        "Eu sou o Rui. Sou Eletricista Industrial."
-      ],
-      [
-        "Atualmente estou trabalhando na\n",
-        "{{company}}",
-        "\nin\n",
-        "{{location}}.\n",
-        "No entanto tenho total e imediata disponibilidade para começar a trabalhar."
-      ],
-      [
-        "Possuo excelentes conhecimentos de Eletricidade, Pneumática, Hidráulica, Interpretação de esquemas, Informática na perspectiva do usuário, bem como no uso da internet.",
-        "Os meus pontos fortes são Electrificação de quadros e estruturas eléctricas, Manutenção e reparação industrial.",
-        "Também tenho experiência em automação industrial e eletromecânica.",
-        "Tenho bom espírito de trabalho em equipa, cooperativo e com gosto pelo conhecimento e pela aprendizagem.",
-        "Tenho preferência em trabalhar como eletricista industrial, mas não excluo a possibilidade de exercer outro cargo em diferentes áreas."
-      ],
-      [
-        "Aguardo contato."
+    "description": {
+      "cv": "Como profissional de eletricidade, desenvolvi uma ampla gama de habilidades e conhecimentos que me tornariam uma adição valiosa para qualquer equipe. Com uma paixão pela engenharia elétrica e um compromisso em estar atualizado com as últimas tecnologias, estou confiante em minha capacidade de enfrentar qualquer desafio.",
+      "website": [
+        [
+          "Eu sou o Rui. Sou Eletricista Industrial."
+        ],
+        [
+          "Atualmente estou trabalhando na\n",
+          "{{company}}",
+          "\nin\n",
+          "{{location}}.\n",
+          "No entanto tenho total e imediata disponibilidade para começar a trabalhar."
+        ],
+        [
+          "Possuo excelentes conhecimentos de Eletricidade, Pneumática, Hidráulica, Interpretação de esquemas, Informática na perspectiva do usuário, bem como no uso da internet.",
+          "Os meus pontos fortes são Electrificação de quadros e estruturas eléctricas, Manutenção e reparação industrial.",
+          "Também tenho experiência em automação industrial e eletromecânica.",
+          "Tenho bom espírito de trabalho em equipa, cooperativo e com gosto pelo conhecimento e pela aprendizagem.",
+          "Tenho preferência em trabalhar como eletricista industrial, mas não excluo a possibilidade de exercer outro cargo em diferentes áreas."
+        ],
+        [
+          "Aguardo contato."
+        ]
       ]
-    ]
+    }
   },
+  "skills": [
+    {
+      "title": "Projetar e analisar sistemas elétricos",
+      "description": "Experiência em projetar sistemas elétricos para uma variedade de aplicações, com proficiência em ferramentas de software como Visio e AutoCAD para analisar e otimizar esses sistemas."
+    },
+    {
+      "title": "Resolução de problemas e solução de problemas",
+      "description": "Fortes habilidades analíticas para identificar rapidamente problemas em sistemas elétricos e desenvolver soluções eficazes para resolvê-los."
+    },
+    {
+      "title": "Testes e Inspeção Elétrica",
+      "description": "Experiência em testes e inspeção de sistemas elétricos para garantir conformidade e funcionalidade, com a capacidade de fornecer relatórios detalhados sobre os resultados."
+    },
+    {
+      "title": "Gestão de projetos",
+      "description": "Gerenciamento bem-sucedido de vários projetos elétricos do início ao fim, entregando resultados de alta qualidade dentro do orçamento e no prazo."
+    },
+    {
+      "title": "Segurança e conformidade",
+      "description": "Foco alto na segurança e conformidade em todos os aspectos do trabalho elétrico."
+    },
+    {
+      "title": "Comunicação e colaboração",
+      "description": "Excelentes habilidades de comunicação e colaboração, possibilitando resultados bem-sucedidos por meio do trabalho em equipe."
+    }
+  ],
   "education": {
     "overlayTitle": "O que eu aprendi",
     "underlayTitle": "Educação",
@@ -65,16 +98,18 @@
   "languages": {
     "overlayTitle": "O que falo",
     "underlayTitle": "Linguagens",
-    "language": "LINGUAGEM",
-    "understanding": "COMPREENDER",
-    "speaking": "FALAR",
-    "writing": "ESCREVER",
-    "listening": "Ouvir",
-    "reading": "Ler",
-    "interaction": "Interação",
-    "production": "Produção",
-    "levels": "Níveis: A1/2: básico - B1/2: Independente - C1/2 Profissional",
-    "framework": "Quadro Europeu Comum de Referência para Línguas",
+    "key": {
+      "language": "LINGUAGEM",
+      "understanding": "COMPREENDER",
+      "speaking": "FALAR",
+      "writing": "ESCREVER",
+      "listening": "Ouvir",
+      "reading": "Ler",
+      "interaction": "Interação",
+      "production": "Produção",
+      "levels": "Níveis: A1/2: básico - B1/2: Independente - C1/2 Profissional",
+      "framework": "Quadro Europeu Comum de Referência para Línguas"
+    },
     "description": [
       {
         "language": "Portugues"
@@ -120,7 +155,7 @@
         "skillsGained": "Habilidades adquiridas de reparo, construção, desenvolvimento e analíticas."
       },
       {
-        "title": "Eletrónica Automação e Comando (1500 hours Internship)",
+        "title": "Eletrónica Automação e Comando (1500 hours)",
         "functionsPerformed": "Reparação e manutenção de eletrodomésticos.",
         "skillsGained": "Habilidades adquiridas de comunicação, motores, reparo e venda."
       }
@@ -162,8 +197,15 @@
     "description": []
   },
   "expressions": {
+    "characteristics": {
+      "sex": "Sexo",
+      "dateOfBirth": "Data de nascimento",
+      "nationality": "Nacionalidade"
+    },
+    "page": "Página",
     "offerType": {
-      "Full-time": "Tempo inteiro"
+      "Full-time": "Tempo inteiro",
+      "Internship": "Estágio"
     },
     "month": {
       "Present": "Presente",
