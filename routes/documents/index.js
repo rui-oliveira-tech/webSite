@@ -1,60 +1,124 @@
 const fs = require("fs");
 const path = require("path");
 
-module.exports = ({ languageKey, language, programmingLanguages, education, experience, projects, other, expressions }) => {
+module.exports = ({ currentLanguageCode, app_title, title, profile, characteristics, skills, languagesKey, languages, programmingLanguages, educations, experiences, projects, others, expressions }) => {
   const template = path.resolve(__dirname, "./cvTemplate.html")
-  const educationHtml = education?.map((education, i) => `
-    <div class="job${i === education.length - 1 ? ' last' : ''}">
-      <h2>${education.company}</h2>
-      <h3>${education.title}</h3>
-      <h4>2005-2007</h4>
-      <p>Intrinsicly enable optimal core competencies through corporate relationships. Phosfluorescently
-        implement worldwide vortals and client-focused imperatives. Conveniently initiate virtual paradigms
-        and top-line convergence. </p>
-    </div>`);
 
-  const experienceHtml = experience?.map((experience, i) => `
-      <div class="job${i === experience.length - 1 ? ' last' : ''}">
-        <h2>${experience.company}</h2>
-        <a class="link" target="_blank" rel="noreferrer" href={${experience.website}}>${experience.title} in ${experience.location}</a >
-        <h4>       
-         ${experience.startDateYear === "" ? "" : experience.startDateDay
-      + " " + experience.startDateMonth === "" ? "" : experience.startDateMonth
-      + " " + experience.startDateYear
-    + " - "}
 
-    ${experience.endDateYear === "" ? "" :
-      experience.endDateYear === "Present" ? expressions.month.Present + " -> " : experience.endDateDay
-        + " " + (experience.endDateMonth === "" ? "" : experience.endDateMonth)
-        + " " + experience.endDateYear
-        + " -> "}
-      
+  function getIntervalDate(arg) {
+    return `${arg.startDateYear === "" ? "" : arg.startDateDay
+      + " " + (arg.startDateMonth === "" ? "" : expressions.month[arg.startDateMonth]) + " " + arg.startDateYear + " - "
+      }
 
-          </h4>
+    ${arg.endDateYear === "" ? "" :
+        arg.endDateYear === "Present" ? expressions.month.Present :
+          arg.endDateDay + " " + (arg.endDateMonth === "" ? "" : expressions.month[arg.endDateMonth]) + " " + arg.endDateYear
+      }`;
+  }
+
+  const profileHtml = (`${profile}`);
+
+  const contactInfoHtml = (`<div class="contact-info">
+  <h3 class="contactInfo">${characteristics.sex} |  ${characteristics.dateOfBirth} | ${characteristics.nationality}</h3>
+  <h3 class="contactInfo">2960 Brecht, Belgium</h3>
+  <div class="lineBrake"> </div>
+  <h3 class="contactInfo"><a href="https://www.rui-oliveira.com/${currentLanguageCode}">www.rui-oliveira.com</a></h3>
+  <h3 class="contactInfo"><a href="mailto:hire@rui-oliveira.com">hire@rui-oliveira.com</a></h3>
+  <h3 class="contactInfo">+32474127175</h3>
+</div>`);
+
+  const skillsHtml = skills?.map((skill, i) => `
+  <div class="skills">
+  <h2>${skill.title}</h2>
+  <p>${skill.description}</p>
+</div>
+`);
+
+  const experienceHtml = experiences?.map((experience, i) => `
+      <div class="job${i === experiences.length - 1 ? ' last' : ''}">
+        <a class="experience link noBrake" target="_blank" rel="noreferrer" href={${experience.website}}><h2 class="noBrake">${experience.company}</h2> <h3 class="noBrake"> in ${experience.location}</h3></a >
+        <h4 class="experience">${experience.title}</h4>
+        <h4 class="first intervalDate">${getIntervalDate(experience)}</h4>
+        <h4 class="second intervalDate">${expressions.offerType[experience.offerType]}</h4>
         <p>${experience.functionsPerformed}</p>
-        <p>${experience.skillsGained}</p>
       </div > `);
 
-  const projectsHtml = projects?.map((projects, i) => `
-  < div class="job${i === projects.length - 1 ? ' last' : ''}" >
-       <h2>${projects.company}</h2>
-       <h3>${projects.title}</h3>
-       <h4>2005-2007</h4>
-       <p>${experience.description}</p>
+
+  const educationHtml = educations?.map((education, i) => `
+    <div class="job${i === educations.length - 1 ? ' last' : ''}">
+      <h2 class="experience">${education.title}</h2>
+      <a class="experience link noBrake" target="_blank" rel="noreferrer" href={${education.website}}><h3 class="noBrake">${education.company}</h3> <h4 class="noBrake"> in ${education.location}</h4></a >
+      <h4 class="first intervalDate">${getIntervalDate(education)}</h4>
+    </div>`);
+
+
+  const projectHtml = projects?.map((project, i) => `
+      <div class="job${i === projects.length - 1 ? ' last' : ''}">
+       <a class="experience link" target="_blank" rel="noreferrer" href={${project.website}}><h2>${project.title}</h2></a>
+       <h4 class="first intervalDate">${getIntervalDate(project)}</h4>
+       <p>${project.description}</p>
      </div > `);
 
-  const otherHtml = other?.map((other, i) => `
-  < div class="job${i === projects.length - 1 ? ' last' : ''}" >
-       <h2>${other.company}</h2>
-       <h3>${other.title}</h3>
-       <h4>2005-2007</h4>
-       <p>${experience.description}</p>
+  const otherHtml = others?.map((other, i) => `
+    <div class="job${i === others.length - 1 ? ' last' : ''}">
+     <h2>${other.title}</h2>
+      <h4 class="first intervalDate">${getIntervalDate(other)}</h4>
+      <p>${other.description}</p>
      </div > `);
+
+
+  const languageHtml = (`
+     <table>
+          <thead>
+            <tr>
+              <th>${languagesKey.language}</th>
+              <th colSpan="2">${languagesKey.understanding}</th>
+              <th colSpan="2">${languagesKey.speaking}</th>
+              <th >${languagesKey.writing}</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td></td>
+              <td>${languagesKey.listening}</td>
+              <td>${languagesKey.reading}</td>
+              <td>${languagesKey.interaction}</td>
+              <td>${languagesKey.production}</td>
+              <td></td>
+            </tr>
+            ${languages?.map((language) => `
+              <tr>
+                <td class="left">${language.language}</td>
+                <td>${language.listening}</td>
+                <td>${language.reading}</td>
+                <td>${language.spokenInteraction}</td>
+                <td>${language.spokenProduction}</td>
+                <td>${language.writing}</td>
+              </tr>
+            `).join("\n")}
+            <tr>
+              <td class="lineBrake" colSpan="5">
+                <p>${languagesKey.levels}</p>
+                <p>${languagesKey.framework}</p>
+              </td>
+            </tr>
+          </tbody>
+        </table>`);
+
+
+  /*      <td className="noBorder left"><span className={"flag-icon flag-icon-" + t(languages.description.${i}.flag)}></span>{degree.language}</td>
+    */
 
   return fs.readFileSync(template).toString()
-    .replace("{{education}}", educationHtml?.join("\n"))
-    .replace("{{experience}}", experienceHtml?.join("\n"))
-    .replace("{{projects}}", projectsHtml?.join("\n"))
-    .replace("{{other}}", otherHtml?.join("\n"));
+    .replace("{{app_title}}", app_title)
+    .replace("{{contactInfo}}", contactInfoHtml)
+    .replace("{{title}}", title)
+    .replace("{{profile}}", profileHtml)
+    .replace("{{skills}}", skillsHtml?.join("\n"))
+    .replace("{{educations}}", educationHtml?.join("\n"))
+    .replace("{{experiences}}", experienceHtml?.join("\n"))
+    .replace("{{projects}}", projectHtml?.join("\n"))
+    .replace("{{others}}", otherHtml?.join("\n"))
+    .replace("{{languages}}", languageHtml);
 };
 // babel
