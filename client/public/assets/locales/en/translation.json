@@ -363,7 +363,7 @@
     "description": [
       {
         "title": "Home Assistant",
-        "description": "My house is controlled by a Raspberry PI 4 and automated with \"Home Assistant\". I can control lights, sensors, robots, both internally (without internet connection) and externally (via VPN \"Tailscale\" and IP masked by \"Duck DNS\").",
+        "description": "MMy house is powered by a Raspberry Pi 4 and is automated using Home Assistant. With this setup, I have the ability to control various aspects such as lights, sensors, and robots, both internally (without an internet connection) and externally (via VPN \"Tailscale\" and IP masked by \"Duck DNS\").",
         "website": "https://github.com/rui-oliveira-tech/homeAssistant/",
         "startDateDay": "7",
         "startDateMonth": "Feb",
@@ -374,7 +374,7 @@
       },
       {
         "title": "Website",
-        "description": "This website was created with the aim of promoting information about my professional career, in a way that is accessible to companies and interested people.",
+        "description": "This website was created with the aim of promoting information about my professional career, in a way that is accessible to companies and interested people.The purpose of this website is to showcase my professional career and make information easily accessible to companies and individuals who are interested in learning more about me.",
         "website": "https://github.com/rui-oliveira-tech/webSite/",
         "startDateDay": "11",
         "startDateMonth": "Feb",

@@ -167,12 +167,12 @@
       {
         "title": "Home Assistant",
         "website": "https://github.com/rui-oliveira-tech/homeAssistant/",
-        "description": "Mijn huis wordt bestuurd door een Raspberry PI 4 en geautomatiseerd met \"Home Assistant\". Ik kan lichten, sensoren, robots aansturen, zowel intern (zonder internetverbinding) als extern (via VPN \"Tailscale\" en IP gemaskeerd door \"Duck DNS\")."
+        "description": "Mijn huis wordt aangedreven door een Raspberry Pi 4 en is geautomatiseerd met behulp van Home Assistant. Met deze opstelling heb ik de mogelijkheid om verschillende aspecten te controleren, zoals verlichting, sensoren en robots, zowel intern (zonder internetverbinding) als extern (via VPN \"Tailscale\" en IP gemaskeerd door \"Duck DNS\")."
       },
       {
         "title": "Website",
         "website": "https://github.com/rui-oliveira-tech/webSite/",
-        "description": "Deze website is gemaakt met als doel informatie over mijn professionele carrière te promoten op een manier die toegankelijk is voor bedrijven en geïnteresseerden."
+        "description": "Het doel van deze website is om mijn professionele carrière te presenteren en informatie gemakkelijk toegankelijk te maken voor bedrijven en personen die geïnteresseerd zijn om meer over mij te weten te komen."
       }
     ]
   },

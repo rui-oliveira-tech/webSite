@@ -167,11 +167,11 @@
     "description": [
       {
         "title": "Home Assistant",
-        "description": "Ma maison est controlée par un Raspberry PI 4 et automatisée avec \"Home Assistant\". Je peux contrôler les lumières, les capteurs, les robots à la fois en interne (sans connexion Internet) et en externe (via VPN \"Tailscale\" et IP masqué par \"Duck DNS\")."
+        "description": "Ma maison est alimentée par un Raspberry Pi 4 et est automatisée à l'aide de Home Assistant. Avec cette configuration, j'ai la possibilité de contrôler divers aspects tels que les lumières, les capteurs et les robots, à la fois en interne (sans connexion Internet) et en externe (via VPN \"Tailscale\" et IP masqué par \"Duck DNS\")."
       },
       {
         "title": "Site web",
-        "description": "Ce site web a été crée avec l'objectif de diffuser mon parcours professionnel de manière accessible pour les entreprises et les particuliers intéressés."
+        "description": "Le but de ce site web est de présenter ma carrière professionnelle et de rendre les informations facilement accessibles aux entreprises et aux particuliers qui souhaitent en savoir plus sur moi."
       }
     ]
   },
