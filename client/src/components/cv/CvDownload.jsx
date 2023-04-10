@@ -78,7 +78,6 @@ export default function CvDownload(props) {
       saveAs(dataURItoBlob(localStorage.getItem(cvFile)), localStorage.getItem(cvFileName));
       return
     }
-    //console.log(deepMergeObject(defaultTranslationKeys.programmingLanguages.description, translationKeys.programmingLanguages.description))
 
     let cvData = {
       currentLanguageCode: currentLanguageCode,
