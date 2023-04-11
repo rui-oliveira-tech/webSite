@@ -1,5 +1,10 @@
 {
   "app_title": "Rui Oliveira - Electrician  Industrial | Residential",
+  "characteristics": {
+    "sex": "Male",
+    "dateOfBirth": "19/12/1995",
+    "nationality": "Portuguese"
+  },
   "navigationBar": {
     "homepage": "Home",
     "cv": "Curriculum Vitae",
@@ -21,29 +26,58 @@
     "img": "about",
     "overlayTitle": "Who I am",
     "underlayTitle": "About",
-    "description": [
-      [
-        "I'm Rui. I'm a Industrial Electrician."
-      ],
-      [
-        "I am currently working at the\n",
-        "{{company}}",
-        "\nin\n",
-        "{{location}}.\n",
-        "However I have total and immediate availability to start working."
-      ],
-      [
-        "I have excellent knowledge of Electricity, Pneumatics, Hydraulics, Interpretation of schematics, Informatics in the user's perspective, as well as in the use of internet.",
-        "My strengths are Electrification of electrical boards and structures, Industrial maintenance and repair.",
-        "I also have experience in industrial automation and electromechanical.",
-        "I have good team work spirit, cooperative and with a taste for knowledge and learning.",
-        "I have preference in working as an industrial electrician, but I do not exclude the possibility of performing another position in different areas."
-      ],
-      [
-        "Looking forward to hearing from you."
+    "description": {
+      "cv": "As an electrical professional, I have developed a diverse range of skills and expertise that would make me a valuable addition to any team. With a passion for electrical engineering and a commitment to staying up-to-date with the latest technologies, I am confident in my ability to tackle any challenge.",
+      "website": [
+        [
+          "I'm Rui. I'm a Industrial Electrician."
+        ],
+        [
+          "I am currently working at the\n",
+          "{{company}}",
+          "\nin\n",
+          "{{location}}.\n",
+          "However I have total and immediate availability to start working."
+        ],
+        [
+          "I have excellent knowledge of Electricity, Pneumatics, Hydraulics, Interpretation of schematics, Informatics in the user's perspective, as well as in the use of internet.",
+          "My strengths are Electrification of electrical boards and structures, Industrial maintenance and repair.",
+          "I also have experience in industrial automation and electromechanical.",
+          "I have good team work spirit, cooperative and with a taste for knowledge and learning.",
+          "I have preference in working as an industrial electrician, but I do not exclude the possibility of performing another position in different areas."
+        ],
+        [
+          "Looking forward to hearing from you."
+        ]
       ]
-    ]
+    }
   },
+  "skills": [
+    {
+      "title": "Designing and analyzing systems",
+      "description": "Experience in designing electrical systems for a variety of applications, with proficiency in software tools such as Visio and AutoCAD to analyze and optimize these systems."
+    },
+    {
+      "title": "Troubleshooting and problem-solving",
+      "description": "Strong analytical skills to quickly identify issues with electrical systems and develop effective solutions to resolve them."
+    },
+    {
+      "title": "Testing and Inspection",
+      "description": "Background in testing and inspecting electrical systems to ensure compliance and functionality, with the ability to provide detailed reports on findings."
+    },
+    {
+      "title": "Project management",
+      "description": "Successful management of numerous electrical projects from start to finish, delivering high-quality results within budget and on time."
+    },
+    {
+      "title": "Safety and compliance",
+      "description": "High focus on safety and compliance in all aspects of electrical work."
+    },
+    {
+      "title": "Communication and collaboration",
+      "description": "Excellent communication and collaboration skills, enabling successful outcomes through teamwork."
+    }
+  ],
   "education": {
     "img": "education",
     "overlayTitle": "What I've learned",
@@ -262,7 +296,7 @@
       },
       {
         "title": "Industrial Electrician",
-        "functionsPerformed": "Find machine problems and fix, install cable ducts, pass cables, connect electrical boards, replace plugs, lamps, switches, mechanics basic.",
+        "functionsPerformed": "Troubleshooting machinery problems, installing cable ducts, passing cables, connecting electrical boards, and replacing basic mechanical parts.",
         "skillsGained": "Repairing and communication skills.",
         "company": "SOCEA nv",
         "location": "Oelegem, Belgium",
@@ -277,7 +311,7 @@
       },
       {
         "title": "Cold technician",
-        "functionsPerformed": "Repair and maintenance of cold containers,\"PTI\", copper welding and replacement of motors and sensors.",
+        "functionsPerformed": "Repairing and maintaining refrigerated containers, performing \"PTI\" inspections, welding copper, and replacing motors and sensors.",
         "skillsGained": "Repairing and communication skills.",
         "company": "MEDREPAIR",
         "location": "Beveren, Belgium",
@@ -292,7 +326,7 @@
       },
       {
         "title": "Industrial Electrician",
-        "functionsPerformed": "Repair of industrial machines (electrical and electromechanical), elaboration and electrification of electrical boards, electrical assembly of machines and structures of transport of cork and beginner of programming and automation of PLC (OMRON).",
+        "functionsPerformed": "Repairing industrial machines (electrical and electromechanical), elaboration and electrification of electrical boards, electrical assembly of machines and structures of transport of cork and beginner of programming and automation of PLC (OMRON).",
         "skillsGained": "Repairing, construction, development and analytical skills.",
         "company": "SERSAN",
         "location": "Lourosa, Portugal",
@@ -306,13 +340,13 @@
         "endDateYear": "2018"
       },
       {
-        "title": "Electronic, automation and maintenance (1500 hours Internship)",
-        "functionsPerformed": "Repair and maintenance of home appliances.",
+        "title": "Electronic, automation and maintenance (1500 hours)",
+        "functionsPerformed": "Repairing and maintaining household appliances.",
         "skillsGained": "Communication, engines, repairing and selling skills.",
         "company": "Electro Oliveira",
         "location": "Milheirós de Poiares, Portugal",
         "website": "https://www.sersan.pt/",
-        "offerType": "Full-time",
+        "offerType": "Internship",
         "startDateDay": "",
         "startDateMonth": "",
         "startDateYear": "2012",
@@ -329,7 +363,7 @@
     "description": [
       {
         "title": "Home Assistant",
-        "description": "My house is controlled by a Raspberry PI 4 and automated with \"Home Assistant\". I can control lights, sensors, robots, both internally (without internet connection) and externally (via VPN \"Tailscale\" and IP masked by \"Duck DNS\").",
+        "description": "My house is powered by a Raspberry Pi 4 and is automated using Home Assistant. With this setup, I have the ability to control various aspects such as lights, sensors, and robots, both internally (without an internet connection) and externally (via VPN \"Tailscale\" and IP masked by \"Duck DNS\").",
         "website": "https://github.com/rui-oliveira-tech/homeAssistant/",
         "startDateDay": "7",
         "startDateMonth": "Feb",
@@ -340,7 +374,7 @@
       },
       {
         "title": "Website",
-        "description": "This website was created with the aim of promoting information about my professional career, in a way that is accessible to companies and interested people.",
+        "description": "This website was created with the aim of promoting information about my professional career, in a way that is accessible to companies and interested people.The purpose of this website is to showcase my professional career and make information easily accessible to companies and individuals who are interested in learning more about me.",
         "website": "https://github.com/rui-oliveira-tech/webSite/",
         "startDateDay": "11",
         "startDateMonth": "Feb",
@@ -385,8 +419,15 @@
     "description": []
   },
   "expressions": {
+    "characteristics": {
+      "sex": "Sex",
+      "dateOfBirth": "Date of birth",
+      "nationality": "Nationality"
+    },
+    "page": "Page",
     "offerType": {
-      "Full-time": "Full-time"
+      "Full-time": "Full-time",
+      "Internship": "Internship"
     },
     "month": {
       "Present": "Present",

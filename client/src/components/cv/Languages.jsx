@@ -44,8 +44,8 @@ export default function Languages(props) {
             <tr>
               <td className="noBorder left" ></td>
               <td className="noBorder left" colSpan="5">
-                <p className="text small noPading">{t('languages.levels')}</p>
-                <p className="text small noPading">{t('languages.framework')}</p>
+                <p className="text small noPading">{t('languages.key.levels')}</p>
+                <p className="text small noPading">{t('languages.key.framework')}</p>
               </td>
             </tr>
           </tbody>

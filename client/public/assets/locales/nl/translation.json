@@ -1,5 +1,9 @@
 {
   "app_title": "Rui Oliveira - Elektricien  Industrieel | Residencial",
+  "characteristics": {
+    "sex": "Man",
+    "nationality": "Portugees"
+  },
   "navigationBar": {
     "homepage": "Home",
     "cv": "Curriculum Vitae",
@@ -19,29 +23,58 @@
   "about": {
     "overlayTitle": "Wie ik ben",
     "underlayTitle": "Over",
-    "description": [
-      [
-        "Ik ben Rui. Ik ben industrieel elektricien."
-      ],
-      [
-        "Ik werk momenteel bij het bedrijf \n",
-        "{{company}}",
-        "\nin\n",
-        "{{location}}.\n",
-        "Doch ben ik meteen beschikbaar."
-      ],
-      [
-        "Ik heb uitstekende kennis van elektriciteit, pneumatiek, hydrauliek, interpretatie van schema's, informatica in het perspectief van de gebruiker, evenals in het gebruik van internet.",
-        "Mijn sterke punten zijn Elektrificatie van elektrische borden en constructies, industrieel onderhoud en reparatie.",
-        "Ik heb ook ervaring in industriële automatisering en elektromechanica.",
-        "Ik heb een goede teamgeest, coöperatief en met een voorliefde voor kennis en leren.",
-        "Mijn voorkeur gaat uit naar het werken als industrieel elektricien, maar ik sluit de mogelijkheid niet uit om een ​​andere functie op verschillende gebieden uit te voeren."
-      ],
-      [
-        "Neem contact met mij op"
+    "description": {
+      "cv": "Als elektrisch professional heb ik een gevarieerd scala aan vaardigheden en expertise ontwikkeld die mij een waardevolle toevoeging zouden maken aan elk team. Met een passie voor elektrotechniek en een toewijding om op de hoogte te blijven van de nieuwste technologieën, ben ik ervan overtuigd dat ik elk uitdaging aankan.",
+      "website": [
+        [
+          "Ik ben Rui. Ik ben industrieel elektricien."
+        ],
+        [
+          "Ik werk momenteel bij het bedrijf \n",
+          "{{company}}",
+          "\nin\n",
+          "{{location}}.\n",
+          "Doch ben ik meteen beschikbaar."
+        ],
+        [
+          "Ik heb uitstekende kennis van elektriciteit, pneumatiek, hydrauliek, interpretatie van schema's, informatica in het perspectief van de gebruiker, evenals in het gebruik van internet.",
+          "Mijn sterke punten zijn Elektrificatie van elektrische borden en constructies, industrieel onderhoud en reparatie.",
+          "Ik heb ook ervaring in industriële automatisering en elektromechanica.",
+          "Ik heb een goede teamgeest, coöperatief en met een voorliefde voor kennis en leren.",
+          "Mijn voorkeur gaat uit naar het werken als industrieel elektricien, maar ik sluit de mogelijkheid niet uit om een ​​andere functie op verschillende gebieden uit te voeren."
+        ],
+        [
+          "Neem contact met mij op"
+        ]
       ]
-    ]
+    }
   },
+  "skills": [
+    {
+      "title": "Ontwerp en analyse systemen",
+      "description": "Ervaring in het ontwerpen van elektrische systemen voor een verscheidenheid aan toepassingen, met expertise in softwaretools zoals Visio en AutoCAD om deze systemen te analyseren en optimaliseren."
+    },
+    {
+      "title": "Probleemoplossing en oplossen van problemen",
+      "description": "Sterke analytische vaardigheden om snel problemen met elektrische systemen te identificeren en effectieve oplossingen te ontwikkelen om deze op te lossen."
+    },
+    {
+      "title": "Testen en inspectie",
+      "description": "Achtergrond in het testen en inspecteren van elektrische systemen om naleving en functionaliteit te garanderen, met de mogelijkheid om gedetailleerde rapporten over bevindingen te verstrekken."
+    },
+    {
+      "title": "Projectmanagement",
+      "description": "Succesvol beheer van talloze elektrische projecten van begin tot eind, waarbij hoogwaardige resultaten binnen budget en op tijd worden geleverd."
+    },
+    {
+      "title": "Veiligheid en naleving",
+      "description": "Sterke focus op veiligheid en naleving in alle aspecten van elektrisch werk."
+    },
+    {
+      "title": "Communicatie en samenwerking",
+      "description": "Uitstekende communicatie- en samenwerkingsvaardigheden, waardoor succesvolle resultaten worden behaald door teamwork."
+    }
+  ],
   "education": {
     "overlayTitle": "Wat ik heb geleerd",
     "underlayTitle": "Opleiding",
@@ -94,8 +127,7 @@
   },
   "programmingLanguages": {
     "overlayTitle": "Wat ik programmeer",
-    "underlayTitle": "Programmeertalen",
-    "description": []
+    "underlayTitle": "Programmeertalen"
   },
   "experience": {
     "overlayTitle": "Wat ik heb gedaan",
@@ -122,7 +154,7 @@
         "skillsGained": "Repareren, bouwen, ontwikkelen en analytisch vermogen."
       },
       {
-        "title": "Elektronica, automatisering en onderhoud (1500 uur stage)",
+        "title": "Elektronica, automatisering en onderhoud (1500 uur)",
         "functionsPerformed": "Reparatie en onderhoud van huishoudelijke apparaten.",
         "skillsGained": "Communicatie, motoren, reparatie- en verkoopvaardigheden."
       }
@@ -135,12 +167,12 @@
       {
         "title": "Home Assistant",
         "website": "https://github.com/rui-oliveira-tech/homeAssistant/",
-        "description": "Mijn huis wordt bestuurd door een Raspberry PI 4 en geautomatiseerd met \"Home Assistant\". Ik kan lichten, sensoren, robots aansturen, zowel intern (zonder internetverbinding) als extern (via VPN \"Tailscale\" en IP gemaskeerd door \"Duck DNS\")."
+        "description": "Mijn huis wordt aangedreven door een Raspberry Pi 4 en is geautomatiseerd met behulp van Home Assistant. Met deze opstelling heb ik de mogelijkheid om verschillende aspecten te controleren, zoals verlichting, sensoren en robots, zowel intern (zonder internetverbinding) als extern (via VPN \"Tailscale\" en IP gemaskeerd door \"Duck DNS\")."
       },
       {
         "title": "Website",
         "website": "https://github.com/rui-oliveira-tech/webSite/",
-        "description": "Deze website is gemaakt met als doel informatie over mijn professionele carrière te promoten op een manier die toegankelijk is voor bedrijven en geïnteresseerden."
+        "description": "Het doel van deze website is om mijn professionele carrière te presenteren en informatie gemakkelijk toegankelijk te maken voor bedrijven en personen die geïnteresseerd zijn om meer over mij te weten te komen."
       }
     ]
   },
@@ -166,8 +198,15 @@
     "description": []
   },
   "expressions": {
+    "characteristics": {
+      "sex": "Geslacht",
+      "dateOfBirth": "Geboortedatum",
+      "nationality": "Nationaliteit"
+    },
+    "page": "Bladzijde",
     "offerType": {
-      "Full-time": "Full-time"
+      "Full-time": "Full-time",
+      "Internship": "Stage"
     },
     "month": {
       "Present": "Nu",
