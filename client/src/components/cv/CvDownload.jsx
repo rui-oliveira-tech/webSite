@@ -2,7 +2,6 @@ import React, { useEffect, useRef } from "react";
 import { useTranslation } from 'react-i18next';
 import axios from 'axios';
 import { saveAs } from 'file-saver';
-import enFile from './translation.json'
 
 import "./Cv.scss";
 import "./CvButton.scss";

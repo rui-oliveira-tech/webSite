@@ -27,12 +27,33 @@ module.exports = ({ currentLanguageCode, app_title, title, profile, characterist
   <h3 class="contactInfo">+32474127175</h3>
 </div>`);
 
-  const skillsHtml = skills?.map((skill, i) => `
-  <div class="skills">
-  <h2>${skill.title}</h2>
-  <p>${skill.description}</p>
-</div>
-`);
+  const numRows = Math.ceil(skills.length / 2);
+  const skillsHtml = (`
+  <table>
+    <tbody>
+      ${Array.from({ length: numRows }, (_, rowIndex) => {
+    const dataIndex = rowIndex * 2;
+    const rowHtml = `
+          <tr>
+            <td class="skill">
+              <h2>${skills[dataIndex].title}</h2>
+              <p class="spaceBrake">${skills[dataIndex].description}</p>
+              </div>
+            </td>
+            ${dataIndex + 1 < skills.length ? `
+          <td class="skill">
+            <h2>${skills[dataIndex + 1].title}</h2>
+            <p class="spaceBrake">${skills[dataIndex + 1].description}</p>
+          </td>`
+        : '<td></td>'
+      }
+          </tr>
+        `;
+    return rowHtml;
+  }).join('')}
+    </tbody>
+  </table>
+  `);
 
   const experienceHtml = experiences?.map((experience, i) => `
       <div class="job${i === experiences.length - 1 ? ' last' : ''}">
@@ -97,7 +118,7 @@ module.exports = ({ currentLanguageCode, app_title, title, profile, characterist
               </tr>
             `).join("\n")}
             <tr>
-              <td class="lineBrake" colSpan="5">
+              <td class="lineBrake langDescription" colSpan="5">
                 <p>${languagesKey.levels}</p>
                 <p>${languagesKey.framework}</p>
               </td>
@@ -114,7 +135,7 @@ module.exports = ({ currentLanguageCode, app_title, title, profile, characterist
     .replace("{{contactInfo}}", contactInfoHtml)
     .replace("{{title}}", title)
     .replace("{{profile}}", profileHtml)
-    .replace("{{skills}}", skillsHtml?.join("\n"))
+    .replace("{{skills}}", skillsHtml)
     .replace("{{educations}}", educationHtml?.join("\n"))
     .replace("{{experiences}}", experienceHtml?.join("\n"))
     .replace("{{projects}}", projectHtml?.join("\n"))
