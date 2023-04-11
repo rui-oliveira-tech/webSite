@@ -363,7 +363,7 @@
     "description": [
       {
         "title": "Home Assistant",
-        "description": "MMy house is powered by a Raspberry Pi 4 and is automated using Home Assistant. With this setup, I have the ability to control various aspects such as lights, sensors, and robots, both internally (without an internet connection) and externally (via VPN \"Tailscale\" and IP masked by \"Duck DNS\").",
+        "description": "My house is powered by a Raspberry Pi 4 and is automated using Home Assistant. With this setup, I have the ability to control various aspects such as lights, sensors, and robots, both internally (without an internet connection) and externally (via VPN \"Tailscale\" and IP masked by \"Duck DNS\").",
         "website": "https://github.com/rui-oliveira-tech/homeAssistant/",
         "startDateDay": "7",
         "startDateMonth": "Feb",
