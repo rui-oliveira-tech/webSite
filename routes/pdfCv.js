@@ -14,15 +14,34 @@ const validatePdfCvType = (req, res, next) => {
   next();
 }
 // 403 Forbidden https://developer.mozilla.org/en-US/docs/Web/HTTP/Status
+//background: #f5f5f5;
 
 pdfCvRouter.post('/create/:type', validatePdfCvType, (req, res, next) => {
   const { type } = req.params;
   const template = path.join(__dirname, "../tmp", `RuiOliveira_CV-${type.toUpperCase()}.pdf`);
+  const generatedHtml = pdfTemplate(req.body);
+  const options = {
+    format: 'Letter',
+    zoomFactor: "1",
+    orientation: 'portrait',
+    header: {
+      height: "15mm",
+      contents: '<header></header>'
+    },
+    footer: {
+      height: '15mm',
+      contents: {
+        default: `<footer><p>Rui Oliveira &mdash; <a href="https://www.rui-oliveira.com/${req.body.currentLanguageCode}">www.rui-oliveira.com</a> &mdash; +32474127175</p><div style="text-align: center;">${req.body.expressions.page} <span>{{page}}</span> of <span>{{pages}}</span></div></footer>`
+      }
+    }
+  };
+
   if (fs.existsSync(template) && process.env.NODE_ENV !== "development") {
     downloadFile(res, template)
     return
   }
-  pdf.create(pdfTemplate(req.body), {}).toFile(template, (err) => {
+  fs.writeFileSync(path.join(__dirname, "../tmp", `RuiOliveira_CV-${type.toUpperCase()}.html`), generatedHtml)
+  pdf.create(generatedHtml, options).toFile(template, (err) => {
     if (err) {
       console.error(err)
       return
