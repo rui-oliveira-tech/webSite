@@ -36,16 +36,20 @@ pdfCvRouter.post('/create/:type', validatePdfCvType, (req, res, next) => {
     }
   };
 
-// if (fs.existsSync(template) && process.env.NODE_ENV !== "development") {
-//   downloadFile(res, template)
-//   return
-// }
+  if (fs.existsSync(template) && process.env.NODE_ENV !== "development") {
+    console.log("File is abalable...")
+    downloadFile(res, template)
+    return
+  }
+  console.log("Writing HTML to file...")
   fs.writeFileSync(path.join(__dirname, "../tmp", `RuiOliveira_CV-${type.toUpperCase()}.html`), generatedHtml)
+  console.log("Generating PDF...")
   pdf.create(generatedHtml, options).toFile(template, (err) => {
     if (err) {
-      console.error(err)
+      console.error("Error:", err)
       return
     }
+    console.log("Downloading PDF...")
     downloadFile(res, template)
   });
 });
