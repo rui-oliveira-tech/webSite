@@ -1,6 +1,6 @@
 const path = require("path");
 const pdfCvRouter = require('express').Router();
-const pdf = require('html-pdf');
+const pdf = require('html-pdf-phantomjs-included');
 const config = require('../config');
 const fs = require('fs');
 
