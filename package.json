@@ -8,7 +8,7 @@
     "server": "nodemon index.js",
     "client": "cd client && npm start",
     "clientBuild": "cd client && npm run build",
-    "postinstall": "npm link html-pdf"
+    "postinstall": "npm ls phantomjs-prebuilt"
   },
   "repository": {
     "type": "git",
