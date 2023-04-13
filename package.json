@@ -8,7 +8,7 @@
     "server": "nodemon index.js",
     "client": "cd client && npm start",
     "clientBuild": "cd client && npm run build",
-    "preinstall": "npm install phantomjs-prebuilt --unsafe-perm --verbose"
+    "preinstall": ""
   },
   "repository": {
     "type": "git",
@@ -27,7 +27,6 @@
     "express": "^4.18.1",
     "helmet": "^5.1.1",
     "html-pdf-phantomjs-included": "^1.0.2",
-    "phantomjs-prebuilt": "^2.1.16",
     "vcards-js": "^2.10.0"
   },
   "devDependencies": {
