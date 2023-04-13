@@ -1,0 +1,75 @@
+
+.cluster-marker {
+  color: #fff;
+  background: #1978c8;
+  border-radius: 50%;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.crime-marker {
+  background: none;
+  border: none;
+}
+
+
+.marker {
+  width: 25px;
+  height: 25px;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  filter: invert(36%) sepia(53%) saturate(1335%) hue-rotate(177deg) brightness(96%) contrast(94%);
+  cursor: pointer;
+  &:hover {
+    z-index: 2;
+    .popup {
+      display: block;
+    }
+    filter: none;
+  }
+
+  .popup {
+    position: absolute;
+    display: none;
+
+    width: 25px;
+    height: 25px;
+    img {
+      position: relative;
+      filter: invert(48%) sepia(79%) saturate(2476%) hue-rotate(86deg)
+        brightness(118%) contrast(119%);
+    }
+
+    .title {
+      width: 200px;
+      transform: translate(100%, -150%);
+      animation: showLettersMapsMarker 1s linear forwards;
+      color: #ffffff;
+      font-size: calc(var(--textSize) * 1.5em);
+      line-height: 1em;
+      font-weight: 600;
+      letter-spacing: normal;
+      font-family: Helvetica;
+    }
+  }
+}
+
+@keyframes showLettersMapsMarker {
+  0% {
+    width: 70%;
+    opacity: 0;
+    //background: rgba(0, 0, 0, 0);
+  }
+  50% {
+    opacity: 0.1;
+  }
+  100% {
+    width: 100%;
+    opacity: 1;
+   // background: rgba(0, 0, 0, 0.359);
+  }
+}

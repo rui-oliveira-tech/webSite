@@ -11,7 +11,10 @@ function logger(req, res, next) {
 }
 
 server.use(helmet());
-server.use(cors({ origin: config.origin }));
+server.use(cors({ 
+  origin: config.origin,
+  exposedHeaders: ["X-Suggested-Filename"]
+}));
 server.use(express.json());
 server.use(logger);
 // server.use(express.static("images"))
@@ -21,7 +24,9 @@ server.get('/', (req, res) => {
 });
   
 const vcard = require('../routes/vcard');
+const pdfCv = require('../routes/pdfCv');
 
 server.use('/vcard', vcard);
+server.use('/cv-pdf', pdfCv);
 
 module.exports = server;

@@ -1,0 +1,448 @@
+{
+  "app_title": "Rui Oliveira - Electrician  Industrial | Residential",
+  "characteristics": {
+    "sex": "Male",
+    "dateOfBirth": "19/12/1995",
+    "nationality": "Portuguese"
+  },
+  "navigationBar": {
+    "homepage": "Home",
+    "cv": "Curriculum Vitae",
+    "portfolio": "Portfolio"
+  },
+  "footer": {
+    "mailButton": "Hire Me"
+  },
+  "home": {
+    "title": "Rui Oliveira",
+    "subTitle": {
+      "first": "Industrial Electrician",
+      "second": "Residential Electrician",
+      "third": "Schematic Projecting"
+    },
+    "cvButton": "Download Cv"
+  },
+  "about": {
+    "img": "about",
+    "overlayTitle": "Who I am",
+    "underlayTitle": "About",
+    "description": {
+      "cv": "As an electrical professional, I have developed a diverse range of skills and expertise that would make me a valuable addition to any team. With a passion for electrical engineering and a commitment to staying up-to-date with the latest technologies, I am confident in my ability to tackle any challenge.",
+      "website": [
+        [
+          "I'm Rui. I'm a Industrial Electrician."
+        ],
+        [
+          "I am currently working at the\n",
+          "{{company}}",
+          "\nin\n",
+          "{{location}}.\n",
+          "However I have total and immediate availability to start working."
+        ],
+        [
+          "I have excellent knowledge of Electricity, Pneumatics, Hydraulics, Interpretation of schematics, Informatics in the user's perspective, as well as in the use of internet.",
+          "My strengths are Electrification of electrical boards and structures, Industrial maintenance and repair.",
+          "I also have experience in industrial automation and electromechanical.",
+          "I have good team work spirit, cooperative and with a taste for knowledge and learning.",
+          "I have preference in working as an industrial electrician, but I do not exclude the possibility of performing another position in different areas."
+        ],
+        [
+          "Looking forward to hearing from you."
+        ]
+      ]
+    }
+  },
+  "skills": [
+    {
+      "title": "Designing and analyzing systems",
+      "description": "Experience in designing electrical systems for a variety of applications, with proficiency in software tools such as Visio and AutoCAD to analyze and optimize these systems."
+    },
+    {
+      "title": "Troubleshooting and problem-solving",
+      "description": "Strong analytical skills to quickly identify issues with electrical systems and develop effective solutions to resolve them."
+    },
+    {
+      "title": "Testing and Inspection",
+      "description": "Background in testing and inspecting electrical systems to ensure compliance and functionality, with the ability to provide detailed reports on findings."
+    },
+    {
+      "title": "Project management",
+      "description": "Successful management of numerous electrical projects from start to finish, delivering high-quality results within budget and on time."
+    },
+    {
+      "title": "Safety and compliance",
+      "description": "High focus on safety and compliance in all aspects of electrical work."
+    },
+    {
+      "title": "Communication and collaboration",
+      "description": "Excellent communication and collaboration skills, enabling successful outcomes through teamwork."
+    }
+  ],
+  "education": {
+    "img": "education",
+    "overlayTitle": "What I've learned",
+    "underlayTitle": "Education",
+    "description": [
+      {
+        "title": "Driving course of electric forklifts, combustion and gas",
+        "companyTitle": "",
+        "company": "Cincork",
+        "location": "Santa Maria de Lamas, Portugal",
+        "website": "https://www.cincork.com/",
+        "startDateDay": "",
+        "startDateMonth": "",
+        "startDateYear": "",
+        "endDateDay": "4",
+        "endDateMonth": "May",
+        "endDateYear": "2018"
+      },
+      {
+        "title": "Electronic, automation and maintenance +1500 hours InternshipElectronic",
+        "companyTitle": "",
+        "company": "CFPIC",
+        "location": "São João da Madeira, Portugal",
+        "website": "http://www.cfpic.pt/",
+        "startDateDay": "",
+        "startDateMonth": "",
+        "startDateYear": "2012",
+        "endDateDay": "22",
+        "endDateMonth": "Apr",
+        "endDateYear": "2015"
+      },
+      {
+        "title": "Driving license AM / B / B1 ",
+        "companyTitle": "Driving school",
+        "company": "Boavista",
+        "location": "Santa Maria da Feira, Portugal",
+        "website": "http://www.ecboavista.com/",
+        "startDateDay": "",
+        "startDateMonth": "",
+        "startDateYear": "",
+        "endDateDay": "4",
+        "endDateMonth": "Dec",
+        "endDateYear": "2015"
+      },
+      {
+        "title": "High School, Course of Sciences and Technologies",
+        "companyTitle": "High School of",
+        "company": "Santa Maria da Feira",
+        "location": "Santa Maria da Feira, Portugal",
+        "website": "https://ae-smfeira.pt/",
+        "startDateDay": "",
+        "startDateMonth": "",
+        "startDateYear": "2010",
+        "endDateDay": "",
+        "endDateMonth": "",
+        "endDateYear": "2012"
+      }
+    ]
+  },
+  "languages": {
+    "img": "languages",
+    "overlayTitle": "What I speak",
+    "underlayTitle": "Languages",
+    "key": {
+      "language": "LANGUAGE",
+      "understanding": "UNDERSTANDING",
+      "speaking": "SPEAKING",
+      "writing": "WRITING",
+      "listening": "Listening",
+      "reading": "Reading",
+      "interaction": "Interaction",
+      "production": "Production",
+      "levels": "Levels: A1/2: Basic - B1/2: Independent - C1/2 Proficient",
+      "framework": "Common European Framework of Reference for Languages"
+    },
+    "description": [
+      {
+        "language": "Portuguese",
+        "flag": "pt",
+        "listening": "C2",
+        "reading": "C2",
+        "spokenInteraction": "C2",
+        "spokenProduction": "C2",
+        "writing": "C2"
+      },
+      {
+        "language": "English",
+        "flag": "gb",
+        "listening": "C1",
+        "reading": "C1",
+        "spokenInteraction": "C1",
+        "spokenProduction": "C1",
+        "writing": "B1"
+      },
+      {
+        "language": "Spanish",
+        "flag": "es",
+        "listening": "C1",
+        "reading": "C1",
+        "spokenInteraction": "C1",
+        "spokenProduction": "C1",
+        "writing": "B1"
+      },
+      {
+        "language": "Dutch",
+        "flag": "be",
+        "listening": "A2",
+        "reading": "A2",
+        "spokenInteraction": "A1",
+        "spokenProduction": "A1",
+        "writing": "A1"
+      }
+    ]
+  },
+  "programmingLanguages": {
+    "img": "programmingLanguages",
+    "overlayTitle": "What I program",
+    "underlayTitle": "Programming Languages",
+    "description": [
+      [
+        {
+          "id": 1,
+          "title": "Industrial"
+        },
+        {
+          "id": 2,
+          "title": "Programming Languages"
+        },
+        {
+          "id": 3,
+          "title": "software"
+        }
+      ],
+      [
+        {
+          "title": "Ladder",
+          "imgLink": "lader",
+          "website": "https://ladderlogicworld.com/"
+        },
+        {
+          "title": "Arduino",
+          "imgLink": "arduino",
+          "website": "https://github.com/rui-oliveira-tech/webSite/"
+        }
+      ],
+      [
+        {
+          "title": "C++",
+          "imgLink": "cpp",
+          "website": "https://www.w3schools.com/cpp/"
+        },
+        {
+          "title": "Css",
+          "imgLink": "css",
+          "website": "https://www.w3schools.com/css/"
+        },
+        {
+          "title": "Html",
+          "imgLink": "html",
+          "website": "https://www.w3.org/html/"
+        },
+        {
+          "title": "Js",
+          "imgLink": "js",
+          "website": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/"
+        },
+        {
+          "title": "NodeJs",
+          "imgLink": "nodeJs",
+          "website": "https://nodejs.org/"
+        }
+      ],
+      [
+        {
+          "title": "Git",
+          "imgLink": "git",
+          "website": "https://git-scm.com/"
+        },
+        {
+          "title": "Visual Studio Code",
+          "imgLink": "vsc",
+          "website": "https://code.visualstudio.com/"
+        },
+        {
+          "title": "Linux",
+          "imgLink": "linux",
+          "website": "https://www.linux.org/"
+        },
+        {
+          "title": "Windows",
+          "imgLink": "windows",
+          "website": "https://www.microsoft.com/en-gb/windows/"
+        }
+      ]
+    ]
+  },
+  "experience": {
+    "img": "experience",
+    "overlayTitle": "What I've done",
+    "underlayTitle": "Experience",
+    "description": [
+      {
+        "title": "Industrial Electrician",
+        "functionsPerformed": "",
+        "skillsGained": "",
+        "company": "AGP eGlass",
+        "location": "Evergem, Belgium",
+        "website": "https://agpglass.com/",
+        "offerType": "Full-time",
+        "startDateDay": "",
+        "startDateMonth": "Mar",
+        "startDateYear": "2023",
+        "endDateDay": "",
+        "endDateMonth": "",
+        "endDateYear": "Present"
+      },
+      {
+        "title": "Industrial Electrician",
+        "functionsPerformed": "Troubleshooting machinery problems, installing cable ducts, passing cables, connecting electrical boards, and replacing basic mechanical parts.",
+        "skillsGained": "Repairing and communication skills.",
+        "company": "SOCEA nv",
+        "location": "Oelegem, Belgium",
+        "website": "https://www.socea.be/",
+        "offerType": "Full-time",
+        "startDateDay": "",
+        "startDateMonth": "May",
+        "startDateYear": "2019",
+        "endDateDay": "",
+        "endDateMonth": "Mar",
+        "endDateYear": "2023"
+      },
+      {
+        "title": "Cold technician",
+        "functionsPerformed": "Repairing and maintaining refrigerated containers, performing \"PTI\" inspections, welding copper, and replacing motors and sensors.",
+        "skillsGained": "Repairing and communication skills.",
+        "company": "MEDREPAIR",
+        "location": "Beveren, Belgium",
+        "website": "https://www.msc.com/",
+        "offerType": "Full-time",
+        "startDateDay": "",
+        "startDateMonth": "July",
+        "startDateYear": "2018",
+        "endDateDay": "",
+        "endDateMonth": "May",
+        "endDateYear": "2019"
+      },
+      {
+        "title": "Industrial Electrician",
+        "functionsPerformed": "Repairing industrial machines (electrical and electromechanical), elaboration and electrification of electrical boards, electrical assembly of machines and structures of transport of cork and beginner of programming and automation of PLC (OMRON).",
+        "skillsGained": "Repairing, construction, development and analytical skills.",
+        "company": "SERSAN",
+        "location": "Lourosa, Portugal",
+        "website": "https://www.sersan.pt/",
+        "offerType": "Full-time",
+        "startDateDay": "",
+        "startDateMonth": "Feb",
+        "startDateYear": "2015",
+        "endDateDay": "",
+        "endDateMonth": "July",
+        "endDateYear": "2018"
+      },
+      {
+        "title": "Electronic, automation and maintenance (1500 hours)",
+        "functionsPerformed": "Repairing and maintaining household appliances.",
+        "skillsGained": "Communication, engines, repairing and selling skills.",
+        "company": "Electro Oliveira",
+        "location": "Milheirós de Poiares, Portugal",
+        "website": "https://www.sersan.pt/",
+        "offerType": "Internship",
+        "startDateDay": "",
+        "startDateMonth": "",
+        "startDateYear": "2012",
+        "endDateDay": "",
+        "endDateMonth": "",
+        "endDateYear": "2015"
+      }
+    ]
+  },
+  "projects": {
+    "img": "projects",
+    "overlayTitle": "What I've created",
+    "underlayTitle": "Projects",
+    "description": [
+      {
+        "title": "Home Assistant",
+        "description": "My house is powered by a Raspberry Pi 4 and is automated using Home Assistant. With this setup, I have the ability to control various aspects such as lights, sensors, and robots, both internally (without an internet connection) and externally (via VPN \"Tailscale\" and IP masked by \"Duck DNS\").",
+        "website": "https://github.com/rui-oliveira-tech/homeAssistant/",
+        "startDateDay": "7",
+        "startDateMonth": "Feb",
+        "startDateYear": "2021",
+        "endDateDay": "",
+        "endDateMonth": "",
+        "endDateYear": "Present"
+      },
+      {
+        "title": "Website",
+        "description": "This website was created with the aim of promoting information about my professional career, in a way that is accessible to companies and interested people.The purpose of this website is to showcase my professional career and make information easily accessible to companies and individuals who are interested in learning more about me.",
+        "website": "https://github.com/rui-oliveira-tech/webSite/",
+        "startDateDay": "11",
+        "startDateMonth": "Feb",
+        "startDateYear": "2022",
+        "endDateDay": "",
+        "endDateMonth": "",
+        "endDateYear": "Present"
+      }
+    ]
+  },
+  "other": {
+    "img": "other",
+    "overlayTitle": "Other stuff I've done",
+    "underlayTitle": "Other things",
+    "description": [
+      {
+        "title": "Off We Go – IB&C WEEKS",
+        "description": "Scholar Exchange experience.",
+        "startDateDay": "17",
+        "startDateMonth": "May",
+        "startDateYear": "2014",
+        "endDateDay": "25",
+        "endDateMonth": "May",
+        "endDateYear": "2014"
+      },
+      {
+        "title": "Europe tour",
+        "description": "Countries I visited.",
+        "startDateDay": "7",
+        "startDateMonth": "Feb",
+        "startDateYear": "2021",
+        "endDateDay": "",
+        "endDateMonth": "",
+        "endDateYear": "Present"
+      }
+    ]
+  },
+  "googleMapsMarkers": {
+    "img": "googleMapsMarkers",
+    "overlayTitle": "Where I've  been",
+    "underlayTitle": "Google Maps Markers",
+    "description": []
+  },
+  "expressions": {
+    "characteristics": {
+      "sex": "Sex",
+      "dateOfBirth": "Date of birth",
+      "nationality": "Nationality"
+    },
+    "page": "Page",
+    "offerType": {
+      "Full-time": "Full-time",
+      "Internship": "Internship"
+    },
+    "month": {
+      "Present": "Present",
+      "Jan": "Jan",
+      "Feb": "Feb",
+      "Mar": "Mar",
+      "Apr": "Apr",
+      "May": "May",
+      "June": "June",
+      "July": "July",
+      "Aug": "Aug",
+      "Sept": "Sept",
+      "Oct": "Oct",
+      "Nov": "Nov",
+      "Dec": "Dec"
+    }
+  }
+}

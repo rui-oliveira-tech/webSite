@@ -1,22 +1,26 @@
-import React from "react"
-import "./Footer.scss"
+import React from "react";
+import { useTranslation } from 'react-i18next';
+import "./Footer.scss";
 
-import Button from "../Button/Button"
+import Button from "../Button/Button";
+import GetLink from "../../resource/link";
 
 export function Footer() {
+  const { t } = useTranslation();
+
   return (
     <footer className="mainFooter">
-        <a className="icon" target="_blank" rel="noreferrer" href="https://www.instagram.com/rui_oliveira_tech/"><i className="icon-instagram" /></a>
+      <a className="icon" target="_blank" rel="noreferrer" href={GetLink("instagram")}><i className="icon-instagram" /></a>
 
-        <a className="icon" target="_blank" rel="noreferrer" href="https://api.whatsapp.com/send/?phone=32474127175&text&type=phone_number&app_absent=0"><i className="icon-whatsapp" /></a>
+      <a className="icon" target="_blank" rel="noreferrer" href={GetLink("whatsapp")}><i className="icon-whatsapp" /></a>
 
-        <Button className="from-center" href="mailto:hire@rui-oliveira.com">Hire Me</Button>
+      <Button className="from-center" href="mailto:hire@rui-oliveira.com">{t('footer.mailButton')}</Button>
 
-        <a className="icon" target="_blank" rel="noreferrer" href="https://github.com/rui-oliveira-tech"><i className="icon-github" /></a>
+      <a className="icon" target="_blank" rel="noreferrer" href={GetLink("github")}><i className="icon-github" /></a>
 
-        <a className="icon" target="_blank" rel="noreferrer" href="https://www.linkedin.com/in/rui-oliveira--tech/"><i className="icon-linkedin" /></a>
+      <a className="icon" target="_blank" rel="noreferrer" href={GetLink("linkedin")}><i className="icon-linkedin" /></a>
 
-        {/*  <a className="icon" href="#"><i className="fab fa-facebook-f" /></a> */}
+      {/*  <a className="icon" href="https://www.facebook.com/RuiOliveira.Electrician/"><i className="fab fa-facebook-f" /></a> */}
     </footer>
   )
 }

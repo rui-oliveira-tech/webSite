@@ -42,6 +42,8 @@ body {
 	/* overflow:hidden; */
 	font-family: "Open Sans", Helvetica, Arial, sans-serif;
 	font-weight: 400;
+
+	user-select: none;
 }
 ol, ul {
 	list-style: none;
