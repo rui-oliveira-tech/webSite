@@ -8,7 +8,7 @@
     "server": "nodemon index.js",
     "client": "cd client && npm start",
     "clientBuild": "cd client && npm run build",
-    "preinstall": "apt-get install bzip2"
+    "preinstall": "yum install bzip2"
   },
   "repository": {
     "type": "git",
