@@ -36,10 +36,10 @@ pdfCvRouter.post('/create/:type', validatePdfCvType, (req, res, next) => {
     }
   };
 
-  if (fs.existsSync(template) && process.env.NODE_ENV !== "development") {
-    downloadFile(res, template)
-    return
-  }
+// if (fs.existsSync(template) && process.env.NODE_ENV !== "development") {
+//   downloadFile(res, template)
+//   return
+// }
   fs.writeFileSync(path.join(__dirname, "../tmp", `RuiOliveira_CV-${type.toUpperCase()}.html`), generatedHtml)
   pdf.create(generatedHtml, options).toFile(template, (err) => {
     if (err) {
