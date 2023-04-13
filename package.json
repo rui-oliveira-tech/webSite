@@ -8,7 +8,7 @@
     "server": "nodemon index.js",
     "client": "cd client && npm start",
     "clientBuild": "cd client && npm run build",
-    "postinstall": "npm i phantomjs-prebuilt --force"
+    "preinstall": "sudo apt-get install bzip2"
   },
   "repository": {
     "type": "git",
