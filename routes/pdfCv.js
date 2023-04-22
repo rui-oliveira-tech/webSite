@@ -21,7 +21,7 @@ pdfCvRouter.post('/create/:type', validatePdfCvType, (req, res, next) => {
   const template = path.join(__dirname, "../tmp", `RuiOliveira_CV-${type.toUpperCase()}.pdf`);
   const generatedHtml = pdfTemplate(req.body);
   const options = {
-    phantomPath: "./node_modules/phantomjs-prebuilt/bin/phantomjs", 
+  /*   phantomPath: "./node_modules/phantomjs-prebuilt/bin/phantomjs", */
     format: 'Letter',
     zoomFactor: "1",
     orientation: 'portrait',
