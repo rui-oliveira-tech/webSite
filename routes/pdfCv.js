@@ -60,16 +60,16 @@ pdfCvRouter.post('/create/:type', validatePdfCvType, (req, res, next) => {
   });
 });
 
-function downloadFile(res, filePath, pdf) {
+function downloadFile(res, filePath, newPdf) {
   const fileName = path.basename(filePath);
   //const file = fs.readFileSync(filePath);
- // const size = fs.statSync(filePath).size;
-  const size = pdf.byteLength;
+  // const size = fs.statSync(filePath).size;
+  const size = newPdf.byteLength;
   res.setHeader("Content-Length", size);
   res.setHeader("Content-Disposition", `attachment; filename="${fileName}";`);
   res.setHeader("Content-Type", "application/pdf");
   res.setHeader("X-Suggested-Filename", fileName);
-  res.send(pdf);
+  res.send(newPdf);
 }
 
 module.exports = pdfCvRouter;
