@@ -1,6 +1,6 @@
 const path = require("path");
 const pdfCvRouter = require('express').Router();
-const pdf = require('html-pdf-node');
+const pdf = require('html-pdf-phantomjs-included');
 const config = require('../config');
 const fs = require('fs');
 
@@ -18,7 +18,7 @@ const validatePdfCvType = (req, res, next) => {
 
 pdfCvRouter.post('/create/:type', validatePdfCvType, (req, res, next) => {
   const { type } = req.params;
-  const template = path.join(__dirname, "../tmp", `RuiOliveira_CV-${type.toUpperCase()}.pdf`);
+  const template = path.join(__dirname, "../client/public/resource", `RuiOliveira_CV-${type.toUpperCase()}.pdf`);
   const generatedHtml = pdfTemplate(req.body);
   const options = {
     /*   phantomPath: "./node_modules/phantomjs-prebuilt/bin/phantomjs", */
@@ -46,30 +46,29 @@ pdfCvRouter.post('/create/:type', validatePdfCvType, (req, res, next) => {
   if (process.env.NODE_ENV === "development") {
     console.log("Writing HTML to file...")
     fs.writeFileSync(path.join(__dirname, "../tmp", `RuiOliveira_CV-${type.toUpperCase()}.html`), generatedHtml)
-    //  return
+    return
   }
 
   console.log("Generating PDF...")
-  pdf.generatePdf({ content: generatedHtml }, { format: 'A4' }, (err, newPdf) => {
+  pdf.create(generatedHtml, options).toFile(template, (err) => {
     if (err) {
       console.error("Error:", err)
       return
     }
     console.log("Downloading PDF...")
-    downloadFile(res, template, newPdf);
+    saveFile(template)
   });
 });
 
-function downloadFile(res, filePath, newPdf) {
+function downloadFile(res, filePath) {
   const fileName = path.basename(filePath);
-  //const file = fs.readFileSync(filePath);
-  // const size = fs.statSync(filePath).size;
-  const size = newPdf.byteLength;
+  const file = fs.readFileSync(filePath);
+  const size = fs.statSync(filePath).size;
   res.setHeader("Content-Length", size);
   res.setHeader("Content-Disposition", `attachment; filename="${fileName}";`);
   res.setHeader("Content-Type", "application/pdf");
   res.setHeader("X-Suggested-Filename", fileName);
-  res.send(newPdf);
+  res.send(file);
 }
 
 module.exports = pdfCvRouter;

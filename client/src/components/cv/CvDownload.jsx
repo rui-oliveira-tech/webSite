@@ -42,9 +42,6 @@ export default function CvDownload(props) {
       return false;
     });
   }
-
-
-
   function deepMergeObject(obj1, obj2) {
     const merged = {
       ...obj1,
