@@ -1,6 +1,6 @@
 const path = require("path");
 const pdfCvRouter = require('express').Router();
-const pdf = require('html-pdf-phantomjs-included');
+const pdf = require('html-pdf');
 const config = require('../config');
 const fs = require('fs');
 
@@ -38,15 +38,15 @@ pdfCvRouter.post('/create/:type', validatePdfCvType, (req, res, next) => {
   };
 
   if (fs.existsSync(template) && process.env.NODE_ENV !== "development") {
-    console.log("File is abalable...")
-    downloadFile(res, template)
+    console.log("File is available...")
+    // downloadFile(res, template)
     return
   }
 
   if (process.env.NODE_ENV === "development") {
-    console.log("Writing HTML to file...")
-    fs.writeFileSync(path.join(__dirname, "../tmp", `RuiOliveira_CV-${type.toUpperCase()}.html`), generatedHtml)
-    return
+    // console.log("Writing HTML to file...")
+    // fs.writeFileSync(path.join(__dirname, "../tmp", `RuiOliveira_CV-${type.toUpperCase()}.html`), generatedHtml)
+    // return
   }
 
   console.log("Generating PDF...")
@@ -56,11 +56,11 @@ pdfCvRouter.post('/create/:type', validatePdfCvType, (req, res, next) => {
       return
     }
     console.log("Downloading PDF...")
-    saveFile(template)
+    saveFile(res, template)
   });
 });
 
-function downloadFile(res, filePath) {
+function saveFile(res, filePath) {
   const fileName = path.basename(filePath);
   const file = fs.readFileSync(filePath);
   const size = fs.statSync(filePath).size;
