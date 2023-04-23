@@ -1,6 +1,6 @@
 const path = require("path");
 const pdfCvRouter = require('express').Router();
-const pdf = require('html-pdf');
+const pdf = require('html-pdf-node');
 const config = require('../config');
 const fs = require('fs');
 
@@ -21,7 +21,7 @@ pdfCvRouter.post('/create/:type', validatePdfCvType, (req, res, next) => {
   const template = path.join(__dirname, "../tmp", `RuiOliveira_CV-${type.toUpperCase()}.pdf`);
   const generatedHtml = pdfTemplate(req.body);
   const options = {
-  /*   phantomPath: "./node_modules/phantomjs-prebuilt/bin/phantomjs", */
+    /*   phantomPath: "./node_modules/phantomjs-prebuilt/bin/phantomjs", */
     format: 'Letter',
     zoomFactor: "1",
     orientation: 'portrait',
@@ -46,29 +46,30 @@ pdfCvRouter.post('/create/:type', validatePdfCvType, (req, res, next) => {
   if (process.env.NODE_ENV === "development") {
     console.log("Writing HTML to file...")
     fs.writeFileSync(path.join(__dirname, "../tmp", `RuiOliveira_CV-${type.toUpperCase()}.html`), generatedHtml)
-    return
+    //  return
   }
 
   console.log("Generating PDF...")
-  pdf.create(generatedHtml, options).toFile(template, (err) => {
+  pdf.generatePdf({ content: generatedHtml }, { format: 'A4' }, (err, newPdf) => {
     if (err) {
       console.error("Error:", err)
       return
     }
     console.log("Downloading PDF...")
-    downloadFile(res, template)
+    downloadFile(res, template, newPdf);
   });
 });
 
-function downloadFile(res, filePath) {
+function downloadFile(res, filePath, pdf) {
   const fileName = path.basename(filePath);
-  const file = fs.readFileSync(filePath);
-  const size = fs.statSync(filePath).size;
+  //const file = fs.readFileSync(filePath);
+ // const size = fs.statSync(filePath).size;
+  const size = pdf.byteLength;
   res.setHeader("Content-Length", size);
   res.setHeader("Content-Disposition", `attachment; filename="${fileName}";`);
   res.setHeader("Content-Type", "application/pdf");
   res.setHeader("X-Suggested-Filename", fileName);
-  res.send(file);
+  res.send(pdf);
 }
 
 module.exports = pdfCvRouter;
