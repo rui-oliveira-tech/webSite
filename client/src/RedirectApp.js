@@ -4,7 +4,7 @@ import { useTranslation, withTranslation } from 'react-i18next';
 
 import { pageList } from "./resource/pages"
 import getLink, { getType } from "./resource/link";
-import { languages } from "./components/Languages/Language";
+import { supportedLngs } from "./resource/lngs";
 import usePublicImages from './hooks/usePublicImages'
 
 
@@ -24,7 +24,7 @@ function RedirectApp(props) {
     if (
       typeof redirect === "undefined" || typeof redirect.lang === "undefined" || (
         !pages.includes(redirect.lang) &&
-        !languages.includes(redirect.lang)
+        !supportedLngs.includes(redirect.lang)
       )
     ) {
       navigate(`/${currentLanguageCode}`, { replace: true });

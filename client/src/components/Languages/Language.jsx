@@ -7,31 +7,10 @@ import withPublicImages from '../../hooks/withPublicImages'
 import 'bootstrap/dist/js/bootstrap.js'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import './Language.scss'
+import { languageList } from '../../resource/lngs';
 
-export const languageList = [
-  {
-    code: 'en',
-    name: 'English',
-    country_code: 'gb',
-  },
-  {
-    code: 'nl',
-    name: 'Netherlands',
-    country_code: 'nl',
-  },
-  {
-    code: 'fr',
-    name: 'Français',
-    country_code: 'fr',
-  },
-  {
-    code: 'pt',
-    name: 'Portugal',
-    country_code: 'pt',
-  },
-]
 
-export const languages = ['en', 'nl', 'fr', 'pt'];
+
 
 function Language(props) {
   const { images } = props;
