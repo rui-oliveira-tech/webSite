@@ -2,39 +2,33 @@
 import React from "react";
 import { useTranslation } from 'react-i18next';
 import axios from 'axios';
+import { defaultLanguage, supportedLngs } from "../../resource/lngs"
 
 import "./Cv.scss";
 import "./CvButton.scss";
 
 const server = process.env.REACT_APP_API;
 export default function CvGen(props) {
-  const defaultLanguage = 'en';
-  // const translationKeys = props.i18n.store.data[currentLanguageCode][defaultLanguage + "/translation.json"];
-  // const defaultTranslationKeys = props.i18n.store.data[defaultLanguage][defaultLanguage + "/translation.json"];
-
-  const allLangs = ['en', 'fr', 'nl', 'pt']
-  const allLangsKeys = {}
-  for (const lang of allLangs) {
-    console.log(lang, props.i18n.store.data[lang])
-    allLangsKeys[lang] = props.i18n.store.data[lang]?.[defaultLanguage + "/translation.json"]
+  const supportedLngsKeys = {}
+  for (const lang of supportedLngs) {
+    supportedLngsKeys[lang] = props.i18n.store.data[lang]?.translation
   }
   const { t } = useTranslation();
 
   const createAndDownloadPdf = (e) => {
     e.preventDefault();
-    // debugger
 
-    for (const lang of allLangs) {
-      const defaultTranslationKeys = allLangsKeys[defaultLanguage]
-      const translationKeys = allLangsKeys[lang]
-      if(!translationKeys || !defaultTranslationKeys) continue;
+    for (const lang of supportedLngs) {
+      const defaultTranslationKeys = supportedLngsKeys[defaultLanguage]
+      const translationKeys = supportedLngsKeys[lang]
+      if (!translationKeys || !defaultTranslationKeys) continue;
       // TODO: remove page refresh
 
       let cvData = {
         currentLanguageCode: lang,
-        app_title: t('app_title'),
-        title: t('home.subTitle.first'),
-        profile: t('about.description.cv'),
+        app_title: translationKeys.app_title,
+        title: translationKeys.home.subTitle.first,
+        profile: translationKeys.about.description.cv,
         languages: deepMergeArray(defaultTranslationKeys.languages.description, translationKeys.languages.description),
         languagesKey: deepMergeObject(defaultTranslationKeys.languages.key, translationKeys.languages.key),
         characteristics: deepMergeObject(defaultTranslationKeys.characteristics, translationKeys.characteristics),
@@ -46,7 +40,7 @@ export default function CvGen(props) {
         others: deepMergeArray(defaultTranslationKeys.other.description, translationKeys.other.description),
         expressions: deepMergeObject(defaultTranslationKeys.expressions, translationKeys.expressions)
       }
-      // debugger
+
       axios.post(`${server}/cv-pdf/create/${lang}`, cvData, { responseType: "blob" })
         .then((res) => {
           console.log(lang, "done")
@@ -65,7 +59,7 @@ export default function CvGen(props) {
     return <></>
   }
   return (
-    <div className="downloadGen" style={{position:"fixed", top:250, "zIndex": 99999}}>
+    <div className="downloadGen" style={{ position: "fixed", top: 250, "zIndex": 99999 }}>
       <button className={"learn-more buttonCV "} onClick={createAndDownloadPdf}>
         <span className="circle" aria-hidden="true">
           <span className="icon arrow"></span>
