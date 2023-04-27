@@ -135,8 +135,13 @@
     "underlayTitle": "Experiência",
     "description": [
       {
-        "title": "Eletricista Industrial",
+        "title": "Manutenção Elétrica / Mecânica",
         "functionsPerformed": "",
+        "skillsGained": ""
+      },
+      {
+        "title": "Eletricista Industrial",
+        "functionsPerformed": "Linhas de processamento de vidro, resolução de problemas de máquinas elétricas e mecânicas, PLC + braços robóticos.",
         "skillsGained": ""
       },
       {

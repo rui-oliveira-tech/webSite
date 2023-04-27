@@ -280,8 +280,23 @@
     "underlayTitle": "Experience",
     "description": [
       {
-        "title": "Industrial Electrician",
+        "title": "Electrical / Mechanical Maintenance",
         "functionsPerformed": "",
+        "skillsGained": "",
+        "company": "Vestas",
+        "location": "Belgium",
+        "website": "https://www.vestas.com/",
+        "offerType": "Full-time",
+        "startDateDay": "",
+        "startDateMonth": "May",
+        "startDateYear": "2023",
+        "endDateDay": "",
+        "endDateMonth": "",
+        "endDateYear": "Present"
+      },
+      {
+        "title": "Industrial Electrician",
+        "functionsPerformed": "Glass Processing Lines, Troubleshooting machinery problems electrical and mechanical, PLC + Robotic arms",
         "skillsGained": "",
         "company": "AGP eGlass",
         "location": "Evergem, Belgium",
@@ -291,8 +306,8 @@
         "startDateMonth": "Mar",
         "startDateYear": "2023",
         "endDateDay": "",
-        "endDateMonth": "",
-        "endDateYear": "Present"
+        "endDateMonth": "May",
+        "endDateYear": "2023"
       },
       {
         "title": "Industrial Electrician",

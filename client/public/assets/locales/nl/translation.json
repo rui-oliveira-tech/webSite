@@ -134,8 +134,13 @@
     "underlayTitle": "Ervaring",
     "description": [
       {
-        "title": "Industrieel Elektricien",
+        "title": "Elektrisch / Mechanisch Onderhoud",
         "functionsPerformed": "",
+        "skillsGained": ""
+      },
+      {
+        "title": "Industrieel Elektricien",
+        "functionsPerformed": "Glasmachines, elektrische en mechanische storingen oplossen, PLC + robotarmen.",
         "skillsGained": ""
       },
       {

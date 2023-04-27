@@ -135,8 +135,13 @@
     "underlayTitle": "Expérience",
     "description": [
       {
-        "title": "Electricien Industriel",
+        "title": "Maintenance Électrique / Mécanique",
         "functionsPerformed": "",
+        "skillsGained": ""
+      },
+      {
+        "title": "Electricien Industriel",
+        "functionsPerformed": "Lignes de traitement de verre, dépannage de problèmes de machines électriques et mécaniques, PLC + bras robotiques.",
         "skillsGained": ""
       },
       {
