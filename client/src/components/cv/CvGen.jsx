@@ -64,7 +64,7 @@ export default function CvGen(props) {
         <span className="circle" aria-hidden="true">
           <span className="icon arrow"></span>
         </span>
-        <span id="buttonCV" className="buttonCV-text">{t('home.cvButton')}</span>
+        <span id="buttonCV" className="buttonCV-text">CvGen</span>
       </button>
     </div>
   )
