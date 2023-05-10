@@ -12,7 +12,7 @@ i18next
   .init({
     supportedLngs: supportedLngs,
     fallbackLng: supportedLngs,
-    debug: true,
+    debug: false,
     // Options for language detector
     detection: {
       order: ['path', 'cookie', 'htmlTag'],
