@@ -581,6 +581,13 @@ export const googleMapsMarkers = [
         marker: Marker,
         zoom: 9,
     },
+    {
+        id: getNextId(),
+        country: "Netherlands",
+        city: "Arnhem",
+        marker: Marker,
+        zoom: 9,
+    },
     //-----------------------// Denmark //-----------------------//
     {
         id: getNextId(),
