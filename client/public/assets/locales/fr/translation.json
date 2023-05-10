@@ -80,6 +80,9 @@
     "underlayTitle": "Education",
     "description": [
       {
+        "title": "Premiers Secours - Sensibilisation aux Incendies - Travail en Hauteur - Manutention Manuelle (GWO)"
+      },
+      {
         "title": "Diplôme en conduite de chariots élévateurs électriques, à combustion et à gaz"
       },
       {
@@ -135,7 +138,7 @@
     "underlayTitle": "Expérience",
     "description": [
       {
-        "title": "Maintenance Électrique / Mécanique",
+        "title": "Technicien de Service sur le Terrain (Électrique / Mécanique)",
         "functionsPerformed": "",
         "skillsGained": ""
       },
@@ -210,7 +213,10 @@
     "page": "Page",
     "offerType": {
       "Full-time": "Temps plein",
-      "Internship": "Stage"
+      "Internship": "Stage",
+      "permanent": "Permanent",
+      "valid": "Valide jusqu'au",
+      "expired": "Expiré le"
     },
     "month": {
       "Present": "Présent",

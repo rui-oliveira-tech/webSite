@@ -80,6 +80,9 @@
     "underlayTitle": "Educação",
     "description": [
       {
+        "title": "Primeiros Socorros - Conscientização sobre Incêndios - Trabalho em Alturas - Manuseio Manual (GWO)"
+      },
+      {
         "title": "Curso de condução de empilhadores elétricos, combustão e gás"
       },
       {
@@ -135,7 +138,7 @@
     "underlayTitle": "Experiência",
     "description": [
       {
-        "title": "Manutenção Elétrica / Mecânica",
+        "title": "Técnico de Serviço de Campo (Elétrico / Mecânico)",
         "functionsPerformed": "",
         "skillsGained": ""
       },
@@ -210,7 +213,10 @@
     "page": "Página",
     "offerType": {
       "Full-time": "Tempo inteiro",
-      "Internship": "Estágio"
+      "Internship": "Estágio",
+      "permanent": "Permanente",
+      "valid": "Válido até",
+      "expired": "Expirado em"
     },
     "month": {
       "Present": "Presente",

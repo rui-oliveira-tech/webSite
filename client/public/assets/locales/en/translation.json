@@ -84,11 +84,26 @@
     "underlayTitle": "Education",
     "description": [
       {
+        "title": "First Aid - Fire Awareness - Working at Heights - Manual Handling (GWO)",
+        "companyTitle": "",
+        "company": "RelyOn Nutec",
+        "location": "Amsterdam, Nederland",
+        "website": "https://relyonnutec.com/",
+        "expirationDate": "2025-05-10",
+        "startDateDay": "8",
+        "startDateMonth": "May",
+        "startDateYear": "2023",
+        "endDateDay": "10",
+        "endDateMonth": "May",
+        "endDateYear": "2023"
+      },
+      {
         "title": "Driving course of electric forklifts, combustion and gas",
         "companyTitle": "",
         "company": "Cincork",
         "location": "Santa Maria de Lamas, Portugal",
         "website": "https://www.cincork.com/",
+        "expirationDate": "2022-05-31",
         "startDateDay": "",
         "startDateMonth": "",
         "startDateYear": "",
@@ -102,6 +117,7 @@
         "company": "CFPIC",
         "location": "São João da Madeira, Portugal",
         "website": "http://www.cfpic.pt/",
+        "expirationDate": "Permanent",
         "startDateDay": "",
         "startDateMonth": "",
         "startDateYear": "2012",
@@ -115,6 +131,7 @@
         "company": "Boavista",
         "location": "Santa Maria da Feira, Portugal",
         "website": "http://www.ecboavista.com/",
+        "expirationDate": "Permanent",
         "startDateDay": "",
         "startDateMonth": "",
         "startDateYear": "",
@@ -128,6 +145,7 @@
         "company": "Santa Maria da Feira",
         "location": "Santa Maria da Feira, Portugal",
         "website": "https://ae-smfeira.pt/",
+        "expirationDate": "Permanent",
         "startDateDay": "",
         "startDateMonth": "",
         "startDateYear": "2010",
@@ -280,7 +298,7 @@
     "underlayTitle": "Experience",
     "description": [
       {
-        "title": "Electrical / Mechanical Maintenance",
+        "title": "Field Service Technician (Electrical / Mechanical)",
         "functionsPerformed": "",
         "skillsGained": "",
         "company": "Vestas",
@@ -442,9 +460,26 @@
     "page": "Page",
     "offerType": {
       "Full-time": "Full-time",
-      "Internship": "Internship"
+      "Internship": "Internship",
+      "permanent": "Permanent",
+      "valid": "Valid until",
+      "expired": "Expired at"
     },
     "month": {
+      "number": {
+        "1": "Jan",
+        "2": "Feb",
+        "3": "Mar",
+        "4": "Apr",
+        "5": "May",
+        "6": "June",
+        "7": "July",
+        "8": "Aug",
+        "9": "Sept",
+        "10": "Oct",
+        "11": "Nov",
+        "12": "Dec"
+      },
       "Present": "Present",
       "Jan": "Jan",
       "Feb": "Feb",
