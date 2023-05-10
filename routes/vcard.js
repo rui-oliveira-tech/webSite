@@ -6,8 +6,8 @@ const fs = require("fs");
 
 const validateVcardType = (req, res, next) => {
   const { type } = req.params;
-  if (![config.type_0, config.type_1, config.type_2].includes(type)) {
-    res.status(404).json({ message: "This type does not exist!" });
+  if (![config.type_0, config.type_1, config.type_2, , config.type_company].includes(type)) {
+    return res.status(404).json({ message: "This type does not exist!" });
   }
   next();
 }
@@ -67,8 +67,8 @@ async function getVcard(type, fileName) {
       vCard.email = config.email;
       vCard.cellPhone = config.cellphone;
 
-      const privatePhotoPath = path.join(publicBasePath, "workFoto_vcard.jpg");
-      vCard.photo.embedFromFile(privatePhotoPath);
+      const privatePhotoPath_1 = path.join(publicBasePath, "workFoto_vcard.jpg");
+      vCard.photo.embedFromFile(privatePhotoPath_1);
       break;
 
     case config.type_2:
@@ -80,8 +80,22 @@ async function getVcard(type, fileName) {
       vCard.email = config.email;
       vCard.cellPhone = config.cellphone;
 
-      const privateSpecialPhotoPath = path.join(publicBasePath, "workFoto_vcard.jpg");
-      vCard.photo.embedFromFile(privateSpecialPhotoPath);
+      const privatePhotoPath_2 = path.join(publicBasePath, "workFoto_vcard.jpg");
+      vCard.photo.embedFromFile(privatePhotoPath_2);
+      break;
+
+
+    case config.type_company:
+      vCard.namePrefix = config.nameprefix_company;
+      vCard.title = config.title_company;
+      vCard.note = config.note_company;
+      // vCard.birthday = new Date(config.birthday);
+      //   vCard.anniversary = new Date(config.birthday);
+      vCard.email = config.email_company;
+      vCard.cellPhone = config.cellphone_email_company;
+
+      const privatePhotoPath_company = path.join(publicBasePath, "workFoto_vcard.jpg");
+      vCard.photo.embedFromFile(privatePhotoPath_company);
       break;
 
 
