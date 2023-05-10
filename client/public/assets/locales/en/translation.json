@@ -463,7 +463,9 @@
       "Internship": "Internship",
       "permanent": "Permanent",
       "valid": "Valid until",
-      "expired": "Expired at"
+      "expired": "Expired at",
+      "validDiplom": "Valid Diploma",
+      "expiredDiplom": "Expired Diploma"
     },
     "month": {
       "number": {

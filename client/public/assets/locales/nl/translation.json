@@ -217,7 +217,9 @@
       "Internship": "Stage",
       "permanent": "Permanent",
       "valid": "Geldig tot",
-      "expired": "Verlopen op"
+      "expired": "Verlopen op",
+      "validDiplom": "Geldig diploma",
+      "expiredDiplom": "Verlopen diploma"
     },
     "month": {
       "Present": "Nu",

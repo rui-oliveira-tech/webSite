@@ -216,7 +216,9 @@
       "Internship": "Stage",
       "permanent": "Permanent",
       "valid": "Valide jusqu'au",
-      "expired": "Expiré le"
+      "expired": "Expiré le",
+      "validDiplom": "Diplôme valide",
+      "expiredDiplom": "Diplôme expiré"
     },
     "month": {
       "Present": "Présent",
