@@ -78,7 +78,16 @@
   "education": {
     "overlayTitle": "O que eu aprendi",
     "underlayTitle": "Educação",
+    "key": {
+      "changeDiplomas": "Clique para alternar entre diplomas válidos e expirados"
+    },
     "description": [
+      {
+        "title": "VOL-VCA"
+      },
+      {
+        "title": "BA4"
+      },
       {
         "title": "Primeiros Socorros - Conscientização sobre Incêndios - Trabalho em Alturas - Manuseio Manual (GWO)"
       },

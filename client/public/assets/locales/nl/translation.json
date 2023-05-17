@@ -78,7 +78,16 @@
   "education": {
     "overlayTitle": "Wat ik heb geleerd",
     "underlayTitle": "Opleiding",
+    "key": {
+      "changeDiplomas": "Klik om te wisselen tussen geldige en verlopen diploma's"
+    },
     "description": [
+      {
+        "title": "VOL-VCA"
+      },
+      {
+        "title": "BA4"
+      },
       {
         "title": "EHBO - Brandbewustzijn - Werken op Hoogte - Handmatig Hanteren (GWO)"
       },

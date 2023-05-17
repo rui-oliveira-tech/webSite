@@ -82,7 +82,38 @@
     "img": "education",
     "overlayTitle": "What I've learned",
     "underlayTitle": "Education",
+    "key": {
+      "changeDiplomas": "Click to change between Valid and Expired Diplomas"
+    },
     "description": [
+      {
+        "title": "VOL-VCA",
+        "companyTitle": "",
+        "company": "PBNA",
+        "location": "Bergen op Zoom, Netherlands",
+        "website": "https://www.pbna.com/",
+        "expirationDate": "2033-05-17",
+        "startDateDay": "",
+        "startDateMonth": "",
+        "startDateYear": "",
+        "endDateDay": "17",
+        "endDateMonth": "May",
+        "endDateYear": "2023"
+      },
+      {
+        "title": "BA4",
+        "companyTitle": "",
+        "company": "Vestas",
+        "location": "Arnhem, Netherlands",
+        "website": "https://www.vestas.com/",
+        "expirationDate": "2024-05-12",
+        "startDateDay": "11",
+        "startDateMonth": "May",
+        "startDateYear": "2023",
+        "endDateDay": "12",
+        "endDateMonth": "May",
+        "endDateYear": "2023"
+      },
       {
         "title": "First Aid - Fire Awareness - Working at Heights - Manual Handling (GWO)",
         "companyTitle": "",
@@ -103,7 +134,7 @@
         "company": "Cincork",
         "location": "Santa Maria de Lamas, Portugal",
         "website": "https://www.cincork.com/",
-        "expirationDate": "2022-05-31",
+        "expirationDate": "2020-09-30",
         "startDateDay": "",
         "startDateMonth": "",
         "startDateYear": "",

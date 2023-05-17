@@ -78,7 +78,16 @@
   "education": {
     "overlayTitle": "Ce que j'ai appris",
     "underlayTitle": "Education",
+    "key": {
+      "changeDiplomas": "Cliquez pour basculer entre les diplômes valides et expirés"
+    },
     "description": [
+      {
+        "title": "VOL-VCA"
+      },
+      {
+        "title": "BA4"
+      },
       {
         "title": "Premiers Secours - Sensibilisation aux Incendies - Travail en Hauteur - Manutention Manuelle (GWO)"
       },
