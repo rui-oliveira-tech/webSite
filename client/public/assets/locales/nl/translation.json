@@ -233,6 +233,12 @@
       "validDiplom": "Geldig diploma",
       "expiredDiplom": "Verlopen diploma"
     },
+    "countries": {
+      "NL": "Netherlands",
+      "BE": "België",
+      "PT": "Portugal",
+      "D": "Duitsland"
+    },
     "month": {
       "Present": "Nu",
       "Jan": "Jan",

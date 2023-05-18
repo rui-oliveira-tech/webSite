@@ -501,6 +501,12 @@
       "validDiplom": "Valid Diploma",
       "expiredDiplom": "Expired Diploma"
     },
+    "countries": {
+      "NL": "Netherlands",
+      "BE": "Belgium",
+      "PT": "Portugal",
+      "D": "Germany"
+    },
     "month": {
       "number": {
         "1": "Jan",
