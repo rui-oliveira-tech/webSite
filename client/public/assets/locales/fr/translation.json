@@ -30,9 +30,9 @@
           "Je m'appelle Rui. Je suis électricien industriel."
         ],
         [
-          "Actuellement, je travaille na\n",
+          "Actuellement, je travaille chez\n",
           "{{company}}",
-          "\nin\n",
+          "\nen\n",
           "{{location}}.\n",
           "Cependant je suis entièrement et immédiatement disponible pour commencer à travailler."
         ],
@@ -218,6 +218,9 @@
       "sex": "Sexe",
       "dateOfBirth": "Date de naissance",
       "nationality": "Nationalité"
+    },
+    "preposition": {
+      "in": "à"
     },
     "page": "Page",
     "offerType": {

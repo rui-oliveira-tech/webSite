@@ -32,7 +32,7 @@
         [
           "Atualmente estou trabalhando na\n",
           "{{company}}",
-          "\nin\n",
+          "\nem\n",
           "{{location}}.\n",
           "No entanto tenho total e imediata disponibilidade para começar a trabalhar."
         ],
@@ -218,6 +218,9 @@
       "sex": "Sexo",
       "dateOfBirth": "Data de nascimento",
       "nationality": "Nacionalidade"
+    },
+    "preposition": {
+      "in": "em"
     },
     "page": "Página",
     "offerType": {
