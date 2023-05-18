@@ -57,7 +57,7 @@ module.exports = ({ currentLanguageCode, app_title, title, profile, characterist
 
   const experienceHtml = experiences?.map((experience, i) => `
       <div class="job${i === experiences.length - 1 ? ' last' : ''}">
-        <a class="experience link noBrake" target="_blank" rel="noreferrer" href="${experience.website}"><h2 class="noBrake">${experience.company}</h2> <h3 class="noBrake"> in ${experience.location}</h3></a >
+        <a class="experience link noBrake" target="_blank" rel="noreferrer" href="${experience.website}"><h2 class="noBrake">${experience.company}</h2> <h3 class="noBrake"> ${expressions.preposition.in} ${experience.location}</h3></a >
         <h4 class="experience">${experience.title}</h4>
         <h4 class="first intervalDate">${getIntervalDate(experience)}</h4>
         <h4 class="second intervalDate">${expressions.offerType[experience.offerType]}</h4>
@@ -68,7 +68,7 @@ module.exports = ({ currentLanguageCode, app_title, title, profile, characterist
   const educationHtml = educations?.map((education, i) => `
     <div class="job${i === educations.length - 1 ? ' last' : ''}">
       <h2 class="experience">${education.title}</h2>
-      <a class="experience link noBrake" target="_blank" rel="noreferrer" href="${education.website}"><h3 class="noBrake">${education.company}</h3> <h4 class="noBrake"> in ${education.location}</h4></a >
+      <a class="experience link noBrake" target="_blank" rel="noreferrer" href="${education.website}"><h3 class="noBrake">${education.company}</h3> <h4 class="noBrake"> ${expressions.preposition.in} ${education.location}</h4></a >
       <h4 class="first intervalDate">${getIntervalDate(education)}</h4>
     </div>`);
 

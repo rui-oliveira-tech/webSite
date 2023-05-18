@@ -16,7 +16,7 @@ export default function Experience(props) {
         {t('experience.description', { returnObjects: true }).map((degree, i) => (
           <React.Fragment key={i}>
             <p className="light big subTitle">{degree.title}</p>
-            <a className="textGlue medium" target="_blank" rel="noreferrer" href={t(`experience.description.${i}.website`)}>{t(`experience.description.${i}.company`)} in {t(`experience.description.${i}.location`)}</a>
+            <a className="textGlue medium" target="_blank" rel="noreferrer" href={t(`experience.description.${i}.website`)}>{t(`experience.description.${i}.company`)} {t(`expressions.preposition.in`)} {t(`experience.description.${i}.location`)}</a>
             <p className="text small">{
               t(`experience.description.${i}.startDateYear`) === "" ? "" :
                 t(`experience.description.${i}.startDateDay`)
