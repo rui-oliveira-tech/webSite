@@ -20,11 +20,9 @@ export default function Education(props) {
 
   function formatDate(date) {
     if (date === "Permanent") return t(`expressions.offerType.permanent`);
-    const parts = date.split('-');
-    const year = parts[0];
-    const month = Number(parts[1]);
-    const day = Number(parts[2]);
-    return `${day} ${t(`expressions.month.number.${month - 1}`)} ${year}`;
+    if (date === "Present") return t(`expressions.month.present`);
+    const [year, month, day] = date.split('-').map(Number);
+    return [day ? `${day}` : '', month ? t(`expressions.month.${month}`) : '', year].join(' ').trim();
   }
 
   return (
@@ -38,10 +36,10 @@ export default function Education(props) {
         {t('education.description', { returnObjects: true }).map((degree, i) => {
           if (!isExpirationDatePassed(t(`education.description.${i}.expirationDate`)) && showValid) {
             degree.title = `${degree.title} (${t(`education.description.${i}.expirationDate`) === "Permanent" ? `` : `${t(`expressions.offerType.valid`)} `}${formatDate(t(`education.description.${i}.expirationDate`))})`
-            return educationInfo(t, degree, i);
+            return educationInfo(formatDate, t, degree, i);
           } else if (isExpirationDatePassed(t(`education.description.${i}.expirationDate`)) && !showValid) {
             degree.title = `${degree.title} (${t(`expressions.offerType.expired`)} ${formatDate(t(`education.description.${i}.expirationDate`))})`
-            return educationInfo(t, degree, i);
+            return educationInfo(formatDate, t, degree, i);
           }
         })}
       </div>
@@ -49,7 +47,7 @@ export default function Education(props) {
   )
 }
 
-function educationInfo(t, degree, i) {
+function educationInfo(formatDate, t, degree, i) {
   return (
     <React.Fragment key={i}>
       <p className="light big subTitle">{degree.title}</p>
@@ -57,16 +55,8 @@ function educationInfo(t, degree, i) {
         {degree.companyTitle} {t(`education.description.${i}.company`)} {t(`expressions.preposition.in`)} {t(`education.description.${i}.location`)}
       </a>
       <p className="text small">
-        {t(`education.description.${i}.startDateYear`) === "" ? "" :
-          t(`education.description.${i}.startDateDay`)
-          + " " + (t(`education.description.${i}.startDateMonth`) === "" ? "" : t(`expressions.month.${t(`education.description.${i}.startDateMonth`)}`))
-          + " " + t(`education.description.${i}.startDateYear`)
-          + " - "}
-        {t(`education.description.${i}.endDateYear`) === "" ? "" :
-          t(`education.description.${i}.endDateYear`) === "Present" ? t(`expressions.month.Present`) :
-            t(`education.description.${i}.endDateDay`)
-            + " " + (t(`education.description.${i}.endDateMonth`) === "" ? "" : t(`expressions.month.${t(`education.description.${i}.endDateMonth`)}`))
-            + " " + t(`education.description.${i}.endDateYear`)}
+        {formatDate(t(`education.description.${i}.startDate`)) === "0" ? '' : `${formatDate(t(`education.description.${i}.startDate`)) + " - "}`}
+        {formatDate(t(`education.description.${i}.endDate`))}
       </p>
     </React.Fragment>
   );

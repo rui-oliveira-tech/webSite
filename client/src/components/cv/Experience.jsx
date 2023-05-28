@@ -6,6 +6,13 @@ import "./Cv.scss";
 export default function Experience(props) {
   const { t } = useTranslation();
 
+  function formatDate(date) {
+    if (date === "Permanent") return t(`expressions.offerType.permanent`);
+    if (date === "Present") return t(`expressions.month.present`);
+    const [year, month, day] = date.split('-').map(Number);
+    return [day ? `${day}` : '', month ? t(`expressions.month.${month}`) : '', year].join(' ').trim();
+  }
+
   return (
     <div className="module" style={{ gridArea: "experience", backgroundImage: `url(${props.cardImages[t('experience.img')]})` }}>
       <div className={"overlay " + props.animatedOverlay.current} style={{ backgroundImage: `${props.gradient}, url(${props.cardImages[t('experience.img')]})` }}>
@@ -17,18 +24,9 @@ export default function Experience(props) {
           <React.Fragment key={i}>
             <p className="light big subTitle">{degree.title}</p>
             <a className="textGlue medium" target="_blank" rel="noreferrer" href={t(`experience.description.${i}.website`)}>{t(`experience.description.${i}.company`)} {t(`expressions.preposition.in`)} {t(`experience.description.${i}.location`)}</a>
-            <p className="text small">{
-              t(`experience.description.${i}.startDateYear`) === "" ? "" :
-                t(`experience.description.${i}.startDateDay`)
-                + " " + (t(`experience.description.${i}.startDateMonth`) === "" ? "" : t(`expressions.month.${t(`experience.description.${i}.startDateMonth`)}`))
-                + " " + t(`experience.description.${i}.startDateYear`)
-                + " - "}
-              {t(`experience.description.${i}.endDateYear`) === "" ? "" :
-                t(`experience.description.${i}.endDateYear`) === "Present" ? t(`expressions.month.Present`) + " -> " :
-                  t(`experience.description.${i}.endDateDay`)
-                  + " " + (t(`experience.description.${i}.endDateMonth`) === "" ? "" : t(`expressions.month.${t(`experience.description.${i}.endDateMonth`)}`))
-                  + " " + t(`experience.description.${i}.endDateYear`)
-                  + " -> "}
+            <p className="text small">
+              {formatDate(t(`experience.description.${i}.startDate`)) === "0" ? '' : `${formatDate(t(`experience.description.${i}.startDate`)) + " - "}`}
+              {formatDate(t(`experience.description.${i}.endDate`)) + " -> "}
               {t(`expressions.offerType.${t(`experience.description.${i}.offerType`)}`)}
             </p>
             <p className="light text medium textSpacement">{degree.skillsGained}</p>

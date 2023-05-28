@@ -93,12 +93,8 @@
         "location": "Bergen op Zoom, Netherlands",
         "website": "https://www.pbna.com/",
         "expirationDate": "2033-05-17",
-        "startDateDay": "",
-        "startDateMonth": "",
-        "startDateYear": "",
-        "endDateDay": "17",
-        "endDateMonth": "May",
-        "endDateYear": "2023"
+        "startDate": "",
+        "endDate": "2023-05-17"
       },
       {
         "title": "BA4",
@@ -107,12 +103,8 @@
         "location": "Arnhem, Netherlands",
         "website": "https://www.vestas.com/",
         "expirationDate": "2024-05-12",
-        "startDateDay": "11",
-        "startDateMonth": "May",
-        "startDateYear": "2023",
-        "endDateDay": "12",
-        "endDateMonth": "May",
-        "endDateYear": "2023"
+        "startDate": "2023-05-11",
+        "endDate": "2023-05-12"
       },
       {
         "title": "First Aid - Fire Awareness - Working at Heights - Manual Handling (GWO)",
@@ -121,12 +113,8 @@
         "location": "Amsterdam, Nederland",
         "website": "https://relyonnutec.com/",
         "expirationDate": "2025-05-10",
-        "startDateDay": "8",
-        "startDateMonth": "May",
-        "startDateYear": "2023",
-        "endDateDay": "10",
-        "endDateMonth": "May",
-        "endDateYear": "2023"
+        "startDate": "2023-05-8",
+        "endDate": "2023-05-10"
       },
       {
         "title": "Driving course of electric forklifts, combustion and gas",
@@ -134,13 +122,9 @@
         "company": "Cincork",
         "location": "Santa Maria de Lamas, Portugal",
         "website": "https://www.cincork.com/",
-        "expirationDate": "2020-09-30",
-        "startDateDay": "",
-        "startDateMonth": "",
-        "startDateYear": "",
-        "endDateDay": "4",
-        "endDateMonth": "May",
-        "endDateYear": "2018"
+        "expirationDate": "Permanent",
+        "startDate": "2020-09-30",
+        "endDate": "2018-05-04"
       },
       {
         "title": "Electronic, automation and maintenance +1500 hours InternshipElectronic",
@@ -149,12 +133,8 @@
         "location": "São João da Madeira, Portugal",
         "website": "http://www.cfpic.pt/",
         "expirationDate": "Permanent",
-        "startDateDay": "",
-        "startDateMonth": "",
-        "startDateYear": "2012",
-        "endDateDay": "22",
-        "endDateMonth": "Apr",
-        "endDateYear": "2015"
+        "startDate": "2012",
+        "endDate": "2015-04-22"
       },
       {
         "title": "Driving license AM / B / B1 ",
@@ -163,12 +143,8 @@
         "location": "Santa Maria da Feira, Portugal",
         "website": "http://www.ecboavista.com/",
         "expirationDate": "Permanent",
-        "startDateDay": "",
-        "startDateMonth": "",
-        "startDateYear": "",
-        "endDateDay": "4",
-        "endDateMonth": "Dec",
-        "endDateYear": "2015"
+        "startDate": "",
+        "endDate": "2015-12-04"
       },
       {
         "title": "High School, Course of Sciences and Technologies",
@@ -177,12 +153,8 @@
         "location": "Santa Maria da Feira, Portugal",
         "website": "https://ae-smfeira.pt/",
         "expirationDate": "Permanent",
-        "startDateDay": "",
-        "startDateMonth": "",
-        "startDateYear": "2010",
-        "endDateDay": "",
-        "endDateMonth": "",
-        "endDateYear": "2012"
+        "startDate": "2010",
+        "endDate": "2012"
       }
     ]
   },
@@ -336,12 +308,8 @@
         "location": "Belgium",
         "website": "https://www.vestas.com/",
         "offerType": "Full-time",
-        "startDateDay": "",
-        "startDateMonth": "May",
-        "startDateYear": "2023",
-        "endDateDay": "",
-        "endDateMonth": "",
-        "endDateYear": "Present"
+        "startDate": "2023-05",
+        "endDate": "Present"
       },
       {
         "title": "Industrial Electrician",
@@ -351,12 +319,8 @@
         "location": "Evergem, Belgium",
         "website": "https://agpglass.com/",
         "offerType": "Full-time",
-        "startDateDay": "",
-        "startDateMonth": "Mar",
-        "startDateYear": "2023",
-        "endDateDay": "",
-        "endDateMonth": "May",
-        "endDateYear": "2023"
+        "startDate": "2023-03",
+        "endDate": "2023-05"
       },
       {
         "title": "Industrial Electrician",
@@ -366,12 +330,8 @@
         "location": "Oelegem, Belgium",
         "website": "https://www.socea.be/",
         "offerType": "Full-time",
-        "startDateDay": "",
-        "startDateMonth": "May",
-        "startDateYear": "2019",
-        "endDateDay": "",
-        "endDateMonth": "Mar",
-        "endDateYear": "2023"
+        "startDate": "2019-05",
+        "endDate": "2023-03"
       },
       {
         "title": "Cold technician",
@@ -381,12 +341,8 @@
         "location": "Beveren, Belgium",
         "website": "https://www.msc.com/",
         "offerType": "Full-time",
-        "startDateDay": "",
-        "startDateMonth": "July",
-        "startDateYear": "2018",
-        "endDateDay": "",
-        "endDateMonth": "May",
-        "endDateYear": "2019"
+        "startDate": "2018-07",
+        "endDate": "2019-05"
       },
       {
         "title": "Industrial Electrician",
@@ -396,12 +352,8 @@
         "location": "Lourosa, Portugal",
         "website": "https://www.sersan.pt/",
         "offerType": "Full-time",
-        "startDateDay": "",
-        "startDateMonth": "Feb",
-        "startDateYear": "2015",
-        "endDateDay": "",
-        "endDateMonth": "July",
-        "endDateYear": "2018"
+        "startDate": "2015-02",
+        "endDate": "2018-07"
       },
       {
         "title": "Electronic, automation and maintenance (1500 hours)",
@@ -411,12 +363,8 @@
         "location": "Milheirós de Poiares, Portugal",
         "website": "https://www.sersan.pt/",
         "offerType": "Internship",
-        "startDateDay": "",
-        "startDateMonth": "",
-        "startDateYear": "2012",
-        "endDateDay": "",
-        "endDateMonth": "",
-        "endDateYear": "2015"
+        "startDate": "2012",
+        "endDate": "2015"
       }
     ]
   },
@@ -429,23 +377,15 @@
         "title": "Home Assistant",
         "description": "My house is powered by a Raspberry Pi 4 and is automated using Home Assistant. With this setup, I have the ability to control various aspects such as lights, sensors, and robots, both internally (without an internet connection) and externally (via VPN \"Tailscale\" and IP masked by \"Duck DNS\").",
         "website": "https://github.com/rui-oliveira-tech/homeAssistant/",
-        "startDateDay": "7",
-        "startDateMonth": "Feb",
-        "startDateYear": "2021",
-        "endDateDay": "",
-        "endDateMonth": "",
-        "endDateYear": "Present"
+        "startDate": "2021-02-07",
+        "endDate": "Present"
       },
       {
         "title": "Website",
         "description": "This website was created with the aim of promoting information about my professional career, in a way that is accessible to companies and interested people.The purpose of this website is to showcase my professional career and make information easily accessible to companies and individuals who are interested in learning more about me.",
         "website": "https://github.com/rui-oliveira-tech/webSite/",
-        "startDateDay": "11",
-        "startDateMonth": "Feb",
-        "startDateYear": "2022",
-        "endDateDay": "",
-        "endDateMonth": "",
-        "endDateYear": "Present"
+        "startDate": "2022-02-11",
+        "endDate": "Present"
       }
     ]
   },
@@ -457,22 +397,14 @@
       {
         "title": "Off We Go – IB&C WEEKS",
         "description": "Scholar Exchange experience.",
-        "startDateDay": "17",
-        "startDateMonth": "May",
-        "startDateYear": "2014",
-        "endDateDay": "25",
-        "endDateMonth": "May",
-        "endDateYear": "2014"
+        "startDate": "2014-05-17",
+        "endDate": "2014-05-25"
       },
       {
         "title": "Europe tour",
         "description": "Countries I visited.",
-        "startDateDay": "7",
-        "startDateMonth": "Feb",
-        "startDateYear": "2021",
-        "endDateDay": "",
-        "endDateMonth": "",
-        "endDateYear": "Present"
+        "startDate": "2021-02-07",
+        "endDate": "Present"
       }
     ]
   },
@@ -508,33 +440,19 @@
       "D": "Germany"
     },
     "month": {
-      "number": {
-        "1": "Jan",
-        "2": "Feb",
-        "3": "Mar",
-        "4": "Apr",
-        "5": "May",
-        "6": "June",
-        "7": "July",
-        "8": "Aug",
-        "9": "Sept",
-        "10": "Oct",
-        "11": "Nov",
-        "12": "Dec"
-      },
-      "Present": "Present",
-      "Jan": "Jan",
-      "Feb": "Feb",
-      "Mar": "Mar",
-      "Apr": "Apr",
-      "May": "May",
-      "June": "June",
-      "July": "July",
-      "Aug": "Aug",
-      "Sept": "Sept",
-      "Oct": "Oct",
-      "Nov": "Nov",
-      "Dec": "Dec"
+      "present": "Present",
+      "1": "Jan",
+      "2": "Feb",
+      "3": "Mar",
+      "4": "Apr",
+      "5": "May",
+      "6": "June",
+      "7": "July",
+      "8": "Aug",
+      "9": "Sept",
+      "10": "Oct",
+      "11": "Nov",
+      "12": "Dec"
     }
   }
 }

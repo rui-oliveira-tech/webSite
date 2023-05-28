@@ -239,19 +239,19 @@
       "D": "Alemanha"
     },
     "month": {
-      "Present": "Presente",
-      "Jan": "Jan",
-      "Feb": "Fev",
-      "Mar": "Março",
-      "Apr": "Abril",
-      "May": "Maio",
-      "June": "Junho",
-      "July": "Julho",
-      "Aug": "Agosto",
-      "Sept": "Set",
-      "Oct": "Out",
-      "Nov": "Nov",
-      "Dec": "Dez"
+      "present": "Presente",
+      "1": "Jan",
+      "2": "Fev",
+      "3": "Março",
+      "4": "Abril",
+      "5": "Maio",
+      "6": "Junho",
+      "7": "Julho",
+      "8": "Agosto",
+      "9": "Set",
+      "10": "Out",
+      "11": "Nov",
+      "12": "Dez"
     }
   }
 }

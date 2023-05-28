@@ -5,15 +5,17 @@ module.exports = ({ currentLanguageCode, app_title, title, profile, characterist
   const template = path.resolve(__dirname, "./cvTemplate.html")
 
 
-  function getIntervalDate(arg) {
-    return `${arg.startDateYear === "" ? "" : arg.startDateDay
-      + " " + (arg.startDateMonth === "" ? "" : expressions.month[arg.startDateMonth]) + " " + arg.startDateYear + " - "
-      }
+  function formatDate(date) {
+    if (date === "Permanent") return expressions.offerType.permanent;
+    if (date === "Present") return expressions.month.present;
+    const [year, month, day] = date.split('-').map(Number);
+    return [day ? `${day}` : '', month ? expressions.month[month] : '', year].join(' ').trim();
+  }
 
-    ${arg.endDateYear === "" ? "" :
-        arg.endDateYear === "Present" ? expressions.month.Present :
-          arg.endDateDay + " " + (arg.endDateMonth === "" ? "" : expressions.month[arg.endDateMonth]) + " " + arg.endDateYear
-      }`;
+
+  function getIntervalDate(arg) {
+    return `${formatDate(arg.startDate) === "0" ? '' : `${formatDate(arg.startDate) + " - "}`}
+    ${formatDate(arg.endDate)}`;
   }
 
   const profileHtml = (`${profile}`);
