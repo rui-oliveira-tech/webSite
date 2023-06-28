@@ -573,6 +573,13 @@ export const googleMapsMarkers = [
         marker: Marker,
         zoom: 9,
     },
+    {
+        id: getNextId(),
+        country: "Germany",
+        city: "Hamburg",
+        marker: Marker,
+        zoom: 9,
+    },
     //-----------------------// Netherlands //-----------------------//
     {
         id: getNextId(),
