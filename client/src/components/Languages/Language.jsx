@@ -47,9 +47,11 @@ function Language(props) {
               onClick={onClickChangeLanguage(code)}
             >
               <span
-                className={`flag-icon flag-icon-${country_code} mx-2`}
+                className={`flag-icon mx-2`}
                 style={{
                   opacity: currentLanguageCode === code ? 0.5 : 1,
+                  backgroundImage: `url(${images[country_code]})`
+                  // bootstrap class was `flag-icon-${country_code}`
                 }}
               ></span>
               {name}

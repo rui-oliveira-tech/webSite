@@ -33,7 +33,9 @@ export default function Languages(props) {
             </tr>
             {t('languages.description', { returnObjects: true }).map((degree, i) => (
               <tr className="color" key={i}>
-                <td className="noBorder left"><span className={"flag-icon flag-icon-" + t(`languages.description.${i}.flag`)}></span>{degree.language}</td>
+                <td className="noBorder left"><span className={"flag-icon "} style={{
+                  backgroundImage: `url(${props.images[`languages/${t(`languages.description.${i}.flag`)}`]})`
+                }}></span>{degree.language}</td>
                 <td>{t(`languages.description.${i}.listening`)}</td>
                 <td>{t(`languages.description.${i}.reading`)}</td>
                 <td>{t(`languages.description.${i}.spokenInteraction`)}</td>
