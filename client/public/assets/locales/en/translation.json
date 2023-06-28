@@ -87,6 +87,36 @@
     },
     "description": [
       {
+        "title": "Basic Technical - Mechanical",
+        "companyTitle": "",
+        "company": "RelyOn Nutec",
+        "location": "Amsterdam, Nederland",
+        "website": "https://relyonnutec.com/",
+        "expirationDate": "Permanent",
+        "startDate": "2023-06-19",
+        "endDate": "2023-06-22"
+      },
+      {
+        "title": "Basic Technical - Hydraulic",
+        "companyTitle": "",
+        "company": "RelyOn Nutec",
+        "location": "Amsterdam, Nederland",
+        "website": "https://relyonnutec.com/",
+        "expirationDate": "Permanent",
+        "startDate": "2023-06-19",
+        "endDate": "2023-06-22"
+      },
+      {
+        "title": "Basic Technical - Electrical",
+        "companyTitle": "",
+        "company": "RelyOn Nutec",
+        "location": "Amsterdam, Nederland",
+        "website": "https://relyonnutec.com/",
+        "expirationDate": "Permanent",
+        "startDate": "2023-06-19",
+        "endDate": "2023-06-22"
+      },
+      {
         "title": "VOL-VCA",
         "companyTitle": "",
         "company": "PBNA",
