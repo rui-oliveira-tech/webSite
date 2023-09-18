@@ -37,7 +37,7 @@ async function getVcard(type, fileName) {
   vCard.firstName = 'Rui';
   vCard.lastName = 'Oliveira';
   vCard.gender = 'M';
-  vCard.workPhone = '+32474127175';
+  if (type !== config.type_company) vCard.workPhone = '+32474127175';
   vCard.workEmail = 'hire@rui-oliveira.com';
   vCard.url = 'https://www.rui-oliveira.com/';
   vCard.socialUrls['linkedIn'] = 'https://www.linkedin.com/in/rui-oliveira--tech/';
@@ -91,7 +91,7 @@ async function getVcard(type, fileName) {
       vCard.note = config.note_company;
       // vCard.birthday = new Date(config.birthday);
       //   vCard.anniversary = new Date(config.birthday);
-      vCard.email = config.email_company;
+      vCard.workEmail = config.email_company;
       vCard.cellPhone = config.cellphone_email_company;
 
       const privatePhotoPath_company = path.join(publicBasePath, "workFoto_vcard.jpg");
