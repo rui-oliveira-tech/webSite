@@ -7,6 +7,7 @@ module.exports = {
         '[rui-oliveira.netlify.app]',
         'http://www.rui-oliveira.com',
         'https://www.rui-oliveira.com',
+        'https://web-site-nu.vercel.app',
         'http://localhost',
         'http://localhost:3000',
     ],
