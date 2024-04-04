@@ -595,6 +595,21 @@ export const googleMapsMarkers = [
         marker: Marker,
         zoom: 9,
     },
+    {
+        id: getNextId(),
+        country: "Netherlands",
+        city: "Zwolle",
+        marker: Marker,
+        zoom: 9,
+    },
+    //-----------------------// United Kingdom //-----------------------//
+    {
+        id: getNextId(),
+        country: "United Kingdom",
+        city: "London",
+        marker: Marker,
+        zoom: 9,
+    },
     //-----------------------// Denmark //-----------------------//
     {
         id: getNextId(),
