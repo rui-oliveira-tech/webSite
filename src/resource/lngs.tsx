@@ -10,9 +10,8 @@ import langImg from "@/images/languages/language.svg";
 export const languageImg = langImg;
 
 export const defaultLanguage = "en";
-
 // if a language add chande on middleware.ts
-export const languageList: Language[] = [
+export const languageList = [
   {
     code: "en",
     img: enImg,
@@ -38,11 +37,13 @@ export const languageList: Language[] = [
     img: esImg,
     langTranslationList: false,
   },
-];
+] as const satisfies Language[];
 
 export const supportedLngs = languageList
   .filter((language) => language.langTranslationList)
   .map((language) => language.code);
+
+export type Locale = typeof supportedLngs[number];
 
 export type Language = {
   code: string;

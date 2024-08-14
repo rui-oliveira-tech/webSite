@@ -8,7 +8,9 @@ import classNames from "classnames";
 
 import "./Language.scss";
 
-import { languageImg, languageList } from "@/resource/lngs";
+import { languageImg, languageList, Locale } from "@/resource/lngs";
+import Link from "next/link";
+import { setUserLocale } from "./cookies";
 
 interface LanguageProps {
   params: {
@@ -24,15 +26,16 @@ const Languages: React.FC<LanguageProps> = (props) => {
   const [isPending, startTransition] = useTransition();
   const pathname = usePathname();
 
-  const onSelectChange =
-    (lang: string): React.FormEventHandler<HTMLButtonElement> =>
-    (event) => {
-      event.preventDefault();
-      startTransition(() => {
-        const newPath = pathname.replace(`/${locale}`, `/${lang}`);
-        router.replace(newPath);
-      });
-    };
+  const onLanguageChange =
+    (lang: Locale): React.FormEventHandler<HTMLButtonElement> =>
+      (event) => {
+        event.preventDefault();
+        startTransition(() => {
+          setUserLocale(lang)
+          const newPath = pathname.replace(`/${locale}`, `/${lang}`);
+          router.replace(newPath);
+        });
+      };
 
   const languageListUpdated = languageList.map((language) => ({
     ...language,
@@ -67,7 +70,7 @@ const Languages: React.FC<LanguageProps> = (props) => {
                     disabled: locale === code,
                   })}
                   disabled={isPending}
-                  onClick={onSelectChange(code)}
+                  onClick={onLanguageChange(code)}
                 >
                   <Image
                     className="inline mr-2 ml-2"
