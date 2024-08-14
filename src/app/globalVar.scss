@@ -1,0 +1,54 @@
+#root {
+  --loadingAnimation: 3.5s;
+
+  --languagesTableColor: 0, 183, 255;
+  --linkColor: rgb(119, 34, 51);
+  --titleColor: #00b7ff;
+  --textColor: #111;
+  --scrollArrowColor: #fff;
+  --hireMeButtonColor__home: #000000;
+  --hireMeButtonColor__about: #ffffff;
+  --backgroundColor0: #ffffff;
+  --backgroundColor1: rgba(255, 255, 255, 0.3);
+  --backgroundColor2: rgba(238, 238, 238, 0.9);
+  --deepBlue: #344757;
+
+  --textSize: 0.8;
+  --pageBorder: 4em;
+  @media (min-width: 270px) and (max-width: 600px) {
+    --pageBorder: 2em;
+  }
+
+  @media (min-width: 601px) and (max-width: 1023px) {
+    --pageBorder: 3em;
+  }
+}
+$Color: #00b7ff;
+
+.wideGrid {
+  width: calc(100% - var(--pageBorder));
+  margin: 0 auto;
+}
+.have_NavigationBar {
+  width: 100%;
+
+  position: relative;
+  padding-top: calc(var(--textSize) * 8em);
+
+  @media (min-width: 270px) and (max-width: 600px) {
+    padding-top: calc(var(--textSize) * 6em);
+  }
+
+  @media (min-width: 601px) and (max-width: 1023px) {
+    padding-top: calc(var(--textSize) * 7em);
+  }
+}
+
+.have_footer {
+  position: relative;
+  padding-bottom: 6.5em;
+
+  @media (min-width: 601px) {
+    padding-bottom: 7.5em;
+  }
+}

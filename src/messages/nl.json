@@ -1,0 +1,253 @@
+{
+  "app_title": "Rui Oliveira - Elektricien  Industrieel | Residencial",
+  "app_description": "Een industriële elektricien met meer dan 5 jaar ervaring op zoek naar vacatures.",
+  "characteristics": {
+    "sex": "Man",
+    "nationality": "Portugees"
+  },
+  "navigationBar": {
+    "homepage": "Home",
+    "cv": "Curriculum Vitae",
+    "portfolio": "Portefeuille"
+  },
+  "footer": {
+    "mailButton": "Contact mij"
+  },
+  "home": {
+    "subTitle": {
+      "first": "Industrieel Elektricien",
+      "second": "Residencial Electrician",
+      "third": "Schematisch projecteren"
+    },
+    "cvButton": "Downloaden Cv"
+  },
+  "about": {
+    "overlayTitle": "Wie ik ben",
+    "underlayTitle": "Over",
+    "description": {
+      "cv": "Als elektrisch professional heb ik een gevarieerd scala aan vaardigheden en expertise ontwikkeld die mij een waardevolle toevoeging zouden maken aan elk team. Met een passie voor elektrotechniek en een toewijding om op de hoogte te blijven van de nieuwste technologieën, ben ik ervan overtuigd dat ik elk uitdaging aankan.",
+      "salutation": "Ik ben Rui. Ik ben industrieel elektricien.",
+      "workingSituation": "Ik werk momenteel bij het bedrijf \n",
+      "body": {
+        "0": "Ik heb uitstekende kennis van elektriciteit, pneumatiek, hydrauliek, interpretatie van schema's, informatica in het perspectief van de gebruiker, evenals in het gebruik van internet.",
+        "1": "Mijn sterke punten zijn Elektrificatie van elektrische borden en constructies, industrieel onderhoud en reparatie.",
+        "2": "Ik heb ook ervaring in industriële automatisering en elektromechanica.",
+        "3": "Ik heb een goede teamgeest, coöperatief en met een voorliefde voor kennis en leren.",
+        "4": "Mijn voorkeur gaat uit naar het werken als industrieel elektricien, maar ik sluit de mogelijkheid niet uit om een ​​andere functie op verschillende gebieden uit te voeren."
+      },
+      "complimentaryClose": "Neem contact met mij op"
+    }
+  },
+  "skills": [
+    {
+      "title": "Ontwerp en analyse systemen",
+      "description": "Ervaring in het ontwerpen van elektrische systemen voor een verscheidenheid aan toepassingen, met expertise in softwaretools zoals Visio en AutoCAD om deze systemen te analyseren en optimaliseren."
+    },
+    {
+      "title": "Probleemoplossing en oplossen van problemen",
+      "description": "Sterke analytische vaardigheden om snel problemen met elektrische systemen te identificeren en effectieve oplossingen te ontwikkelen om deze op te lossen."
+    },
+    {
+      "title": "Testen en inspectie",
+      "description": "Achtergrond in het testen en inspecteren van elektrische systemen om naleving en functionaliteit te garanderen, met de mogelijkheid om gedetailleerde rapporten over bevindingen te verstrekken."
+    },
+    {
+      "title": "Projectmanagement",
+      "description": "Succesvol beheer van talloze elektrische projecten van begin tot eind, waarbij hoogwaardige resultaten binnen budget en op tijd worden geleverd."
+    },
+    {
+      "title": "Veiligheid en naleving",
+      "description": "Sterke focus op veiligheid en naleving in alle aspecten van elektrisch werk."
+    },
+    {
+      "title": "Communicatie en samenwerking",
+      "description": "Uitstekende communicatie- en samenwerkingsvaardigheden, waardoor succesvolle resultaten worden behaald door teamwork."
+    }
+  ],
+  "educations": {
+    "overlayTitle": "Wat ik heb geleerd",
+    "underlayTitle": "Opleiding",
+    "key": {
+      "changeDiplomas": "Klik om te wisselen tussen geldige en verlopen diploma's"
+    },
+    "description": [
+      {
+        "title": "Slinger Signaller (GWO)"
+      },
+      {
+        "title": "Basis Technisch - Mechanisch"
+      },
+      {
+        "title": "Basis technisch - hydraulisch"
+      },
+      {
+        "title": "Basis technisch - elektrisch"
+      },
+      {
+        "title": "VOL-VCA"
+      },
+      {
+        "title": "BA4"
+      },
+      {
+        "title": "EHBO - Brandbewustzijn - Werken op Hoogte - Handmatig Hanteren (GWO)"
+      },
+      {
+        "title": "Rijopleiding elektrische heftrucks, verbranding en gas"
+      },
+      {
+        "title": "Elektronisch, automatisering en onderhoud +1500 uur Stage Elektronisch"
+      },
+      {
+        "title": "Rijbewijs AM / B / B1 ",
+        "companyTitle": "Driving school"
+      },
+      {
+        "title": "Middelbare school, cursus wetenschappen en technologieën",
+        "companyTitle": "Middelbare school van"
+      }
+    ]
+  },
+  "languages": {
+    "overlayTitle": "Wat ik spreek",
+    "underlayTitle": "Talen",
+    "key": {
+      "language": "TAAL",
+      "understanding": "BEGRIP",
+      "speaking": "SPREKEN",
+      "writing": "SCHRIJVEN",
+      "listening": "Luisteren",
+      "reading": "Lezing",
+      "interaction": "Interactie",
+      "production": "Productie",
+      "levels": "Niveaus: A1/2: Basis - B1/2: Onafhankelijk - C1/2 bekwaam",
+      "framework": "Gemeenschappelijk Europees Referentiekader voor Talen"
+    },
+    "description": []
+  },
+  "programmingLanguages": {
+    "overlayTitle": "Wat ik programmeer",
+    "underlayTitle": "Programmeertalen"
+  },
+  "experiences": {
+    "overlayTitle": "Wat ik heb gedaan",
+    "underlayTitle": "Ervaring",
+    "description": [
+      {
+        "title": "Veldservice Technicus (Elektrisch / Mechanisch)",
+        "functionsPerformed": "",
+        "skillsGained": ""
+      },
+      {
+        "title": "Industrieel Elektricien",
+        "functionsPerformed": "Glasmachines, elektrische en mechanische storingen oplossen, PLC + robotarmen.",
+        "skillsGained": ""
+      },
+      {
+        "title": "Industrieel Elektricien",
+        "functionsPerformed": "Opsporen en oplossen van problemen met machines, kabelgoten installeren, kabels doorvoeren, elektrische borden aansluiten, stekkers vervangen, lampen, schakelaars, mechanica basis.",
+        "skillsGained": "Reparatie en communicatieve vaardigheden."
+      },
+      {
+        "title": "Koude technicus",
+        "functionsPerformed": "Reparatie en onderhoud van koelcontainers,\"PTI\", koper lassen en vervanging van motoren en sensoren.",
+        "skillsGained": "Reparatie en communicatieve vaardigheden."
+      },
+      {
+        "title": "Industrial Electrician",
+        "functionsPerformed": "Reparatie van industriële machines (elektrisch en elektromechanische), uitwerking en elektrificatie van elektrische borden, elektrische assemblage van machines en constructies van transport van kurk en beginner van programmering en automatisering van PLC (OMRON).",
+        "skillsGained": "Repareren, bouwen, ontwikkelen en analytisch vermogen."
+      },
+      {
+        "title": "Elektronica, automatisering en onderhoud (1500 uur)",
+        "functionsPerformed": "Reparatie en onderhoud van huishoudelijke apparaten.",
+        "skillsGained": "Communicatie, motoren, reparatie- en verkoopvaardigheden."
+      }
+    ]
+  },
+  "projects": {
+    "overlayTitle": "Wat ik heb gemaakt",
+    "underlayTitle": "Projecten",
+    "description": [
+      {
+        "title": "Home Assistant",
+        "website": "https://github.com/rui-oliveira-tech/homeAssistant/",
+        "description": "Mijn huis wordt aangedreven door een Raspberry Pi 4 en is geautomatiseerd met behulp van Home Assistant. Met deze opstelling heb ik de mogelijkheid om verschillende aspecten te controleren, zoals verlichting, sensoren en robots, zowel intern (zonder internetverbinding) als extern (via VPN \"Tailscale\" en IP gemaskeerd door \"Duck DNS\")."
+      },
+      {
+        "title": "Website",
+        "website": "https://github.com/rui-oliveira-tech/webSite/",
+        "description": "Het doel van deze website is om mijn professionele carrière te presenteren en informatie gemakkelijk toegankelijk te maken voor bedrijven en personen die geïnteresseerd zijn om meer over mij te weten te komen."
+      }
+    ]
+  },
+  "other": {
+    "overlayTitle": "Andere dingen die ik heb gedaan",
+    "underlayTitle": "Andere dingen",
+    "description": [
+      {
+        "id": 2,
+        "title": "Off We Go – IB&C WEEKS",
+        "description": "Ervaring met Scholar Exchange."
+      },
+      {
+        "id": 1,
+        "title": "Europa tour",
+        "description": "Landen die ik heb bezocht."
+      }
+    ]
+  },
+  "googleMapsMarkers": {
+    "overlayTitle": "Waar ik ben geweest",
+    "underlayTitle": "Google Maps-markeringen",
+    "description": []
+  },
+  "expressions": {
+    "globals": {
+      "sex": "Geslacht",
+      "dateOfBirth": "Geboortedatum",
+      "nationality": "Nationaliteit",
+      "page": "Bladzijde"
+    },
+    "prepositions": {
+      "in": "in"
+    },
+    "offerType": {
+      "Full-time": "Full-time",
+      "Internship": "Stage",
+      "permanent": "Permanent",
+      "valid": "Geldig tot",
+      "expired": "Verlopen op",
+      "validDiplom": "Geldig diploma",
+      "expiredDiplom": "Verlopen diploma"
+    },
+    "countries": {
+      "NL": "Netherlands",
+      "BE": "België",
+      "PT": "Portugal",
+      "D": "Duitsland"
+    },
+    "languages": {
+      "pt": "Portugees",
+      "fr": "Frans",
+      "en": "Engels",
+      "es": "Spaans",
+      "nl": "Nederlands"
+    },
+    "months": {
+      "present": "Nu",
+      "1": "Jan",
+      "2": "Feb",
+      "3": "Maart",
+      "4": "Apr",
+      "5": "Mei",
+      "6": "Juni",
+      "7": "Juli",
+      "8": "Aug",
+      "9": "Sept",
+      "10": "Oct",
+      "11": "Nov",
+      "12": "Dec"
+    }
+  }
+}
