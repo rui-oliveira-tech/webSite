@@ -39,12 +39,12 @@ pdfCvRouter.post('/create/:type', validatePdfCvType, (req, res, next) => {
 
   if (fs.existsSync(template) && process.env.NODE_ENV !== "development") {
     console.log("File is available...")
-    // downloadFile(res, template)
-    return
+   // downloadFile(res, template)
+  //  return
   }
 
   if (process.env.NODE_ENV === "development") {
-     console.log("Writing HTML to file...")
+    console.log("Writing HTML to file...")
     fs.writeFileSync(path.join(__dirname, "../tmp", `RuiOliveira_CV-${type.toUpperCase()}.html`), generatedHtml)
     // return
   }
