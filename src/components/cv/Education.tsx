@@ -50,15 +50,21 @@ export default function Education(props: IEducationProps) {
         </button>
         <p className="text small">{t("educations.key.changeDiplomas")}</p>
         {educations.map((education, i) => {
+          const isPermanent = education.expirationDate === "Permanent";
           const isExpired =
-            education.expirationDate !== "Permanent" &&
-            isExpirationDatePassed(education.expirationDate);
+            !isPermanent && isExpirationDatePassed(education.expirationDate);
+
           if ((showValid && !isExpired) || (!showValid && isExpired)) {
-            const title = `${education.title} (${
-              isExpired
-                ? expressions.offerTypes.expired
-                : expressions.offerTypes.valid
-            } ${formatDate(education.endDate, expressions)})`;
+            const title = isExpired
+              ? `${education.title} (${
+                  expressions.offerTypes.expired
+                } ${formatDate(education.endDate, expressions)})`
+              : `${education.title} (${
+                  isPermanent
+                    ? expressions.offerTypes.permanent
+                    : `${expressions.offerTypes.valid} ${education.expirationDate}`
+                })`;
+
             return (
               <React.Fragment key={i}>
                 <p className="light big subTitle">{title}</p>
