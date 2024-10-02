@@ -8,17 +8,44 @@ import Link from "next/link";
 
 import "./NavigationBar.scss";
 import Languages from "../Languages/Language";
-import { pageList } from "../../resource/pages";
+import { pageList, Page } from "../../resource/pages";
 
 import logoImg from "@/images/logo/logo.svg";
 import { usePathname } from "next/navigation";
+import { languageImg, supportedLngs, Locale } from "@/resource/lngs";
 
-export default function NavigationBar(props) {
+// Define the props interface for the NavigationBar component
+interface NavigationBarProps {
+  params: {
+    locale: string;
+  };
+}
+
+function classPageInList(
+  pathname: string,
+  currentPage: Page,
+  supportedLngs: Locale[]
+): string {
+  return (currentPage.name === "homepage" &&
+    supportedLngs.some((lng) => pathname.endsWith(`/${lng}`))) ||
+    pathname.endsWith(`${currentPage.url}`)
+    ? "thisPage"
+    : "notThisPage";
+}
+
+const NavigationBar: React.FC<NavigationBarProps> = (props) => {
   const t = useTranslations("");
   const pathname = usePathname();
   const currentLanguageCode = props.params.locale;
 
-  const logoClass = pathname.includes("cv") ? "thisPage" : "notThisPage";
+  const logoClass = pageList.some(
+    (page) =>
+      page.name === "homepage" &&
+      supportedLngs.some((lng) => pathname.endsWith(`/${lng}`))
+  )
+    ? "thisPage"
+    : "notThisPage";
+
   return (
     <nav className="mainNavigationBar">
       <Link className="iconNavigationBar" href={`/${currentLanguageCode}`}>
@@ -31,17 +58,13 @@ export default function NavigationBar(props) {
         />
       </Link>
       <div className="contentNavigationBar">
-        {pageList.reduce((urls, page, i) => {
+        {pageList.reduce((urls: ReactNode[], page: Page, i: number) => {
+          const pageClass = classPageInList(pathname, page, supportedLngs);
           if (page.navigationBar) {
             urls.push(
               <Link
                 key={i}
-                className={
-                  pathname.endsWith(page.url) ||
-                  pathname.split("/").length === 1
-                    ? "thisPage"
-                    : "notThisPage"
-                }
+                className={pageClass}
                 href={`/${currentLanguageCode}${page.url === "" ? "" : "/"}${
                   page.url
                 }`}
@@ -51,11 +74,13 @@ export default function NavigationBar(props) {
             );
           }
           return urls;
-        }, [] as ReactNode[])}
+        }, [])}
       </div>
       <div className="languageNavigationBar">
         <Languages {...props} />
       </div>
     </nav>
   );
-}
+};
+
+export default NavigationBar;

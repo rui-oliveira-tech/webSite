@@ -43,7 +43,7 @@ export const supportedLngs = languageList
   .filter((language) => language.langTranslationList)
   .map((language) => language.code);
 
-export type Locale = typeof supportedLngs[number];
+export type Locale = (typeof supportedLngs)[number];
 
 export type Language = {
   code: string;
