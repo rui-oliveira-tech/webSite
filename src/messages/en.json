@@ -86,6 +86,16 @@
         "endDate": "2024-07-01"
       },
       {
+        "title": "Electric Stacker",
+        "companyTitle": "",
+        "company": "PRAXIS",
+        "location": "Izegem, Belgium",
+        "website": "https://www.praxistraining.be/",
+        "expirationDate": "2029-02-14",
+        "startDate": "",
+        "endDate": "2024-02-14"
+      },
+      {
         "title": "Slinger Signaller (GWO)",
         "companyTitle": "",
         "company": "Normec ISEC",
@@ -330,7 +340,7 @@
         "title": "Field Service Technician (Electrical / Mechanical)",
         "functionsPerformed": "",
         "skillsGained": "",
-        "company": "Vestas",
+        "company": "VESTAS BELGIUM nv",
         "location": "Belgium",
         "website": "https://www.vestas.com/",
         "offerType": "Full-time",
