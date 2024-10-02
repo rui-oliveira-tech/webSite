@@ -87,6 +87,16 @@
     },
     "description": [
       {
+        "title": "20221 - VP LS + HS (NEN 3140 + 3840)",
+        "companyTitle": "",
+        "company": "Aestimavi",
+        "location": "Zwolle, Nederland",
+        "website": "https://aestimavi.com/",
+        "expirationDate": "2027-06-30",
+        "startDate": "2024-03-14",
+        "endDate": "2024-07-01"
+      },
+      {
         "title": "Slinger Signaller (GWO)",
         "companyTitle": "",
         "company": "Normec ISEC",
@@ -227,10 +237,10 @@
       {
         "language": "English",
         "flag": "gb",
-        "listening": "C1",
-        "reading": "C1",
-        "spokenInteraction": "C1",
-        "spokenProduction": "C1",
+        "listening": "B2",
+        "reading": "B2",
+        "spokenInteraction": "B2",
+        "spokenProduction": "B2",
         "writing": "B1"
       },
       {
@@ -247,9 +257,9 @@
         "flag": "be",
         "listening": "A2",
         "reading": "A2",
-        "spokenInteraction": "A1",
-        "spokenProduction": "A1",
-        "writing": "A1"
+        "spokenInteraction": "A2",
+        "spokenProduction": "A2",
+        "writing": "A2"
       }
     ]
   },
