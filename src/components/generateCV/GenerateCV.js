@@ -1,9 +1,9 @@
 const puppeteer = require('puppeteer');
 const fs = require('fs');
 const path = require('path');
-const deepMerge = require('../../../util/deepMerge.js'); // Assuming you have a deepMerge function
-const pdfTemplate = require('./documents'); // Import the CV generation function
-const { defaultLanguage, supportedLngs } = require('../../../resource/lngs/langs.js');
+const deepMerge = require('../../util/deepMerge.js'); // Assuming you have a deepMerge function
+const pdfTemplate = require('./documents/index.js'); // Import the CV generation function
+const { defaultLanguage, supportedLngs } = require('../../resource/lngs/langs.js');
 
 
 const getTranslations = (locale) => {
@@ -11,8 +11,8 @@ const getTranslations = (locale) => {
     throw new Error(`Locale "${locale}" not supported`);
   }
 
-  const localeFilePath = path.join(__dirname, `../../../messages/${locale}.json`);
-  const defaultLocaleFilePath = path.join(__dirname, `../../../messages/${defaultLanguage}.json`);
+  const localeFilePath = path.join(__dirname, `../../messages/${locale}.json`);
+  const defaultLocaleFilePath = path.join(__dirname, `../../messages/${defaultLanguage}.json`);
 
   const localeJson = JSON.parse(fs.readFileSync(localeFilePath, 'utf8'));
   const defaultLocaleJson = locale === defaultLanguage ? {} : JSON.parse(fs.readFileSync(defaultLocaleFilePath, 'utf8'));
