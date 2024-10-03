@@ -1,6 +1,6 @@
 'use server';
 
-import { defaultLanguage, Locale } from "@/resource/lngs";
+import { defaultLanguage, Locale } from "@/resource/lngs/lngs";
 import {cookies} from 'next/headers';
 
 const COOKIE_NAME = 'NEXT_LOCALE';

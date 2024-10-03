@@ -12,7 +12,7 @@ import { pageList, Page } from "../../resource/pages";
 
 import logoImg from "@/images/logo/logo.svg";
 import { usePathname } from "next/navigation";
-import { languageImg, supportedLngs, Locale } from "@/resource/lngs";
+import { languageImg, supportedLngs, Locale } from "@/resource/lngs/lngs";
 
 // Define the props interface for the NavigationBar component
 interface NavigationBarProps {

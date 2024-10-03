@@ -1,5 +1,5 @@
 import createMiddleware from 'next-intl/middleware';
-import { supportedLngs, defaultLanguage } from "./resource/lngs"
+import { supportedLngs, defaultLanguage } from "./resource/lngs/lngs"
 
 export default createMiddleware({
   locales: supportedLngs,

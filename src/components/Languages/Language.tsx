@@ -8,7 +8,7 @@ import classNames from "classnames";
 
 import "./Language.scss";
 
-import { languageImg, languageList, Locale } from "@/resource/lngs";
+import { languageImg, languageList, Locale } from "@/resource/lngs/lngs";
 import Link from "next/link";
 import { setUserLocale } from "./cookies";
 

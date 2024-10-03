@@ -1,111 +1,78 @@
-const fs = require("fs");
-const path = require("path");
-const csv = require("csv-parser");
-const { googleMapsMarkers } = require("./markers");
+const puppeteer = require('puppeteer');
+const fs = require('fs');
+const path = require('path');
+const deepMerge = require('../../../util/deepMerge.js'); // Assuming you have a deepMerge function
+const pdfTemplate = require('./documents'); // Import the CV generation function
+const { defaultLanguage, supportedLngs } = require('../../../resource/lngs/langs.js');
 
-console.error("CSV's loaded");
 
-async function readCsvFile(filePath) {
-  return new Promise((resolve, reject) => {
-    const results = [];
-    fs.createReadStream(filePath)
-      .pipe(csv())
-      .on("data", (row) => results.push(row))
-      .on("end", () => resolve(results))
-      .on("error", (error) => reject(error));
-  });
-}
-
-function parseRows(data) {
-  const type = {};
-  if (data.length > 0) {
-    const keys = Object.keys(data[0]);
-    keys.forEach((header, i) => {
-      type[header] = i;
-    });
+const getTranslations = (locale) => {
+  if (!supportedLngs.includes(locale)) {
+    throw new Error(`Locale "${locale}" not supported`);
   }
-  return [
-    data.slice(1).map((row) => ({
-      city: row.city,
-      city_ascii: row.city_ascii,
-      lat: +row.lat,
-      lng: +row.lng,
-      country: row.country,
-      iso2: row.iso2,
-      iso3: row.iso3,
-      admin_name: row.admin_name,
-      population: +row.population,
-      id: +row.id,
-    })),
-    type,
-  ];
-}
 
-function processNewMarkers(markers, results, type) {
-  const newMarkers = markers.reduce((total, marker) => {
-    const country = results.filter((row) => row.country === marker.country);
-    const cities = country.filter((row) => row.city === marker.city);
-    const cityMarkers = cities.map((city) => ({
-      type: "Feature",
-      properties: {
-        markersId: +city.id,
-        city: city.city,
-        country: city.country,
-      },
-      geometry: {
-        type: "Point",
-        zoom: +marker.zoom,
-        marker: marker.marker,
-        coordinates: [+city.lng, +city.lat],
-      },
-    }));
+  const localeFilePath = path.join(__dirname, `../../../messages/${locale}.json`);
+  const defaultLocaleFilePath = path.join(__dirname, `../../../messages/${defaultLanguage}.json`);
 
-    return total.concat(cityMarkers);
-  }, []);
-  return newMarkers;
-}
+  const localeJson = JSON.parse(fs.readFileSync(localeFilePath, 'utf8'));
+  const defaultLocaleJson = locale === defaultLanguage ? {} : JSON.parse(fs.readFileSync(defaultLocaleFilePath, 'utf8'));
 
-console.error("CSV's loaded");
+  return { messages: deepMerge(defaultLocaleJson, localeJson) };
+};
 
-(async () => {
-  console.error("CSV's loaded");
-  try {
-    const csv1 = await readCsvFile("./public/maps/worldcities.csv");
-    const csv2 = await readCsvFile("./public/maps/worldexteacities.csv");
-    if (csv1 && csv2) {
-      const [cities, citiesProps] = parseRows(csv1);
-      const [extraCities, extraCitiesProps] = parseRows(csv2);
+const generatePDF = async (browser, lang, translationKeys, outputDirectory) => {
+  const cvHtml = pdfTemplate({ currentLanguageCode: lang, cvData: translationKeys });
+  const options = {
+    format: 'Letter',
+    zoomFactor: "1",
+    orientation: 'portrait',
+    displayHeaderFooter: true, // Enable header and footer display
+    margin: {
+      top: '15mm',
+      bottom: '15mm',
+      left: '10mm',
+      right: '10mm',
+    },
+    footerTemplate: `<div style="font-size: 10px; text-align: center; width: 100%;">
+      <p>Rui Oliveira &mdash; <a href="https://www.rui-oliveira.com/${lang}">www.rui-oliveira.com</a> &mdash; +32474127175</p>
+      <div>${translationKeys.expressions.page} <span class="pageNumber"></span> of <span class="totalPages"></span></div>
+    </div>`,
+    headerTemplate: '<header></header>', // If you want a custom header, you can define it here
+    printBackground: true, // Ensure background colors/images are printed
+  };
 
-      const directory = "./src/resource";
-      const filename = "processedGoogleMapsMarkers.json";
-      const filePath = path.join(directory, filename);
+  const page = await browser.newPage();
+  await page.setContent(cvHtml, { waitUntil: 'networkidle0' });
+  await page.pdf({ ...options, path: path.join(outputDirectory, `RuiOliveira_CV-${lang.toUpperCase()}.pdf`) });
+  console.log(`CV generated for ${lang}`);
+  await page.close();
+};
 
-      if (!fs.existsSync(directory)) {
-        fs.mkdirSync(directory, { recursive: true });
-        console.error(`Created directory: ${directory}`);
-      }
+const generateCV = async () => {
+  const outputDirectory = process.env.OUTPUT_DIR || "public/resource";
+  fs.mkdirSync(outputDirectory, { recursive: true });
 
-      fs.writeFileSync(
-        filePath,
-        JSON.stringify(
-          [
-            ...processNewMarkers(googleMapsMarkers, cities, citiesProps),
-            ...processNewMarkers(
-              googleMapsMarkers,
-              extraCities,
-              extraCitiesProps
-            ),
-          ],
-          undefined,
-          4
-        )
-      );
-      console.error(`File written: ${filePath}`);
-    } else {
-      console.error("NO CSVS!");
+  const browser = await puppeteer.launch();
+  const supportedLngsKeys = Object.fromEntries(supportedLngs.map(lang => {
+    try {
+      return [lang, getTranslations(lang).messages];
+    } catch (err) {
+      console.error(err.message);
+      return [lang, null]; // Return null for failed translations
     }
-  } catch (error) {
-    console.error("Error:", error);
+  }));
+
+  try {
+    await Promise.all(supportedLngs.map(lang => {
+      const translationKeys = supportedLngsKeys[lang];
+      if (translationKeys) return generatePDF(browser, lang, translationKeys, outputDirectory);
+    }));
+  } catch (err) {
+    console.error('Error generating CVs:', err);
+  } finally {
+    await browser.close();
   }
-  console.error("CSV's processed and data written to file");
-})();
+};
+
+// Start the CV generation process
+generateCV().catch(console.error);

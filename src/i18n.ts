@@ -1,5 +1,5 @@
 import { getRequestConfig } from 'next-intl/server';
-import { supportedLngs, defaultLanguage } from "./resource/lngs"
+import { supportedLngs, defaultLanguage } from "./resource/lngs/lngs"
 import deepMerge from './util/deepMerge';
 import { notFound } from "next/navigation";
 

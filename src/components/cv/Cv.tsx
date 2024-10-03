@@ -3,7 +3,6 @@
 import React, { useEffect, useRef } from "react";
 
 import CvDownload from "./CvDownload";
-import CvGen from "./generateCV/CvGen";
 import About from "./About";
 import Education from "./Education";
 import Languages from "./Languages";
@@ -36,7 +35,6 @@ export default function Cv(props) {
   return (
     <section className="have_footer have_NavigationBar cv">
       <CvDownload {...props} animatedOverlay={animatedOverlay} />
-      <CvGen {...props} />
       <div className="cvContainer">
         <About
           {...props}

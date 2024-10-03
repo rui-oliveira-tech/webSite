@@ -4,7 +4,7 @@ import { useTranslations } from "next-intl";
 
 import "./Cv.scss";
 
-import { languageList } from "@/resource/lngs";
+import { languageList } from "@/resource/lngs/lngs";
 
 import languagesImg from "@/images/cv/languages.jpg";
 
