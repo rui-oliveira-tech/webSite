@@ -7,9 +7,9 @@ import "./../ruicons-embedded.css";
 import "./../globalVar.scss";
 import "./../global.css";
 
-import NavigationBar from "@/components/navigationBar/NavigationBar";
-import Home from "@/components/home/Home";
-import Footer from "@/components/footer/Footer";
+import NavigationBar from "@/components/layout/navigationBar/NavigationBar";
+import Home from "@/components/pages/home/Home";
+import Footer from "@/components/layout/footer/Footer";
 
 interface IHomepageProps {}
 

@@ -5,9 +5,9 @@ import "./../../ruicons-embedded.css";
 import "./../../globalVar.scss";
 import "./../../global.css";
 
-import NavigationBar from "@/components/navigationBar/NavigationBar";
-import Cv from "@/components/cv/Cv";
-import Footer from "@/components/footer/Footer";
+import NavigationBar from "@/components/layout/navigationBar/NavigationBar";
+import Cv from "@/components/pages/cv/Cv";
+import Footer from "@/components/layout/footer/Footer";
 
 interface ICurriculumProps {}
 

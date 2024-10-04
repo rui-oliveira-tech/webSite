@@ -21,6 +21,6 @@
       "@/*": ["./src/*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "src/components/Languages/Language.tsx", "src/components/Map/GenerateMarkers.js", "src/components/Map/googleMapsMarkers.js", "src/resource/lngs/langs.js"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "src/components/layout/Languages/Language.tsx", "src/scripts/generateMarkers/generateMarkers.js", "src/components/others/Map/googleMapsMarkers.js", "src/resource/lngs/langs.js"],
   "exclude": ["node_modules"]
 }

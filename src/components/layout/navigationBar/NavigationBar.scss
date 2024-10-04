@@ -1,0 +1,123 @@
+.mainNavigationBar {
+  position: fixed;
+  z-index: 99999;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1em 0em;
+  width: calc(100% - var(--pageBorder));
+  height: calc(var(--textSize) * 8em);
+  background-color: rgb(255, 255, 255);
+
+  .iconNavigationBar {
+    display: flex;
+    align-items: center;
+    height: calc(var(--textSize) * 6em);
+
+    img {
+      height: 100%;
+      width: calc(var(--textSize) * 6em);
+    }
+
+    .thisPage {
+      cursor: default;
+    }
+
+    .notThisPage {
+      cursor: pointer;
+      &:hover {
+        opacity: 0.5;
+      }
+    }
+  }
+  .contentNavigationBar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+    height: 100%;
+
+    a {
+      font-size: calc(var(--textSize) * 1.3rem);
+      color: black;
+      text-transform: uppercase;
+      text-decoration: none;
+      margin: auto;
+      border: none;
+      margin: 0 1em;
+    }
+    .thisPage {
+      opacity: 0.5;
+      cursor: default;
+    }
+
+    .notThisPage {
+      cursor: pointer;
+      &:hover {
+        opacity: 0.5;
+      }
+    }
+  }
+
+  .languageNavigationBar {
+    display: flex;
+    align-items: center;
+    height: 100%;
+
+    img {
+      height: calc(var(--textSize) * 1.6em);
+      width: calc(var(--textSize) * 1.6em);
+    }
+  }
+
+  @media (min-width: 270px) and (max-width: 600px) {
+    height: calc(var(--textSize) * 6em);
+    .iconNavigationBar {
+      height: calc(var(--textSize) * 4em);
+    }
+    .contentNavigationBar {
+      a {
+        font-size: calc(var(--textSize) * 0.7rem);
+      }
+    }
+
+    .languageNavigationBar {
+      img {
+        height: calc(var(--textSize) * 1em);
+      }
+    }
+  }
+
+  @media (min-width: 601px) and (max-width: 1023px) {
+    height: calc(var(--textSize) * 7em);
+    .iconNavigationBar {
+      height: calc(var(--textSize) * 5em);
+    }
+    .contentNavigationBar {
+      a {
+        font-size: calc(var(--textSize) * 1.1rem);
+      }
+    }
+
+    .languageNavigationBar {
+      img {
+        height: calc(var(--textSize) * 1.4em);
+      }
+      .dropdown-toggle {
+        padding: 0;
+
+        &:after {
+          display: inline-block;
+          margin-left: 0.255em;
+          vertical-align: 0.255em;
+          content: "";
+          border-top: 0.3em solid;
+          border-right: 0.2em solid transparent;
+          border-bottom: 0;
+          border-left: 0.2em solid transparent;
+        }
+      }
+    }
+  }
+}

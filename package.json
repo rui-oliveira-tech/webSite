@@ -7,8 +7,8 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "build:markers": "npx ts-node src/components/Map/GenerateMarkers.js --noEmit",
-    "build:cv": "npx ts-node src/components/generateCV/generateCV.js --noEmit"
+    "build:markers": "npx ts-node src/scripts/generateMarkers/generateMarkers.js --noEmit",
+    "build:cv": "npx ts-node src/scripts/generateCV/generateCV.js --noEmit"
   },
   "dependencies": {
     "@react-google-maps/api": "^2.19.3",
