@@ -72,7 +72,7 @@
     "overlayTitle": "What I've learned",
     "underlayTitle": "Education",
     "key": {
-      "changeDiplomas": "Click to change between Valid and Expired Diplomas"
+      "changeDiplomas": "Click to switch between Valid, Duplicate, and Expired Diplomas."
     },
     "description": [
       {
@@ -83,7 +83,8 @@
         "website": "https://aestimavi.com/",
         "expirationDate": "2027-06-30",
         "startDate": "2024-03-14",
-        "endDate": "2024-07-01"
+        "endDate": "2024-07-01",
+        "type": "valid"
       },
       {
         "title": "Electric Stacker",
@@ -93,7 +94,8 @@
         "website": "https://www.praxistraining.be/",
         "expirationDate": "2029-02-14",
         "startDate": "",
-        "endDate": "2024-02-14"
+        "endDate": "2024-02-14",
+        "type": "valid"
       },
       {
         "title": "Slinger Signaller (GWO)",
@@ -103,7 +105,8 @@
         "website": "https://normecisec.com/",
         "expirationDate": "Permanent",
         "startDate": "2023-09-07",
-        "endDate": "2023-09-08"
+        "endDate": "2023-09-08",
+        "type": "valid"
       },
       {
         "title": "Basic Technical - Mechanical",
@@ -113,7 +116,8 @@
         "website": "https://relyonnutec.com/",
         "expirationDate": "Permanent",
         "startDate": "2023-06-19",
-        "endDate": "2023-06-22"
+        "endDate": "2023-06-22",
+        "type": "valid"
       },
       {
         "title": "Basic Technical - Hydraulic",
@@ -123,7 +127,8 @@
         "website": "https://relyonnutec.com/",
         "expirationDate": "Permanent",
         "startDate": "2023-06-19",
-        "endDate": "2023-06-22"
+        "endDate": "2023-06-22",
+        "type": "duplicate"
       },
       {
         "title": "Basic Technical - Electrical",
@@ -133,7 +138,8 @@
         "website": "https://relyonnutec.com/",
         "expirationDate": "Permanent",
         "startDate": "2023-06-19",
-        "endDate": "2023-06-22"
+        "endDate": "2023-06-22",
+        "type": "duplicate"
       },
       {
         "title": "VOL-VCA",
@@ -143,7 +149,8 @@
         "website": "https://www.pbna.com/",
         "expirationDate": "2033-05-17",
         "startDate": "",
-        "endDate": "2023-05-17"
+        "endDate": "2023-05-17",
+        "type": "valid"
       },
       {
         "title": "BA4",
@@ -153,7 +160,8 @@
         "website": "https://www.vestas.com/",
         "expirationDate": "2024-05-12",
         "startDate": "2023-05-11",
-        "endDate": "2023-05-12"
+        "endDate": "2023-05-12",
+        "type": "duplicate"
       },
       {
         "title": "First Aid - Fire Awareness - Working at Heights - Manual Handling (GWO)",
@@ -163,7 +171,19 @@
         "website": "https://relyonnutec.com/",
         "expirationDate": "2025-05-10",
         "startDate": "2023-05-8",
-        "endDate": "2023-05-10"
+        "endDate": "2023-05-10",
+        "type": "valid"
+      },
+      {
+        "title": "BASIS-VCA",
+        "companyTitle": "",
+        "company": "HaCeCo",
+        "location": "Werchter, Belgium",
+        "website": "https://www.haceco.be/",
+        "expirationDate": "2029-09-12",
+        "startDate": "",
+        "endDate": "2019-09-12",
+        "type": "duplicate"
       },
       {
         "title": "Driving course of electric forklifts, combustion and gas",
@@ -173,7 +193,8 @@
         "website": "https://www.cincork.com/",
         "expirationDate": "Permanent",
         "startDate": "2018-03-07",
-        "endDate": "2018-05-03"
+        "endDate": "2018-05-03",
+        "type": "valid"
       },
       {
         "title": "Electronic, automation and maintenance +1500 hours InternshipElectronic",
@@ -183,7 +204,8 @@
         "website": "http://www.cfpic.pt/",
         "expirationDate": "Permanent",
         "startDate": "2012",
-        "endDate": "2015-01-16"
+        "endDate": "2015-01-16",
+        "type": "valid"
       },
       {
         "title": "Driving license AM / B / B1 ",
@@ -193,7 +215,8 @@
         "website": "http://www.ecboavista.com/",
         "expirationDate": "Permanent",
         "startDate": "",
-        "endDate": "2015-12-04"
+        "endDate": "2015-12-04",
+        "type": "valid"
       },
       {
         "title": "High School, Course of Sciences and Technologies",
@@ -203,7 +226,8 @@
         "website": "https://ae-smfeira.pt/",
         "expirationDate": "Permanent",
         "startDate": "2010",
-        "endDate": "2012"
+        "endDate": "2012",
+        "type": "duplicate"
       }
     ]
   },
@@ -345,7 +369,7 @@
         "website": "https://www.vestas.com/",
         "offerType": "Full-time",
         "startDate": "2023-05",
-        "endDate": "Present"
+        "endDate": "2024-12"
       },
       {
         "title": "Industrial Electrician",
@@ -467,7 +491,8 @@
       "valid": "Valid until",
       "expired": "Expired at",
       "validDiplom": "Valid Diploma",
-      "expiredDiplom": "Expired Diploma"
+      "expiredDiplom": "Expired Diploma",
+      "duplicateDiplom": "Duplicate Diploma"
     },
     "countries": {
       "NL": "Netherlands",

@@ -68,7 +68,7 @@
     "overlayTitle": "Wat ik heb geleerd",
     "underlayTitle": "Opleiding",
     "key": {
-      "changeDiplomas": "Klik om te wisselen tussen geldige en verlopen diploma's"
+      "changeDiplomas": "Klik om te wisselen tussen Geldige, Dubbele en Verlopen Diploma's."
     },
     "description": [
       {
@@ -97,6 +97,9 @@
       },
       {
         "title": "EHBO - Brandbewustzijn - Werken op Hoogte - Handmatig Hanteren (GWO)"
+      },
+      {
+        "title": "BASIS-VCA"
       },
       {
         "title": "Rijopleiding elektrische heftrucks, verbranding en gas"
@@ -223,9 +226,9 @@
       "Internship": "Stage",
       "permanent": "Permanent",
       "valid": "Geldig tot",
-      "expired": "Verlopen op",
-      "validDiplom": "Geldig diploma",
-      "expiredDiplom": "Verlopen diploma"
+      "validDiploma": "Geldig Diploma",
+      "expiredDiploma": "Verlopen Diploma",
+      "duplicateDiploma": "Duplicaat Diploma"
     },
     "countries": {
       "NL": "Netherlands",

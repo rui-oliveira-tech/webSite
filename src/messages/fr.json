@@ -68,7 +68,7 @@
     "overlayTitle": "Ce que j'ai appris",
     "underlayTitle": "Education",
     "key": {
-      "changeDiplomas": "Cliquez pour basculer entre les diplômes valides et expirés"
+      "changeDiplomas": "Cliquez pour basculer entre Diplômes Valides, Duplicatas et Expirés."
     },
     "description": [
       {
@@ -97,6 +97,9 @@
       },
       {
         "title": "Premiers Secours - Sensibilisation aux Incendies - Travail en Hauteur - Manutention Manuelle (GWO)"
+      },
+      {
+        "title": "BASIS-VCA"
       },
       {
         "title": "Diplôme en conduite de chariots élévateurs électriques, à combustion et à gaz"
@@ -223,8 +226,9 @@
       "permanent": "Permanent",
       "valid": "Valide jusqu'au",
       "expired": "Expiré le",
-      "validDiplom": "Diplôme valide",
-      "expiredDiplom": "Diplôme expiré"
+      "validDiploma": "Diplôme Valide",
+      "expiredDiploma": "Diplôme Expiré",
+      "duplicateDiploma": "Diplôme Duplicata"
     },
     "countries": {
       "NL": "Pays-Bas",

@@ -68,7 +68,7 @@
     "overlayTitle": "O que eu aprendi",
     "underlayTitle": "Educação",
     "key": {
-      "changeDiplomas": "Clique para alternar entre diplomas válidos e expirados"
+      "changeDiplomas": "Clique para alternar entre Diplomas Válidos, Duplicados e Expirados."
     },
     "description": [
       {
@@ -97,6 +97,9 @@
       },
       {
         "title": "Primeiros Socorros - Conscientização sobre Incêndios - Trabalho em Alturas - Manuseio Manual (GWO)"
+      },
+      {
+        "title": "BASIS-VCA"
       },
       {
         "title": "Curso de condução de empilhadores elétricos, combustão e gás"
@@ -223,8 +226,9 @@
       "permanent": "Permanente",
       "valid": "Válido até",
       "expired": "Expirado em",
-      "validDiplom": "Diploma Valido",
-      "expiredDiplom": "Diploma Caducado"
+      "validDiploma": "Diploma Válido",
+      "expiredDiplom": "Diploma Caducado",
+      "duplicateDiploma": "Diploma Duplicado"
     },
     "countries": {
       "NL": "Holanda",
