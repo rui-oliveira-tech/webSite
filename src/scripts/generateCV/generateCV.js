@@ -2,9 +2,8 @@ const puppeteer = require('puppeteer');
 const fs = require('fs');
 const path = require('path');
 const deepMerge = require('../../util/deepMerge.js'); // Assuming you have a deepMerge function
-const pdfTemplate = require('./documents/index.js'); // Import the CV generation function
+const pdfTemplate = require('./documents/oldCv/index.js'); // Import the CV generation function
 const { defaultLanguage, supportedLngs } = require('../../resource/lngs/langs.js');
-
 
 const getTranslations = (locale) => {
   if (!supportedLngs.includes(locale)) {
@@ -18,6 +17,15 @@ const getTranslations = (locale) => {
   const defaultLocaleJson = locale === defaultLanguage ? {} : JSON.parse(fs.readFileSync(defaultLocaleFilePath, 'utf8'));
 
   return { messages: deepMerge(defaultLocaleJson, localeJson) };
+};
+
+const generateHTML = async (lang, translationKeys, outputDirectory) => {
+  const cvHtml = pdfTemplate({ currentLanguageCode: lang, cvData: translationKeys });
+  const htmlFilePath = path.join(outputDirectory, `RuiOliveira_CV-${lang.toUpperCase()}.html`);
+
+  // Save the HTML file
+  fs.writeFileSync(htmlFilePath, cvHtml, 'utf8');
+  console.log(`HTML file generated for ${lang}`);
 };
 
 const generatePDF = async (browser, lang, translationKeys, outputDirectory) => {
@@ -44,7 +52,7 @@ const generatePDF = async (browser, lang, translationKeys, outputDirectory) => {
   const page = await browser.newPage();
   await page.setContent(cvHtml, { waitUntil: 'networkidle0' });
   await page.pdf({ ...options, path: path.join(outputDirectory, `RuiOliveira_CV-${lang.toUpperCase()}.pdf`) });
-  console.log(`CV generated for ${lang}`);
+  console.log(`PDF generated for ${lang}`);
   await page.close();
 };
 
@@ -63,9 +71,12 @@ const generateCV = async () => {
   }));
 
   try {
-    await Promise.all(supportedLngs.map(lang => {
+    await Promise.all(supportedLngs.map(async (lang) => {
       const translationKeys = supportedLngsKeys[lang];
-      if (translationKeys) return generatePDF(browser, lang, translationKeys, outputDirectory);
+      if (translationKeys) {
+        await generateHTML(lang, translationKeys, outputDirectory); // Generate HTML
+        await generatePDF(browser, lang, translationKeys, outputDirectory); // Generate PDF
+      }
     }));
   } catch (err) {
     console.error('Error generating CVs:', err);
