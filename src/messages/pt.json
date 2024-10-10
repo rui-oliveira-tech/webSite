@@ -38,32 +38,35 @@
       "complimentaryClose": "Aguardo contato."
     }
   },
-  "skills": [
-    {
-      "title": "Projetar e analisar sistemas",
-      "description": "Experiência em projetar sistemas elétricos para uma variedade de aplicações, com proficiência em ferramentas de software como Visio e AutoCAD para analisar e otimizar esses sistemas."
-    },
-    {
-      "title": "Resolução e solução de problemas",
-      "description": "Fortes habilidades analíticas para identificar rapidamente problemas em sistemas elétricos e desenvolver soluções eficazes para resolvê-los."
-    },
-    {
-      "title": "Testes e Inspeção",
-      "description": "Experiência em testes e inspeção de sistemas elétricos para garantir conformidade e funcionalidade, com a capacidade de fornecer relatórios detalhados sobre os resultados."
-    },
-    {
-      "title": "Gestão de projetos",
-      "description": "Gerenciamento bem-sucedido de vários projetos elétricos do início ao fim, entregando resultados de alta qualidade dentro do orçamento e no prazo."
-    },
-    {
-      "title": "Segurança e conformidade",
-      "description": "Foco alto na segurança e conformidade em todos os aspectos do trabalho elétrico."
-    },
-    {
-      "title": "Comunicação e colaboração",
-      "description": "Excelentes habilidades de comunicação e colaboração, possibilitando resultados bem-sucedidos por meio do trabalho em equipe."
-    }
-  ],
+  "skills": {
+    "underlayTitle": "Habilidades",
+    "description": [
+      {
+        "title": "Projetar e analisar sistemas",
+        "description": "Experiência em projetar sistemas elétricos para uma variedade de aplicações, com proficiência em ferramentas de software como Visio e AutoCAD para analisar e otimizar esses sistemas."
+      },
+      {
+        "title": "Resolução e solução de problemas",
+        "description": "Fortes habilidades analíticas para identificar rapidamente problemas em sistemas elétricos e desenvolver soluções eficazes para resolvê-los."
+      },
+      {
+        "title": "Testes e Inspeção",
+        "description": "Experiência em testes e inspeção de sistemas elétricos para garantir conformidade e funcionalidade, com a capacidade de fornecer relatórios detalhados sobre os resultados."
+      },
+      {
+        "title": "Gestão de projetos",
+        "description": "Gerenciamento bem-sucedido de vários projetos elétricos do início ao fim, entregando resultados de alta qualidade dentro do orçamento e no prazo."
+      },
+      {
+        "title": "Segurança e conformidade",
+        "description": "Foco alto na segurança e conformidade em todos os aspectos do trabalho elétrico."
+      },
+      {
+        "title": "Comunicação e colaboração",
+        "description": "Excelentes habilidades de comunicação e colaboração, possibilitando resultados bem-sucedidos por meio do trabalho em equipe."
+      }
+    ]
+  },
   "educations": {
     "overlayTitle": "O que eu aprendi",
     "underlayTitle": "Educação",
@@ -72,7 +75,7 @@
     },
     "description": [
       {
-        "title": "20221 - VP LS + HS (NEN 3140 + 3840)"
+        "title": "VP LS + HS (NEN 3140 + 3840)"
       },
       {
         "title": "Porta-Palete Elétrico"
@@ -145,7 +148,7 @@
     "description": [
       {
         "title": "Técnico de Serviço de Campo (Elétrico / Mecânico)",
-        "functionsPerformed": "",
+        "functionsPerformed": "Solução de problemas e diagnóstico de questões técnicas, Realização de inspeções de rotina e manutenção preventiva, Cumprimento dos protocolos de segurança e garantia de conformidade com os padrões da empresa e da indústria.",
         "skillsGained": ""
       },
       {

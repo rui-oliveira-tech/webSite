@@ -38,32 +38,35 @@
       "complimentaryClose": "Neem contact met mij op"
     }
   },
-  "skills": [
-    {
-      "title": "Ontwerp en analyse systemen",
-      "description": "Ervaring in het ontwerpen van elektrische systemen voor een verscheidenheid aan toepassingen, met expertise in softwaretools zoals Visio en AutoCAD om deze systemen te analyseren en optimaliseren."
-    },
-    {
-      "title": "Probleemoplossing en oplossen van problemen",
-      "description": "Sterke analytische vaardigheden om snel problemen met elektrische systemen te identificeren en effectieve oplossingen te ontwikkelen om deze op te lossen."
-    },
-    {
-      "title": "Testen en inspectie",
-      "description": "Achtergrond in het testen en inspecteren van elektrische systemen om naleving en functionaliteit te garanderen, met de mogelijkheid om gedetailleerde rapporten over bevindingen te verstrekken."
-    },
-    {
-      "title": "Projectmanagement",
-      "description": "Succesvol beheer van talloze elektrische projecten van begin tot eind, waarbij hoogwaardige resultaten binnen budget en op tijd worden geleverd."
-    },
-    {
-      "title": "Veiligheid en naleving",
-      "description": "Sterke focus op veiligheid en naleving in alle aspecten van elektrisch werk."
-    },
-    {
-      "title": "Communicatie en samenwerking",
-      "description": "Uitstekende communicatie- en samenwerkingsvaardigheden, waardoor succesvolle resultaten worden behaald door teamwork."
-    }
-  ],
+  "skills": {
+    "underlayTitle": "Vaardigheden",
+    "description": [
+      {
+        "title": "Ontwerp en analyse systemen",
+        "description": "Ervaring in het ontwerpen van elektrische systemen voor een verscheidenheid aan toepassingen, met expertise in softwaretools zoals Visio en AutoCAD om deze systemen te analyseren en optimaliseren."
+      },
+      {
+        "title": "Probleemoplossing en oplossen van problemen",
+        "description": "Sterke analytische vaardigheden om snel problemen met elektrische systemen te identificeren en effectieve oplossingen te ontwikkelen om deze op te lossen."
+      },
+      {
+        "title": "Testen en inspectie",
+        "description": "Achtergrond in het testen en inspecteren van elektrische systemen om naleving en functionaliteit te garanderen, met de mogelijkheid om gedetailleerde rapporten over bevindingen te verstrekken."
+      },
+      {
+        "title": "Projectmanagement",
+        "description": "Succesvol beheer van talloze elektrische projecten van begin tot eind, waarbij hoogwaardige resultaten binnen budget en op tijd worden geleverd."
+      },
+      {
+        "title": "Veiligheid en naleving",
+        "description": "Sterke focus op veiligheid en naleving in alle aspecten van elektrisch werk."
+      },
+      {
+        "title": "Communicatie en samenwerking",
+        "description": "Uitstekende communicatie- en samenwerkingsvaardigheden, waardoor succesvolle resultaten worden behaald door teamwork."
+      }
+    ]
+  },
   "educations": {
     "overlayTitle": "Wat ik heb geleerd",
     "underlayTitle": "Opleiding",
@@ -72,7 +75,7 @@
     },
     "description": [
       {
-        "title": "20221 - VP LS + HS (NEN 3140 + 3840)"
+        "title": "VP LS + HS (NEN 3140 + 3840)"
       },
       {
         "title": "Electric Stacker"
@@ -144,7 +147,7 @@
     "description": [
       {
         "title": "Veldservice Technicus (Elektrisch / Mechanisch)",
-        "functionsPerformed": "",
+        "functionsPerformed": "Storingen oplossen en technische problemen diagnosticeren, Uitvoeren van routinematige inspecties en preventief onderhoud, Naleving van veiligheidsprotocollen en zorgen voor naleving van de bedrijfs- en industriestandaarden.",
         "skillsGained": ""
       },
       {

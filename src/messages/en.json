@@ -41,32 +41,35 @@
       "complimentaryClose": "Looking forward to hearing from you."
     }
   },
-  "skills": [
-    {
-      "title": "Designing and analyzing systems",
-      "description": "Experience in designing electrical systems for a variety of applications, with proficiency in software tools such as Visio and AutoCAD to analyze and optimize these systems."
-    },
-    {
-      "title": "Troubleshooting and problem-solving",
-      "description": "Strong analytical skills to quickly identify issues with electrical systems and develop effective solutions to resolve them."
-    },
-    {
-      "title": "Testing and Inspection",
-      "description": "Background in testing and inspecting electrical systems to ensure compliance and functionality, with the ability to provide detailed reports on findings."
-    },
-    {
-      "title": "Project management",
-      "description": "Successful management of numerous electrical projects from start to finish, delivering high-quality results within budget and on time."
-    },
-    {
-      "title": "Safety and compliance",
-      "description": "High focus on safety and compliance in all aspects of electrical work."
-    },
-    {
-      "title": "Communication and collaboration",
-      "description": "Excellent communication and collaboration skills, enabling successful outcomes through teamwork."
-    }
-  ],
+  "skills": {
+    "underlayTitle": "Skills",
+    "description": [
+      {
+        "title": "Designing and analyzing systems",
+        "description": "Experience in designing electrical systems for a variety of applications, with proficiency in software tools such as Visio and AutoCAD to analyze and optimize these systems."
+      },
+      {
+        "title": "Troubleshooting and problem-solving",
+        "description": "Strong analytical skills to quickly identify issues with electrical systems and develop effective solutions to resolve them."
+      },
+      {
+        "title": "Testing and Inspection",
+        "description": "Background in testing and inspecting electrical systems to ensure compliance and functionality, with the ability to provide detailed reports on findings."
+      },
+      {
+        "title": "Project management",
+        "description": "Successful management of numerous electrical projects from start to finish, delivering high-quality results within budget and on time."
+      },
+      {
+        "title": "Safety and compliance",
+        "description": "High focus on safety and compliance in all aspects of electrical work."
+      },
+      {
+        "title": "Communication and collaboration",
+        "description": "Excellent communication and collaboration skills, enabling successful outcomes through teamwork."
+      }
+    ]
+  },
   "educations": {
     "img": "education",
     "overlayTitle": "What I've learned",
@@ -76,7 +79,7 @@
     },
     "description": [
       {
-        "title": "20221 - VP LS + HS (NEN 3140 + 3840)",
+        "title": "VP LS + HS (NEN 3140 + 3840)",
         "companyTitle": "",
         "company": "Aestimavi",
         "location": "Zwolle, Nederland",
@@ -258,18 +261,18 @@
       },
       {
         "flag": "en",
-        "listening": "C1",
-        "reading": "C1",
-        "spokenInteraction": "C1",
-        "spokenProduction": "C1",
+        "listening": "B2",
+        "reading": "B1",
+        "spokenInteraction": "B1",
+        "spokenProduction": "B1",
         "writing": "B1"
       },
       {
         "flag": "es",
-        "listening": "C1",
-        "reading": "C1",
-        "spokenInteraction": "C1",
-        "spokenProduction": "C1",
+        "listening": "B2",
+        "reading": "B1",
+        "spokenInteraction": "B1",
+        "spokenProduction": "B1",
         "writing": "B1"
       },
       {
@@ -362,7 +365,7 @@
     "description": [
       {
         "title": "Field Service Technician (Electrical / Mechanical)",
-        "functionsPerformed": "",
+        "functionsPerformed": "Troubleshooting and diagnosing technical issues, Performing routine inspections and preventive maintenance, Adhering to safety protocols and ensuring compliance with company and industry standards.",
         "skillsGained": "",
         "company": "VESTAS BELGIUM nv",
         "location": "Belgium",
@@ -373,7 +376,7 @@
       },
       {
         "title": "Industrial Electrician",
-        "functionsPerformed": "Glass Processing Lines, Troubleshooting machinery problems electrical and mechanical, PLC + Robotic arms",
+        "functionsPerformed": "Glass Processing Lines, Troubleshooting machinery problems electrical and mechanical, PLC + Robotic arms.",
         "skillsGained": "",
         "company": "AGP eGlass",
         "location": "Evergem, Belgium",

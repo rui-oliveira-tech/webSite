@@ -2,7 +2,7 @@ const puppeteer = require('puppeteer');
 const fs = require('fs');
 const path = require('path');
 const deepMerge = require('../../util/deepMerge.js'); // Assuming you have a deepMerge function
-const pdfTemplate = require('./documents/oldCv/index.js'); // Import the CV generation function
+const pdfTemplate = require('./documents/newCv/index.js'); // Import the CV generation function
 const { defaultLanguage, supportedLngs } = require('../../resource/lngs/langs.js');
 
 const getTranslations = (locale) => {
@@ -33,16 +33,16 @@ const generatePDF = async (browser, lang, translationKeys, outputDirectory) => {
   const options = {
     format: 'Letter',
     zoomFactor: "1",
-    orientation: 'portrait',
-    displayHeaderFooter: true, // Enable header and footer display
+    orientation: 'portrait', 
     margin: {
-      top: '15mm',
-      bottom: '15mm',
-      left: '10mm',
-      right: '10mm',
+      top: '8mm',
+      bottom: '8mm',
+      left: '8mm',
+      right: '8mm',
     },
+    displayHeaderFooter: false, // Enable header and footer display
     footerTemplate: `<div style="font-size: 10px; text-align: center; width: 100%;">
-      <p>Rui Oliveira &mdash; <a href="https://www.rui-oliveira.com/${lang}">www.rui-oliveira.com</a> &mdash; +32474127175</p>
+      <p>Rui Oliveira &mdash; <a href="https://www.rui-oliveira.com/${lang}" class="icon-globe-1">www.rui-oliveira.com</a> &mdash; +32474127175</p>
       <div>${translationKeys.expressions.page} <span class="pageNumber"></span> of <span class="totalPages"></span></div>
     </div>`,
     headerTemplate: '<header></header>', // If you want a custom header, you can define it here
@@ -58,6 +58,8 @@ const generatePDF = async (browser, lang, translationKeys, outputDirectory) => {
 
 const generateCV = async () => {
   const outputDirectory = process.env.OUTPUT_DIR || "public/resource";
+  const outputDirectoryTemp = process.env.OUTPUT_DIR || ".temp";
+
   fs.mkdirSync(outputDirectory, { recursive: true });
 
   const browser = await puppeteer.launch();
@@ -74,7 +76,7 @@ const generateCV = async () => {
     await Promise.all(supportedLngs.map(async (lang) => {
       const translationKeys = supportedLngsKeys[lang];
       if (translationKeys) {
-        await generateHTML(lang, translationKeys, outputDirectory); // Generate HTML
+        await generateHTML(lang, translationKeys, outputDirectoryTemp); // Generate HTML
         await generatePDF(browser, lang, translationKeys, outputDirectory); // Generate PDF
       }
     }));
