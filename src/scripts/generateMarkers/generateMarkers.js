@@ -1,7 +1,7 @@
-const fs = require("fs");
-const path = require("path");
-const csv = require("csv-parser");
-const { googleMapsMarkers } = require("../../resource/mapMarkers");
+import fs from "fs";
+import path from "path";
+import csv from "csv-parser";
+import googleMapsMarkers from "../../resource/mapMarkers.js";
 
 console.error("CSV's loaded");
 

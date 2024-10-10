@@ -4,8 +4,6 @@ const getNextId = () => {
   return ++id;
 };
 
-
-
 const googleMapsMarkers = [
   //-----------------------// Portugal //-----------------------//
   {//extra
@@ -828,4 +826,4 @@ const googleMapsMarkers = [
   },
 ];
 
-module.exports = {googleMapsMarkers}
+export default googleMapsMarkers;
