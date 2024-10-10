@@ -2,14 +2,13 @@ import React from "react";
 import Image from "next/image";
 import { useTranslations } from "next-intl";
 
-import "./Cv.scss";
-
 import { languageList } from "@/resource/lngs/lngs";
-
 import languagesImg from "@/images/cv/languages.jpg";
-
 import { Expressions } from "@/models/Expressions";
 import { Language } from "@/models/Language";
+
+import "./Cv.scss";
+
 interface ILanguagesProps {
   animatedOverlay: React.MutableRefObject<string>;
   gradient: string;
@@ -24,10 +23,8 @@ export default function Languages(props: ILanguagesProps) {
   }, {});
   const languagesExp = t.raw("expressions.languages") as Expressions;
 
-
-
   const languages = t.raw("languages.description").map((item) => ({
-    ...item as Language[],
+    ...(item as Language[]),
     language: languagesExp[item.flag],
   }));
 

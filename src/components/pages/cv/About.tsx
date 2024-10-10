@@ -1,12 +1,12 @@
 import React from "react";
 import { useTranslations } from "next-intl";
 
-import "./Cv.scss";
-
 import aboutImg from "@/images/cv/about.jpg";
-
 import { Expressions } from "@/models/Expressions";
 import { Experience } from "@/models/Experience";
+
+import "./Cv.scss";
+
 interface IAboutProps {
   animatedOverlay: React.MutableRefObject<string>;
   gradient: string;

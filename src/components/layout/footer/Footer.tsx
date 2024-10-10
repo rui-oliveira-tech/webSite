@@ -1,4 +1,3 @@
-
 'use client';
 
 import React from "react";
@@ -6,7 +5,7 @@ import { useTranslations } from "next-intl";
 import "./Footer.scss";
 
 import Button from "../../others/Button/Button";
-import GetLink from "@/resource/link";
+import GetLink from "@/resource/links";
 
 export function Footer() {
   const t = useTranslations("");

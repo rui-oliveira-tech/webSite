@@ -1,23 +1,32 @@
 import React, { useState } from "react";
 import { useTranslations } from "next-intl";
-import getFormatDate, { formatDate, isExpirationDatePassed } from "@/util/getFormatDate";
+import getFormatDate, {
+  formatDate,
+  isExpirationDatePassed,
+} from "@/util/getFormatDate.tsx";
 
-import "./Cv.scss";
 import educationImg from "@/images/cv/education.jpg";
 import { Expressions } from "@/models/Expressions";
 import { Education } from "@/models/Education";
+
+import "./Cv.scss";
 
 interface IEducationProps {
   animatedOverlay: React.MutableRefObject<string>;
   gradient: string;
 }
 
-export default function Education({ animatedOverlay, gradient }: IEducationProps) {
+export default function Education({
+  animatedOverlay,
+  gradient,
+}: IEducationProps) {
   const t = useTranslations("");
   const expressions = t.raw("expressions") as Expressions;
   const educations = t.raw("educations.description") as Education[];
 
-  const [showDiplomType, setShowDiplomType] = useState<"validDiplom" | "duplicateDiplom" | "expiredDiplom">("validDiplom");
+  const [showDiplomType, setShowDiplomType] = useState<
+    "validDiplom" | "duplicateDiplom" | "expiredDiplom"
+  >("validDiplom");
 
   const toggleDiplomaStatus = () => {
     setShowDiplomType((prev) => {
@@ -56,25 +65,38 @@ export default function Education({ animatedOverlay, gradient }: IEducationProps
           onClick={toggleDiplomaStatus}
           aria-label="Toggle diploma status"
         >
-          {`${t("educations.underlayTitle")} (${expressions.offerTypes[showDiplomType]})`}
+          {`${t("educations.underlayTitle")} (${
+            expressions.offerTypes[showDiplomType]
+          })`}
         </button>
         <p className="text small">{t("educations.key.changeDiplomas")}</p>
         {educations.length > 0 ? (
           educations.map((education, i) => {
             const isPermanent = education.expirationDate === "Permanent";
-            const isExpired = !isPermanent && isExpirationDatePassed(education.expirationDate);
+            const isExpired =
+              !isPermanent && isExpirationDatePassed(education.expirationDate);
             const isDuplicate = education.type === "duplicate";
 
             // Adjusted filtering logic
             const shouldShow =
-              (showDiplomType === "validDiplom" && !isExpired && !isDuplicate) ||
-              (showDiplomType === "duplicateDiplom" && isDuplicate && !isExpired) ||
+              (showDiplomType === "validDiplom" &&
+                !isExpired &&
+                !isDuplicate) ||
+              (showDiplomType === "duplicateDiplom" &&
+                isDuplicate &&
+                !isExpired) ||
               (showDiplomType === "expiredDiplom" && isExpired);
 
             if (shouldShow) {
               const title = isExpired
-                ? `${education.title} (${expressions.offerTypes.expired} ${formatDate(education.endDate, expressions)})`
-                : `${education.title} (${isPermanent ? expressions.offerTypes.permanent : `${expressions.offerTypes.valid} ${education.expirationDate}`})`;
+                ? `${education.title} (${
+                    expressions.offerTypes.expired
+                  } ${formatDate(education.endDate, expressions)})`
+                : `${education.title} (${
+                    isPermanent
+                      ? expressions.offerTypes.permanent
+                      : `${expressions.offerTypes.valid} ${education.expirationDate}`
+                  })`;
 
               return (
                 <React.Fragment key={i}>
@@ -86,9 +108,12 @@ export default function Education({ animatedOverlay, gradient }: IEducationProps
                     href={education.website}
                     aria-label={`Visit ${education.companyTitle} website`}
                   >
-                    {education.companyTitle} {education.company} {expressions.prepositions.in} {education.location}
+                    {education.companyTitle} {education.company}{" "}
+                    {expressions.prepositions.in} {education.location}
                   </a>
-                  <p className="text small">{getFormatDate(education, expressions)}</p>
+                  <p className="text small">
+                    {getFormatDate(education, expressions)}
+                  </p>
                 </React.Fragment>
               );
             }

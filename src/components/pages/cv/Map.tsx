@@ -1,10 +1,10 @@
 import React, { useEffect, useRef, useState } from "react";
 import { useTranslations } from "next-intl";
-import MapSection from "../../others/Map/Map";
+import MapSection from "@/components/others/Map/Map";
 import pointsDataset from "@/resource/generated/processedGoogleMapsMarkers.json";
-import "./Cv.scss";
-
 import MapsImg from "@/images/cv/googleMapsMarkers.jpg";
+
+import "./Cv.scss";
 
 //import { Map } from "@/models/Project";
 interface IMapProps {

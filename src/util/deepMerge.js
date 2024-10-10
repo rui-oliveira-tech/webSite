@@ -1,3 +1,5 @@
+// deepMerge.js
+
 // Define isObject function
 function isObject(item) {
   return (
@@ -10,13 +12,13 @@ function isObject(item) {
 
 // Define deepMerge function
 function deepMerge(target) {
-  var sources = Array.prototype.slice.call(arguments, 1);
+  const sources = Array.prototype.slice.call(arguments, 1);
   if (!sources.length) return target;
 
   // Iterate through each source object without modifying the sources array
   sources.forEach(function (source) {
     if (isObject(target) && isObject(source)) {
-      for (var key in source) {
+      for (const key in source) {
         if (isObject(source[key])) {
           if (
             key === "__proto__" ||
@@ -46,5 +48,5 @@ function deepMerge(target) {
   return target;
 }
 
-// Export deepMerge function using CommonJS syntax
-module.exports = deepMerge;
+// Export deepMerge function using ES module syntax
+export default deepMerge;

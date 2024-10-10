@@ -1,13 +1,13 @@
 import React from "react";
 import { useTranslations } from "next-intl";
-import getFormatDate from "@/util/getFormatDate";
+import getFormatDate from "@/util/getFormatDate.tsx";
+
+import othersImg from "@/images/cv/others.jpg";
+import { Expressions } from "@/models/Expressions";
+import { Other } from "@/models/Other";
 
 import "./Cv.scss";
 
-import othersImg from "@/images/cv/others.jpg";
-
-import { Expressions } from "@/models/Expressions";
-import { Other } from "@/models/Other";
 interface IOthersProps {
   animatedOverlay: React.MutableRefObject<string>;
   gradient: string;

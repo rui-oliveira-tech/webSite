@@ -12,14 +12,21 @@ export default function getLink(type) {
       return "https://api.whatsapp.com/send/?phone=32474127175&text&type=phone_number&app_absent=0";
     case "mail":
       return "mailto:hire@rui-oliveira.com";
-    /*  case "google":
-     return "Google";
-      case "vdab":
-     return "VDAB";
-   case "twitter":
-     return "Twitter"; */
-    default:
+    case "website":
       return "https://www.rui-oliveira.com/";
+    case "gsm":
+      return "+32474127175";
+    /*  
+      Uncomment these when you need them:
+      case "google":
+        return "Google";
+      case "vdab":
+        return "VDAB";
+      case "twitter":
+        return "Twitter";
+    */
+    default:
+      return "#"; // fallback link
   }
 }
 

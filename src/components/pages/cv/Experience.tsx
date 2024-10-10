@@ -1,13 +1,13 @@
 import React from "react";
 import { useTranslations } from "next-intl";
-import getFormatDate from "@/util/getFormatDate";
+import getFormatDate from "@/util/getFormatDate.tsx";
+
+import experienceImg from "@/images/cv/experience.jpg";
+import { Expressions } from "@/models/Expressions";
+import { Experience } from "@/models/Experience";
 
 import "./Cv.scss";
 
-import experienceImg from "@/images/cv/experience.jpg";
-
-import { Expressions } from "@/models/Expressions";
-import { Experience } from "@/models/Experience";
 interface IExperienceProps {
   animatedOverlay: React.MutableRefObject<string>;
   gradient: string;

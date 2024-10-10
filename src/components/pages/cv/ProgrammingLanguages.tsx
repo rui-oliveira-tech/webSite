@@ -2,13 +2,12 @@ import React from "react";
 import { useTranslations } from "next-intl";
 import Image from "next/image";
 
-import "./Cv.scss";
-
 import programmingLanguagesImg from "@/images/cv/programmingLanguages.jpg";
 import { proglanguageList } from "@/images/programming_languages/ImgSrc";
-
-
 import { ProgrammingLanguage } from "@/models/ProgrammingLanguage";
+
+import "./Cv.scss";
+
 interface IProgrammingLanguagesProps {
   animatedOverlay: React.MutableRefObject<string>;
   gradient: string;

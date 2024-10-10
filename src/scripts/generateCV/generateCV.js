@@ -1,9 +1,15 @@
-const puppeteer = require('puppeteer');
-const fs = require('fs');
-const path = require('path');
-const deepMerge = require('../../util/deepMerge.js'); // Assuming you have a deepMerge function
-const pdfTemplate = require('./documents/newCv/index.js'); // Import the CV generation function
-const { defaultLanguage, supportedLngs } = require('../../resource/lngs/langs.js');
+import puppeteer from 'puppeteer';
+import fs from 'fs';
+import path from 'path';
+import deepMerge from '../../util/deepMerge.js';
+import pdfTemplate from './documents/newCv/index.js'; 
+import { defaultLanguage, supportedLngs } from '../../resource/lngs/langs.js';
+import getLink from '../../resource/link.js';
+import { fileURLToPath } from 'url'; 
+
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename); 
 
 const getTranslations = (locale) => {
   if (!supportedLngs.includes(locale)) {
@@ -20,7 +26,7 @@ const getTranslations = (locale) => {
 };
 
 const generateHTML = async (lang, translationKeys, outputDirectory) => {
-  const cvHtml = pdfTemplate({ currentLanguageCode: lang, cvData: translationKeys });
+  const cvHtml = pdfTemplate({ currentLanguageCode: lang, cvData: translationKeys, getLink: getLink });
   const htmlFilePath = path.join(outputDirectory, `RuiOliveira_CV-${lang.toUpperCase()}.html`);
 
   // Save the HTML file
@@ -29,24 +35,24 @@ const generateHTML = async (lang, translationKeys, outputDirectory) => {
 };
 
 const generatePDF = async (browser, lang, translationKeys, outputDirectory) => {
-  const cvHtml = pdfTemplate({ currentLanguageCode: lang, cvData: translationKeys });
+  const cvHtml = pdfTemplate({ currentLanguageCode: lang, cvData: translationKeys, getLink: getLink });
   const options = {
     format: 'Letter',
     zoomFactor: "1",
-    orientation: 'portrait', 
+    orientation: 'portrait',
     margin: {
       top: '8mm',
       bottom: '8mm',
       left: '8mm',
       right: '8mm',
     },
-    displayHeaderFooter: false, // Enable header and footer display
+    displayHeaderFooter: false, 
     footerTemplate: `<div style="font-size: 10px; text-align: center; width: 100%;">
       <p>Rui Oliveira &mdash; <a href="https://www.rui-oliveira.com/${lang}" class="icon-globe-1">www.rui-oliveira.com</a> &mdash; +32474127175</p>
       <div>${translationKeys.expressions.page} <span class="pageNumber"></span> of <span class="totalPages"></span></div>
     </div>`,
-    headerTemplate: '<header></header>', // If you want a custom header, you can define it here
-    printBackground: true, // Ensure background colors/images are printed
+    headerTemplate: '<header></header>', 
+    printBackground: true, 
   };
 
   const page = await browser.newPage();
@@ -68,7 +74,7 @@ const generateCV = async () => {
       return [lang, getTranslations(lang).messages];
     } catch (err) {
       console.error(err.message);
-      return [lang, null]; // Return null for failed translations
+      return [lang, null];
     }
   }));
 
@@ -76,8 +82,8 @@ const generateCV = async () => {
     await Promise.all(supportedLngs.map(async (lang) => {
       const translationKeys = supportedLngsKeys[lang];
       if (translationKeys) {
-        await generateHTML(lang, translationKeys, outputDirectoryTemp); // Generate HTML
-        await generatePDF(browser, lang, translationKeys, outputDirectory); // Generate PDF
+        await generateHTML(lang, translationKeys, outputDirectoryTemp); 
+        await generatePDF(browser, lang, translationKeys, outputDirectory); 
       }
     }));
   } catch (err) {
