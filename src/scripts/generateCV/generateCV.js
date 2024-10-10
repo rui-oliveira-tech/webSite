@@ -4,7 +4,7 @@ import path from 'path';
 import deepMerge from '../../util/deepMerge.js';
 import pdfTemplate from './documents/newCv/index.js'; 
 import { defaultLanguage, supportedLngs } from '../../resource/lngs/langs.js';
-import getLink from '../../resource/link.js';
+import getLink from '../../resource/links.js';
 import { fileURLToPath } from 'url'; 
 
 
