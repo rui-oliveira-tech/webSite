@@ -24,8 +24,7 @@ Readonly<{
   return (
     <html lang={locale}>
       <NextIntlClientProvider messages={messages}>
-     {/*    <Meta locale={locale} /> */}
-
+        <Meta locale={locale} />
         <body className={classNames(inter.className, "overflow-y-scroll")}>
           <div id="root" className="flex flex-col min-h-screen mx-auto">
             <div className="flex-grow">{children}</div>

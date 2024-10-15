@@ -1,6 +1,7 @@
 "use client";
 
 import { NextSeo } from "next-seo";
+import Head from "next/head";
 import { useTranslations } from "next-intl";
 
 interface IMetaProps {
@@ -15,24 +16,32 @@ const Meta = ({ title, description, canonical, locale }: IMetaProps) => {
 
   const pageTitle = title || t("app_title");
   const pageDescription = description || t("app_description");
-  console.log(pageTitle, pageDescription, locale);
+  const imageUrl = process.env.NEXT_PUBLIC_URL + "/favicon/android-chrome-512x512.png";
 
   return (
     <>
+      <Head>
+      <meta charset="utf-8" />
+      <title>Your Page Title</title>
+      </Head>
       <NextSeo
         title={pageTitle}
         description={pageDescription}
-        //    canonical={canonical}
-        //    twitter={{
-        //      cardType: "summary_large_image",
-        //      // Add Twitter handle and site URL if needed
-        //    }}
+        canonical={canonical} // Add canonical URL if needed
         openGraph={{
           title: pageTitle,
           description: pageDescription,
-          // Add URL if available
+          images: [
+            {
+              url: imageUrl,
+              width: 512,
+              height: 512,
+              alt: pageTitle,
+            },
+          ],
           locale: locale,
           site_name: pageTitle,
+          type: "website",
         }}
       />
     </>
@@ -40,6 +49,7 @@ const Meta = ({ title, description, canonical, locale }: IMetaProps) => {
 };
 
 export { Meta };
+
 //<Head>
 //{/* Example meta tags */}
 //<meta charSet="UTF-8" key="charset" />
