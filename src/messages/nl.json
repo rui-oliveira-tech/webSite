@@ -40,10 +40,7 @@
   },
   "skills": {
     "softSkills": {
-      "underlayTitle": [
-        "Certification",
-        "Éducation"
-      ],
+      "underlayTitle": "Zachte Vaardigheden",
       "description": [
         {
           "title": "Probleemoplossing en troubleshooting",
@@ -52,6 +49,20 @@
         {
           "title": "Communicatie en samenwerking",
           "description": "Uitstekende communicatie- en samenwerkingsvaardigheden, waardoor succesvolle resultaten worden bereikt via teamwork."
+        },
+        {
+          "title": "Kritisch Denken",
+          "description": "Feiten analyseren om weloverwogen beslissingen te nemen.",
+          "type": [
+            "cv1"
+          ]
+        },
+        {
+          "title": "Werkethiek",
+          "description": "Betrouwbaarheid, ijver en toewijding aan kwaliteit aantonen.",
+          "type": [
+            "cv1"
+          ]
         }
       ]
     },

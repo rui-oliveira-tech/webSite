@@ -58,6 +58,20 @@
           "type": [
             "cv1"
           ]
+        },
+        {
+          "title": "Critical Thinking",
+          "description": "Analyzing facts to make informed decisions.",
+          "type": [
+            "cv1"
+          ]
+        },
+        {
+          "title": "Work Ethic",
+          "description": "Demonstrating reliability, diligence, and commitment to quality.",
+          "type": [
+            "cv1"
+          ]
         }
       ]
     },

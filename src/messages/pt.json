@@ -70,6 +70,20 @@
         {
           "title": "Segurança e conformidade",
           "description": "Foco elevado em segurança e conformidade em todos os aspectos do trabalho elétrico."
+        },
+        {
+          "title": "Pensamento Crítico",
+          "description": "Analisando fatos para tomar decisões informadas.",
+          "type": [
+            "cv1"
+          ]
+        },
+        {
+          "title": "Ética de Trabalho",
+          "description": "Demonstrando confiabilidade, diligência e compromisso com a qualidade.",
+          "type": [
+            "cv1"
+          ]
         }
       ]
     }

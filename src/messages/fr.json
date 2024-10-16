@@ -49,6 +49,20 @@
         {
           "title": "Communication et collaboration",
           "description": "Excellentes compétences en communication et en collaboration, permettant d'obtenir des résultats réussis grâce au travail d'équipe."
+        },
+        {
+          "title": "Pensée Critique",
+          "description": "Analyser les faits pour prendre des décisions éclairées.",
+          "type": [
+            "cv1"
+          ]
+        },
+        {
+          "title": "Éthique de Travail",
+          "description": "Démontrer fiabilité, diligence et engagement envers la qualité.",
+          "type": [
+            "cv1"
+          ]
         }
       ]
     },
