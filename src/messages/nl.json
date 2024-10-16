@@ -78,7 +78,7 @@
     }
   },
   "certifications": {
-    "overlayTitle": "Wat ik heb geleerd",
+    "overlayTitle": "Wat zijn mijn accreditaties?",
     "underlayTitle": "Certificeringen",
     "key": {
       "changeDiplomas": "Klik om te wisselen tussen Certificeringen, Dubbele en Verlopen Diploma's."
@@ -124,7 +124,7 @@
     ]
   },
   "educations": {
-    "overlayTitle": "Ce que j'ai appris",
+    "overlayTitle": "Wat ik heb geleerd",
     "underlayTitle": "Éducation",
     "key": {
       "changeDiplomas": "Cliquez pour basculer entre Diplômes Valides, Duplicatas et Expirés."

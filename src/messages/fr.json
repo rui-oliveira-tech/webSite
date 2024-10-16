@@ -75,7 +75,7 @@
     }
   },
   "certifications": {
-    "overlayTitle": "Ce que j'ai appris",
+    "overlayTitle": "Quelles sont mes accréditations?",
     "underlayTitle": "Certification",
     "key": {
       "changeDiplomas": "Cliquez pour basculer entre Certifications, Diplômes en double et expirés."

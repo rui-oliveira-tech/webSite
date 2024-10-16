@@ -97,7 +97,7 @@
   },
   "certifications": {
     "img": "certification",
-    "overlayTitle": "What I've learned",
+    "overlayTitle": "What are my accreditations?",
     "underlayTitle": "Certification",
     "key": {
       "changeDiplomas": "Click to switch between Valid, certification, and certification Diplomas."

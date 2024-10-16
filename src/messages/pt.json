@@ -75,7 +75,7 @@
     }
   },
   "certifications": {
-    "overlayTitle": "O que eu aprendi",
+    "overlayTitle": "Quais as minhas acreditações ?",
     "underlayTitle": "Certificação",
     "key": {
       "changeDiplomas": "Clique para alternar entre Certificações Válidos, Duplicados e Expirados."
@@ -121,7 +121,7 @@
     ]
   },
   "educations": {
-    "overlayTitle": "Ce que j'ai appris",
+    "overlayTitle": "O que eu aprendi",
     "underlayTitle": "Éducation",
     "key": {
       "changeDiplomas": "Cliquez pour basculer entre Diplômes Valides, Duplicatas et Expirés."
