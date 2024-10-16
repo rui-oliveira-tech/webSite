@@ -42,38 +42,66 @@
     }
   },
   "skills": {
-    "underlayTitle": "Skills",
-    "description": [
-      {
-        "title": "Designing and analyzing systems",
-        "description": "Experience in designing electrical systems for a variety of applications, with proficiency in software tools such as Visio and AutoCAD to analyze and optimize these systems."
-      },
-      {
-        "title": "Troubleshooting and problem-solving",
-        "description": "Strong analytical skills to quickly identify issues with electrical systems and develop effective solutions to resolve them."
-      },
-      {
-        "title": "Testing and Inspection",
-        "description": "Background in testing and inspecting electrical systems to ensure compliance and functionality, with the ability to provide detailed reports on findings."
-      },
-      {
-        "title": "Project management",
-        "description": "Successful management of numerous electrical projects from start to finish, delivering high-quality results within budget and on time."
-      },
-      {
-        "title": "Safety and compliance",
-        "description": "High focus on safety and compliance in all aspects of electrical work."
-      },
-      {
-        "title": "Communication and collaboration",
-        "description": "Excellent communication and collaboration skills, enabling successful outcomes through teamwork."
-      }
-    ]
+    "softSkills": {
+      "underlayTitle": "Soft Skills",
+      "description": [
+        {
+          "title": "Troubleshooting and problem-solving",
+          "description": "Strong analytical skills to quickly identify issues with electrical systems and develop effective solutions to resolve them.",
+          "type": [
+            "cv1"
+          ]
+        },
+        {
+          "title": "Communication and collaboration",
+          "description": "Excellent communication and collaboration skills, enabling successful outcomes through teamwork.",
+          "type": [
+            "cv1"
+          ]
+        }
+      ]
+    },
+    "hardSkills": {
+      "underlayTitle": "Hard Skills",
+      "description": [
+        {
+          "title": "Designing and analyzing systems",
+          "description": "Experience in designing electrical systems for a variety of applications, with proficiency in software tools such as Visio and AutoCAD to analyze and optimize these systems.",
+          "type": [
+            "cv1"
+          ]
+        },
+        {
+          "title": "Testing and Inspection",
+          "description": "Background in testing and inspecting electrical systems to ensure compliance and functionality, with the ability to provide detailed reports on findings.",
+          "type": [
+            "cv1"
+          ]
+        },
+        {
+          "title": "Project management",
+          "description": "Successful management of numerous electrical projects from start to finish, delivering high-quality results within budget and on time.",
+          "type": [
+            "cv1"
+          ]
+        },
+        {
+          "title": "Safety and compliance",
+          "description": "High focus on safety and compliance in all aspects of electrical work.",
+          "type": [
+            "cv1"
+          ]
+        }
+      ]
+    }
   },
   "educations": {
     "img": "education",
     "overlayTitle": "What I've learned",
-    "underlayTitle": "Education",
+    "underlayTitle": [
+      "Certification",
+      "Education"
+    ],
     "key": {
       "changeDiplomas": "Click to switch between Valid, Duplicate, and Expired Diplomas."
     },
@@ -87,7 +115,11 @@
         "expirationDate": "2027-06-30",
         "startDate": "2024-03-14",
         "endDate": "2024-07-01",
-        "type": "valid"
+        "type": [
+          "certification",
+          "valid",
+          "cv1"
+        ]
       },
       {
         "title": "Electric Stacker",
@@ -98,7 +130,11 @@
         "expirationDate": "2029-02-14",
         "startDate": "",
         "endDate": "2024-02-14",
-        "type": "valid"
+        "type": [
+          "certification",
+          "valid",
+          "cv1"
+        ]
       },
       {
         "title": "Slinger Signaller (GWO)",
@@ -109,7 +145,11 @@
         "expirationDate": "Permanent",
         "startDate": "2023-09-07",
         "endDate": "2023-09-08",
-        "type": "valid"
+        "type": [
+          "certification",
+          "valid",
+          "cv1"
+        ]
       },
       {
         "title": "Basic Technical - Mechanical",
@@ -120,7 +160,10 @@
         "expirationDate": "Permanent",
         "startDate": "2023-06-19",
         "endDate": "2023-06-22",
-        "type": "valid"
+        "type": [
+          "certification",
+          "valid"
+        ]
       },
       {
         "title": "Basic Technical - Hydraulic",
@@ -131,7 +174,10 @@
         "expirationDate": "Permanent",
         "startDate": "2023-06-19",
         "endDate": "2023-06-22",
-        "type": "duplicate"
+        "type": [
+          "certification",
+          "duplicate"
+        ]
       },
       {
         "title": "Basic Technical - Electrical",
@@ -142,7 +188,11 @@
         "expirationDate": "Permanent",
         "startDate": "2023-06-19",
         "endDate": "2023-06-22",
-        "type": "duplicate"
+        "type": [
+          "certification",
+          "duplicate",
+          "cv1"
+        ]
       },
       {
         "title": "VOL-VCA",
@@ -153,7 +203,11 @@
         "expirationDate": "2033-05-17",
         "startDate": "",
         "endDate": "2023-05-17",
-        "type": "valid"
+        "type": [
+          "certification",
+          "valid",
+          "cv1"
+        ]
       },
       {
         "title": "BA4",
@@ -164,7 +218,10 @@
         "expirationDate": "2024-05-12",
         "startDate": "2023-05-11",
         "endDate": "2023-05-12",
-        "type": "duplicate"
+        "type": [
+          "certification",
+          "duplicate"
+        ]
       },
       {
         "title": "First Aid - Fire Awareness - Working at Heights - Manual Handling (GWO)",
@@ -175,7 +232,11 @@
         "expirationDate": "2025-05-10",
         "startDate": "2023-05-8",
         "endDate": "2023-05-10",
-        "type": "valid"
+        "type": [
+          "certification",
+          "valid",
+          "cv1"
+        ]
       },
       {
         "title": "BASIS-VCA",
@@ -186,7 +247,10 @@
         "expirationDate": "2029-09-12",
         "startDate": "",
         "endDate": "2019-09-12",
-        "type": "duplicate"
+        "type": [
+          "certification",
+          "duplicate"
+        ]
       },
       {
         "title": "Driving course of electric forklifts, combustion and gas",
@@ -197,10 +261,13 @@
         "expirationDate": "Permanent",
         "startDate": "2018-03-07",
         "endDate": "2018-05-03",
-        "type": "valid"
+        "type": [
+          "certification",
+          "valid"
+        ]
       },
       {
-        "title": "Electronic, automation and maintenance +1500 hours InternshipElectronic",
+        "title": "Electronic, automation and maintenance",
         "companyTitle": "",
         "company": "CFPIC",
         "location": "São João da Madeira, Portugal",
@@ -208,7 +275,11 @@
         "expirationDate": "Permanent",
         "startDate": "2012",
         "endDate": "2015-01-16",
-        "type": "valid"
+        "type": [
+          "education",
+          "valid",
+          "cv1"
+        ]
       },
       {
         "title": "Driving license AM / B / B1 ",
@@ -219,7 +290,11 @@
         "expirationDate": "Permanent",
         "startDate": "",
         "endDate": "2015-12-04",
-        "type": "valid"
+        "type": [
+          "certification",
+          "valid",
+          "cv1"
+        ]
       },
       {
         "title": "High School, Course of Sciences and Technologies",
@@ -230,7 +305,10 @@
         "expirationDate": "Permanent",
         "startDate": "2010",
         "endDate": "2012",
-        "type": "duplicate"
+        "type": [
+          "education",
+          "duplicate"
+        ]
       }
     ]
   },
@@ -252,20 +330,13 @@
     },
     "description": [
       {
-        "flag": "pt",
-        "listening": "C2",
-        "reading": "C2",
-        "spokenInteraction": "C2",
-        "spokenProduction": "C2",
-        "writing": "C2"
-      },
-      {
         "flag": "en",
         "listening": "B2",
         "reading": "B1",
         "spokenInteraction": "B1",
         "spokenProduction": "B1",
-        "writing": "B1"
+        "writing": "B1",
+        "level": "professional"
       },
       {
         "flag": "es",
@@ -273,7 +344,8 @@
         "reading": "B1",
         "spokenInteraction": "B1",
         "spokenProduction": "B1",
-        "writing": "B1"
+        "writing": "B1",
+        "level": "professional"
       },
       {
         "flag": "nl",
@@ -281,7 +353,17 @@
         "reading": "A2",
         "spokenInteraction": "A1",
         "spokenProduction": "A1",
-        "writing": "A1"
+        "writing": "A1",
+        "level": "conversational"
+      },
+      {
+        "flag": "pt",
+        "listening": "C2",
+        "reading": "C2",
+        "spokenInteraction": "C2",
+        "spokenProduction": "C2",
+        "writing": "C2",
+        "level": "native"
       }
     ]
   },
@@ -291,70 +373,95 @@
     "underlayTitle": "Programming Languages",
     "description": [
       {
-        "type": "Industrial",
         "title": "Ladder",
         "img": "lader",
-        "website": "https://ladderlogicworld.com/"
+        "website": "https://ladderlogicworld.com/",
+        "type": [
+          "industrial",
+          "cv1"
+        ]
       },
       {
-        "type": "Industrial",
         "title": "Arduino",
         "img": "arduino",
-        "website": "https://github.com/rui-oliveira-tech/webSite/"
+        "website": "https://github.com/rui-oliveira-tech/webSite/",
+        "type": [
+          "industrial"
+        ]
       },
       {
-        "type": "Programming Languages",
         "title": "C++",
         "img": "cpp",
-        "website": "https://www.w3schools.com/cpp/"
+        "website": "https://www.w3schools.com/cpp/",
+        "type": [
+          "programmingLanguages",
+          "cv1"
+        ]
       },
       {
-        "type": "Programming Languages",
         "title": "Css",
         "img": "css",
-        "website": "https://www.w3schools.com/css/"
+        "website": "https://www.w3schools.com/css/",
+        "type": [
+          "programmingLanguages"
+        ]
       },
       {
-        "type": "Programming Languages",
         "title": "Html",
         "img": "html",
-        "website": "https://www.w3.org/html/"
+        "website": "https://www.w3.org/html/",
+        "type": [
+          "programmingLanguages"
+        ]
       },
       {
-        "type": "Programming Languages",
         "title": "Js",
         "img": "js",
-        "website": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/"
+        "website": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/",
+        "type": [
+          "programmingLanguages",
+          "cv1"
+        ]
       },
       {
-        "type": "Programming Languages",
         "title": "NodeJs",
         "img": "nodeJs",
-        "website": "https://nodejs.org/"
+        "website": "https://nodejs.org/",
+        "type": [
+          "programmingLanguages"
+        ]
       },
       {
-        "type": "software",
         "title": "Git",
         "img": "git",
-        "website": "https://git-scm.com/"
+        "website": "https://git-scm.com/",
+        "type": [
+          "software"
+        ]
       },
       {
-        "type": "software",
         "title": "Visual Studio Code",
         "img": "vsc",
-        "website": "https://code.visualstudio.com/"
+        "website": "https://code.visualstudio.com/",
+        "type": [
+          "software"
+        ]
       },
       {
-        "type": "software",
         "title": "Linux",
         "img": "linux",
-        "website": "https://www.linux.org/"
+        "website": "https://www.linux.org/",
+        "type": [
+          "software"
+        ]
       },
       {
-        "type": "software",
         "title": "Windows",
         "img": "windows",
-        "website": "https://www.microsoft.com/en-gb/windows/"
+        "website": "https://www.microsoft.com/en-gb/windows/",
+        "type": [
+          "software"
+        ]
       }
     ]
   },
@@ -372,7 +479,10 @@
         "website": "https://www.vestas.com/",
         "offerType": "Full-time",
         "startDate": "2023-05",
-        "endDate": "2024-12"
+        "endDate": "2024-12",
+        "type": [
+          "cv1"
+        ]
       },
       {
         "title": "Industrial Electrician",
@@ -383,7 +493,8 @@
         "website": "https://agpglass.com/",
         "offerType": "Full-time",
         "startDate": "2023-03",
-        "endDate": "2023-05"
+        "endDate": "2023-05",
+        "type": []
       },
       {
         "title": "Industrial Electrician",
@@ -394,7 +505,10 @@
         "website": "https://www.socea.be/",
         "offerType": "Full-time",
         "startDate": "2019-05",
-        "endDate": "2023-03"
+        "endDate": "2023-03",
+        "type": [
+          "cv1"
+        ]
       },
       {
         "title": "Cold technician",
@@ -405,7 +519,10 @@
         "website": "https://www.msc.com/",
         "offerType": "Full-time",
         "startDate": "2018-07",
-        "endDate": "2019-05"
+        "endDate": "2019-05",
+        "type": [
+          "cv1"
+        ]
       },
       {
         "title": "Industrial Electrician",
@@ -416,7 +533,10 @@
         "website": "https://www.sersan.pt/",
         "offerType": "Full-time",
         "startDate": "2015-02",
-        "endDate": "2018-07"
+        "endDate": "2018-07",
+        "type": [
+          "cv1"
+        ]
       },
       {
         "title": "Electronic, automation and maintenance (1500 hours)",
@@ -427,7 +547,10 @@
         "website": "https://www.sersan.pt/",
         "offerType": "Internship",
         "startDate": "2012",
-        "endDate": "2015"
+        "endDate": "2015",
+        "type": [
+          "cv1"
+        ]
       }
     ]
   },
@@ -441,14 +564,20 @@
         "description": "My house is powered by a Raspberry Pi 4 and is automated using Home Assistant. With this setup, I have the ability to control various aspects such as lights, sensors, and robots, both internally (without an internet connection) and externally (via VPN \"Tailscale\" and IP masked by \"Duck DNS\").",
         "website": "https://github.com/rui-oliveira-tech/homeAssistant/",
         "startDate": "2021-02-07",
-        "endDate": "Present"
+        "endDate": "Present",
+        "type": [
+          "cv1"
+        ]
       },
       {
         "title": "Website",
         "description": "This website was created with the aim of promoting information about my professional career, in a way that is accessible to companies and interested people.The purpose of this website is to showcase my professional career and make information easily accessible to companies and individuals who are interested in learning more about me.",
         "website": "https://github.com/rui-oliveira-tech/webSite/",
         "startDate": "2022-02-11",
-        "endDate": "Present"
+        "endDate": "Present",
+        "type": [
+          "cv1"
+        ]
       }
     ]
   },
@@ -461,13 +590,19 @@
         "title": "Off We Go – IB&C WEEKS",
         "description": "Scholar Exchange experience.",
         "startDate": "2014-05-17",
-        "endDate": "2014-05-25"
+        "endDate": "2014-05-25",
+        "type": [
+          "cv1"
+        ]
       },
       {
         "title": "Europe tour",
         "description": "Countries I visited.",
         "startDate": "2021-02-07",
-        "endDate": "Present"
+        "endDate": "Present",
+        "type": [
+          "cv1"
+        ]
       }
     ]
   },
@@ -509,6 +644,11 @@
       "en": "English",
       "es": "Spanish",
       "nl": "Dutch"
+    },
+    "languagesLevels": {
+      "native": "Native",
+      "professional": "Professional",
+      "conversational": "Conversational"
     },
     "months": {
       "present": "Present",

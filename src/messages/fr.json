@@ -39,37 +39,47 @@
     }
   },
   "skills": {
-    "underlayTitle": "Compétences",
-    "description": [
-      {
-        "title": "Conception et analyse de systèmes",
-        "description": "Expérience dans la conception de systèmes électriques pour une variété d'applications, avec une expertise dans des outils logiciels tels que Visio et AutoCAD pour analyser et optimiser ces systèmes."
-      },
-      {
-        "title": "Dépannage et résolution de problèmes",
-        "description": "Fortes compétences analytiques pour identifier rapidement les problèmes avec les systèmes électriques et développer des solutions efficaces pour les résoudre."
-      },
-      {
-        "title": "Tests et inspections",
-        "description": "Expérience dans le test et l'inspection de systèmes électriques pour garantir la conformité et la fonctionnalité, avec la capacité de fournir des rapports détaillés sur les résultats."
-      },
-      {
-        "title": "Gestion de projet",
-        "description": "Gestion réussie de nombreux projets électriques de bout en bout, fournissant des résultats de haute qualité dans les limites du budget et dans les délais impartis."
-      },
-      {
-        "title": "Sécurité et conformité",
-        "description": "Fort accent sur la sécurité et la conformité dans tous les aspects du travail électrique."
-      },
-      {
-        "title": "Communication et collaboration",
-        "description": "Excellentes compétences en communication et en collaboration, permettant des résultats réussis grâce au travail d'équipe."
-      }
-    ]
+    "softSkills": {
+      "underlayTitle": "Compétences Interpersonnelles",
+      "description": [
+        {
+          "title": "Dépannage et résolution de problèmes",
+          "description": "Solides compétences analytiques pour identifier rapidement les problèmes des systèmes électriques et développer des solutions efficaces pour les résoudre."
+        },
+        {
+          "title": "Communication et collaboration",
+          "description": "Excellentes compétences en communication et en collaboration, permettant d'obtenir des résultats réussis grâce au travail d'équipe."
+        }
+      ]
+    },
+    "hardSkills": {
+      "underlayTitle": "Compétences Techniques",
+      "description": [
+        {
+          "title": "Conception et analyse de systèmes",
+          "description": "Expérience dans la conception de systèmes électriques pour diverses applications, avec une maîtrise des outils logiciels tels que Visio et AutoCAD pour analyser et optimiser ces systèmes."
+        },
+        {
+          "title": "Test et inspection",
+          "description": "Expérience dans les tests et l'inspection des systèmes électriques pour garantir la conformité et la fonctionnalité, avec la capacité de fournir des rapports détaillés sur les résultats."
+        },
+        {
+          "title": "Gestion de projets",
+          "description": "Gestion réussie de nombreux projets électriques du début à la fin, en livrant des résultats de haute qualité dans les délais et le budget."
+        },
+        {
+          "title": "Sécurité et conformité",
+          "description": "Forte attention à la sécurité et à la conformité dans tous les aspects du travail électrique."
+        }
+      ]
+    }
   },
   "educations": {
     "overlayTitle": "Ce que j'ai appris",
-    "underlayTitle": "Education",
+    "underlayTitle": [
+      "Certification",
+      "Éducation"
+    ],
     "key": {
       "changeDiplomas": "Cliquez pour basculer entre Diplômes Valides, Duplicatas et Expirés."
     },
@@ -245,6 +255,11 @@
       "en": "Anglais",
       "es": "Espagnol",
       "nl": "Holandais"
+    },
+    "languagesLevels": {
+      "native": "Natif",
+      "professional": "Professionnel",
+      "conversational": "Conversationnel"
     },
     "months": {
       "present": "Présent",

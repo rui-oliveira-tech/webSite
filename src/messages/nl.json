@@ -39,33 +39,43 @@
     }
   },
   "skills": {
-    "underlayTitle": "Vaardigheden",
-    "description": [
-      {
-        "title": "Ontwerp en analyse systemen",
-        "description": "Ervaring in het ontwerpen van elektrische systemen voor een verscheidenheid aan toepassingen, met expertise in softwaretools zoals Visio en AutoCAD om deze systemen te analyseren en optimaliseren."
-      },
-      {
-        "title": "Probleemoplossing en oplossen van problemen",
-        "description": "Sterke analytische vaardigheden om snel problemen met elektrische systemen te identificeren en effectieve oplossingen te ontwikkelen om deze op te lossen."
-      },
-      {
-        "title": "Testen en inspectie",
-        "description": "Achtergrond in het testen en inspecteren van elektrische systemen om naleving en functionaliteit te garanderen, met de mogelijkheid om gedetailleerde rapporten over bevindingen te verstrekken."
-      },
-      {
-        "title": "Projectmanagement",
-        "description": "Succesvol beheer van talloze elektrische projecten van begin tot eind, waarbij hoogwaardige resultaten binnen budget en op tijd worden geleverd."
-      },
-      {
-        "title": "Veiligheid en naleving",
-        "description": "Sterke focus op veiligheid en naleving in alle aspecten van elektrisch werk."
-      },
-      {
-        "title": "Communicatie en samenwerking",
-        "description": "Uitstekende communicatie- en samenwerkingsvaardigheden, waardoor succesvolle resultaten worden behaald door teamwork."
-      }
-    ]
+    "softSkills": {
+      "underlayTitle": [
+        "Certification",
+        "Éducation"
+      ],
+      "description": [
+        {
+          "title": "Probleemoplossing en troubleshooting",
+          "description": "Sterke analytische vaardigheden om snel problemen in elektrische systemen te identificeren en effectieve oplossingen te ontwikkelen om deze op te lossen."
+        },
+        {
+          "title": "Communicatie en samenwerking",
+          "description": "Uitstekende communicatie- en samenwerkingsvaardigheden, waardoor succesvolle resultaten worden bereikt via teamwork."
+        }
+      ]
+    },
+    "hardSkills": {
+      "underlayTitle": "Technische Vaardigheden",
+      "description": [
+        {
+          "title": "Ontwerp en analyse van systemen",
+          "description": "Ervaring met het ontwerpen van elektrische systemen voor verschillende toepassingen, met vaardigheid in softwaretools zoals Visio en AutoCAD om deze systemen te analyseren en optimaliseren."
+        },
+        {
+          "title": "Testen en inspectie",
+          "description": "Ervaring in het testen en inspecteren van elektrische systemen om naleving en functionaliteit te waarborgen, met het vermogen om gedetailleerde rapporten over de bevindingen te leveren."
+        },
+        {
+          "title": "Projectmanagement",
+          "description": "Succesvol beheer van talrijke elektrische projecten van begin tot eind, waarbij hoogwaardige resultaten op tijd en binnen het budget worden geleverd."
+        },
+        {
+          "title": "Veiligheid en naleving",
+          "description": "Sterke focus op veiligheid en naleving in alle aspecten van elektrisch werk."
+        }
+      ]
+    }
   },
   "educations": {
     "overlayTitle": "Wat ik heb geleerd",
@@ -245,6 +255,11 @@
       "en": "Engels",
       "es": "Spaans",
       "nl": "Nederlands"
+    },
+    "languagesLevels": {
+      "native": "Natif",
+      "professional": "Professionnel",
+      "conversational": "Conversationnel"
     },
     "months": {
       "present": "Nu",

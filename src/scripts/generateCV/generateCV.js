@@ -2,14 +2,14 @@ import puppeteer from 'puppeteer';
 import fs from 'fs';
 import path from 'path';
 import deepMerge from '../../util/deepMerge.js';
-import pdfTemplate from './documents/newCv/index.js'; 
+import pdfTemplate from './documents/newCv/index.js';
 import { defaultLanguage, supportedLngs } from '../../resource/lngs/langs.js';
 import getLink from '../../resource/links.js';
-import { fileURLToPath } from 'url'; 
+import { fileURLToPath } from 'url';
 
 
 const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename); 
+const __dirname = path.dirname(__filename);
 
 const getTranslations = (locale) => {
   if (!supportedLngs.includes(locale)) {
@@ -26,7 +26,7 @@ const getTranslations = (locale) => {
 };
 
 const generateHTML = async (lang, translationKeys, outputDirectory) => {
-  const cvHtml = pdfTemplate({ currentLanguageCode: lang, cvData: translationKeys, getLink: getLink });
+  const cvHtml = pdfTemplate({ currentLanguageCode: lang, cvData: translationKeys, getLink: getLink, cvType: "cv1" });
   const htmlFilePath = path.join(outputDirectory, `RuiOliveira_CV-${lang.toUpperCase()}.html`);
 
   // Save the HTML file
@@ -35,7 +35,7 @@ const generateHTML = async (lang, translationKeys, outputDirectory) => {
 };
 
 const generatePDF = async (browser, lang, translationKeys, outputDirectory) => {
-  const cvHtml = pdfTemplate({ currentLanguageCode: lang, cvData: translationKeys, getLink: getLink });
+  const cvHtml = pdfTemplate({ currentLanguageCode: lang, cvData: translationKeys, getLink: getLink, cvType: "cv1" });
   const options = {
     format: 'Letter',
     zoomFactor: "1",
@@ -46,13 +46,13 @@ const generatePDF = async (browser, lang, translationKeys, outputDirectory) => {
       left: '8mm',
       right: '8mm',
     },
-    displayHeaderFooter: false, 
+    displayHeaderFooter: false,
     footerTemplate: `<div style="font-size: 10px; text-align: center; width: 100%;">
       <p>Rui Oliveira &mdash; <a href="https://www.rui-oliveira.com/${lang}" class="icon-globe-1">www.rui-oliveira.com</a> &mdash; +32474127175</p>
       <div>${translationKeys.expressions.page} <span class="pageNumber"></span> of <span class="totalPages"></span></div>
     </div>`,
-    headerTemplate: '<header></header>', 
-    printBackground: true, 
+    headerTemplate: '<header></header>',
+    printBackground: true,
   };
 
   const page = await browser.newPage();
@@ -82,8 +82,8 @@ const generateCV = async () => {
     await Promise.all(supportedLngs.map(async (lang) => {
       const translationKeys = supportedLngsKeys[lang];
       if (translationKeys) {
-        await generateHTML(lang, translationKeys, outputDirectoryTemp); 
-        await generatePDF(browser, lang, translationKeys, outputDirectory); 
+        await generateHTML(lang, translationKeys, outputDirectoryTemp);
+        await generatePDF(browser, lang, translationKeys, outputDirectory);
       }
     }));
   } catch (err) {

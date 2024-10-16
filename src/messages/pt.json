@@ -39,37 +39,47 @@
     }
   },
   "skills": {
-    "underlayTitle": "Habilidades",
-    "description": [
-      {
-        "title": "Projetar e analisar sistemas",
-        "description": "Experiência em projetar sistemas elétricos para uma variedade de aplicações, com proficiência em ferramentas de software como Visio e AutoCAD para analisar e otimizar esses sistemas."
-      },
-      {
-        "title": "Resolução e solução de problemas",
-        "description": "Fortes habilidades analíticas para identificar rapidamente problemas em sistemas elétricos e desenvolver soluções eficazes para resolvê-los."
-      },
-      {
-        "title": "Testes e Inspeção",
-        "description": "Experiência em testes e inspeção de sistemas elétricos para garantir conformidade e funcionalidade, com a capacidade de fornecer relatórios detalhados sobre os resultados."
-      },
-      {
-        "title": "Gestão de projetos",
-        "description": "Gerenciamento bem-sucedido de vários projetos elétricos do início ao fim, entregando resultados de alta qualidade dentro do orçamento e no prazo."
-      },
-      {
-        "title": "Segurança e conformidade",
-        "description": "Foco alto na segurança e conformidade em todos os aspectos do trabalho elétrico."
-      },
-      {
-        "title": "Comunicação e colaboração",
-        "description": "Excelentes habilidades de comunicação e colaboração, possibilitando resultados bem-sucedidos por meio do trabalho em equipe."
-      }
-    ]
+    "softSkills": {
+      "underlayTitle": "Habilidades Interpessoais",
+      "description": [
+        {
+          "title": "Solução de problemas",
+          "description": "Fortes habilidades analíticas para identificar rapidamente problemas em sistemas elétricos e desenvolver soluções eficazes para resolvê-los."
+        },
+        {
+          "title": "Comunicação e colaboração",
+          "description": "Excelentes habilidades de comunicação e colaboração, permitindo resultados bem-sucedidos através do trabalho em equipe."
+        }
+      ]
+    },
+    "hardSkills": {
+      "underlayTitle": "Habilidades Técnicas",
+      "description": [
+        {
+          "title": "Desenho e análise de sistemas",
+          "description": "Experiência em projetar sistemas elétricos para várias aplicações, com proficiência em ferramentas de software como Visio e AutoCAD para analisar e otimizar esses sistemas."
+        },
+        {
+          "title": "Teste e inspeção",
+          "description": "Experiência em testar e inspecionar sistemas elétricos para garantir conformidade e funcionalidade, com a capacidade de fornecer relatórios detalhados sobre as conclusões."
+        },
+        {
+          "title": "Gestão de projetos",
+          "description": "Gestão bem-sucedida de vários projetos elétricos do início ao fim, entregando resultados de alta qualidade dentro do orçamento e no prazo."
+        },
+        {
+          "title": "Segurança e conformidade",
+          "description": "Foco elevado em segurança e conformidade em todos os aspectos do trabalho elétrico."
+        }
+      ]
+    }
   },
   "educations": {
     "overlayTitle": "O que eu aprendi",
-    "underlayTitle": "Educação",
+    "underlayTitle": [
+      "Certificação",
+      "Educação"
+    ],
     "key": {
       "changeDiplomas": "Clique para alternar entre Diplomas Válidos, Duplicados e Expirados."
     },
@@ -245,6 +255,11 @@
       "en": "Inglés",
       "es": "Espanhol",
       "nl": "Holandés"
+    },
+    "languagesLevels": {
+      "native": "Nativo",
+      "professional": "Profissional",
+      "conversational": "Conversação"
     },
     "months": {
       "present": "Presente",
