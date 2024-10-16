@@ -272,9 +272,6 @@
     "img": "education",
     "overlayTitle": "What I've learned",
     "underlayTitle": "Education",
-    "key": {
-      "changeDiplomas": "Click to switch between Valid, Duplicate, and Expired Diplomas."
-    },
     "description": [
       {
         "title": "Electronic, automation and maintenance",

@@ -18,12 +18,12 @@
 
     grid-template-areas:
       ". about about about ."
+      ". certification . experience ."
+      ". certification . experience ."
       ". education . experience ."
-      ". education . experience ."
-      ". programmingLanguages . experience ."
-      ". languages languages languages ."
-      ". projects projects projects ."
-      ". others . map .";
+      ". projects . others ."
+      ". programmingLanguages . map ."
+      ". languages . map .";
 
     @media (min-width: 270px) and (max-width: 1023px) {
       grid-template-rows: auto auto auto auto auto auto auto auto;

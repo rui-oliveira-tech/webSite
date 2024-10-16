@@ -5,6 +5,7 @@ import React, { useEffect, useRef } from "react";
 import CvDownload from "./CvDownload";
 import About from "./About";
 import Education from "./Education";
+import Certification from "./Certification";
 import Languages from "./Languages";
 import ProgrammingLanguages from "./ProgrammingLanguages";
 import Experience from "./Experience";
@@ -37,6 +38,11 @@ export default function Cv(props) {
       <CvDownload {...props} animatedOverlay={animatedOverlay} />
       <div className="cvContainer">
         <About
+          {...props}
+          gradient={gradient}
+          animatedOverlay={animatedOverlay}
+        />
+        <Certification
           {...props}
           gradient={gradient}
           animatedOverlay={animatedOverlay}
