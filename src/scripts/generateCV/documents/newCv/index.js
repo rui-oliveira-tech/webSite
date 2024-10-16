@@ -19,6 +19,7 @@ export default ({ currentLanguageCode, cvData, getLink, cvType }) => {
   const characteristics = cvData.characteristics;
   const softSkills = cvData.skills.softSkills.description;
   const educations = cvData.educations.description;
+  const certifications = cvData.certifications.description;
   const experiences = cvData.experiences.description;
   const programmingLanguages = cvData.programmingLanguages.description;
   const projects = cvData.projects.description;
@@ -71,8 +72,8 @@ export default ({ currentLanguageCode, cvData, getLink, cvType }) => {
 
   const educationHtml = `
     <div class="yui-gf pageBrake">
-      <div class="line-with-text"><h2 class="icon-graduation-cap">&nbsp;&nbsp;${cvData.educations.underlayTitle[1]}</h2></div>
-      ${educations?.map((education, i) => education.type.includes(cvType) && education.type.includes("education") ? `
+      <div class="line-with-text"><h2 class="icon-graduation-cap">&nbsp;&nbsp;${cvData.educations.underlayTitle}</h2></div>
+      ${educations?.map((education, i) => education.type.includes(cvType)  ? `
         <div class="educations${i === 0 ? ' frist' : ''}">
           <h4 class="experience">${education.title}</h4>
           <a class="experience link noBrake" target="_blank" rel="noreferrer" href="${education.website}">
@@ -84,12 +85,12 @@ export default ({ currentLanguageCode, cvData, getLink, cvType }) => {
 
   const certificationHtml = `
   <div class="yui-gf pageBrake">
-    <div class="line-with-text"><h2 class="icon-graduation-cap">&nbsp;&nbsp;${cvData.educations.underlayTitle[0]}</h2></div>
-    ${educations?.map((education, i) => education.type.includes(cvType) && education.type.includes("certification") ? `
-      <div class="educations${i === 0 ? ' frist' : ''}">
-        <h4 class="experience">${education.title}</h4>
-        <a class="experience link noBrake" target="_blank" rel="noreferrer" href="${education.website}">
-          <h5 class="noBrake company">${education.company}</h5> <h5 class="noBrake company"> ${expressions.prepositions.in} ${education.location}</h5>
+    <div class="line-with-text"><h2 class="icon-graduation-cap">&nbsp;&nbsp;${cvData.certifications.underlayTitle}</h2></div>
+    ${certifications?.map((certification, i) => certification.type.includes(cvType) ? `
+      <div class="certifications${i === 0 ? ' frist' : ''}">
+        <h4 class="experience">${certification.title}</h4>
+        <a class="experience link noBrake" target="_blank" rel="noreferrer" href="${certification.website}">
+          <h5 class="noBrake company">${certification.company}</h5> <h5 class="noBrake company"> ${expressions.prepositions.in} ${certification.location}</h5>
         </a>
       </div>`: '').join('')}
   </div>

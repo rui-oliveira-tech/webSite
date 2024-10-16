@@ -77,11 +77,11 @@
       ]
     }
   },
-  "educations": {
+  "certifications": {
     "overlayTitle": "Wat ik heb geleerd",
-    "underlayTitle": "Opleiding",
+    "underlayTitle": "Certificeringen",
     "key": {
-      "changeDiplomas": "Klik om te wisselen tussen Geldige, Dubbele en Verlopen Diploma's."
+      "changeDiplomas": "Klik om te wisselen tussen Certificeringen, Dubbele en Verlopen Diploma's."
     },
     "description": [
       {
@@ -118,11 +118,20 @@
         "title": "Rijopleiding elektrische heftrucks, verbranding en gas"
       },
       {
-        "title": "Elektronisch, automatisering en onderhoud +1500 uur Stage Elektronisch"
-      },
-      {
         "title": "Rijbewijs AM / B / B1 ",
         "companyTitle": "Driving school"
+      }
+    ]
+  },
+  "educations": {
+    "overlayTitle": "Ce que j'ai appris",
+    "underlayTitle": "Éducation",
+    "key": {
+      "changeDiplomas": "Cliquez pour basculer entre Diplômes Valides, Duplicatas et Expirés."
+    },
+    "description": [
+      {
+        "title": "Elektronisch, automatisering en onderhoud +1500 uur Stage Elektronisch"
       },
       {
         "title": "Middelbare school, cursus wetenschappen en technologieën",

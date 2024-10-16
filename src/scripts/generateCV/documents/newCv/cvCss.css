@@ -395,6 +395,7 @@ p.enlarge span {
 .skills,
 .projects,
 .educations,
+.certifications,
 .experiences {
     position: relative;
     margin-top: 1em;
@@ -403,6 +404,7 @@ p.enlarge span {
 
 .projects p,
 .educations p,
+.certifications p,
 .experiences p {
     margin: 0.5em 0 0em 0;
 }

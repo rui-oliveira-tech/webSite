@@ -74,14 +74,11 @@
       ]
     }
   },
-  "educations": {
+  "certifications": {
     "overlayTitle": "Ce que j'ai appris",
-    "underlayTitle": [
-      "Certification",
-      "Éducation"
-    ],
+    "underlayTitle": "Certification",
     "key": {
-      "changeDiplomas": "Cliquez pour basculer entre Diplômes Valides, Duplicatas et Expirés."
+      "changeDiplomas": "Cliquez pour basculer entre Certifications, Diplômes en double et expirés."
     },
     "description": [
       {
@@ -118,11 +115,20 @@
         "title": "Diplôme en conduite de chariots élévateurs électriques, à combustion et à gaz"
       },
       {
-        "title": "Diplôme en Électronique d'automatisation et de contrôle +1500 heures de stage"
-      },
-      {
         "title": "Permis de conduire AM / B / B1 ",
         "companyTitle": "École de conduite"
+      }
+    ]
+  },
+  "educations": {
+    "overlayTitle": "Ce que j'ai appris",
+    "underlayTitle": "Éducation",
+    "key": {
+      "changeDiplomas": "Cliquez pour basculer entre Diplômes Valides, Duplicatas et Expirés."
+    },
+    "description": [
+      {
+        "title": "Diplôme en Électronique d'automatisation et de contrôle +1500 heures de stage"
       },
       {
         "title": " Equivalent du Bac en science et technologies",

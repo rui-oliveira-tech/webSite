@@ -95,15 +95,12 @@
       ]
     }
   },
-  "educations": {
-    "img": "education",
+  "certifications": {
+    "img": "certification",
     "overlayTitle": "What I've learned",
-    "underlayTitle": [
-      "Certification",
-      "Education"
-    ],
+    "underlayTitle": "Certification",
     "key": {
-      "changeDiplomas": "Click to switch between Valid, Duplicate, and Expired Diplomas."
+      "changeDiplomas": "Click to switch between Valid, certification, and certification Diplomas."
     },
     "description": [
       {
@@ -116,7 +113,6 @@
         "startDate": "2024-03-14",
         "endDate": "2024-07-01",
         "type": [
-          "certification",
           "valid",
           "cv1"
         ]
@@ -131,7 +127,6 @@
         "startDate": "",
         "endDate": "2024-02-14",
         "type": [
-          "certification",
           "valid",
           "cv1"
         ]
@@ -146,7 +141,6 @@
         "startDate": "2023-09-07",
         "endDate": "2023-09-08",
         "type": [
-          "certification",
           "valid",
           "cv1"
         ]
@@ -161,7 +155,6 @@
         "startDate": "2023-06-19",
         "endDate": "2023-06-22",
         "type": [
-          "certification",
           "valid"
         ]
       },
@@ -175,7 +168,6 @@
         "startDate": "2023-06-19",
         "endDate": "2023-06-22",
         "type": [
-          "certification",
           "duplicate"
         ]
       },
@@ -189,7 +181,6 @@
         "startDate": "2023-06-19",
         "endDate": "2023-06-22",
         "type": [
-          "certification",
           "duplicate",
           "cv1"
         ]
@@ -204,7 +195,6 @@
         "startDate": "",
         "endDate": "2023-05-17",
         "type": [
-          "certification",
           "valid",
           "cv1"
         ]
@@ -219,7 +209,6 @@
         "startDate": "2023-05-11",
         "endDate": "2023-05-12",
         "type": [
-          "certification",
           "duplicate"
         ]
       },
@@ -233,7 +222,6 @@
         "startDate": "2023-05-8",
         "endDate": "2023-05-10",
         "type": [
-          "certification",
           "valid",
           "cv1"
         ]
@@ -248,7 +236,6 @@
         "startDate": "",
         "endDate": "2019-09-12",
         "type": [
-          "certification",
           "duplicate"
         ]
       },
@@ -262,23 +249,7 @@
         "startDate": "2018-03-07",
         "endDate": "2018-05-03",
         "type": [
-          "certification",
           "valid"
-        ]
-      },
-      {
-        "title": "Electronic, automation and maintenance",
-        "companyTitle": "",
-        "company": "CFPIC",
-        "location": "São João da Madeira, Portugal",
-        "website": "http://www.cfpic.pt/",
-        "expirationDate": "Permanent",
-        "startDate": "2012",
-        "endDate": "2015-01-16",
-        "type": [
-          "education",
-          "valid",
-          "cv1"
         ]
       },
       {
@@ -291,7 +262,30 @@
         "startDate": "",
         "endDate": "2015-12-04",
         "type": [
-          "certification",
+          "valid",
+          "cv1"
+        ]
+      }
+    ]
+  },
+  "educations": {
+    "img": "education",
+    "overlayTitle": "What I've learned",
+    "underlayTitle": "Education",
+    "key": {
+      "changeDiplomas": "Click to switch between Valid, Duplicate, and Expired Diplomas."
+    },
+    "description": [
+      {
+        "title": "Electronic, automation and maintenance",
+        "companyTitle": "",
+        "company": "CFPIC",
+        "location": "São João da Madeira, Portugal",
+        "website": "http://www.cfpic.pt/",
+        "expirationDate": "Permanent",
+        "startDate": "2012",
+        "endDate": "2015-01-16",
+        "type": [
           "valid",
           "cv1"
         ]
@@ -306,7 +300,6 @@
         "startDate": "2010",
         "endDate": "2012",
         "type": [
-          "education",
           "duplicate"
         ]
       }

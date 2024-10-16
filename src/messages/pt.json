@@ -74,14 +74,11 @@
       ]
     }
   },
-  "educations": {
+  "certifications": {
     "overlayTitle": "O que eu aprendi",
-    "underlayTitle": [
-      "Certificação",
-      "Educação"
-    ],
+    "underlayTitle": "Certificação",
     "key": {
-      "changeDiplomas": "Clique para alternar entre Diplomas Válidos, Duplicados e Expirados."
+      "changeDiplomas": "Clique para alternar entre Certificações Válidos, Duplicados e Expirados."
     },
     "description": [
       {
@@ -118,11 +115,20 @@
         "title": "Curso de condução de empilhadores elétricos, combustão e gás"
       },
       {
-        "title": "Curso de Eletrónica Automação e Comando +1500 horas Estágio"
-      },
-      {
         "title": "Carta de condução AM / B / B1 ",
         "companyTitle": "Escola de condução"
+      }
+    ]
+  },
+  "educations": {
+    "overlayTitle": "Ce que j'ai appris",
+    "underlayTitle": "Éducation",
+    "key": {
+      "changeDiplomas": "Cliquez pour basculer entre Diplômes Valides, Duplicatas et Expirés."
+    },
+    "description": [
+      {
+        "title": "Curso de Eletrónica Automação e Comando +1500 horas Estágio"
       },
       {
         "title": "Curso de Ciências e Tecnologias",
