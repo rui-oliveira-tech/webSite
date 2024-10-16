@@ -85,7 +85,7 @@ export default ({ currentLanguageCode, cvData, getLink, cvType }) => {
 
   const certificationHtml = `
   <div class="yui-gf pageBrake">
-    <div class="line-with-text"><h2 class="icon-graduation-cap">&nbsp;&nbsp;${cvData.certifications.underlayTitle}</h2></div>
+    <div class="line-with-text"><h2 class="icon-certificate-outline">&nbsp;&nbsp;${cvData.certifications.underlayTitle}</h2></div>
     ${certifications?.map((certification, i) => certification.type.includes(cvType) ? `
       <div class="certifications${i === 0 ? ' frist' : ''}">
         <h4 class="experience">${certification.title}</h4>
@@ -100,7 +100,7 @@ export default ({ currentLanguageCode, cvData, getLink, cvType }) => {
   const programmingLanguageHtml = `
 <div class="yui-gf pageBrake">
   <div class="line-with-text">
-    <h2 class="icon-flow-tree">&nbsp;&nbsp;${cvData.programmingLanguages.underlayTitle}</h2>
+    <h2 class="icon-laptop">&nbsp;&nbsp;${cvData.programmingLanguages.underlayTitle}</h2>
   </div> <div class="programmingLanguages">
   ${programmingLanguages?.map((programmingLanguage, i) => programmingLanguage.type.includes(cvType) ? `
     <a href="${programmingLanguage.website}" target="_blank" class="svg-link${i === 0 ? ' first' : ''}">
