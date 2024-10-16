@@ -462,7 +462,11 @@
     "description": [
       {
         "title": "Field Service Technician (Electrical / Mechanical)",
-        "functionsPerformed": "Troubleshooting and diagnosing technical issues, Performing routine inspections and preventive maintenance, Adhering to safety protocols and ensuring compliance with company and industry standards.",
+        "functionsPerformed": [
+          "Troubleshooting and diagnosing technical issues. ",
+          "Performing routine inspections and preventive maintenance. ",
+          "Adhering to safety protocols and ensuring compliance with company and industry standards."
+        ],
         "skillsGained": "",
         "company": "VESTAS BELGIUM nv",
         "location": "Belgium",
@@ -471,12 +475,17 @@
         "startDate": "2023-05",
         "endDate": "2024-12",
         "type": [
-          "cv1"
+          "cv1",
+          "cv1-bulletPoints"
         ]
       },
       {
         "title": "Industrial Electrician",
-        "functionsPerformed": "Glass Processing Lines, Troubleshooting machinery problems electrical and mechanical, PLC + Robotic arms.",
+        "functionsPerformed": [
+          "Glass Processing Lines. ",
+          "Troubleshooting machinery problems electrical and mechanical. ",
+          "PLC + Robotic arms."
+        ],
         "skillsGained": "",
         "company": "AGP eGlass",
         "location": "Evergem, Belgium",
@@ -488,7 +497,11 @@
       },
       {
         "title": "Industrial Electrician",
-        "functionsPerformed": "Troubleshooting machinery problems, installing cable ducts, passing cables, connecting electrical boards, and replacing basic mechanical parts.",
+        "functionsPerformed": [
+          "Troubleshooting machinery problems. ",
+          "Installing cable ducts, passing cables, connecting electrical boards. ",
+          "Replacing basic mechanical parts."
+        ],
         "skillsGained": "Repairing and communication skills.",
         "company": "SOCEA nv",
         "location": "Oelegem, Belgium",
@@ -497,12 +510,18 @@
         "startDate": "2019-05",
         "endDate": "2023-03",
         "type": [
-          "cv1"
+          "cv1",
+          "cv1-bulletPoints"
         ]
       },
       {
         "title": "Cold technician",
-        "functionsPerformed": "Repairing and maintaining refrigerated containers, performing \"PTI\" inspections, welding copper, and replacing motors and sensors.",
+        "functionsPerformed": [
+          "Repairing and maintaining refrigerated containers. ",
+          "Performing \"PTI\" inspections. ",
+          "Welding copper. ",
+          "Replacing motors and sensors."
+        ],
         "skillsGained": "Repairing and communication skills.",
         "company": "MEDREPAIR",
         "location": "Beveren, Belgium",
@@ -516,7 +535,12 @@
       },
       {
         "title": "Industrial Electrician",
-        "functionsPerformed": "Repairing industrial machines (electrical and electromechanical), elaboration and electrification of electrical boards, electrical assembly of machines and structures of transport of cork and beginner of programming and automation of PLC (OMRON).",
+        "functionsPerformed": [
+          "Repairing industrial machines (electrical and electromechanical). ",
+          "Elaboration and electrification of electrical boards. ",
+          "Electrical assembly of machines and structures of transport of cork. ",
+          "Beginner of programming automation of PLC (OMRON)."
+        ],
         "skillsGained": "Repairing, construction, development and analytical skills.",
         "company": "SERSAN",
         "location": "Lourosa, Portugal",
@@ -525,12 +549,15 @@
         "startDate": "2015-02",
         "endDate": "2018-07",
         "type": [
-          "cv1"
+          "cv1",
+          "cv1-bulletPoints"
         ]
       },
       {
         "title": "Electronic, automation and maintenance (1500 hours)",
-        "functionsPerformed": "Repairing and maintaining household appliances.",
+        "functionsPerformed": [
+          "Repairing and maintaining household appliances."
+        ],
         "skillsGained": "Communication, engines, repairing and selling skills.",
         "company": "Electro Oliveira",
         "location": "Milheirós de Poiares, Portugal",

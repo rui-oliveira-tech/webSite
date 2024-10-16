@@ -402,12 +402,17 @@ p.enlarge span {
     width: 100%;
 }
 
-.projects p,
+
 .educations p,
-.certifications p,
-.experiences p {
+.certifications p {
     margin: 0.5em 0 0em 0;
 }
+
+.projects p,
+.experiences p {
+    margin: 0.5em 0 0em 1em;
+}
+
 
 .programmingLanguages {
     display: flex;
