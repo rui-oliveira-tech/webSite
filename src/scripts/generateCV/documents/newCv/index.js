@@ -6,7 +6,8 @@ import { getFormatDate } from "../../../../util/getFormatDate.js";
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-const cssIconsTemplate = path.resolve(__dirname, "./icons/css/fontello-embedded.css");
+const cssIconsTemplate = path.resolve(__dirname, "../../../../icons/css/fontello-embedded.css");
+console.log(cssIconsTemplate)
 const cssTemplate = path.resolve(__dirname, "./cvCss.css");
 
 export const pdfTemplate = ({ currentLanguageCode, cvData, links, cvType }) => {

@@ -8,26 +8,3 @@ export const links = {
   website: { name: "website", showName: "Rui-oliveira.com", link: "https://www.rui-oliveira.com/" },
   gsm: { name: "gsm", showName: "+32474127175", link: "+32474127175" }
 };
-
-export function getType({ type }) {
-  switch (type) {
-    case "face":
-      return "Facebook";
-    case "insta":
-      return "Instagram";
-    case "linkedin":
-      return "Linkedin";
-    case "github":
-      return "Github";
-    case "google":
-      return "Google";
-    case "mail":
-      return "Mail";
-    case "vdab":
-      return "VDAB";
-    case "twitter":
-      return "Twitter";
-    default:
-      return "other";
-  }
-}

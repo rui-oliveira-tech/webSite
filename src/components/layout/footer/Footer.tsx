@@ -1,22 +1,23 @@
-'use client';
+"use client";
 
 import React from "react";
 import { useTranslations } from "next-intl";
 import "./Footer.scss";
+import "./../../../icons/css/fontello-embedded.css";
 
 import Button from "../../others/Button/Button";
-import GetLink from "@/resource/links";
+import { links } from "@/resource/links";
 
 export function Footer() {
   const t = useTranslations("");
-  
+
   return (
     <footer className="mainFooter">
       <a
         className="icon"
         target="_blank"
         rel="noreferrer"
-        href={GetLink("instagram")}
+        href={links.instagram.link}
       >
         <i className="icon-instagram" />
       </a>
@@ -25,12 +26,12 @@ export function Footer() {
         className="icon"
         target="_blank"
         rel="noreferrer"
-        href={GetLink("whatsapp")}
+        href={links.whatsapp.link}
       >
         <i className="icon-whatsapp" />
       </a>
 
-      <Button className="from-center" href="mailto:hire@rui-oliveira.com">
+      <Button className="from-center" href={links.mail.link}>
         {t("footer.mailButton")}
       </Button>
 
@@ -38,16 +39,16 @@ export function Footer() {
         className="icon"
         target="_blank"
         rel="noreferrer"
-        href={GetLink("github")}
+        href={links.github.link}
       >
-        <i className="icon-github" />
+        <i className="icon-github-circled" />
       </a>
 
       <a
         className="icon"
         target="_blank"
         rel="noreferrer"
-        href={GetLink("linkedin")}
+        href={links.linkedin.link}
       >
         <i className="icon-linkedin" />
       </a>

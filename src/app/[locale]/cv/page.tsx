@@ -1,7 +1,6 @@
 "use client";
 
 import React from "react";
-import "./../../ruicons-embedded.css";
 import "./../../globalVar.scss";
 import "./../../global.css";
 

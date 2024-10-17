@@ -3,7 +3,6 @@
 import React, { useEffect, useRef } from "react";
 
 import { useTranslations } from "next-intl";
-import "./../ruicons-embedded.css";
 import "./../globalVar.scss";
 import "./../global.css";
 

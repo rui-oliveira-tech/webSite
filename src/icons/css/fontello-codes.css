@@ -21,6 +21,11 @@
 .icon-target:before { content: '\e813'; } /* '' */
 .icon-book:before { content: '\e814'; } /* '' */
 .icon-certificate-outline:before { content: '\e815'; } /* '' */
+.icon-facebook:before { content: '\f09a'; } /* '' */
+.icon-github-circled:before { content: '\f09b'; } /* '' */
+.icon-linkedin:before { content: '\f0e1'; } /* '' */
 .icon-laptop:before { content: '\f109'; } /* '' */
+.icon-instagram:before { content: '\f16d'; } /* '' */
 .icon-graduation-cap:before { content: '\f19d'; } /* '' */
-.icon-linkedin:before { content: '\f318'; } /* '' */
+.icon-twitch:before { content: '\f1e8'; } /* '' */
+.icon-whatsapp:before { content: '\f232'; } /* '' */
