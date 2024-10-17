@@ -4,7 +4,7 @@ import path from 'path';
 import deepMerge from '../../util/deepMerge.js';
 import { pdfTemplate, headerTemplate, footerTemplate } from './documents/newCv/index.js';
 import { defaultLanguage, supportedLngs } from '../../resource/lngs/langs.js';
-import getLink from '../../resource/links.js';
+import { links } from '../../resource/links.js';
 import { fileURLToPath } from 'url';
 
 
@@ -26,9 +26,9 @@ const getTranslations = (locale) => {
 };
 
 const generateHTML = async (lang, translationKeys, outputDirectory) => {
-  const cvHtml = headerTemplate({ currentLanguageCode: lang, cvData: translationKeys, getLink: getLink, cvType: 'cv1' }) +
-    pdfTemplate({ currentLanguageCode: lang, cvData: translationKeys, getLink: getLink, cvType: 'cv1' }) +
-    footerTemplate({ currentLanguageCode: lang, cvData: translationKeys, getLink: getLink, cvType: 'cv1' });
+  const cvHtml = headerTemplate({ currentLanguageCode: lang, cvData: translationKeys, links: links, cvType: 'cv1' }) +
+    pdfTemplate({ currentLanguageCode: lang, cvData: translationKeys, links: links, cvType: 'cv1' }) +
+    footerTemplate({ currentLanguageCode: lang, cvData: translationKeys, links: links, cvType: 'cv1' });
   const htmlFilePath = path.join(outputDirectory, `RuiOliveira_CV-${lang.toUpperCase()}.html`);
 
   // Save the HTML file
@@ -37,7 +37,7 @@ const generateHTML = async (lang, translationKeys, outputDirectory) => {
 };
 
 const generatePDF = async (browser, lang, translationKeys, outputDirectory) => {
-  const cvHtml = pdfTemplate({ currentLanguageCode: lang, cvData: translationKeys, getLink: getLink, cvType: "cv1" });
+  const cvHtml = pdfTemplate({ currentLanguageCode: lang, cvData: translationKeys, links: links, cvType: "cv1" });
 
   const options = {
     format: 'Letter',
@@ -50,8 +50,8 @@ const generatePDF = async (browser, lang, translationKeys, outputDirectory) => {
       right: '8mm',
     },
     displayHeaderFooter: true,
-    footerTemplate: footerTemplate({ currentLanguageCode: lang, cvData: translationKeys, getLink: getLink, cvType: "cv1" }),
-    headerTemplate: headerTemplate({ currentLanguageCode: lang, cvData: translationKeys, getLink: getLink, cvType: "cv1" }),
+    footerTemplate: footerTemplate({ currentLanguageCode: lang, cvData: translationKeys, links: links, cvType: "cv1" }),
+    headerTemplate: headerTemplate({ currentLanguageCode: lang, cvData: translationKeys, links: links, cvType: "cv1" }),
     printBackground: true,
   };
 

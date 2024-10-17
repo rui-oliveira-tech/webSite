@@ -9,7 +9,7 @@ const __dirname = path.dirname(__filename);
 const cssIconsTemplate = path.resolve(__dirname, "./icons/css/fontello-embedded.css");
 const cssTemplate = path.resolve(__dirname, "./cvCss.css");
 
-export const pdfTemplate = ({ currentLanguageCode, cvData, getLink, cvType }) => {
+export const pdfTemplate = ({ currentLanguageCode, cvData, links, cvType }) => {
   const template = path.resolve(__dirname, "./cvTemplate.html");
 
   const app_title = cvData.app_title;
@@ -161,22 +161,22 @@ export const pdfTemplate = ({ currentLanguageCode, cvData, getLink, cvType }) =>
     .replace("{{languages}}", languageHtml);
 };
 
-export const headerTemplate = ({ currentLanguageCode, cvData, getLink, cvType }) => {
+export const headerTemplate = ({ currentLanguageCode, cvData, links, cvType }) => {
   return '<header></header>';
 };
 
-export const footerTemplate = ({ currentLanguageCode, cvData, getLink, cvType }) => {
+export const footerTemplate = ({ currentLanguageCode, cvData, links, cvType }) => {
   return `
     <style>${fs.readFileSync(cssIconsTemplate).toString()}</style>
     <style>${fs.readFileSync(cssTemplate).toString()}</style>
     <div class="contact-info yui-gf">
       <h3 class="contactInfo noBrake blue-icon icon-globe-1">
-        <a href="${getLink('website')}${currentLanguageCode}">&nbsp;&nbsp;rui-oliveira.com</a>
+        <a href="${links.website.link}${currentLanguageCode}">&nbsp;&nbsp;${links.website.showName}</a>
       </h3>
       <h3 class="contactInfo noBrake blue-icon icon-mail">
-        <a href="${getLink('mail')}">&nbsp;&nbsp;hire@rui-oliveira.com</a>
+        <a href="${links.mail.link}">&nbsp;&nbsp;${links.mail.showName}</a>
       </h3>
-      <h3 class="contactInfo noBrake blue-icon icon-phone">&nbsp;&nbsp;${getLink('gsm')}</h3>
+      <h3 class="contactInfo noBrake blue-icon icon-phone">&nbsp;&nbsp;${links.gsm.link}</h3>
       <h3 class="contactInfo noBrake blue-icon icon-home">&nbsp;&nbsp;${cvData.expressions.places.antwerp}, ${cvData.expressions.countries.BE}</h3>
     </div>`;
 };
