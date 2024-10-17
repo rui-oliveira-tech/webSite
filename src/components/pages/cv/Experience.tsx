@@ -49,16 +49,27 @@ export default function Experience(props: IExperienceProps) {
               {experience.location}
             </a>
             <p className="text small">
-              {getFormatDate(experience, expressions) +
-                " -> " +
-                expressions.offerTypes[experience.offerType]}
+              {getFormatDate(experience, expressions)}
+              {" -> "}
+              {expressions.offerTypes[experience.offerType]}
             </p>
             <p className="light text medium textSpacement">
               {experience.skillsGained}
             </p>
-            <p className="light text medium textSpacement">
-              {experience.functionsPerformed}
-            </p>
+            <div className="functionsPerformed">
+              {experience.functionsPerformed &&
+                typeof experience.functionsPerformed === "object" &&
+                Object.values(experience.functionsPerformed).map(
+                  (functionPerformed, index) => (
+                    <p
+                      key={index}
+                      className="light text medium textSpacement icon-right-open"
+                    >
+                      {functionPerformed}
+                    </p>
+                  )
+                )}
+            </div>
           </React.Fragment>
         ))}
       </div>

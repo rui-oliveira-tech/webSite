@@ -178,57 +178,51 @@
     "description": [
       {
         "title": "Technicien de Service sur le Terrain",
-        "functionsPerformed": [
-          "Travail électrique et mécanique effectué. ",
-          "Dépannage et diagnostic des problèmes techniques. ",
-          "Effectuer des inspections de routine et de la maintenance préventive. ",
-          "Respecter les protocoles de sécurité et assurer la conformité avec les normes de l'entreprise et de l'industrie. "
-        ],
-        "skillsGained": ""
+        "functionsPerformed": {
+          "0": "Travail électrique et mécanique effectué.",
+          "1": "Dépannage et diagnostic des problèmes techniques.",
+          "2": "Effectuer des inspections de routine et de la maintenance préventive.",
+          "3": "Respecter les protocoles de sécurité et assurer la conformité avec les normes de l'entreprise et de l'industrie."
+        }
       },
       {
         "title": "Electricien Industriel",
-        "functionsPerformed": [
-          "Lignes de traitement de verre. ",
-          "Dépannage de problèmes de machines électriques et mécaniques. ",
-          "PLC + bras robotiques. "
-        ],
-        "skillsGained": ""
+        "functionsPerformed": {
+          "0": "Lignes de traitement de verre.",
+          "1": "Dépannage de problèmes de machines électriques et mécaniques.",
+          "2": "PLC + bras robotiques."
+        }
       },
       {
         "title": "Electricien Industriel",
-        "functionsPerformed": [
-          "Identifier les problèmes dans la machine. ",
-          "Installation de gaines pour câbles, passage de câbles, raccordement de tableaux électriques. ",
-          "Mécanique de base. "
-        ],
-        "skillsGained": "Compétences acquises de réparation et communication."
+        "functionsPerformed": {
+          "0": "Identifier les problèmes dans la machine.",
+          "1": "Installation de gaines pour câbles, passage de câbles, raccordement de tableaux électriques.",
+          "2": "Mécanique de base."
+        }
       },
       {
         "title": "Technicien de froid",
-        "functionsPerformed": [
-          "Réparation, inspection et maintenance de containers frigorifiques. ",
-          "Soudure de cuivre. ",
-          "Remplacement de moteurs et de capteurs. "
-        ],
-        "skillsGained": "Compétences acquises de réparation et communication."
+        "functionsPerformed": {
+          "0": "Réparation, inspection et maintenance de containers frigorifiques.",
+          "1": "Soudure de cuivre.",
+          "2": "Remplacement de moteurs et de capteurs."
+        }
       },
       {
-        "title": "Industrial Electrician",
-        "functionsPerformed": [
-          "Réparation de machines industrielles (électriques et électromécaniques). ",
-          "Élaboration et électrification de cadres électriques. ",
-          "Montages électriques de machines et structures de transport de liège. ",
-          "Débutant en programmation et automatisation d'automates (OMRON). "
-        ],
-        "skillsGained": "Compétences acquises de réparation, construction, développement et analyse."
+        "title": "Electricien Industriel",
+        "functionsPerformed": {
+          "0": "Réparation de machines industrielles (électriques et électromécaniques).",
+          "1": "Élaboration et électrification de cadres électriques.",
+          "2": "Montages électriques de machines et structures de transport de liège.",
+          "3": "Débutant en programmation et automatisation d'automates (OMRON)."
+        }
       },
       {
         "title": "Electronique automatisation et commande (1500 heures)",
-        "functionsPerformed": [
-          "Réparation et maintenance d'électroménagers."
-        ],
-        "skillsGained": "Compétences acquises de communication, moteurs, réparation et vente."
+        "functionsPerformed": {
+          "0": "Réparation et maintenance d'électroménagers."
+        }
       }
     ]
   },

@@ -177,57 +177,51 @@
     "description": [
       {
         "title": "Veldservice Technicus",
-        "functionsPerformed": [
-          "Elektrisch en mechanisch werk uitgevoerd. ",
-          "Storingen oplossen en technische problemen diagnosticeren. ",
-          "Uitvoeren van routinematige inspecties en preventief onderhoud. ",
-          "Naleving van veiligheidsprotocollen en zorgen voor naleving van de bedrijfs- en industriestandaarden. "
-        ],
-        "skillsGained": ""
+        "functionsPerformed": {
+          "0": "Elektrisch en mechanisch werk uitgevoerd.",
+          "1": "Storingen oplossen en technische problemen diagnosticeren.",
+          "2": "Uitvoeren van routinematige inspecties en preventief onderhoud.",
+          "3": "Naleving van veiligheidsprotocollen en zorgen voor naleving van de bedrijfs- en industriestandaarden."
+        }
       },
       {
         "title": "Industrieel Elektricien",
-        "functionsPerformed": [
-          "Glasmachines. ",
-          "Elektrische en mechanische storingen oplossen. ",
-          "PLC + robotarmen. "
-        ],
-        "skillsGained": ""
+        "functionsPerformed": {
+          "0": "Glasmachines.",
+          "1": "Elektrische en mechanische storingen oplossen.",
+          "2": "PLC + robotarmen."
+        }
       },
       {
         "title": "Industrieel Elektricien",
-        "functionsPerformed": [
-          "Opsporen en oplossen van problemen met machines. ",
-          "Installeren van kabelgoten, doorvoeren van kabels, aansluiten van elektrische borden. ",
-          "Mechanica basis. "
-        ],
-        "skillsGained": "Reparatie en communicatieve vaardigheden."
+        "functionsPerformed": {
+          "0": "Opsporen en oplossen van problemen met machines.",
+          "1": "Installeren van kabelgoten, doorvoeren van kabels, aansluiten van elektrische borden.",
+          "2": "Mechanica basis."
+        }
       },
       {
         "title": "Koude technicus",
-        "functionsPerformed": [
-          "Reparatie, inspectie en onderhoud van koelcontainers. ",
-          "Koper lassen. ",
-          "Vervanging van motoren en sensoren. "
-        ],
-        "skillsGained": "Reparatie en communicatieve vaardigheden. "
+        "functionsPerformed": {
+          "0": "Reparatie, inspectie en onderhoud van koelcontainers.",
+          "1": "Koper lassen.",
+          "2": "Vervanging van motoren en sensoren."
+        }
       },
       {
-        "title": "Industrial Electrician",
-        "functionsPerformed": [
-          "Reparatie van industriële machines (elektrisch en elektromechanisch). ",
-          "Uitwerking en elektrificatie van elektrische borden. ",
-          "Elektrische assemblage van machines en constructies van transport van kurk. ",
-          "Beginner in programmering en automatisering van PLC (OMRON). "
-        ],
-        "skillsGained": "Repareren, bouwen, ontwikkelen en analytisch vermogen."
+        "title": "Industrieel Elektricien",
+        "functionsPerformed": {
+          "0": "Reparatie van industriële machines (elektrisch en elektromechanisch).",
+          "1": "Uitwerking en elektrificatie van elektrische borden.",
+          "2": "Elektrische assemblage van machines en constructies van transport van kurk.",
+          "3": "Beginner in programmering en automatisering van PLC (OMRON)."
+        }
       },
       {
         "title": "Elektronica, automatisering en onderhoud (1500 uur)",
-        "functionsPerformed": [
-          "Reparatie en onderhoud van huishoudelijke apparaten. "
-        ],
-        "skillsGained": "Communicatie, motoren, reparatie- en verkoopvaardigheden."
+        "functionsPerformed": {
+          "0": "Reparatie en onderhoud van huishoudelijke apparaten."
+        }
       }
     ]
   },

@@ -43,23 +43,24 @@ export const pdfTemplate = ({ currentLanguageCode, cvData, links, cvType }) => {
   const experienceHtml = `
   <div class="yui-gf pageBrake">
     <div class="line-with-text"><h2 class="icon-briefcase">&nbsp;&nbsp;${cvData.experiences.underlayTitle}</h2></div>
-    ${experiences?.map((experience, i) => experience.type.includes(cvType) ? `
+    ${cvData.experiences.description?.map((experience, i) => experience.type.includes(cvType) ? `
       <div class="experiences${i === 0 ? ' frist' : ''}">
         <h3 class="experience title">${experience.title}</h3>
-        <a class="experience link noBrake" target="_blank" rel="noreferrer" href="${experience.website}">
-          <h4 class="noBrake company">${experience.company}</h4> <h4 class="noBrake company">${expressions.prepositions.in} ${experience.location}</h4>
+        <a class="experience link noBrake" target="_blank" rel="noreferrer" href="${experience.website}">   
+          <h4 class="noBrake company">${experience.company}</h4>
+          <h4 class="noBrake company">${expressions.prepositions.in} ${experience.location}</h4>
         </a>
         <h4 class="first-intervalDate intervalDate date">${getFormatDate(experience, expressions)}</h4>
         <h4 class="second-intervalDate intervalDate date">${expressions.offerTypes[experience.offerType]}</h4>
         ${experience.type.includes(cvType + "-bulletPoints") ?
-      (Array.isArray(experience.functionsPerformed) ?
-        experience.functionsPerformed.map((functionsPerformed) => `
-              <p class="description icon-right-open blue-icon">${functionsPerformed}</p>
+          (typeof experience.functionsPerformed === 'object' ? 
+            Object.values(experience.functionsPerformed).map((functionPerformed) => `
+              <p class="description icon-right-open blue-icon">${functionPerformed}</p>
             `).join('')
-        : ' '
-      ) : ''}
+            : ' '
+          ) : ''}
       </div>
-    `: '').join('')}
+    ` : '').join('')}
   </div>
 `;
 
