@@ -663,6 +663,10 @@
       "expiredDiplom": "Expired Diploma",
       "duplicateDiplom": "Duplicate Diploma"
     },
+    "places": {
+      "antwerp": "Antwerpen",
+      "brech": "Brecht"
+    },
     "countries": {
       "NL": "Netherlands",
       "BE": "Belgium",

@@ -373,18 +373,13 @@ p.enlarge span {
 }
 
 /* Geral */
-
-
-
-.yui-gc {
-    padding-bottom: 25px;
-}
-
 .contact-info {
+    padding-bottom: 10px;
     display: flex;
     flex-wrap: nowrap;
     justify-content: center;
     align-items: center;
+    font-size: 10px;
 }
 
 .contactInfo {

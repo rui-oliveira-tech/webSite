@@ -263,6 +263,10 @@
       "expiredDiplom": "Diploma Caducado",
       "duplicateDiploma": "Diploma Duplicado"
     },
+    "places": {
+      "antwerp": "Antuérpia",
+      "brech": "Brecht"
+    },
     "countries": {
       "NL": "Holanda",
       "BE": "Bélgica",

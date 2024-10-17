@@ -6,10 +6,11 @@ import { getFormatDate } from "../../../../util/getFormatDate.js";
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-export default ({ currentLanguageCode, cvData, getLink, cvType }) => {
+const cssIconsTemplate = path.resolve(__dirname, "./icons/css/fontello-embedded.css");
+const cssTemplate = path.resolve(__dirname, "./cvCss.css");
+
+export const pdfTemplate = ({ currentLanguageCode, cvData, getLink, cvType }) => {
   const template = path.resolve(__dirname, "./cvTemplate.html");
-  const cssIconsTemplate = path.resolve(__dirname, "./icons/css/fontello-embedded.css");
-  const cssTemplate = path.resolve(__dirname, "./cvCss.css");
 
   const app_title = cvData.app_title;
   const title = cvData.home.subTitle.first;
@@ -26,21 +27,6 @@ export default ({ currentLanguageCode, cvData, getLink, cvType }) => {
   const expressions = cvData.expressions;
 
   const profileHtml = (`${profile}`);
-
-  const contactInfoHtml = (`
-    <div class="yui-gf pageBrake">
-      <div class="contact-info">
-        <h3 class="contactInfo noBrake blue-icon icon-globe-1">
-          <a href="${getLink('website')}${currentLanguageCode}">&nbsp;&nbsp;rui-oliveira.com</a>
-        </h3>
-        <h3 class="contactInfo noBrake blue-icon icon-mail">
-          <a href="${getLink('mail')}">&nbsp;&nbsp;hire@rui-oliveira.com</a>
-        </h3>
-        <h3 class="contactInfo noBrake blue-icon icon-phone">&nbsp;&nbsp;${getLink('gsm')}</h3>
-        <h3 class="contactInfo noBrake blue-icon icon-home">&nbsp;&nbsp;Brecht, Belgium</h3>
-      </div>
-    </div>
-  `);
 
   const skillsHtml = `
     <div class="yui-gf pageBrake">
@@ -164,7 +150,6 @@ export default ({ currentLanguageCode, cvData, getLink, cvType }) => {
     .replace("{{cssIcons}}", "<style>" + fs.readFileSync(cssIconsTemplate).toString() + "</style>")
     .replace("{{css}}", "<style>" + fs.readFileSync(cssTemplate).toString() + "</style>")
     .replace("{{app_title}}", app_title)
-    .replace("{{contactInfo}}", contactInfoHtml)
     .replace("{{title}}", title)
     .replace("{{profile}}", profileHtml)
     .replace("{{skills}}", skillsHtml)
@@ -174,4 +159,24 @@ export default ({ currentLanguageCode, cvData, getLink, cvType }) => {
     .replace("{{experiences}}", experienceHtml)
     .replace("{{projects}}", projectHtml)
     .replace("{{languages}}", languageHtml);
+};
+
+export const headerTemplate = ({ currentLanguageCode, cvData, getLink, cvType }) => {
+  return '<header></header>';
+};
+
+export const footerTemplate = ({ currentLanguageCode, cvData, getLink, cvType }) => {
+  return `
+    <style>${fs.readFileSync(cssIconsTemplate).toString()}</style>
+    <style>${fs.readFileSync(cssTemplate).toString()}</style>
+    <div class="contact-info yui-gf">
+      <h3 class="contactInfo noBrake blue-icon icon-globe-1">
+        <a href="${getLink('website')}${currentLanguageCode}">&nbsp;&nbsp;rui-oliveira.com</a>
+      </h3>
+      <h3 class="contactInfo noBrake blue-icon icon-mail">
+        <a href="${getLink('mail')}">&nbsp;&nbsp;hire@rui-oliveira.com</a>
+      </h3>
+      <h3 class="contactInfo noBrake blue-icon icon-phone">&nbsp;&nbsp;${getLink('gsm')}</h3>
+      <h3 class="contactInfo noBrake blue-icon icon-home">&nbsp;&nbsp;${cvData.expressions.places.antwerp}, ${cvData.expressions.countries.BE}</h3>
+    </div>`;
 };

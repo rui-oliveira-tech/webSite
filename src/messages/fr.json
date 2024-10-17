@@ -263,6 +263,10 @@
       "expiredDiploma": "Diplôme Expiré",
       "duplicateDiploma": "Diplôme Duplicata"
     },
+    "places": {
+      "antwerp": "Anvers",
+      "brech": "Brecht"
+    },
     "countries": {
       "NL": "Pays-Bas",
       "BE": "Belgique",
