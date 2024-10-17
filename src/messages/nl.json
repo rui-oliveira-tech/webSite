@@ -176,8 +176,9 @@
     "underlayTitle": "Ervaring",
     "description": [
       {
-        "title": "Veldservice Technicus (Elektrisch / Mechanisch)",
+        "title": "Veldservice Technicus",
         "functionsPerformed": [
+          "Elektrisch en mechanisch werk uitgevoerd. ",
           "Storingen oplossen en technische problemen diagnosticeren. ",
           "Uitvoeren van routinematige inspecties en preventief onderhoud. ",
           "Naleving van veiligheidsprotocollen en zorgen voor naleving van de bedrijfs- en industriestandaarden. "
@@ -198,7 +199,6 @@
         "functionsPerformed": [
           "Opsporen en oplossen van problemen met machines. ",
           "Installeren van kabelgoten, doorvoeren van kabels, aansluiten van elektrische borden. ",
-
           "Mechanica basis. "
         ],
         "skillsGained": "Reparatie en communicatieve vaardigheden."
