@@ -178,32 +178,55 @@
     "description": [
       {
         "title": "Técnico de Serviço de Campo (Elétrico / Mecânico)",
-        "functionsPerformed": "Solução de problemas e diagnóstico de questões técnicas, Realização de inspeções de rotina e manutenção preventiva, Cumprimento dos protocolos de segurança e garantia de conformidade com os padrões da empresa e da indústria.",
+        "functionsPerformed": [
+          "Solução de problemas e diagnóstico de questões técnicas. ",
+          "Realização de inspeções de rotina e manutenção preventiva. ",
+          "Cumprimento dos protocolos de segurança e garantia de conformidade com os padrões da empresa e da indústria. "
+        ],
         "skillsGained": ""
       },
       {
         "title": "Eletricista Industrial",
-        "functionsPerformed": "Linhas de processamento de vidro, resolução de problemas de máquinas elétricas e mecânicas, PLC + braços robóticos.",
+        "functionsPerformed": [
+          "Linhas de processamento de vidro. ",
+          "Resolução de problemas de máquinas elétricas e mecânicas. ",
+          "PLC + braços robóticos. "
+        ],
         "skillsGained": ""
       },
       {
         "title": "Eletricista Industrial",
-        "functionsPerformed": "Encontrar problemas na máquina e consertar, instalar suporte de cabos, passar cabos, conectar quadros elétricos, trocar tomadas, lâmpadas, interruptores, mecânica básica.",
+        "functionsPerformed": [
+          "Encontrar problemas na máquina e consertar. ",
+          "Instalação de calhas para cabos, passagem de cabos, conexão de quadros elétricos. ",
+          "Mecânica básica. "
+        ],
         "skillsGained": "Habilidades de reparo e comunicação."
       },
       {
         "title": "Técnico de frio",
-        "functionsPerformed": "Reparação e manutenção de contentores frios,\"PTI\", soldadura de cobre e substituição de motores e sensores.",
+        "functionsPerformed": [
+          "Reparação, Inspeção e manutenção de contentores frios. ",
+          "Soldadura de cobre. ",
+          "Substituição de motores e sensores."
+        ],
         "skillsGained": "Habilidades adquiridas de reparo e comunicação."
       },
       {
         "title": "Eletricista Industrial",
-        "functionsPerformed": "Reparação de máquinas industriais (eléctricas e electromecânicas), elaboração e electrificação de elétricos, montagem elétrica de máquinas e estruturas de transporte de cortiça e iniciante de programação e automatização de PLC (OMRON).",
+        "functionsPerformed": [
+          "Reparação de máquinas industriais (eléctricas e electromecânicas). ",
+          "Elaboração e electrificação de quadros elétricos. ",
+          "Montagem elétrica de máquinas e estruturas de transporte de cortiça. ",
+          "Iniciante em programação e automatização de PLC (OMRON). "
+        ],
         "skillsGained": "Habilidades adquiridas de reparo, construção, desenvolvimento e analíticas."
       },
       {
-        "title": "Eletrónica Automação e Comando (1500 hours)",
-        "functionsPerformed": "Reparação e manutenção de eletrodomésticos.",
+        "title": "Eletrónica Automação e Comando (1500 horas)",
+        "functionsPerformed": [
+          "Reparação e manutenção de eletrodomésticos. "
+        ],
         "skillsGained": "Habilidades adquiridas de comunicação, motores, reparo e venda."
       }
     ]

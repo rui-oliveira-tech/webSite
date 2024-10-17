@@ -178,32 +178,55 @@
     "description": [
       {
         "title": "Technicien de Service sur le Terrain (Électrique / Mécanique)",
-        "functionsPerformed": "Dépannage et diagnostic des problèmes techniques, Effectuer des inspections de routine et de la maintenance préventive, Respecter les protocoles de sécurité et assurer la conformité avec les normes de l'entreprise et de l'industrie.",
+        "functionsPerformed": [
+          "Dépannage et diagnostic des problèmes techniques. ",
+          "Effectuer des inspections de routine et de la maintenance préventive. ",
+          "Respecter les protocoles de sécurité et assurer la conformité avec les normes de l'entreprise et de l'industrie. "
+        ],
         "skillsGained": ""
       },
       {
         "title": "Electricien Industriel",
-        "functionsPerformed": "Lignes de traitement de verre, dépannage de problèmes de machines électriques et mécaniques, PLC + bras robotiques.",
+        "functionsPerformed": [
+          "Lignes de traitement de verre. ",
+          "Dépannage de problèmes de machines électriques et mécaniques. ",
+          "PLC + bras robotiques. "
+        ],
         "skillsGained": ""
       },
       {
         "title": "Electricien Industriel",
-        "functionsPerformed": "Identifier les problèmes dans la machine, dépanner la machine et la réparer, installer le support de câble, faire passer les câbles, connecter les panneaux électriques, changer les prises, les ampoules, les interrupteurs, la mécanique de base.",
+        "functionsPerformed": [
+          "Identifier les problèmes dans la machine. ",
+          "Installation de gaines pour câbles, passage de câbles, raccordement de tableaux électriques. ",
+          "Mécanique de base. "
+        ],
         "skillsGained": "Compétences acquises de réparation et communication."
       },
       {
         "title": "Technicien de froid",
-        "functionsPerformed": "Réparation et maintenance de containers froids,\"PTI\", soudure cuivre et remplacement moteurs et capteurs.",
+        "functionsPerformed": [
+          "Réparation, inspection et maintenance de containers frigorifiques. ",
+          "Soudure de cuivre. ",
+          "Remplacement de moteurs et de capteurs. "
+        ],
         "skillsGained": "Compétences acquises de réparation et communication."
       },
       {
         "title": "Industrial Electrician",
-        "functionsPerformed": "Réparation de machines industrielles (électriques et électromécaniques), élaboration et électrification de cadres électriques, montages électriques de machines et structures de transport de structures de transport de liège et débutant en programmation et automatisation d'automates (OMRON).",
+        "functionsPerformed": [
+          "Réparation de machines industrielles (électriques et électromécaniques). ",
+          "Élaboration et électrification de cadres électriques. ",
+          "Montages électriques de machines et structures de transport de liège. ",
+          "Débutant en programmation et automatisation d'automates (OMRON). "
+        ],
         "skillsGained": "Compétences acquises de réparation, construction, développement et analyse."
       },
       {
         "title": "Electronique automatisation et commande (1500 heures)",
-        "functionsPerformed": "Réparation et maintenance d'électroménagers.",
+        "functionsPerformed": [
+          "Réparation et maintenance d'électroménagers."
+        ],
         "skillsGained": "Compétences acquises de communication, moteurs, réparation et vente."
       }
     ]
