@@ -8,7 +8,11 @@ import NavigationBar from "@/components/layout/navigationBar/NavigationBar";
 import Cv from "@/components/pages/cv/Cv";
 import Footer from "@/components/layout/footer/Footer";
 
-interface ICurriculumProps {}
+interface ICurriculumProps {
+  params: {
+    locale: string;
+  };
+}
 
 export default function Curriculum(props: ICurriculumProps) {
   return (

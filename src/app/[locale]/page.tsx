@@ -10,7 +10,11 @@ import NavigationBar from "@/components/layout/navigationBar/NavigationBar";
 import Home from "@/components/pages/home/Home";
 import Footer from "@/components/layout/footer/Footer";
 
-interface IHomepageProps {}
+interface IHomepageProps {
+  params: {
+    locale: string;
+  };
+}
 
 export default function Homepage(props: IHomepageProps) {
   const t = useTranslations("");
@@ -47,11 +51,11 @@ export default function Homepage(props: IHomepageProps) {
        }, scrollSpeed)
      } 
   }*/
-  return ( 
-      <div className="wideGrid">
-        <NavigationBar {...props} />
-        <Home {...props} />
-        <Footer />
-      </div>
+  return (
+    <div className="wideGrid">
+      <NavigationBar {...props} />
+      <Home {...props} />
+      <Footer />
+    </div>
   );
 }
