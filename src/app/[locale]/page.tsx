@@ -1,8 +1,4 @@
-"use client";
-
-import React, { useEffect, useRef } from "react";
-
-import { useTranslations } from "next-intl";
+import React from "react";
 import "./../globalVar.scss";
 import "./../global.css";
 
@@ -16,9 +12,7 @@ interface IHomepageProps {
   };
 }
 
-export default function Homepage(props: IHomepageProps) {
-  const t = useTranslations("");
-
+export default async function Homepage(props: IHomepageProps) {
   return (
     <div className="wideGrid">
       <NavigationBar {...props} />
