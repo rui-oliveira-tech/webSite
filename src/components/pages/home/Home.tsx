@@ -1,32 +1,15 @@
 "use client";
 
-import React, { useRef, useEffect } from "react";
 import Image from "next/image";
 import { useTranslations } from "next-intl";
 import "./Home.scss";
 
 import homeImg from "@/assets/images/home/main.jpg";
 
-export function Home(props) {
+interface IHomeProps {}
+
+export function Home(props: IHomeProps) {
   const t = useTranslations("");
-  const animation = useRef("notLoading");
-  let waitForLoading = useRef(setTimeout(() => {}, 0));
-  useEffect(() => {
-    waitForLoading.current = setTimeout(() => {
-      if (props.isLoading) {
-        animation.current = "loading";
-      }
-    }, 1);
-    return () => clearTimeout(waitForLoading.current);
-  }, []);
-
-  /*  function scrollDown(e) {
-     document.querySelector(".projects").scrollIntoView({
-       behavior: "smooth",
-       block: "start",
-     });
-   } */
-
   return (
     <section className="have_footer have_NavigationBar home">
       <header>
@@ -44,29 +27,23 @@ export function Home(props) {
         <h1 className="title">{t("home.title")}</h1>
         <h2
           data-texteffect={t("home.subTitle.first")}
-          className={"subTitle first " + animation.current}
+          className={"subTitle first "}
         >
           {t("home.subTitle.first")}
         </h2>
         <h3
           data-texteffect={t("home.subTitle.second")}
-          className={"subTitle second " + animation.current}
+          className={"subTitle second "}
         >
           {t("home.subTitle.second")}
         </h3>
         <h3
           data-texteffect={t("home.subTitle.third")}
-          className={"subTitle third " + animation.current}
+          className={"subTitle third "}
         >
           {t("home.subTitle.third")}
         </h3>
       </main>
-
-      {/*  <footer className="scrollArrow" onClick={scrollDown}>
-        <span></span>
-        <span></span>
-        <span></span>
-      </footer> */}
     </section>
   );
 }

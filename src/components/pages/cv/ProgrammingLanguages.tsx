@@ -9,8 +9,11 @@ import { ProgrammingLanguage } from "@/models/ProgrammingLanguage";
 import "./Cv.scss";
 
 interface IProgrammingLanguagesProps {
-  animatedOverlay: React.MutableRefObject<string>;
+  animatedOverlay: string; 
   gradient: string;
+  params: {
+    locale: string;
+  };
 }
 
 export default function ProgrammingLanguages(
@@ -35,7 +38,7 @@ export default function ProgrammingLanguages(
       }}
     >
       <div
-        className={"overlay " + props.animatedOverlay.current}
+        className={"overlay " + props.animatedOverlay}
         style={{
           backgroundImage: `${props.gradient},url(${programmingLanguagesImg.src})`,
         }}

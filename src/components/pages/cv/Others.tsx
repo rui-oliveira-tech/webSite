@@ -9,8 +9,11 @@ import { Other } from "@/models/Other";
 import "./Cv.scss";
 
 interface IOthersProps {
-  animatedOverlay: React.MutableRefObject<string>;
+  animatedOverlay: string; 
   gradient: string;
+  params: {
+    locale: string;
+  };
 }
 
 export default function Others(props: IOthersProps) {
@@ -27,7 +30,7 @@ export default function Others(props: IOthersProps) {
       }}
     >
       <div
-        className={"overlay " + props.animatedOverlay.current}
+        className={"overlay " + props.animatedOverlay}
         style={{
           backgroundImage: `${props.gradient},url(${othersImg.src})`,
         }}

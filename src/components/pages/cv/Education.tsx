@@ -12,14 +12,14 @@ import { Education } from "@/models/Education";
 import "./Cv.scss";
 
 interface IEducationProps {
-  animatedOverlay: React.MutableRefObject<string>;
+  animatedOverlay: string; 
   gradient: string;
+  params: {
+    locale: string;
+  };
 }
 
-export default function Education({
-  animatedOverlay,
-  gradient,
-}: IEducationProps) {
+export default function Education(props: IEducationProps) {
   const t = useTranslations("");
   const expressions = t.raw("expressions") as Expressions;
   const educations = t.raw("educations.description") as Education[];
@@ -33,9 +33,9 @@ export default function Education({
       }}
     >
       <div
-        className={`overlay ${animatedOverlay.current}`}
+        className={`overlay ${props.animatedOverlay}`}
         style={{
-          backgroundImage: `${gradient},url(${educationImg.src})`,
+          backgroundImage: `${props.gradient},url(${educationImg.src})`,
         }}
       >
         <p>{t("educations.overlayTitle")}</p>

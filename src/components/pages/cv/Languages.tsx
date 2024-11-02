@@ -10,8 +10,11 @@ import { Language } from "@/models/Language";
 import "./Cv.scss";
 
 interface ILanguagesProps {
-  animatedOverlay: React.MutableRefObject<string>;
+  animatedOverlay: string; 
   gradient: string;
+  params: {
+    locale: string;
+  };
 }
 
 export default function Languages(props: ILanguagesProps) {
@@ -37,7 +40,7 @@ export default function Languages(props: ILanguagesProps) {
       }}
     >
       <div
-        className={"overlay " + props.animatedOverlay.current}
+        className={"overlay " + props.animatedOverlay}
         style={{
           backgroundImage: `${props.gradient},url(${languagesImg.src})`,
         }}

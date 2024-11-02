@@ -8,8 +8,11 @@ import { Experience } from "@/models/Experience";
 import "./Cv.scss";
 
 interface IAboutProps {
-  animatedOverlay: React.MutableRefObject<string>;
+  animatedOverlay: string; 
   gradient: string;
+  params: {
+    locale: string;
+  };
 }
 
 export default function About(props: IAboutProps) {
@@ -26,7 +29,7 @@ export default function About(props: IAboutProps) {
       }}
     >
       <div
-        className={"overlay " + props.animatedOverlay.current}
+        className={`overlay ${props.animatedOverlay.current}`}
         style={{
           backgroundImage: `${props.gradient},url(${aboutImg.src})`,
         }}
@@ -37,7 +40,6 @@ export default function About(props: IAboutProps) {
         <h2 className="extraBig bold">{t("about.underlayTitle")}</h2>
         <div className="light text">
           <p className="big">{t("about.description.salutation")}</p>
-
           <p className="medium">
             {t("about.description.workingSituation")}
             <a target="_blank" rel="noreferrer" href={experiences[0].website}>
@@ -49,7 +51,7 @@ export default function About(props: IAboutProps) {
           </p>
           <p className="medium">
             {Object.values(t.raw("about.description.body")).map((info, i) => (
-              <React.Fragment key={i}>{info}</React.Fragment>
+              <React.Fragment key={i}>{info as React.ReactNode}</React.Fragment>
             ))}
           </p>
           <p className="big right">

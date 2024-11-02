@@ -9,8 +9,11 @@ import { Experience } from "@/models/Experience";
 import "./Cv.scss";
 
 interface IExperienceProps {
-  animatedOverlay: React.MutableRefObject<string>;
+  animatedOverlay: string; 
   gradient: string;
+  params: {
+    locale: string;
+  };
 }
 
 export default function Experience(props: IExperienceProps) {
@@ -27,7 +30,7 @@ export default function Experience(props: IExperienceProps) {
       }}
     >
       <div
-        className={"overlay " + props.animatedOverlay.current}
+        className={"overlay " + props.animatedOverlay}
         style={{
           backgroundImage: `${props.gradient},url(${experienceImg.src})`,
         }}

@@ -9,8 +9,11 @@ import { Project } from "@/models/Project";
 import "./Cv.scss";
 
 interface IProjectsProps {
-  animatedOverlay: React.MutableRefObject<string>;
+  animatedOverlay: string; 
   gradient: string;
+  params: {
+    locale: string;
+  };
 }
 
 export default function Projects(props: IProjectsProps) {
@@ -27,7 +30,7 @@ export default function Projects(props: IProjectsProps) {
       }}
     >
       <div
-        className={"overlay " + props.animatedOverlay.current}
+        className={"overlay " + props.animatedOverlay}
         style={{
           backgroundImage: `${props.gradient},url(${projectsImg.src})`,
         }}

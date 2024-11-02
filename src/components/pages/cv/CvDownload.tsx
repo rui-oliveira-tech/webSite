@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react";
+import React from "react";
 import { useTranslations } from "next-intl";
 import { saveAs } from "file-saver";
 
@@ -6,26 +6,18 @@ import "./Cv.scss";
 import "./CvButton.scss";
 
 interface ICvDownloadProps {
-  animatedOverlay: React.MutableRefObject<string>;
+  animatedOverlay: string; 
+  gradient: string;
+  params: {
+    locale: string;
+  };
 }
 
 export default function CvDownload(props: ICvDownloadProps) {
-  const currentLanguageCode = props.params.locale;
-
+  const currentLanguageCode = props.params.locale; // Use destructuring for clarity
   const t = useTranslations("");
-  const animation = useRef("notLoading");
-  let waitForLoading = useRef(setTimeout(() => {}, 0));
 
-  useEffect(() => {
-    waitForLoading.current = setTimeout(() => {
-      if (props.isLoading) {
-        animation.current = "loading";
-      }
-    }, 1);
-    return () => clearTimeout(waitForLoading.current);
-  }, []);
-
-  const downloadPDF = (e) => {
+  const downloadPDF = (e: React.MouseEvent) => {
     e.preventDefault();
     const fileName = `RuiOliveira_CV-${currentLanguageCode.toUpperCase()}.pdf`;
     fetch(`/resource/${fileName}`)
@@ -39,7 +31,7 @@ export default function CvDownload(props: ICvDownloadProps) {
   return (
     <div className="download">
       <button
-        className={"learn-more buttonCV " + animation.current}
+        className={`learn-more buttonCV ${props.animatedOverlay}`} // Access current value
         onClick={downloadPDF}
       >
         <span className="circle" aria-hidden="true">

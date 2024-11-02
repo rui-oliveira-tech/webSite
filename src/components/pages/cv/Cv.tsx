@@ -1,7 +1,6 @@
 "use client";
 
-import React, { useEffect, useRef } from "react";
-
+import React, { useEffect, useState } from "react";
 import CvDownload from "./CvDownload";
 import About from "./About";
 import Education from "./Education";
@@ -15,70 +14,43 @@ import Map from "./Map";
 
 import "./Cv.scss";
 
-// color: #193a59;
-// background-color: #bdd9f3;
-// const gradient = "radial-gradient(circle, rgba(63,94,251,1) 0%, rgba(252,70,107,1) 100%)"
-// const gradient = "radial-gradient(circle, rgb(25, 58, 89, 0.7) 0%, rgb(189, 217, 243, 0.7) 100%)"
-
 const gradient =
   "radial-gradient(circle, rgb(25, 58, 89, 0.5) 0%, rgb(0, 0, 0, 0.5) 100%)";
 
-export default function Cv(props) {
-  const animatedOverlay = useRef("");
-  let waitForOverlay = useRef(setTimeout(() => {}, 0));
+interface ICvProps {
+  params: {
+    locale: string;
+  };
+}
+
+export function Cv(props: ICvProps) {
+  const [animatedOverlay, setAnimatedOverlay] = useState("notLoading");
+
   useEffect(() => {
-    waitForOverlay.current = setTimeout(() => {
-      animatedOverlay.current = "animated";
+    const timer = setTimeout(() => {
+      setAnimatedOverlay("notLoading");
     }, 1);
-    return () => clearTimeout(waitForOverlay.current);
+    return () => clearTimeout(timer);
   }, []);
+
+  const sharedProps = { ...props, gradient, animatedOverlay };
 
   return (
     <section className="have_footer have_NavigationBar cv">
-      <CvDownload {...props} animatedOverlay={animatedOverlay} />
+      <CvDownload {...sharedProps} />
       <div className="cvContainer">
-        <About
-          {...props}
-          gradient={gradient}
-          animatedOverlay={animatedOverlay}
-        />
-        <Certification
-          {...props}
-          gradient={gradient}
-          animatedOverlay={animatedOverlay}
-        />
-        <Education
-          {...props}
-          gradient={gradient}
-          animatedOverlay={animatedOverlay}
-        />
-        <Languages
-          {...props}
-          gradient={gradient}
-          animatedOverlay={animatedOverlay}
-        />
-        <ProgrammingLanguages
-          {...props}
-          gradient={gradient}
-          animatedOverlay={animatedOverlay}
-        />
-        <Experience
-          {...props}
-          gradient={gradient}
-          animatedOverlay={animatedOverlay}
-        />
-        <Projects
-          {...props}
-          gradient={gradient}
-          animatedOverlay={animatedOverlay}
-        />
-        <Others
-          {...props}
-          gradient={gradient}
-          animatedOverlay={animatedOverlay}
-        />
-        <Map {...props} gradient={gradient} animatedOverlay={animatedOverlay} />
+        <About {...sharedProps} />
+        <Certification {...sharedProps} />
+        <Education {...sharedProps} />
+        <Languages {...sharedProps} />
+        <ProgrammingLanguages {...sharedProps} />
+        <Experience {...sharedProps} />
+        <Projects {...sharedProps} />
+        <Others {...sharedProps} />
+        <Map {...sharedProps} />
       </div>
     </section>
   );
 }
+
+export default Cv;

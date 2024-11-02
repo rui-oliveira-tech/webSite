@@ -8,8 +8,11 @@ import "./Cv.scss";
 
 //import { Map } from "@/models/Project";
 interface IMapProps {
-  animatedOverlay: React.MutableRefObject<string>;
+  animatedOverlay: string;
   gradient: string;
+  params: {
+    locale: string;
+  };
 }
 
 export default function Map(props: IMapProps) {
@@ -39,7 +42,7 @@ export default function Map(props: IMapProps) {
           }}
         >
           <div
-            className={"overlay " + props.animatedOverlay.current}
+            className={"overlay " + props.animatedOverlay}
             style={{
               backgroundImage: `${props.gradient},url(${MapsImg.src})`,
             }}

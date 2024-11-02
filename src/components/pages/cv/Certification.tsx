@@ -12,14 +12,14 @@ import { Certification } from "@/models/Certification";
 import "./Cv.scss";
 
 interface ICertificationProps {
-  animatedOverlay: React.MutableRefObject<string>;
+  animatedOverlay: string; 
   gradient: string;
+  params: {
+    locale: string;
+  };
 }
 
-export default function Certification({
-  animatedOverlay,
-  gradient,
-}: ICertificationProps) {
+export default function Certification(props: ICertificationProps) {
   const t = useTranslations("");
   const expressions = t.raw("expressions") as Expressions;
   const certifications = t.raw("certifications.description") as Certification[];
@@ -52,9 +52,9 @@ export default function Certification({
       }}
     >
       <div
-        className={`overlay ${animatedOverlay.current}`}
+        className={`overlay ${props.animatedOverlay}`}
         style={{
-          backgroundImage: `${gradient},url(${certificationImg.src})`,
+          backgroundImage: `${props.gradient},url(${certificationImg.src})`,
         }}
       >
         <p>{t("certifications.overlayTitle")}</p>
