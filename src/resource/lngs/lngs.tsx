@@ -1,16 +1,16 @@
-import beImg from "@/images/languages/be.svg";
-import esImg from "@/images/languages/es.svg";
-import frImg from "@/images/languages/fr.svg";
-import enImg from "@/images/languages/en.svg";
-import nlImg from "@/images/languages/nl.svg";
-import ptImg from "@/images/languages/pt.svg";
+import beImg from "@/assets/images/languages/be.svg";
+import esImg from "@/assets/images/languages/es.svg";
+import frImg from "@/assets/images/languages/fr.svg";
+import enImg from "@/assets/images/languages/en.svg";
+import nlImg from "@/assets/images/languages/nl.svg";
+import ptImg from "@/assets/images/languages/pt.svg";
 
-import langImg from "@/images/languages/language.svg";
+import langImg from "@/assets/images/languages/language.svg";
 
 export const languageImg = langImg;
 
 export const defaultLanguage = "en";
-// if a language add chande on middleware.ts
+
 export const languageList = [
   {
     code: "en",

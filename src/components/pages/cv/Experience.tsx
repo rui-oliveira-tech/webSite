@@ -2,7 +2,7 @@ import React from "react";
 import { useTranslations } from "next-intl";
 import getFormatDate from "@/util/getFormatDate.tsx";
 
-import experienceImg from "@/images/cv/experience.jpg";
+import experienceImg from "@/assets/images/cv/experience.jpg";
 import { Expressions } from "@/models/Expressions";
 import { Experience } from "@/models/Experience";
 

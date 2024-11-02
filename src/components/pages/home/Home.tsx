@@ -5,7 +5,7 @@ import Image from "next/image";
 import { useTranslations } from "next-intl";
 import "./Home.scss";
 
-import homeImg from "@/images/home/main.jpg";
+import homeImg from "@/assets/images/home/main.jpg";
 
 export function Home(props) {
   const t = useTranslations("");
@@ -27,7 +27,6 @@ export function Home(props) {
      });
    } */
 
- 
   return (
     <section className="have_footer have_NavigationBar home">
       <header>

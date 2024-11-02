@@ -3,7 +3,7 @@
 import React from "react";
 import { useTranslations } from "next-intl";
 import "./Footer.scss";
-import "./../../../icons/css/fontello-embedded.css";
+import "./../../../assets/icons/css/fontello-embedded.css";
 
 import Button from "../../others/Button/Button";
 import { links } from "@/resource/links";

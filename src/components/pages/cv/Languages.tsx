@@ -3,7 +3,7 @@ import Image from "next/image";
 import { useTranslations } from "next-intl";
 
 import { languageList } from "@/resource/lngs/lngs";
-import languagesImg from "@/images/cv/languages.jpg";
+import languagesImg from "@/assets/images/cv/languages.jpg";
 import { Expressions } from "@/models/Expressions";
 import { Language } from "@/models/Language";
 

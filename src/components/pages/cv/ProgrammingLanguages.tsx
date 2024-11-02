@@ -2,8 +2,8 @@ import React from "react";
 import { useTranslations } from "next-intl";
 import Image from "next/image";
 
-import programmingLanguagesImg from "@/images/cv/programmingLanguages.jpg";
-import { proglanguageList } from "@/images/programming_languages/ImgSrc";
+import programmingLanguagesImg from "@/assets/images/cv/programmingLanguages.jpg";
+import { proglanguageList } from "@/assets/images/programming_languages/ImgSrc";
 import { ProgrammingLanguage } from "@/models/ProgrammingLanguage";
 
 import "./Cv.scss";

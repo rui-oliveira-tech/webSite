@@ -6,7 +6,7 @@ import { getFormatDate } from "../../../../util/getFormatDate.js";
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-const cssIconsTemplate = path.resolve(__dirname, "../../../../icons/css/fontello-embedded.css");
+const cssIconsTemplate = path.resolve(__dirname, "../../../../assets/icons/css/fontello-embedded.css");
 console.log(cssIconsTemplate)
 const cssTemplate = path.resolve(__dirname, "./cvCss.css");
 
@@ -53,12 +53,12 @@ export const pdfTemplate = ({ currentLanguageCode, cvData, links, cvType }) => {
         <h4 class="first-intervalDate intervalDate date">${getFormatDate(experience, expressions)}</h4>
         <h4 class="second-intervalDate intervalDate date">${expressions.offerTypes[experience.offerType]}</h4>
         ${experience.type.includes(cvType + "-bulletPoints") ?
-          (typeof experience.functionsPerformed === 'object' ? 
-            Object.values(experience.functionsPerformed).map((functionPerformed) => `
+      (typeof experience.functionsPerformed === 'object' ?
+        Object.values(experience.functionsPerformed).map((functionPerformed) => `
               <p class="description icon-right-open blue-icon">${functionPerformed}</p>
             `).join('')
-            : ' '
-          ) : ''}
+        : ' '
+      ) : ''}
       </div>
     ` : '').join('')}
   </div>

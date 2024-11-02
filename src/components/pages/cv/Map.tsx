@@ -2,7 +2,7 @@ import React, { useEffect, useRef, useState } from "react";
 import { useTranslations } from "next-intl";
 import MapSection from "@/components/others/Map/Map";
 import pointsDataset from "@/resource/generated/processedGoogleMapsMarkers.json";
-import MapsImg from "@/images/cv/googleMapsMarkers.jpg";
+import MapsImg from "@/assets/images/cv/googleMapsMarkers.jpg";
 
 import "./Cv.scss";
 

@@ -5,7 +5,7 @@ import getFormatDate, {
   isExpirationDatePassed,
 } from "@/util/getFormatDate.tsx";
 
-import certificationImg from "@/images/cv/certification.jpg";
+import certificationImg from "@/assets/images/cv/certification.jpg";
 import { Expressions } from "@/models/Expressions";
 import { Certification } from "@/models/Certification";
 

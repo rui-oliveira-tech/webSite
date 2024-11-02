@@ -2,7 +2,7 @@ import React from "react";
 import { useTranslations } from "next-intl";
 import getFormatDate from "@/util/getFormatDate.tsx";
 
-import projectsImg from "@/images/cv/projects.jpg";
+import projectsImg from "@/assets/images/cv/projects.jpg";
 import { Expressions } from "@/models/Expressions";
 import { Project } from "@/models/Project";
 

@@ -1,7 +1,7 @@
 import React from "react";
 import { useTranslations } from "next-intl";
 
-import aboutImg from "@/images/cv/about.jpg";
+import aboutImg from "@/assets/images/cv/about.jpg";
 import { Expressions } from "@/models/Expressions";
 import { Experience } from "@/models/Experience";
 
