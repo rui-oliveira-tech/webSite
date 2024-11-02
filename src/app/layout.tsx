@@ -1,4 +1,4 @@
-import { Meta } from "./Meta";
+import { Meta } from "../components/metaTags/Meta";
 import { NextIntlClientProvider, useMessages } from "next-intl";
 import classNames from "classnames";
 import { Inter } from "next/font/google";
