@@ -20,9 +20,12 @@ export default function LoadingIcon() {
   useEffect(() => {
     const paths = document.querySelectorAll("svg path");
     shuffle(Array.from(paths)).forEach((p, i) => {
-      setTimeout(() => {
-        p.classList.add(p.getAttribute("data-classname") || "");
-      }, 500 + Math.random() * 1000);
+      const className = p.getAttribute("data-classname") || ""; 
+      if (className) {
+        setTimeout(() => {
+          p.classList.add(className);
+        }, 500 + Math.random() * 1000);
+      }
     });
   }, []);
 
