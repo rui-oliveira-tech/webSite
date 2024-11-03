@@ -12,6 +12,7 @@
     "build:cv": "npx ts-node src/scripts/generateCV/generateCV.js --noEmit"
   },
   "dependencies": {
+    "@netlify/plugin-nextjs": "^5.8.1",
     "@react-google-maps/api": "^2.19.3",
     "axios": "^1.7.3",
     "classnames": "^2.5.1",
