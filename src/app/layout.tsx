@@ -1,18 +1,31 @@
 import React from "react";
 import { getLocale, getMessages } from "next-intl/server";
-import RootLayout from "./RootLayout";
 
-export default async function Layout({
-  children,
-}: {
+import RootLayout from "./RootLayout";
+import NavigationBar from "@/components/layout/navigationBar/NavigationBar";
+import Footer from "@/components/layout/footer/Footer";
+
+import "@/assets/styles/globalVar.scss";
+import "@/assets/styles/global.css";
+
+interface ILayoutProps {
   children: React.ReactNode;
-}) {
+  params: {
+    locale: string;
+  };
+}
+
+export default async function Layout(props: ILayoutProps) {
   const locale = await getLocale();
   const messages = await getMessages();
 
   return (
     <RootLayout locale={locale} messages={messages}>
-      {children}
+      <div className="wideGrid">
+        <NavigationBar locale={locale} />
+        {props.children}
+        <Footer />
+      </div>
     </RootLayout>
   );
 }

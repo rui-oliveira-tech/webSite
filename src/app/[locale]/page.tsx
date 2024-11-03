@@ -1,10 +1,11 @@
-import React from "react";
-import "./../globalVar.scss";
-import "./../global.css";
+"use client";
+
+import React, { useEffect, useState } from "react";
 
 import NavigationBar from "@/components/layout/navigationBar/NavigationBar";
 import Home from "@/components/pages/home/Home";
 import Footer from "@/components/layout/footer/Footer";
+import FadeIn from "@/components/fadeIn/FadeIn";
 
 interface IHomepageProps {
   params: {
@@ -12,12 +13,10 @@ interface IHomepageProps {
   };
 }
 
-export default async function Homepage(props: IHomepageProps) {
+export default function Homepage(props: IHomepageProps) {
   return (
-    <div className="wideGrid">
-      <NavigationBar {...props} />
+    <FadeIn type="fast">
       <Home {...props} />
-      <Footer />
-    </div>
+    </FadeIn>
   );
 }

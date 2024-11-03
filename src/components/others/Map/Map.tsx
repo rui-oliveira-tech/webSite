@@ -203,7 +203,7 @@ export default function MapSection({
                 position={{ lat, lng }}
                 mapPaneName={OverlayView.OVERLAY_MOUSE_TARGET}
               >
-                <p className="title">{cluster.properties.city}</p>
+                <p className="map title">{cluster.properties.city}</p>
               </OverlayView>
             )}
           </Marker>

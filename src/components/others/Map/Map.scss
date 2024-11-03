@@ -1,13 +1,15 @@
-.title {
-  width: 200px;
-  transform: translate(0.5rem, -1rem);
-  animation: showLettersMapsMarker 1s linear forwards;
-  color: #ffffff;
-  font-size: calc(var(--textSize) * 1.5em);
-  line-height: 1em;
-  font-weight: 600;
-  letter-spacing: normal;
-  font-family: Helvetica;
+.map {
+  .title {
+    width: 200px;
+    transform: translate(0.5rem, -1rem);
+    animation: showLettersMapsMarker 1s linear forwards;
+    color: #ffffff;
+    font-size: calc(var(--textSize) * 1.5em);
+    line-height: 1em;
+    font-weight: 600;
+    letter-spacing: normal;
+    font-family: Helvetica;
+  }
 }
 
 @keyframes showLettersMapsMarker {

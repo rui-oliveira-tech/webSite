@@ -12,14 +12,12 @@ import { languageImg, languageList, Locale } from "@/resource/lngs/lngs";
 import Link from "next/link";
 import { setUserLocale } from "./cookies";
 
-interface LanguageProps {
-  params: {
-    locale: string;
-  };
+interface ILanguageProps {
+  locale: string;
 }
 
-const Languages: React.FC<LanguageProps> = (props) => {
-  const { locale } = props.params;
+const Languages: React.FC<ILanguageProps> = (props) => {
+  const locale = props.locale;
   const t = useTranslations("");
   const languages = t.raw("expressions.languages");
   const router = useRouter();
@@ -28,14 +26,14 @@ const Languages: React.FC<LanguageProps> = (props) => {
 
   const onLanguageChange =
     (lang: Locale): React.FormEventHandler<HTMLButtonElement> =>
-      (event) => {
-        event.preventDefault();
-        startTransition(() => {
-          setUserLocale(lang)
-          const newPath = pathname.replace(`/${locale}`, `/${lang}`);
-          router.replace(newPath);
-        });
-      };
+    (event) => {
+      event.preventDefault();
+      startTransition(() => {
+        setUserLocale(lang);
+        const newPath = pathname.replace(`/${locale}`, `/${lang}`);
+        router.replace(newPath);
+      });
+    };
 
   const languageListUpdated = languageList.map((language) => ({
     ...language,

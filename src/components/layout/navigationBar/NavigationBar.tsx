@@ -14,11 +14,8 @@ import logoImg from "@/assets/images/logo/logo.svg";
 import { usePathname } from "next/navigation";
 import { languageImg, supportedLngs, Locale } from "@/resource/lngs/lngs";
 
-// Define the props interface for the NavigationBar component
-interface NavigationBarProps {
-  params: {
-    locale: string;
-  };
+interface INavigationBarProps {
+  locale: string;
 }
 
 function classPageInList(
@@ -33,10 +30,10 @@ function classPageInList(
     : "notThisPage";
 }
 
-const NavigationBar: React.FC<NavigationBarProps> = (props) => {
+const NavigationBar: React.FC<INavigationBarProps> = (props) => {
   const t = useTranslations("");
   const pathname = usePathname();
-  const currentLanguageCode = props.params.locale;
+  const currentLanguageCode = props.locale;
 
   const logoClass = pageList.some(
     (page) =>
@@ -77,7 +74,7 @@ const NavigationBar: React.FC<NavigationBarProps> = (props) => {
         }, [])}
       </div>
       <div className="languageNavigationBar">
-        <Languages {...props} />
+        <Languages locale={props.locale} />
       </div>
     </nav>
   );
