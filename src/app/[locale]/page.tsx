@@ -16,7 +16,7 @@ export default async function Homepage(props: IHomepageProps) {
   return (
     <FadeIn type="fast">
       aa
-            <Home {...props} /> 
+       {/*      <Home {...props} />  */}
     </FadeIn>
   );
 }
