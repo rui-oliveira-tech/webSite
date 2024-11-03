@@ -14,9 +14,9 @@ interface IHomepageProps {
 export default function Homepage(props: IHomepageProps) {
   return (
     <>
-      <FadeIn type="fast">
+     {/*  <FadeIn type="fast">
         <Home {...props} />
-      </FadeIn>{" "}
+      </FadeIn>{" "} */}
     </>
   );
 }
