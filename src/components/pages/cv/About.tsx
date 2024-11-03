@@ -9,9 +9,6 @@ import "./Cv.scss";
 
 interface IAboutProps {
   gradient: string;
-  params: {
-    locale: string;
-  };
 }
 
 export default function About(props: IAboutProps) {

@@ -10,9 +10,6 @@ import "./Cv.scss";
 
 interface IExperienceProps {
   gradient: string;
-  params: {
-    locale: string;
-  };
 }
 
 export default function Experience(props: IExperienceProps) {

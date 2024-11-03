@@ -11,9 +11,6 @@ import "./Cv.scss";
 
 interface ILanguagesProps {
   gradient: string;
-  params: {
-    locale: string;
-  };
 }
 
 export default function Languages(props: ILanguagesProps) {

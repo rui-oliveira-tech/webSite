@@ -10,9 +10,6 @@ import "./Cv.scss";
 
 interface IProjectsProps {
   gradient: string;
-  params: {
-    locale: string;
-  };
 }
 
 export default function Projects(props: IProjectsProps) {

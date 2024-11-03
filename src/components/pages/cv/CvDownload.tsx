@@ -7,13 +7,11 @@ import "./CvButton.scss";
 
 interface ICvDownloadProps {
   gradient: string;
-  params: {
-    locale: string;
-  };
+  locale: string;
 }
 
 export default function CvDownload(props: ICvDownloadProps) {
-  const currentLanguageCode = props.params.locale; // Use destructuring for clarity
+  const currentLanguageCode = props.locale; // Use destructuring for clarity
   const t = useTranslations("");
 
   const downloadPDF = (e: React.MouseEvent) => {

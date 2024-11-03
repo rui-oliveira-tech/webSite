@@ -13,9 +13,6 @@ import "./Cv.scss";
 
 interface IEducationProps {
   gradient: string;
-  params: {
-    locale: string;
-  };
 }
 
 export default function Education(props: IEducationProps) {

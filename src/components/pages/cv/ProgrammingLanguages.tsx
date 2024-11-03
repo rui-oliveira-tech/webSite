@@ -10,9 +10,6 @@ import "./Cv.scss";
 
 interface IProgrammingLanguagesProps {
   gradient: string;
-  params: {
-    locale: string;
-  };
 }
 
 export default function ProgrammingLanguages(

@@ -18,9 +18,7 @@ const gradient =
   "radial-gradient(circle, rgb(25, 58, 89, 0.5) 0%, rgb(0, 0, 0, 0.5) 100%)";
 
 interface ICvProps {
-  params: {
-    locale: string;
-  };
+  locale: string;
 }
 
 export function Cv(props: ICvProps) {

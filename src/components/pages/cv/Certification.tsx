@@ -13,9 +13,6 @@ import "./Cv.scss";
 
 interface ICertificationProps {
   gradient: string;
-  params: {
-    locale: string;
-  };
 }
 
 export default function Certification(props: ICertificationProps) {
