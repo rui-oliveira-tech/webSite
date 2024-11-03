@@ -1,9 +1,9 @@
-/* "use client";
+"use client";
 
 import React from "react";
 
-import Home from "@/components/pages/home/Home";
-import FadeIn from "@/components/fadeIn/FadeIn";
+/* import Home from "@/components/pages/home/Home";
+import FadeIn from "@/components/fadeIn/FadeIn"; */
 
 interface IHomepageProps {
   params: {
@@ -13,8 +13,10 @@ interface IHomepageProps {
 
 export default function Homepage(props: IHomepageProps) {
   return (
-    <FadeIn type="fast">
-      <Home {...props} />
-    </FadeIn>
+    <>
+      <FadeIn type="fast">
+        <Home {...props} />
+      </FadeIn>{" "}
+    </>
   );
-} */
+}
