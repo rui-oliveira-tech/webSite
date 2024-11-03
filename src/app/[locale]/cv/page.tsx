@@ -2,7 +2,7 @@
 
 import React from "react";
 
-import Cv from "@/components/pages/cv/Cv";
+/* import Cv from "@/components/pages/cv/Cv"; */
 import FadeIn from "@/components/fadeIn/FadeIn";
 
 // This function specifies the locales for the CV page
@@ -21,7 +21,7 @@ export default function CvPage(props: ICvProps) {
   return (
     <FadeIn type="fast">
       asds
- {/*      <Cv {...props} /> */}
+      {/*      <Cv {...props} /> */}
     </FadeIn>
   );
 }
