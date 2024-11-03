@@ -1,7 +1,7 @@
 import { getRequestConfig } from 'next-intl/server';
 import { notFound } from "next/navigation";
 import { supportedLngs, defaultLanguage } from "./resource/lngs/lngs";
-import deepMerge from './util/deepMerge';
+import deepMerge from './utils/deepMerge';
 
 export default getRequestConfig(async ({ locale }) => {
   // Validate that the incoming `locale` parameter is valid

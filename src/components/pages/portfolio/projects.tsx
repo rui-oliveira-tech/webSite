@@ -4,7 +4,7 @@ import { MouseParallaxContainer, MouseParallaxChild } from 'react-parallax-mouse
 import Tilt from 'react-parallax-tilt';
 import "./Projects.scss";
 
-import getImagesFromFolder from '../../../util/getImagesFromFolder';
+import getImagesFromFolder from '../../../utils/getImagesFromFolder';
 
 export default function Portfolio(props) {
   const t = useTranslations("");
