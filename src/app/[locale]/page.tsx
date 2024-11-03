@@ -16,4 +16,4 @@ export default async function Homepage(props: IHomepageProps) {
   );
 }
 
-export { generateStaticParams };
+//export { generateStaticParams };
