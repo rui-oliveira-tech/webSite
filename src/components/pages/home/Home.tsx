@@ -27,19 +27,19 @@ export function Home(props: IHomeProps) {
       <main>
         <h1 className="title">{/* t("home.title") */} Home Title</h1>
         <h2
-          data-texteffect={/* t("home.subTitle.first") */}
+         {/* data-texteffect= t("home.subTitle.first") */}
           className="subTitle first"
         >
           {/* t("home.subTitle.first") */} Sub Title First
         </h2>
         <h3
-          data-texteffect={/* t("home.subTitle.second") */}
+         {/* data-texteffect= t("home.subTitle.second") */}
           className="subTitle second"
         >
           {/* t("home.subTitle.second") */} Sub Title Second
         </h3>
         <h3
-          data-texteffect={/* t("home.subTitle.third") */}
+         {/* data-texteffect= t("home.subTitle.third") */}
           className="subTitle third"
         >
           {/* t("home.subTitle.third") */} Sub Title Third
