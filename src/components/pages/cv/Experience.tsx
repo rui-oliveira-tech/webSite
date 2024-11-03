@@ -3,8 +3,8 @@ import { useTranslations } from "next-intl";
 import getFormatDate from "@/util/getFormatDate.tsx";
 
 import experienceImg from "@/assets/images/cv/experience.jpg";
-import { Expressions } from "@/models/Expressions";
-import { Experience } from "@/models/Experience";
+import { IExpressions } from "@/models/IExpressions";
+import { IExperience } from "@/models/IMessages";
 
 import "./Cv.scss";
 
@@ -17,8 +17,8 @@ interface IExperienceProps {
 
 export default function Experience(props: IExperienceProps) {
   const t = useTranslations("");
-  const expressions = t.raw("expressions") as Expressions;
-  const experiences = t.raw("experiences.description") as Experience[];
+  const expressions = t.raw("expressions") as IExpressions;
+  const experiences = t.raw("experiences.description") as IExperience[];
 
   return (
     <div
@@ -29,7 +29,7 @@ export default function Experience(props: IExperienceProps) {
       }}
     >
       <div
-        className={"overlay " + props.animatedOverlay}
+        className={"overlay "}
         style={{
           backgroundImage: `${props.gradient},url(${experienceImg.src})`,
         }}
@@ -53,10 +53,11 @@ export default function Experience(props: IExperienceProps) {
             <p className="text small">
               {getFormatDate(experience, expressions)}
               {" -> "}
-              {expressions.offerTypes[experience.offerType]}
-            </p>
-            <p className="light text medium textSpacement">
-              {experience.skillsGained}
+              {
+                expressions.offerTypes[
+                  experience.offerType as keyof IExpressions["offerTypes"]
+                ]
+              }
             </p>
             <div className="functionsPerformed">
               {experience.functionsPerformed &&

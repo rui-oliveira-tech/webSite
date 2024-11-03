@@ -6,8 +6,8 @@ import getFormatDate, {
 } from "@/util/getFormatDate.tsx";
 
 import certificationImg from "@/assets/images/cv/certification.jpg";
-import { Expressions } from "@/models/Expressions";
-import { Certification } from "@/models/Certification";
+import { Expressions } from "@/models/IExpressions";
+import { Certification } from "@/models/IMessages";
 
 import "./Cv.scss";
 
@@ -51,7 +51,7 @@ export default function Certification(props: ICertificationProps) {
       }}
     >
       <div
-        className={`overlay ${props.animatedOverlay}`}
+        className={`overlay`}
         style={{
           backgroundImage: `${props.gradient},url(${certificationImg.src})`,
         }}

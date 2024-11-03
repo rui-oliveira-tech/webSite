@@ -6,8 +6,8 @@ import getFormatDate, {
 } from "@/util/getFormatDate.tsx";
 
 import educationImg from "@/assets/images/cv/education.jpg";
-import { Expressions } from "@/models/Expressions";
-import { Education } from "@/models/Education";
+import { IExpressions } from "@/models/IExpressions";
+import { IEducation } from "@/models/IMessages";
 
 import "./Cv.scss";
 
@@ -20,8 +20,8 @@ interface IEducationProps {
 
 export default function Education(props: IEducationProps) {
   const t = useTranslations("");
-  const expressions = t.raw("expressions") as Expressions;
-  const educations = t.raw("educations.description") as Education[];
+  const expressions = t.raw("expressions") as IExpressions;
+  const educations = t.raw("educations.description") as IEducation[];
 
   return (
     <div
@@ -32,7 +32,7 @@ export default function Education(props: IEducationProps) {
       }}
     >
       <div
-        className={`overlay ${props.animatedOverlay}`}
+        className={`overlay`}
         style={{
           backgroundImage: `${props.gradient},url(${educationImg.src})`,
         }}

@@ -3,8 +3,8 @@ import { useTranslations } from "next-intl";
 import getFormatDate from "@/util/getFormatDate.tsx";
 
 import othersImg from "@/assets/images/cv/others.jpg";
-import { Expressions } from "@/models/Expressions";
-import { Other } from "@/models/Other";
+import { IExpressions } from "@/models/IExpressions";
+import { IOther } from "@/models/IMessages";
 
 import "./Cv.scss";
 
@@ -17,8 +17,8 @@ interface IOthersProps {
 
 export default function Others(props: IOthersProps) {
   const t = useTranslations("");
-  const expressions = t.raw("expressions") as Expressions;
-  const others = t.raw("other.description") as Other[];
+  const expressions = t.raw("expressions") as IExpressions;
+  const others = t.raw("other.description") as IOther[];
 
   return (
     <div
@@ -29,7 +29,7 @@ export default function Others(props: IOthersProps) {
       }}
     >
       <div
-        className={"overlay " + props.animatedOverlay}
+        className={"overlay "}
         style={{
           backgroundImage: `${props.gradient},url(${othersImg.src})`,
         }}

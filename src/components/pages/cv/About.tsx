@@ -2,8 +2,8 @@ import React from "react";
 import { useTranslations } from "next-intl";
 
 import aboutImg from "@/assets/images/cv/about.jpg";
-import { Expressions } from "@/models/Expressions";
-import { Experience } from "@/models/Experience";
+import { Expressions } from "@/models/IExpressions";
+import { Experience } from "@/models/IExperience";
 
 import "./Cv.scss";
 

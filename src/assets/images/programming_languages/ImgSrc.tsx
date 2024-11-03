@@ -10,9 +10,12 @@ import nodeJsImg from "@/assets/images/programming_languages/nodeJs.svg";
 import vscImg from "@/assets/images/programming_languages/vsc.svg";
 import windowsImg from "@/assets/images/programming_languages/windows.svg";
 
+export interface IProglanguageListProps {
+  code: string;
+  img: string;
+}
 
-
-export const proglanguageList = [
+export const proglanguageList: IProglanguageListProps[] = [
   {
     code: "arduino",
     img: arduinoImg,
@@ -56,7 +59,5 @@ export const proglanguageList = [
   {
     code: "windows",
     img: windowsImg,
-  }
-
-
-]
+  },
+];

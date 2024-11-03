@@ -9,7 +9,7 @@ import {
   OverlayView,
 } from "@react-google-maps/api";
 import "./Map.scss";
-import { Point } from "@/models/Map";
+import { Point } from "@/models/IMap";
 
 import pointsDataset from "@/resource/generated/processedGoogleMapsMarkers.json";
 

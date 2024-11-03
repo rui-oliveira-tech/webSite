@@ -4,8 +4,8 @@ import { useTranslations } from "next-intl";
 
 import { languageList } from "@/resource/lngs/lngs";
 import languagesImg from "@/assets/images/cv/languages.jpg";
-import { Expressions } from "@/models/Expressions";
-import { Language } from "@/models/Language";
+import { IExpressions } from "@/models/IExpressions";
+import { ILanguage } from "@/models/IMessages";
 
 import "./Cv.scss";
 
@@ -22,13 +22,16 @@ export default function Languages(props: ILanguagesProps) {
   const imageMap = languageList.reduce((acc, lang) => {
     acc[lang.code] = lang.img;
     return acc;
-  }, {});
-  const languagesExp = t.raw("expressions.languages") as Expressions;
+  }, {} as Record<string, string>);
 
-  const languages = t.raw("languages.description").map((item) => ({
-    ...(item as Language[]),
-    language: languagesExp[item.flag],
-  }));
+  const languagesExp = (t.raw("expressions") as IExpressions).languages;
+
+  const languages = (t.raw("languages.description") as ILanguage[]).map(
+    (item) => ({
+      ...item,
+      language: languagesExp[item.flag as keyof IExpressions["languages"]],
+    })
+  );
 
   return (
     <div
@@ -39,7 +42,7 @@ export default function Languages(props: ILanguagesProps) {
       }}
     >
       <div
-        className={"overlay " + props.animatedOverlay}
+        className={"overlay "}
         style={{
           backgroundImage: `${props.gradient},url(${languagesImg.src})`,
         }}
@@ -52,8 +55,8 @@ export default function Languages(props: ILanguagesProps) {
           <thead className="">
             <tr>
               <th className="languageColumn">{t("languages.key.language")}</th>
-              <th colSpan="2">{t("languages.key.understanding")}</th>
-              <th colSpan="2">{t("languages.key.speaking")}</th>
+              <th colSpan={2}>{t("languages.key.understanding")}</th>
+              <th colSpan={2}>{t("languages.key.speaking")}</th>
               <th>{t("languages.key.writing")}</th>
             </tr>
           </thead>
@@ -87,7 +90,7 @@ export default function Languages(props: ILanguagesProps) {
             ))}
             <tr>
               <td className="noBorder left"></td>
-              <td className="noBorder left" colSpan="5">
+              <td className="noBorder left" colSpan={5}>
                 <p className="text small noPading">
                   {t("languages.key.levels")}
                 </p>

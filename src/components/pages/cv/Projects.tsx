@@ -3,8 +3,8 @@ import { useTranslations } from "next-intl";
 import getFormatDate from "@/util/getFormatDate.tsx";
 
 import projectsImg from "@/assets/images/cv/projects.jpg";
-import { Expressions } from "@/models/Expressions";
-import { Project } from "@/models/Project";
+import { IExpressions } from "@/models/IExpressions";
+import { IProject } from "@/models/IMessages";
 
 import "./Cv.scss";
 
@@ -17,8 +17,8 @@ interface IProjectsProps {
 
 export default function Projects(props: IProjectsProps) {
   const t = useTranslations("");
-  const expressions = t.raw("expressions") as Expressions;
-  const projects = t.raw("projects.description") as Project[];
+  const expressions = t.raw("expressions") as IExpressions;
+  const projects = t.raw("projects.description") as IProject[];
 
   return (
     <div
@@ -29,7 +29,7 @@ export default function Projects(props: IProjectsProps) {
       }}
     >
       <div
-        className={"overlay " + props.animatedOverlay}
+        className={"overlay "}
         style={{
           backgroundImage: `${props.gradient},url(${projectsImg.src})`,
         }}

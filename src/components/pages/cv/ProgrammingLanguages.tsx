@@ -4,7 +4,7 @@ import Image from "next/image";
 
 import programmingLanguagesImg from "@/assets/images/cv/programmingLanguages.jpg";
 import { proglanguageList } from "@/assets/images/programming_languages/ImgSrc";
-import { ProgrammingLanguage } from "@/models/ProgrammingLanguage";
+import { IProgrammingLanguage } from "@/models/IMessages";
 
 import "./Cv.scss";
 
@@ -21,12 +21,12 @@ export default function ProgrammingLanguages(
   const t = useTranslations("");
   const programmingLanguages = t.raw(
     "programmingLanguages.description"
-  ) as ProgrammingLanguage[];
+  ) as IProgrammingLanguage[];
 
   const imageMap = proglanguageList.reduce((acc, proglanguage) => {
     acc[proglanguage.code] = proglanguage.img;
     return acc;
-  }, {});
+  }, {} as Record<string, string>);
 
   return (
     <div
@@ -37,7 +37,7 @@ export default function ProgrammingLanguages(
       }}
     >
       <div
-        className={"overlay " + props.animatedOverlay}
+        className={"overlay "}
         style={{
           backgroundImage: `${props.gradient},url(${programmingLanguagesImg.src})`,
         }}

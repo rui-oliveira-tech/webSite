@@ -40,7 +40,7 @@ export default function Map(props: IMapProps) {
           }}
         >
           <div
-            className={"overlay " + props.animatedOverlay}
+            className={"overlay "}
             style={{
               backgroundImage: `${props.gradient},url(${MapsImg.src})`,
             }}
