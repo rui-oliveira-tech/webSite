@@ -2,8 +2,8 @@ import React from "react";
 import { useTranslations } from "next-intl";
 
 import aboutImg from "@/assets/images/cv/about.jpg";
-import { Expressions } from "@/models/IExpressions";
-import { Experience } from "@/models/IExperience";
+import { IExpressions } from "@/models/IExpressions";
+import { IExperience } from "@/models/IExperience";
 
 import "./Cv.scss";
 
@@ -16,8 +16,8 @@ interface IAboutProps {
 
 export default function About(props: IAboutProps) {
   const t = useTranslations();
-  const expressions = t.raw("expressions") as Expressions;
-  const experiences = t.raw("experiences.description") as Experience[];
+  const expressions = t.raw("expressions") as IExpressions;
+  const experiences = t.raw("experiences.description") as IExperience[];
 
   return (
     <div

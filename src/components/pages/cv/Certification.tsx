@@ -6,8 +6,8 @@ import getFormatDate, {
 } from "@/util/getFormatDate.tsx";
 
 import certificationImg from "@/assets/images/cv/certification.jpg";
-import { Expressions } from "@/models/IExpressions";
-import { Certification } from "@/models/IMessages";
+import { IExpressions } from "@/models/IExpressions";
+import { ICertification } from "@/models/IMessages";
 
 import "./Cv.scss";
 
@@ -20,8 +20,8 @@ interface ICertificationProps {
 
 export default function Certification(props: ICertificationProps) {
   const t = useTranslations("");
-  const expressions = t.raw("expressions") as Expressions;
-  const certifications = t.raw("certifications.description") as Certification[];
+  const expressions = t.raw("expressions") as IExpressions;
+  const certifications = t.raw("certifications.description") as ICertification[];
 
   const [showDiplomType, setShowDiplomType] = useState<
     "validDiplom" | "duplicateDiplom" | "expiredDiplom"
