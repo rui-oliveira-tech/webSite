@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from "react";
+/* import React, { useState, useEffect, useRef } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import "./Vcard.scss";
 
@@ -85,3 +85,4 @@ export default function Vcard() {
     </div>
   );
 }
+ */
