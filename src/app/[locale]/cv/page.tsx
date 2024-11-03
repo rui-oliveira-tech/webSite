@@ -1,22 +1,20 @@
-"use client";
+// src/app/[locale]/cv/page.tsx
 
 import React from "react";
+import CvClient from "@/components/pages/cv/Cv"; // Adjust the import path as necessary
 
-/* import Cv from "@/components/pages/cv/Cv";
-import FadeIn from "@/components/fadeIn/FadeIn";
- */
-interface ICurriculumProps {
+// This function specifies the locales for the CV page
+export async function generateStaticParams() {
+  const locales = ["en", "pt", "fr"]; // Replace with your actual locales
+  return locales.map((locale) => ({ locale })); // Pre-render for each locale
+}
+
+interface ICvProps {
   params: {
     locale: string;
   };
 }
 
-export default function Curriculum(props: ICurriculumProps) {
-  return (
-    <>
-      {/* <FadeIn type="fast">
-      <Cv {...props} />
-    </FadeIn> */}
-    </>
-  );
+export default function CvPage(props: ICvProps) {
+  return <CvClient {...props} />; // Render the client component
 }
