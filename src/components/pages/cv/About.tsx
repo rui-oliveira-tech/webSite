@@ -3,7 +3,7 @@ import { useTranslations } from "next-intl";
 
 import aboutImg from "@/assets/images/cv/about.jpg";
 import { IExpressions } from "@/models/IExpressions";
-import { IExperience } from "@/models/IExperience";
+import { IExperience } from "@/models/IMessages";
 
 import "./Cv.scss";
 
