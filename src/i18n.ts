@@ -1,26 +1,22 @@
 import { getRequestConfig } from 'next-intl/server';
-import { supportedLngs, defaultLanguage } from "./resource/lngs/lngs"
-import deepMerge from './util/deepMerge';
 import { notFound } from "next/navigation";
-
+import { supportedLngs, defaultLanguage } from "./resource/lngs/lngs";
+import deepMerge from './util/deepMerge';
 
 export default getRequestConfig(async ({ locale }) => {
   // Validate that the incoming `locale` parameter is valid
   if (!supportedLngs.includes(locale as any)) notFound();
 
   let messages;
-  let localeJson = structuredClone((
-    await import(`./assets/translations/${locale}.json`)
-  ).default)
+  let localeJson = (await import(`./assets/translations/${locale}.json`)).default;
 
   if (locale === defaultLanguage) {
     messages = localeJson;
   } else {
-    let defaultLocaleJson = structuredClone((
-      await import(`./assets/translations/${defaultLanguage}.json`)
-    ).default)
+    let defaultLocaleJson = (await import(`./assets/translations/${defaultLanguage}.json`)).default;
     messages = deepMerge(defaultLocaleJson, localeJson);
   }
+
   return {
     messages
   };

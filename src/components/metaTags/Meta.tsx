@@ -1,7 +1,6 @@
 "use client";
 
 import { NextSeo } from "next-seo";
-import Head from "next/head";
 import { useTranslations } from "next-intl";
 
 interface IMetaProps {
