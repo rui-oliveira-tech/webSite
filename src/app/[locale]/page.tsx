@@ -1,7 +1,8 @@
 // src/app/[locale]/page.tsx
 
 import React from "react";
-import HomepageClient from "./HomepageClient"; // Import the client component
+/* import Home from "@/components/pages/home/Home";
+import FadeIn from "@/components/fadeIn/FadeIn"; */
 
 // This function is used to specify which locales will be pre-rendered
 export async function generateStaticParams() {
@@ -16,5 +17,14 @@ interface IHomepageProps {
 }
 
 export default async function Homepage(props: IHomepageProps) {
-  return <HomepageClient {...props} />; // Render the client component
+  return (
+    <div>
+      <h2>Your CV Content for</h2>
+      {/* 
+      <FadeIn type="fast">
+        <Home {...props} />
+      </FadeIn>{" "} 
+      */}
+    </div>
+  );
 }

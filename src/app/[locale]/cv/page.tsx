@@ -1,7 +1,10 @@
 // src/app/[locale]/cv/page.tsx
 
 import React from "react";
-import CvClient from "@/components/pages/cv/Cv"; // Adjust the import path as necessary
+
+/* import Cv from "@/components/pages/cv/Cv";
+import FadeIn from "@/components/fadeIn/FadeIn";
+ */
 
 // This function specifies the locales for the CV page
 export async function generateStaticParams() {
@@ -16,5 +19,12 @@ interface ICvProps {
 }
 
 export default function CvPage(props: ICvProps) {
-  return <CvClient {...props} />; // Render the client component
+  return (
+    <div>
+      <h2>Your CV Content for</h2>
+      {/* <FadeIn type="fast">
+      <Cv {...props} />
+    </FadeIn> */}
+    </div>
+  );
 }
