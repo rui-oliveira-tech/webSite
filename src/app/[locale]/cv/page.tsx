@@ -13,8 +13,8 @@ interface ICvProps {
 
 export default function CvPage(props: ICvProps) {
   return (
-    <FadeIn type="fast">
-      <Cv {...props} locale="en" />
+    <FadeIn type="fast">sss
+    {/*   <Cv {...props} locale="en" /> */}
     </FadeIn>
   );
 }
