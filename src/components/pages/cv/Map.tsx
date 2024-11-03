@@ -6,7 +6,6 @@ import MapsImg from "@/assets/images/cv/googleMapsMarkers.jpg";
 import "./Cv.scss";
 
 interface IMapProps {
-  animatedOverlay: string;
   gradient: string;
   params: {
     locale: string;
