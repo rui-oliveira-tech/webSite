@@ -9,7 +9,6 @@ import { ProgrammingLanguage } from "@/models/ProgrammingLanguage";
 import "./Cv.scss";
 
 interface IProgrammingLanguagesProps {
-  animatedOverlay: string; 
   gradient: string;
   params: {
     locale: string;

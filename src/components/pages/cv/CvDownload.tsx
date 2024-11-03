@@ -6,7 +6,6 @@ import "./Cv.scss";
 import "./CvButton.scss";
 
 interface ICvDownloadProps {
-  animatedOverlay: string; 
   gradient: string;
   params: {
     locale: string;
@@ -31,7 +30,7 @@ export default function CvDownload(props: ICvDownloadProps) {
   return (
     <div className="download">
       <button
-        className={`learn-more buttonCV ${props.animatedOverlay}`} // Access current value
+        className={`learn-more buttonCV`} // Access current value
         onClick={downloadPDF}
       >
         <span className="circle" aria-hidden="true">

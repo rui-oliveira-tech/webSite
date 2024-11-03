@@ -9,7 +9,6 @@ import { Other } from "@/models/Other";
 import "./Cv.scss";
 
 interface IOthersProps {
-  animatedOverlay: string; 
   gradient: string;
   params: {
     locale: string;

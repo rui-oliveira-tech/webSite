@@ -12,7 +12,6 @@ import { Certification } from "@/models/Certification";
 import "./Cv.scss";
 
 interface ICertificationProps {
-  animatedOverlay: string; 
   gradient: string;
   params: {
     locale: string;

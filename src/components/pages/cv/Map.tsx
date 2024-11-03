@@ -1,12 +1,10 @@
 import React, { useEffect, useRef, useState } from "react";
 import { useTranslations } from "next-intl";
 import MapSection from "@/components/others/Map/Map";
-import pointsDataset from "@/resource/generated/processedGoogleMapsMarkers.json";
 import MapsImg from "@/assets/images/cv/googleMapsMarkers.jpg";
 
 import "./Cv.scss";
 
-//import { Map } from "@/models/Project";
 interface IMapProps {
   animatedOverlay: string;
   gradient: string;
@@ -51,7 +49,7 @@ export default function Map(props: IMapProps) {
           </div>
           <div className="underlay">
             <div className="traveledMap">
-              <MapSection pointsDataset={pointsDataset} />
+              <MapSection />
             </div>
           </div>
         </div>

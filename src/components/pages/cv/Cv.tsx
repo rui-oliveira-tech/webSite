@@ -24,16 +24,7 @@ interface ICvProps {
 }
 
 export function Cv(props: ICvProps) {
-  const [animatedOverlay, setAnimatedOverlay] = useState("notLoading");
-
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setAnimatedOverlay("notLoading");
-    }, 1);
-    return () => clearTimeout(timer);
-  }, []);
-
-  const sharedProps = { ...props, gradient, animatedOverlay };
+  const sharedProps = { ...props, gradient };
 
   return (
     <section className="have_footer have_NavigationBar cv">

@@ -9,7 +9,6 @@ import { Experience } from "@/models/Experience";
 import "./Cv.scss";
 
 interface IExperienceProps {
-  animatedOverlay: string; 
   gradient: string;
   params: {
     locale: string;

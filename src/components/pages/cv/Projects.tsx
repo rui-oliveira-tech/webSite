@@ -9,7 +9,6 @@ import { Project } from "@/models/Project";
 import "./Cv.scss";
 
 interface IProjectsProps {
-  animatedOverlay: string; 
   gradient: string;
   params: {
     locale: string;

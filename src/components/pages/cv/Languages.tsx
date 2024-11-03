@@ -10,7 +10,6 @@ import { Language } from "@/models/Language";
 import "./Cv.scss";
 
 interface ILanguagesProps {
-  animatedOverlay: string; 
   gradient: string;
   params: {
     locale: string;

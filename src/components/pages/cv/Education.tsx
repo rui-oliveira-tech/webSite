@@ -12,7 +12,6 @@ import { Education } from "@/models/Education";
 import "./Cv.scss";
 
 interface IEducationProps {
-  animatedOverlay: string; 
   gradient: string;
   params: {
     locale: string;

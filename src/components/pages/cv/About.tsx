@@ -8,7 +8,6 @@ import { Experience } from "@/models/Experience";
 import "./Cv.scss";
 
 interface IAboutProps {
-  animatedOverlay: string; 
   gradient: string;
   params: {
     locale: string;
@@ -29,7 +28,7 @@ export default function About(props: IAboutProps) {
       }}
     >
       <div
-        className={`overlay ${props.animatedOverlay.current}`}
+        className={`overlay`}
         style={{
           backgroundImage: `${props.gradient},url(${aboutImg.src})`,
         }}

@@ -11,11 +11,11 @@ import {
 import "./Map.scss";
 import { Point } from "@/models/Map";
 
-export default function MapSection({
-  pointsDataset,
-}: {
-  pointsDataset: Point[];
-}) {
+import pointsDataset from "@/resource/generated/processedGoogleMapsMarkers.json";
+
+interface IMapSectionProps {}
+
+export default function MapSection(props: IMapSectionProps) {
   const defaultZoom = 2;
   const defaultCenter = { lat: 49.1485207, lng: 2.9511712 };
   const mapRef = useRef<google.maps.Map | null>(null);
