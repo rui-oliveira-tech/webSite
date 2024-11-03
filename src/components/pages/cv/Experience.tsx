@@ -1,6 +1,6 @@
 import React from "react";
 import { useTranslations } from "next-intl";
-import getFormatDate from "@/utils/getFormatDate";
+import getFormatDate from "@/utils/getFormatDate.tsx";
 
 import experienceImg from "@/assets/images/cv/experience.jpg";
 import { IExpressions } from "@/models/IExpressions";

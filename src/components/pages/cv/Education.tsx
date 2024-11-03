@@ -3,7 +3,7 @@ import { useTranslations } from "next-intl";
 import getFormatDate, {
   formatDate,
   isExpirationDatePassed,
-} from "@/utils/getFormatDate";
+} from "@/utils/getFormatDate.tsx";
 
 import educationImg from "@/assets/images/cv/education.jpg";
 import { IExpressions } from "@/models/IExpressions";
