@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useEffect, useState } from "react";
+import React from "react";
 import CvDownload from "./CvDownload";
 import About from "./About";
 import Education from "./Education";

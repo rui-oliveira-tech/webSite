@@ -6,16 +6,12 @@ import FadeIn from "@/components/fadeIn/FadeIn";
 
 import { generateStaticParams } from "@/utils/staticParams";
 
-interface IHomepageProps {
-  params: {
-    locale: string;
-  };
-}
+interface IHomepageProps {}
 
 export default async function Homepage(props: IHomepageProps) {
   return (
     <FadeIn type="fast">
-        <Home />
+      <Home {...props} />
     </FadeIn>
   );
 }
