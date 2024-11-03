@@ -1,27 +1,27 @@
 "use client";
 
-import Image from "next/image";
-import { useTranslations } from "next-intl";
+/* import Image from "next/image"; */
+// import { useTranslations } from "next-intl";
 import "./Home.scss";
 
-import homeImg from "@/assets/images/home/main.jpg";
+/* import homeImg from "@/assets/images/home/main.jpg"; */
 
 interface IHomeProps {}
 
 export function Home(props: IHomeProps) {
-  const t = useTranslations("");
+  // const t = useTranslations("");
 
   return (
     <section className="have_footer have_NavigationBar home">
       <header>
         <figure>
-          <Image
+         {/*  <Image
             src={homeImg}
             className="frontImage"
             width={500}
             height={500}
             alt="Rui Oliveira"
-          />
+          /> */}
         </figure>
       </header>
       <main>
