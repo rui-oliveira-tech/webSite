@@ -1,10 +1,8 @@
-"use client";
+/* "use client";
 
-import React, { useEffect, useState } from "react";
+import React from "react";
 
-import NavigationBar from "@/components/layout/navigationBar/NavigationBar";
 import Home from "@/components/pages/home/Home";
-import Footer from "@/components/layout/footer/Footer";
 import FadeIn from "@/components/fadeIn/FadeIn";
 
 interface IHomepageProps {
@@ -19,4 +17,4 @@ export default function Homepage(props: IHomepageProps) {
       <Home {...props} />
     </FadeIn>
   );
-}
+} */

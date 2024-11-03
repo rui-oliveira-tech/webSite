@@ -1,4 +1,4 @@
-"use client";
+/* "use client";
 
 import React from "react";
 import Cv from "@/components/pages/cv/Cv";
@@ -16,4 +16,4 @@ export default function Curriculum(props: ICurriculumProps) {
       <Cv {...props} />
     </FadeIn>
   );
-}
+} */
