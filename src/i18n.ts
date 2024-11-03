@@ -10,14 +10,14 @@ export default getRequestConfig(async ({ locale }) => {
 
   let messages;
   let localeJson = structuredClone((
-    await import(`./messages/${locale}.json`)
+    await import(`./assets/translations/${locale}.json`)
   ).default)
 
   if (locale === defaultLanguage) {
     messages = localeJson;
   } else {
     let defaultLocaleJson = structuredClone((
-      await import(`./messages/${defaultLanguage}.json`)
+      await import(`./assets/translations/${defaultLanguage}.json`)
     ).default)
     messages = deepMerge(defaultLocaleJson, localeJson);
   }
