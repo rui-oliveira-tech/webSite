@@ -2,9 +2,8 @@
 
 import React from "react";
 
-/* import Cv from "@/components/pages/cv/Cv";
+import Cv from "@/components/pages/cv/Cv";
 import FadeIn from "@/components/fadeIn/FadeIn";
- */
 
 // This function specifies the locales for the CV page
 export async function generateStaticParams() {
@@ -22,9 +21,9 @@ export default function CvPage(props: ICvProps) {
   return (
     <div>
       <h2>Your CV Content for</h2>
-      {/* <FadeIn type="fast">
-      <Cv {...props} />
-    </FadeIn> */}
+      <FadeIn type="fast">
+        <Cv {...props} />
+      </FadeIn>
     </div>
   );
 }
