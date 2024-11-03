@@ -2,7 +2,7 @@
 
 import React from "react";
 import Home from "@/components/pages/home/Home";
-import FadeIn from "@/components/fadeIn/FadeIn"; 
+import FadeIn from "@/components/fadeIn/FadeIn";
 
 // This function is used to specify which locales will be pre-rendered
 export async function generateStaticParams() {
@@ -18,10 +18,8 @@ interface IHomepageProps {
 
 export default async function Homepage(props: IHomepageProps) {
   return (
-    <div>
-      <FadeIn type="fast">
-        <Home {...props} />
-      </FadeIn>
-    </div>
+    <FadeIn type="fast">
+      <Home {...props} />
+    </FadeIn>
   );
 }

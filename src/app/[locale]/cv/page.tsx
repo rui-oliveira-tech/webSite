@@ -19,11 +19,9 @@ interface ICvProps {
 
 export default function CvPage(props: ICvProps) {
   return (
-    <div>
-      <h2>Your CV Content for</h2>
-      <FadeIn type="fast">
-        <Cv {...props} />
-      </FadeIn>
-    </div>
+    <FadeIn type="fast">
+      asds
+ {/*      <Cv {...props} /> */}
+    </FadeIn>
   );
 }
