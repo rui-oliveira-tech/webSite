@@ -1,5 +1,5 @@
-import React, { useRef, useEffect } from "react";
-import { useTranslation } from 'react-i18next';
+/* import React, { useRef, useEffect } from "react";
+import { useTranslations } from "next-intl";
 import { MouseParallaxContainer, MouseParallaxChild } from 'react-parallax-mouse';
 import Tilt from 'react-parallax-tilt';
 import "./Projects.scss";
@@ -7,7 +7,7 @@ import "./Projects.scss";
 import getImagesFromFolder from '../../../util/getImagesFromFolder';
 
 export default function Portfolio(props) {
-  const { t } = useTranslation();
+  const t = useTranslations("");
   const animation = useRef("notLoading");
 
   const images = getImagesFromFolder(props.images, "projects");
@@ -58,4 +58,4 @@ export default function Portfolio(props) {
       </div>
     </div>
   )
-}
+} */
