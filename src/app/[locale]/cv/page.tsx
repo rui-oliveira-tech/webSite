@@ -1,5 +1,3 @@
-// src/app/[locale]/cv/page.tsx
-
 import React from "react";
 
 import Cv from "@/components/pages/cv/Cv";

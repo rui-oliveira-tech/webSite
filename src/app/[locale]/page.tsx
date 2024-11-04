@@ -1,6 +1,5 @@
-// src/app/[locale]/page.tsx
-
 import React from "react";
+
 import Home from "@/components/pages/home/Home";
 import FadeIn from "@/components/fadeIn/FadeIn";
 
@@ -13,5 +12,3 @@ export default async function Homepage(props: ILocaleProps) {
     </FadeIn>
   );
 }
-
-//export { generateStaticParams };
