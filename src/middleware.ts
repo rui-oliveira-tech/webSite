@@ -1,11 +1,9 @@
 import createMiddleware from 'next-intl/middleware';
-import { supportedLngs, defaultLanguage } from "./resource/lngs/lngs"
+import {routing} from './i18n/routing';
 
-export default createMiddleware({
-  locales: supportedLngs,
-  defaultLocale: defaultLanguage,
-});
+export default createMiddleware(routing);
 
 export const config = {
   matcher: ['/((?!api|_next|static|...).*)', '/', '/(en|nl|fr|pt)/:path*'] 
 };
+  

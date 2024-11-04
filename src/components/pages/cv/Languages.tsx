@@ -2,8 +2,11 @@ import React from "react";
 import Image from "next/image";
 import { useTranslations } from "next-intl";
 
-import { languageList } from "@/resource/lngs/lngs";
+import { useLanguageListUpdated } from "@/i18n/routing";
+import { supportedlanguagesExpLngs } from "@/i18n/lngs";
+
 import languagesImg from "@/assets/images/cv/languages.jpg";
+
 import { IExpressions } from "@/models/IExpressions";
 import { ILanguage } from "@/models/IMessages";
 
@@ -15,20 +18,24 @@ interface ILanguagesProps {
 
 export default function Languages(props: ILanguagesProps) {
   const t = useTranslations("");
-
-  const imageMap = languageList.reduce((acc, lang) => {
-    acc[lang.code] = lang.img;
-    return acc;
-  }, {} as Record<string, string>);
-
   const languagesExp = (t.raw("expressions") as IExpressions).languages;
 
-  const languages = (t.raw("languages.description") as ILanguage[]).map(
-    (item) => ({
-      ...item,
-      language: languagesExp[item.flag as keyof IExpressions["languages"]],
+  const languageListUpdated = useLanguageListUpdated(supportedlanguagesExpLngs);
+  const languages = (t.raw("languages.description") as ILanguage[])
+    .map((item) => {
+      const matchedLanguage = languageListUpdated.find(
+        (lang) => lang.code === item.flag
+      );
+      return matchedLanguage
+        ? {
+            ...item,
+            img: matchedLanguage.img,
+            languageTranslatedName:
+              languagesExp[item.flag as keyof IExpressions["languages"]],
+          }
+        : null;
     })
-  );
+    .filter(Boolean); // Remove null entries
 
   return (
     <div
@@ -70,13 +77,13 @@ export default function Languages(props: ILanguagesProps) {
               <tr className="color" key={i}>
                 <td className="noBorder left flex items-center">
                   <Image
-                    src={imageMap[language.flag]}
+                    src={language.img.src}
                     className="flag-icon w-5 h-5 "
                     width={10}
                     height={10}
                     alt={language.flag}
                   />
-                  <span>{language.language}</span>
+                  <span>{language.languageTranslatedName}</span>
                 </td>
                 <td>{language.listening}</td>
                 <td>{language.reading}</td>

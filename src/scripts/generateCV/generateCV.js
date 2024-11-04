@@ -3,7 +3,7 @@ import fs from 'fs';
 import path from 'path';
 import deepMerge from '../../utils/deepMerge.js';
 import { pdfTemplate, headerTemplate, footerTemplate } from './documents/newCv/index.js';
-import { defaultLanguage, supportedLngs } from '../../resource/lngs/langs.js';
+import { defaultLanguage, supportedLngs } from '../../i18n/langs.js';
 import { links } from '../../resource/links.js';
 import { fileURLToPath } from 'url';
 

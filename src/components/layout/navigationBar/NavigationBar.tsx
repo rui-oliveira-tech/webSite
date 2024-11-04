@@ -2,35 +2,22 @@
 
 import React, { ReactNode } from "react";
 import { useTranslations } from "next-intl";
-
 import Image from "next/image";
 import Link from "next/link";
 
-import "./NavigationBar.scss";
-import Languages from "../Languages/Language";
-import { pageList, Page } from "../../../resource/pages";
+import { usePathname, routing } from "@/i18n/routing";
 
+import Languages from "../Languages/Language";
+import { pageList, Page } from "@/resource/pages";
 import logoImg from "@/assets/images/logo/logo.svg";
-import { usePathname } from "next/navigation";
-import { languageImg, supportedLngs, Locale } from "@/resource/lngs/lngs";
+
+import "./NavigationBar.scss";
 
 interface INavigationBarProps {
   locale: string;
 }
 
-function classPageInList(
-  pathname: string,
-  currentPage: Page,
-  supportedLngs: Locale[]
-): string {
-  return (currentPage.name === "homepage" &&
-    supportedLngs.some((lng) => pathname.endsWith(`/${lng}`))) ||
-    pathname.endsWith(`${currentPage.url}`)
-    ? "thisPage"
-    : "notThisPage";
-}
-
-const NavigationBar: React.FC<INavigationBarProps> = (props) => {
+export default function NavigationBar(props: INavigationBarProps) {
   const t = useTranslations("");
   const pathname = usePathname();
   const currentLanguageCode = props.locale;
@@ -38,7 +25,7 @@ const NavigationBar: React.FC<INavigationBarProps> = (props) => {
   const logoClass = pageList.some(
     (page) =>
       page.name === "homepage" &&
-      supportedLngs.some((lng) => pathname.endsWith(`/${lng}`))
+      routing.locales.some((lng) => pathname.endsWith(`/${lng}`))
   )
     ? "thisPage"
     : "notThisPage";
@@ -56,7 +43,9 @@ const NavigationBar: React.FC<INavigationBarProps> = (props) => {
       </Link>
       <div className="contentNavigationBar">
         {pageList.reduce((urls: ReactNode[], page: Page, i: number) => {
-          const pageClass = classPageInList(pathname, page, supportedLngs);
+          const pageClass = pathname.endsWith(`${page.url}`)
+            ? "thisPage"
+            : "notThisPage";
           if (page.navigationBar) {
             urls.push(
               <Link
@@ -78,6 +67,4 @@ const NavigationBar: React.FC<INavigationBarProps> = (props) => {
       </div>
     </nav>
   );
-};
-
-export default NavigationBar;
+}
