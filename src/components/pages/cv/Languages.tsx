@@ -73,25 +73,28 @@ export default function Languages(props: ILanguagesProps) {
               <td>{t("languages.key.production")}</td>
               <td></td>
             </tr>
-            {languages.map((language, i) => (
-              <tr className="color" key={i}>
-                <td className="noBorder left flex items-center">
-                  <Image
-                    src={language.img.src}
-                    className="flag-icon w-5 h-5 "
-                    width={10}
-                    height={10}
-                    alt={language.flag}
-                  />
-                  <span>{language.languageTranslatedName}</span>
-                </td>
-                <td>{language.listening}</td>
-                <td>{language.reading}</td>
-                <td>{language.spokenInteraction}</td>
-                <td>{language.spokenProduction}</td>
-                <td>{language.writing}</td>
-              </tr>
-            ))}
+            {languages.map(
+              (language, i) =>
+                language && (
+                  <tr className="color" key={i}>
+                    <td className="noBorder left flex items-center">
+                      <Image
+                        src={language.img.src}
+                        className="flag-icon w-5 h-5"
+                        width={10}
+                        height={10}
+                        alt={language.flag}
+                      />
+                      <span>{language.languageTranslatedName}</span>
+                    </td>
+                    <td>{language.listening}</td>
+                    <td>{language.reading}</td>
+                    <td>{language.spokenInteraction}</td>
+                    <td>{language.spokenProduction}</td>
+                    <td>{language.writing}</td>
+                  </tr>
+                )
+            )}
             <tr>
               <td className="noBorder left"></td>
               <td className="noBorder left" colSpan={5}>

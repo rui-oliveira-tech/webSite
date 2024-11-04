@@ -7,14 +7,10 @@ export const routing = defineRouting({ locales: supportedTranledLngs, defaultLoc
 
 export const { Link, redirect, usePathname, useRouter } = createNavigation(routing);
 
-
-
-
-
 export const useLanguageListUpdated = (langs: string[]) => {
     const languages = useTranslations("").raw("expressions.languages");
 
-    return Object.keys(languagesList)
+    return (Object.keys(languagesList) as Array<keyof typeof languagesList>)
         .filter(code => langs?.includes(code))
         .map(code => ({
             code,

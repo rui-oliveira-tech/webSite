@@ -1,5 +1,5 @@
 import { getRequestConfig } from 'next-intl/server';
-import { supportedLngs, defaultLanguage } from "./lngs";
+import { supportedTranledLngs, defaultLanguage } from "./lngs";
 import { routing } from "./routing"
 import deepMerge from '../utils/deepMerge';
 
@@ -7,7 +7,7 @@ import deepMerge from '../utils/deepMerge';
 
   let locale = await requestLocale;
 
-  if (!locale || !supportedLngs.includes(locale as any)) {
+  if (!locale || !supportedTranledLngs.includes(locale as any)) {
     locale = defaultLanguage;
   }
   let messages;

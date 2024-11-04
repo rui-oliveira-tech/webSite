@@ -27,7 +27,7 @@ export const languagesList = {
   },
 } as const satisfies Record<string, Language>;
 
-export type Locale = (typeof languagesList)[number];
+export type Locale = keyof typeof languagesList;
 
 export type Language = {
   img: any;
