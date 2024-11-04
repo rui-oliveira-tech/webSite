@@ -1,17 +1,17 @@
 import React from "react";
 import { useTranslations } from "next-intl";
 import { saveAs } from "file-saver";
+import { ILocaleProps } from "@/models/ILocaleProps";
 
 import "./Cv.scss";
 import "./CvButton.scss";
 
-interface ICvDownloadProps {
+interface ICvDownloadProps extends ILocaleProps {
   gradient: string;
-  locale: string;
 }
 
 export default function CvDownload(props: ICvDownloadProps) {
-  const currentLanguageCode = props.locale; // Use destructuring for clarity
+  const currentLanguageCode = props.params.locale; // Use destructuring for clarity
   const t = useTranslations("");
 
   const downloadPDF = (e: React.MouseEvent) => {

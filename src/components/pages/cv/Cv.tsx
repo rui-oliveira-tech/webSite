@@ -12,16 +12,14 @@ import Projects from "./Projects";
 import Others from "./Others";
 import Map from "./Map";
 
+import { ILocaleProps } from "@/models/ILocaleProps";
+
 import "./Cv.scss";
 
 const gradient =
   "radial-gradient(circle, rgb(25, 58, 89, 0.5) 0%, rgb(0, 0, 0, 0.5) 100%)";
 
-interface ICvProps {
-  locale: string;
-}
-
-export function Cv(props: ICvProps) {
+export function Cv(props: ILocaleProps) {
   const sharedProps = { ...props, gradient };
 
   return (

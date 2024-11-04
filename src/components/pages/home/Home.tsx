@@ -6,9 +6,7 @@ import "./Home.scss";
 
 import homeImg from "@/assets/images/home/main.jpg";
 
-interface IHomeProps {}
-
-export function Home(props: IHomeProps) {
+export function Home() {
   const t = useTranslations("");
 
   return (
