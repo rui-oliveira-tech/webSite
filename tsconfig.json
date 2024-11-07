@@ -36,7 +36,7 @@
     "src/components/layout/Languages/Language.tsx",
     "src/scripts/generateMarkers/generateMarkers.js",
     "src/components/others/Map/googleMapsMarkers.js",
-    "src/resource/lngs/langs.js"
+    "src/i18n/langs.js"
   ],
   "exclude": [
     "node_modules"
