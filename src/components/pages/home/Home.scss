@@ -16,19 +16,16 @@
     color: #193a59;
     box-shadow: 0 2px 25px #193a59;
     background-color: #bdd9f3;
-    padding: 20px 25px;
-    font-size: calc(var(--textSize) * 6em);
     line-height: 1em;
     font-weight: 600;
     letter-spacing: normal;
     font-family: Helvetica;
-    margin: 1em 0 0 -25%;
     white-space: nowrap;
 
-    transform: translate(0.5rem, -1rem);
-    animation: showHomeTitleEffect 1s linear forwards;
+    //transform: translate(0.5rem, -1rem);
+    //animation: showHomeTitleEffect 1s linear forwards;
     animation-delay: calc(var(--loadingAnimation) + 0.3s);
-    opacity: 0;
+    opacity: 1;
   }
 
   .subTitle {
@@ -36,7 +33,6 @@
     margin-left: 2em;
     position: relative;
     color: #aaa;
-    font-size: calc(var(--textSize) * 2em);
     line-height: 1.5em;
     font-weight: 600;
     text-transform: uppercase;
@@ -59,7 +55,7 @@
     }
 
     &.first {
-      margin-top: 2em;
+      margin-top: clamp(0em, 8.5vh - 2rem, 2em);
       animation-delay: calc(var(--loadingAnimation) + 1s);
       &::before {
         animation-delay: calc(var(--loadingAnimation) + 1.1s);
@@ -94,7 +90,6 @@
     max-height: 100%;
     object-fit: cover;
     object-position: center;
-    // border: 50px double #bdd9f3;
   }
 
   main {
@@ -106,60 +101,45 @@
     z-index: 3;
   }
 
-  @media (min-width: 270px) and (max-width: 600px) {
+  @media ((min-width: 270px) and (max-width: 900px) and (orientation: portrait)) or ((orientation: portrait) and (min-height: 500px)) {
     align-content: flex-start;
+    header {
+      max-height: clamp(67%, 8.5vh, 100%);
+    }
+    h1 {
+      //transform: translate(0rem, clamp(-0.2rem, -2.5vw, 1rem));
+      margin: clamp(-25px, 2.5vw, -52px) auto 0 auto;
+      padding: clamp(10px, 2.5vw, 20px) clamp(12px, 2.5vw, 25px);
+      font-size: clamp(0rem + 1vh, 3.1vh + 0.5rem, 5rem);
+    }
 
+    /* height: clamp(100rem, 100vw, 500rem); */
     header {
       width: 100%;
-      max-height: calc(100% - 6em - 9em);
     }
 
     main {
       width: 100%;
     }
 
-    h1 {
-      margin: -25px auto 0 auto;
-      font-size: calc(var(--textSize) * 2em);
-      padding: 10px 12px;
-    }
-
-    .scrollArrow {
-      display: none;
-    }
-
     .subTitle {
       margin: 0 auto;
-      font-size: calc(var(--textSize) * 1em);
+      font-size: clamp(0.4rem + 1vh, 0.1vh + 0.5rem, 7rem);
     }
   }
+}
 
-  @media (min-width: 601px) and (max-width: 1023px) {
-    align-content: flex-start;
+@media (orientation: landscape) and (min-height: 500px),
+  (orientation: landscape) and (max-height: 500px) {
+  h1 {
+    transform: translate(-42%, -36%);
+    margin: 2em 0 0 clamp(1%, 2.5vh, 10%);
+    font-size: clamp(1rem, 5.5vh, 5rem);
+    padding: clamp(10px, 1.5vh, 25px) clamp(12px, 2.5vh, 25px);
+  }
 
-    header {
-      width: 100%;
-      max-height: calc(100% - 12em - 6.5em);
-    }
-
-    main {
-      width: 100%;
-    }
-
-    h1 {
-      margin: -52px auto 0 auto;
-      font-size: calc(var(--textSize) * 4em);
-      padding: 20px 25px;
-    }
-
-    .scrollArrow {
-      display: none;
-    }
-
-    .subTitle {
-      margin: 0 auto;
-      font-size: calc(var(--textSize) * 2em);
-    }
+  .subTitle {
+    font-size: clamp(0.9rem, 3vh, 3rem);
   }
 }
 
@@ -197,63 +177,6 @@
   }
   100% {
     opacity: 1;
-  }
-}
-
-.scrollArrow {
-  position: absolute;
-  bottom: 50px;
-  left: 50%;
-  z-index: 3;
-
-  transform: translate(-50%, -50%);
-  background-color: var(--deepBlue);
-
-  width: 100px;
-  height: 100px;
-
-  color: var(--backgroundColor0);
-  font: normal 400 20px/1 "Josefin Sans", sans-serif;
-  letter-spacing: 0.1em;
-  text-decoration: none;
-  transition: translate 0.33s ease-in-out;
-  cursor: pointer;
-
-  &:active {
-    transform: translate(-50%, -50%) scale(0.9);
-  }
-
-  span {
-    position: absolute;
-    top: 0;
-    left: 50%;
-    width: 24px;
-    height: 24px;
-    margin-left: -12px;
-    border-left: 2px solid var(--scrollArrowColor);
-    border-bottom: 2px solid var(--scrollArrowColor);
-    transform: rotate(-45deg);
-    animation: fadeArrowsInOut 2s infinite;
-    opacity: 0;
-    box-sizing: border-box;
-
-    &:nth-of-type(1) {
-      top: 12%;
-      -webkit-animation-delay: 0s;
-      animation-delay: 0s;
-    }
-
-    &:nth-of-type(2) {
-      top: 32%;
-      -webkit-animation-delay: 0.15s;
-      animation-delay: 0.15s;
-    }
-
-    &:nth-of-type(3) {
-      top: 52%;
-      -webkit-animation-delay: 0.3s;
-      animation-delay: 0.3s;
-    }
   }
 }
 
