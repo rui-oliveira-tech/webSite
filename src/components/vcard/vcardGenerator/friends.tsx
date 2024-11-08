@@ -6,9 +6,10 @@ export function generateFriends(lastname: string, firstname: string): string {
   const myVCard = new VCard();
 
   myVCard
-    .addName(lastname, firstname, "", process.env.PREFIX_FRIENDS ?? "", "")
-    .addEmail(process.env.EMAIL_FRIENDS ?? "")
-    .addPhoneNumber(process.env.CELLPHONE_FRIENDS ?? "", "PREF;CELL")
+    .addName(lastname, firstname, "", "", "")
+    .addEmail(process.env.EMAIL ?? "")
+    .addJobtitle(process.env.TITLE_FRIENDS ?? "")
+    .addPhoneNumber(process.env.CELLPHONE ?? "", "PREF;CELL")
     .addPhoneNumber(links.gsm.link, "PREF;WORK")
     .addAddress("Antwerpen", "Belgium")
     .addSocial(
