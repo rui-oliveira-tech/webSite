@@ -1,77 +1,74 @@
-/* import React, { useState, useEffect, useRef } from "react";
-import { useNavigate, useParams } from "react-router-dom";
+"use client";
+
+import { useEffect, useRef, useState } from "react";
+import { useRouter } from "@/i18n/routing";
+import { VcardGenerator } from "@/components/vcard/vcardGenerator/VcardGenerator"; // Ensure correct import
+import { ILocaleProps } from "@/models/ILocaleProps";
+
 import "./Vcard.scss";
 
-const server = process.env.REACT_APP_API;
+export default function VcardPage(props: ILocaleProps) {
+  const router = useRouter();
+  const filename = `Rui_Oliveira_Vcard.vcf`;
+  const vcardSuffix = props.params.vcardCode
+    ? props.params.vcardCode
+    : "default";
 
-function manageErrors(response) {
-  if (!response.ok) {
-    const responseError = {
-      statusText: response.statusText,
-      status: response.status,
-    };
-    throw responseError;
-  }
-  return response;
-}
-
-export default function Vcard() {
-  const navigate = useNavigate();
-  const { type } = useParams();
-  const filename = `${type}_vcard.vcf`;
-  const initialTimer = 15;
-  const vCardLink = useRef(null);
-  const timerTimeOut = useRef(null);
-  const [fileUrl, setFileUrl] = useState(null);
-  const [errors, setErrors] = useState(null);
-  const [timer, setTimer] = useState(initialTimer);
+  const [timer, setTimer] = useState(5);
+  const [errors, setErrors] = useState(false);
+  const [fileUrl, setFileUrl] = useState<string | null>(null);
+  const vCardLink = useRef<HTMLAnchorElement | null>(null);
 
   useEffect(() => {
-    fetch(`${server}/vcard/${type}`)
-      .then(manageErrors)
-      .then((response) => response.blob())
-      .then(function (response) {
-        const url = URL.createObjectURL(response);
-        setFileUrl(url);
-        vCardLink.current?.click();
-        console.log("Request successful", response);
-      })
-      .catch(function (error) {
-        console.log("Request failed", error);
-        setErrors(error);
-      });
-  }, []);
+    const generateVCard = async () => {
+      if (vcardSuffix) {
+        try {
+          const vCardData = await VcardGenerator(vcardSuffix);
 
-  const resetTimer = () => {
-    setTimer(initialTimer);
-  };
-  useEffect(() => {
-    if (fileUrl || errors) {
-      timerTimeOut.current = setTimeout(() => {
-        if (timer > 0) {
-          setTimer(timer - 1);
-        } else {
-          URL.revokeObjectURL(fileUrl);
-          navigate("/");
+          if (vCardData) {
+            const blob = new Blob([vCardData], { type: "text/vcard" });
+            const url = URL.createObjectURL(blob);
+            setFileUrl(url);
+            return () => {
+              URL.revokeObjectURL(url);
+            };
+          } else {
+            throw new Error("Generated vCard data is empty");
+          }
+        } catch (error) {
+          console.error("Error generating vCard:", error);
+          setErrors(true);
         }
-      }, 1000);
-    }
-    return () => {
-      clearTimeout(timerTimeOut.current);
+      }
     };
-  }, [timer, fileUrl, errors]);
+
+    generateVCard();
+  }, [vcardSuffix, filename]);
+
+  useEffect(() => {
+    const countdown = setInterval(() => setTimer((prev) => prev - 1), 1000);
+
+    if (timer === 0) {
+      router.replace("/", { locale: props.params.locale });
+    }
+
+    return () => clearInterval(countdown);
+  }, [timer, vcardSuffix, router, props.params.locale]);
+
+  const resetTimer = () => setTimer(5);
 
   return (
     <div className="centerVcard">
       <div className="ringVcard"></div>
-      <div className="titleTextVcard">You gonna be redirected</div>
-      <div className="timerTextVcard">{timer}</div>
+      <div className="titleTextVcard">You will be redirected</div>
+      <div className="timerTextVcard">Redirecting in {timer} seconds...</div>
+
       {!errors ? (
         <a
           className="vcardDownloadTextVcard"
           onClick={resetTimer}
           ref={vCardLink}
-          href={fileUrl}
+          href={fileUrl || undefined}
           download={filename}
         >
           Download Vcard
@@ -79,10 +76,9 @@ export default function Vcard() {
       ) : (
         <>
           <p className="textErrorVcard">Error</p>
-          <p className="vcardDownloadTextVcard">Please ty latter</p>
+          <p className="vcardDownloadTextVcard">Please try later</p>
         </>
       )}
     </div>
   );
 }
- */
