@@ -4,23 +4,21 @@ import { NextSeo } from "next-seo";
 import { useTranslations } from "next-intl";
 
 interface IMetaProps {
-  title?: string;
-  description?: string;
-  canonical?: string;
   locale?: string;
 }
 
-const Meta = ({ title, description, canonical, locale }: IMetaProps) => {
+export const Meta = (props: IMetaProps) => {
   const t = useTranslations("");
 
-  const pageTitle = title || t("app_title");
-  const pageDescription = description || t("app_description");
+  const pageTitle = t("app_title");
+  const pageDescription = t("app_description");
+  const canonical = "";
   const imageUrl =
     process.env.NEXT_PUBLIC_URL + "/favicon/android-chrome-512x512.png";
 
   return (
     <>
-      <NextSeo
+      {/* <NextSeo
         title={pageTitle}
         description={pageDescription}
         canonical={canonical} // Add canonical URL if needed
@@ -35,16 +33,14 @@ const Meta = ({ title, description, canonical, locale }: IMetaProps) => {
               alt: pageTitle,
             },
           ],
-          locale: locale,
+          locale: props.locale,
           site_name: pageTitle,
           type: "website",
         }}
-      />
+      /> */}
     </>
   );
 };
-
-export { Meta };
 
 //<Head>
 //{/* Example meta tags */}

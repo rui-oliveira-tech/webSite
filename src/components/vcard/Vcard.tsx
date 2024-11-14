@@ -2,17 +2,20 @@
 
 import { useEffect, useRef, useState } from "react";
 import { useRouter } from "@/i18n/routing";
-import { VcardGenerator } from "@/components/vcard/vcardGenerator/VcardGenerator"; // Ensure correct import
-import { ILocaleProps } from "@/models/ILocaleProps";
+import { VcardGenerator } from "@/components/vcard/vcardGenerator/VcardGenerator";
 
 import "./Vcard.scss";
 
-export default function VcardPage(props: ILocaleProps) {
+export default function VcardPage({
+  locale,
+  vcardCode,
+}: {
+  locale: string;
+  vcardCode: string;
+}) {
   const router = useRouter();
   const filename = `Rui_Oliveira_Vcard.vcf`;
-  const vcardSuffix = props.params.vcardCode
-    ? props.params.vcardCode
-    : "default";
+  const vcardSuffix = vcardCode || "default";
 
   const [timer, setTimer] = useState(5);
   const [errors, setErrors] = useState(false);
@@ -21,39 +24,35 @@ export default function VcardPage(props: ILocaleProps) {
 
   useEffect(() => {
     const generateVCard = async () => {
-      if (vcardSuffix) {
-        try {
-          const vCardData = await VcardGenerator(vcardSuffix);
+      try {
+        const vCardData = await VcardGenerator(vcardSuffix);
+        if (vCardData) {
+          const blob = new Blob([vCardData], { type: "text/vcard" });
+          const url = URL.createObjectURL(blob);
+          setFileUrl(url);
 
-          if (vCardData) {
-            const blob = new Blob([vCardData], { type: "text/vcard" });
-            const url = URL.createObjectURL(blob);
-            setFileUrl(url);
-            return () => {
-              URL.revokeObjectURL(url);
-            };
-          } else {
-            throw new Error("Generated vCard data is empty");
-          }
-        } catch (error) {
-          console.error("Error generating vCard:", error);
-          setErrors(true);
+          return () => URL.revokeObjectURL(url);
+        } else {
+          throw new Error("Generated vCard data is empty");
         }
+      } catch (error) {
+        console.error("Error generating vCard:", error);
+        setErrors(true);
       }
     };
 
     generateVCard();
-  }, [vcardSuffix, filename]);
+  }, [vcardSuffix]);
 
   useEffect(() => {
     const countdown = setInterval(() => setTimer((prev) => prev - 1), 1000);
 
     if (timer === 0) {
-      router.replace("/", { locale: props.params.locale });
+      router.replace("/", { locale });
     }
 
     return () => clearInterval(countdown);
-  }, [timer, vcardSuffix, router, props.params.locale]);
+  }, [timer, locale, router]);
 
   const resetTimer = () => setTimer(5);
 

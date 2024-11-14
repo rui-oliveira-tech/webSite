@@ -19,10 +19,15 @@ interface IRootLayoutProps {
 
 export default function RootLayout(props: IRootLayoutProps) {
   const { animationDuration } = useLoadingAnimation("20s", 2500);
+  const timeZone = Intl.DateTimeFormat().resolvedOptions().timeZone;
 
   return (
     <html lang={props.locale}>
-      <NextIntlClientProvider messages={props.messages} locale={props.locale}>
+      <NextIntlClientProvider
+        timeZone={timeZone}
+        messages={props.messages}
+        locale={props.locale}
+      >
         <Meta locale={props.locale} />
         <body
           style={

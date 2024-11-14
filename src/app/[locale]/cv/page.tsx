@@ -5,10 +5,11 @@ import FadeIn from "@/components/fadeIn/FadeIn";
 
 import { ILocaleProps } from "@/models/ILocaleProps";
 
-export default function CvPage(props: ILocaleProps) {
+export default async function CvPage(props: ILocaleProps) {
+  const { locale } = await props.params;
   return (
     <FadeIn type="fast">
-      <Cv {...props} />
+      <Cv locale={locale} />
     </FadeIn>
   );
 }

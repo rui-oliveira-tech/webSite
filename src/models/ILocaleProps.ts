@@ -1,6 +1,6 @@
 export interface ILocaleProps {
-  params: {
+  params: Promise<{
     locale: string;
     vcardCode: string;
-  };
+  }>;
 }

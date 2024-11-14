@@ -1,3 +1,5 @@
+"use server";
+
 import { generateRandownPerson } from "./randownPerson";
 import { generateFriends } from "./friends";
 import { generateJobs } from "./jobs";

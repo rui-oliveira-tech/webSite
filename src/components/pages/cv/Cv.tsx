@@ -12,29 +12,25 @@ import Projects from "./Projects";
 import Others from "./Others";
 import Map from "./Map";
 
-import { ILocaleProps } from "@/models/ILocaleProps";
-
 import "./Cv.scss";
 
 const gradient =
   "radial-gradient(circle, rgb(25, 58, 89, 0.5) 0%, rgb(0, 0, 0, 0.5) 100%)";
 
-export function Cv(props: ILocaleProps) {
-  const sharedProps = { ...props, gradient };
-
+export function Cv({ locale }: { locale: string }) {
   return (
     <section className="have_footer have_NavigationBar cv">
-      <CvDownload {...sharedProps} />
+      <CvDownload locale={locale} />
       <div className="cvContainer">
-        <About {...sharedProps} />
-        <Certification {...sharedProps} />
-        <Education {...sharedProps} />
-        <Languages {...sharedProps} />
-        <ProgrammingLanguages {...sharedProps} />
-        <Experience {...sharedProps} />
-        <Projects {...sharedProps} />
-        <Others {...sharedProps} />
-        <Map {...sharedProps} />
+        <About gradient={gradient} />
+        <Certification gradient={gradient} />
+        <Education gradient={gradient} />
+        <Languages gradient={gradient} />
+        <ProgrammingLanguages gradient={gradient} />
+        <Experience gradient={gradient} />
+        <Projects gradient={gradient} />
+        <Others gradient={gradient} />
+        <Map gradient={gradient} />
       </div>
     </section>
   );
