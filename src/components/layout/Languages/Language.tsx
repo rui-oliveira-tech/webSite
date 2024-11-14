@@ -22,7 +22,7 @@ interface ILanguageProps {
 }
 
 export default function Languages(props: ILanguageProps) {
-  const locale = props.locale;
+  const { locale } = props;
   const languageListUpdated = useLanguageListUpdated(routing.locales);
   const router = useRouter();
   const [isPending, startTransition] = useTransition();
@@ -55,16 +55,19 @@ export default function Languages(props: ILanguageProps) {
         )}
       >
         {languageListUpdated.map(({ code, languageTranslatedName, img }) => (
-          <li className="py-1 hover:bg-gray-100 rounded-md" key={code}>
+          <li
+            className={classNames("py-1 rounded-md", {
+              "hover:bg-gray-100": locale !== code,
+            })}
+            key={code}
+          >
             <button
-              style={{
-                opacity: locale === code ? 0.5 : 1,
-              }}
-              className={classNames("flex items-center", {
-                disabled: locale === code,
+              className={classNames("w-full", "flex items-center", {
+                "text-gray-400": locale === code,
+                "opacity-50": locale === code,
               })}
-              disabled={isPending}
-              onClick={onLanguageChange(code)}
+              disabled={locale === code || isPending}
+              onClick={locale === code ? undefined : onLanguageChange(code)}
             >
               <Image
                 className="inline mr-2 ml-2"
