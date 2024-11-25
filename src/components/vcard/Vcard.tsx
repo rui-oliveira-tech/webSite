@@ -3,6 +3,9 @@
 import { useEffect, useRef, useState } from "react";
 import { useRouter } from "@/i18n/routing";
 import { VcardGenerator } from "@/components/vcard/vcardGenerator/VcardGenerator";
+import { useTranslations } from "next-intl";
+
+import { IVcard } from "@/models/IVcard";
 
 import "./Vcard.scss";
 
@@ -13,6 +16,8 @@ export default function VcardPage({
   locale: string;
   vcardCode: string;
 }) {
+  const t = useTranslations();
+  const vcard = t.raw("vcard") as IVcard;
   const router = useRouter();
   const filename = `Rui_Oliveira_Vcard.vcf`;
   const vcardSuffix = vcardCode || "default";
@@ -31,6 +36,12 @@ export default function VcardPage({
           const url = URL.createObjectURL(blob);
           setFileUrl(url);
 
+          if (vCardLink.current) {
+            vCardLink.current.href = url;
+            vCardLink.current.download = filename;
+            vCardLink.current.click();
+          }
+
           return () => URL.revokeObjectURL(url);
         } else {
           throw new Error("Generated vCard data is empty");
@@ -48,7 +59,7 @@ export default function VcardPage({
     const countdown = setInterval(() => setTimer((prev) => prev - 1), 1000);
 
     if (timer === 0) {
-      router.replace("/", { locale });
+      //router.replace("/", { locale });
     }
 
     return () => clearInterval(countdown);
@@ -58,24 +69,25 @@ export default function VcardPage({
 
   return (
     <div className="centerVcard">
-      <div className="ringVcard"></div>
-      <div className="titleTextVcard">You will be redirected</div>
-      <div className="timerTextVcard">Redirecting in {timer} seconds...</div>
+      <div className="titleTextVcard">{vcard.redirectMessage}</div>
+
+      <div className="timerTextVcard">
+        {`${vcard.redirectCountdownTitle} ${timer} ${vcard.redirectCountdownUnit} ...`}
+      </div>
 
       {!errors ? (
         <a
           className="vcardDownloadTextVcard"
-          onClick={resetTimer}
           ref={vCardLink}
           href={fileUrl || undefined}
           download={filename}
         >
-          Download Vcard
+          {vcard.downloadPrompt}
         </a>
       ) : (
         <>
-          <p className="textErrorVcard">Error</p>
-          <p className="vcardDownloadTextVcard">Please try later</p>
+          <p className="textErrorVcard">{vcard.error}</p>
+          <p className="vcardDownloadTextVcard">{vcard.errorMessage}</p>
         </>
       )}
     </div>

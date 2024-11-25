@@ -33,6 +33,7 @@ export interface IProgrammingLanguage {
     website: string;
     type: string[];
 }
+
 export interface ILanguage {
     flag: string;
     listening: string;
@@ -41,7 +42,6 @@ export interface ILanguage {
     spokenProduction: string;
     writing: string;
 }
-
 
 export interface IExperience {
     title: string;

@@ -261,6 +261,14 @@
     "underlayTitle": "Points sur Google Maps",
     "description": []
   },
+  "vcard": {
+    "redirectMessage": "Vous serez redirigé sous peu.",
+    "redirectCountdownTitle": "Redirection dans",
+    "redirectCountdownUnit": "secondes",
+    "downloadPrompt": "Télécharger la Vcard",
+    "error": "Erreur",
+    "errorMessage": "Veuillez réessayer plus tard."
+  },
   "expressions": {
     "globals": {
       "sex": "Sexe",

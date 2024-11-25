@@ -9,30 +9,11 @@
   min-height: 100vh;
   animation: showLettersVcard 15s ease-in-out forwards;
 
-  .ringVcard {
-    position: absolute;
-    width: 399px;
-    height: 400px;
-    border-radius: 50%;
-    animation: ring 2s linear infinite;
-  }
-
-  .ringVcard:before {
-    position: absolute;
-    content: "";
-    left: 0;
-    top: 0;
-    height: 100%;
-    width: 100%;
-    border-radius: 50%;
-    box-shadow: 0 0 5px rgba(255, 255, 255, 0.3);
-  }
-
   .titleTextVcard {
     position: absolute;
     transform: translate(0, -60px);
     color: #737373;
-    font-size: 2rem;
+    padding: 0 2rem;
 
     animation-delay: calc(var(--loadingAnimation) + 1s);
     &::before {
@@ -44,7 +25,6 @@
     position: absolute;
     transform: translate(0, 10px);
     color: #737373;
-    font-size: 1rem;
     animation: timer 1s ease-in-out infinite;
   }
 
@@ -59,49 +39,38 @@
     position: absolute;
     transform: translate(0, 130px);
     color: #737373;
-    font-size: 1.2rem;
     text-transform: uppercase;
     letter-spacing: 1px;
   }
 }
 
-@media (min-width: 270px) and (max-width: 600px) {
-  .centerVcard {
-    .ringVcard {
-      width: 299px;
-      height: 300px;
-    }
-    .titleTextVcard {
-      transform: translate(0, -60px);
-      font-size: 1.4rem;
-    }
-    .timerTextVcard {
-      transform: translate(0, 10px);
-      font-size: 3rem;
-    }
-    .textErrorVcard {
-      transform: translate(0, 70px);
-      font-size: 1.4rem;
-    }
-    .vcardDownloadTextVcard {
-      transform: translate(0, 100px);
-      font-size: 1rem;
-    }
+@media ((min-width: 270px) and (max-width: 900px) and (orientation: portrait)) or ((orientation: portrait) and (min-height: 500px)) {
+  .titleTextVcard {
+    //transform: translate(0rem, clamp(-0.2rem, -2.5vw, 1rem));
+    padding: clamp(10px, 2.5vh, 20px) clamp(12px, 2.5vh, 25px);
+    font-size: clamp(1rem, 6.5vw, 3rem);
+  }
+
+  .timerTextVcard {
+    font-size: clamp(0.5rem, 2.75vw, 2.5rem);
+  }
+  .vcardDownloadTextVcard {
+    font-size: clamp(1rem, 6.5vw, 3rem);
   }
 }
 
-@keyframes ring {
-  0% {
-    transform: rotate(0deg);
-    box-shadow: 1px 5px 2px #e65c00;
+@media (orientation: landscape) and (min-height: 500px),
+  (orientation: landscape) and (max-height: 500px) {
+  .titleTextVcard {
+    font-size: clamp(3rem, 5.5vw, 10rem);
+    padding: clamp(10px, 4.5vh, 25px) clamp(12px, 2.5vh, 25px);
   }
-  50% {
-    transform: rotate(180deg);
-    box-shadow: 1px 5px 2px #18b201;
+
+  .timerTextVcard {
+    font-size: clamp(1.5rem, 2.75vw, 5rem);
   }
-  100% {
-    transform: rotate(360deg);
-    box-shadow: 1px 5px 2px #0456c8;
+  .vcardDownloadTextVcard {
+    font-size: clamp(3rem, 5.5vw, 10rem);
   }
 }
 

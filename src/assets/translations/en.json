@@ -637,6 +637,14 @@
     "underlayTitle": "Google Maps Markers",
     "description": []
   },
+  "vcard": {
+    "redirectMessage": "You will be redirected shortly.",
+    "redirectCountdownTitle": "Redirecting in",
+    "redirectCountdownUnit": "seconds",
+    "downloadPrompt": "Download Vcard",
+    "error": "Error",
+    "errorMessage": "Please try again later."
+  },
   "expressions": {
     "globals": {
       "sex": "Sex",

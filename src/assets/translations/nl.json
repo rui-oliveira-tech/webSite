@@ -262,6 +262,14 @@
     "underlayTitle": "Google Maps-markeringen",
     "description": []
   },
+  "vcard": {
+    "redirectMessage": "Je wordt binnenkort doorgestuurd.",
+    "redirectCountdownTitle": "Doorgestuurd in",
+    "redirectCountdownUnit": "seconden",
+    "downloadPrompt": "Download Vcard",
+    "error": "Fout",
+    "errorMessage": "Probeer het later opnieuw."
+  },
   "expressions": {
     "globals": {
       "sex": "Geslacht",

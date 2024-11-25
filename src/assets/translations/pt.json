@@ -261,6 +261,14 @@
     "underlayTitle": "Marcadores do Google Maps",
     "description": []
   },
+  "vcard": {
+    "redirectMessage": "Você será redirecionado em breve.",
+    "redirectCountdownTitle": "Redirecionando em",
+    "redirectCountdownUnit": "segundos",
+    "downloadPrompt": "Baixar Vcard",
+    "error": "Erro",
+    "errorMessage": "Por favor, tente novamente mais tarde."
+  },
   "expressions": {
     "globals": {
       "sex": "Sexo",
